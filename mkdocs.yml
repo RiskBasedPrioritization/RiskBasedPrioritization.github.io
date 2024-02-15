@@ -1,0 +1,147 @@
+
+site_name: Risk Based Prioritization
+site_url: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io
+
+# Page tree
+nav:
+  - Home: index.md
+  - Introduction: 
+    - Introduction: introduction/Introduction.md
+    - Contributors: introduction/contributors.md
+    - Scope: introduction/Scope.md
+#    - Source Code and Data: introduction/code_and_data.md
+  - Risk: 
+    - Vulnerability Landscape: risk/Vulnerability_Landscape.md
+    - Understanding Risk: risk/Understanding_Risk.md
+    - Likelihood of Exploit Populations: risk/Data_Sources.md
+    - Applied Back of Napkin Risk Prioritization: risk/Back_of_napkin.md
+  - Standards:
+    - Common Vulnerability Scoring System (CVSS): cvss/CVSS.md
+    - Exploit Prediction Scoring System (EPSS):
+      - Exploit Prediction Scoring System (EPSS): epss/Introduction_to_EPSS.md
+      - EPSS and CISA Known Exploited Vulnerabilities (CISA KEV): epss/EPSS_and_CISA_KEV.md
+      - Counts of CVEs by EPSS: epss/Count_of_CVEs_by_EPSS.md
+#      - Applying EPSS to your environment: epss/Applying_EPSS_to_your_environment.md
+    - CISA Known Exploited Vulnerabilities (CISA KEV): cisa_kev/cisa_kev.md
+    - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): 
+      - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): cisa_ssvc/SSVC.md
+      - Decision Trees From Scratch: cisa_ssvc/decision_trees_from_scratch.md
+      - Decision Trees Example Usage: cisa_ssvc/decision_trees.md
+    - Applied Log4Shell Example: risk/Log4Shell.md
+  - Vendors: 
+    - Vendors: vendors/vendors.md
+    - Qualys: vendors/Qualys.md
+#    - EdgeScan: vendors/EdgeScan.md
+    - Microsoft Exploitability Index: vendors/Microsoft_Exploitability_Index.md
+  - Organizations: 
+    - Yahoo: organizations/Yahoo.md
+#    - ACME Corporation: 
+#      - Risk Based Prioritization: organizations/acme/Applied.md
+#      - Exploratory Data Analysis: organizations/acme/EDA.md
+  - Annex:
+    - Requirements: requirements/Requirements.md
+  
+    
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  icon:
+    logo: material/fire-off
+  features:
+    - navigation.expand
+    ##- navigation.footer
+    ##- navigation.indexes
+    ##- navigation.instant
+    ###- navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    #- navigation.sections
+    ##- navigation.tabs
+    # - navigation.tabs.sticky
+    ##- navigation.top
+    ##- navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    #- toc.follow
+    # - toc.integrate
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+        primary: light blue
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+markdown_extensions:
+  - pymdownx.snippets:
+      auto_append: [includes/abbreviations.md]
+      base_path: docs
+  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - tables
+  - markdown_include.include:
+      base_path: docs
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+
+
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # for sortable tables
+  - javascripts/tablesort.js 
+
+
+watch:
+  - docs/includes
+  - docs
+
+extra:
+  analytics:
+    provider: google
+    property: G-51FVYR35TJ
+  social:
+  - icon: fontawesome/solid/house
+    link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io
+    name: Risk Based Prioritization Guide
+  - icon: fontawesome/solid/bug
+    link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/
+    name: Report an Issue or Suggest a Change
+  - icon: fontawesome/brands/github
+    link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io
+    name: Risk Based Prioritization source on Github
+  - icon: fontawesome/solid/download
+    link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/print_page/
+    name: Save as HTML or print to PDF / paper
+
+copyright: Copyright &copy; Contributors to the Risk Based Prioritization Guide.
+
+plugins:
+  - search
+  - print-site 
+

@@ -136,7 +136,7 @@ extra:
     link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io
     name: Risk Based Prioritization source on Github
   - icon: fontawesome/solid/download
-    link: https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/print_page/
+    link: https://riskbasedprioritization.github.io/print_page/
     name: Save as HTML or print to PDF / paper
 
 copyright: Copyright &copy; Contributors to the Risk Based Prioritization Guide.

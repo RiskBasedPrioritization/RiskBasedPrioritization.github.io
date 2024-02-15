@@ -1,0 +1,1633 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/epss/Count_of_CVEs_by_EPSS/">
+      
+      
+        <link rel="prev" href="../EPSS_and_CISA_KEV/">
+      
+      
+        <link rel="next" href="../../cisa_kev/cisa_kev/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Counts of CVEs by EPSS - Risk Based Prioritization</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-51FVYR35TJ"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-51FVYR35TJ",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-51FVYR35TJ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#count-of-cves-by-epss" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  THIS GUIDE WILL BE RELEASED FOR FEEDBACK FEBUARY 21. UNTIL THEN IT'S UNDER CONSTRUCTION.
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Risk Based Prioritization" class="md-header__button md-logo" aria-label="Risk Based Prioritization" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.11 21.46 2.39 1.73 1.11 3l5.98 6C5.66 10.36 4.88 12.47 5 14.47c.06.5.12 1 .29 1.5.14.6.41 1.2.71 1.73 1.08 1.73 2.95 2.97 4.96 3.22 2.14.27 4.43-.12 6.07-1.6.07-.06.12-.14.19-.21l3.62 3.62 1.27-1.27M8.8 14.05c-.23.1-.47.04-.66-.12a.58.58 0 0 1-.14-.17c-1-1.29-1.26-3.07-.74-4.61l1.32 1.32c0 .93.15 1.86.49 2.75.04.1.08.2.08.33 0 .22-.15.42-.35.5m5.7 3.45c-.28.24-.74.5-1.1.6-1.12.4-2.24-.16-2.9-.82 1.19-.28 1.9-1.16 2.11-2.05.05-.23.05-.47.03-.7L15 16.88c-.15.23-.31.45-.5.62m4.42-1.78L9.65 6.46c.47-.81 1.07-1.54 1.81-2.14.71-.57 1.54-1.09 2.49-1.32-.95 1.85-.62 4.26.87 5.72.64.63 1.4 1.06 2.07 1.66.26.26.54.52.77.82 0 0 .56.8.77 1.26l.13.26c.4.97.5 2 .36 3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Risk Based Prioritization
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Counts of CVEs by EPSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Risk Based Prioritization" class="md-nav__button md-logo" aria-label="Risk Based Prioritization" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.11 21.46 2.39 1.73 1.11 3l5.98 6C5.66 10.36 4.88 12.47 5 14.47c.06.5.12 1 .29 1.5.14.6.41 1.2.71 1.73 1.08 1.73 2.95 2.97 4.96 3.22 2.14.27 4.43-.12 6.07-1.6.07-.06.12-.14.19-.21l3.62 3.62 1.27-1.27M8.8 14.05c-.23.1-.47.04-.66-.12a.58.58 0 0 1-.14-.17c-1-1.29-1.26-3.07-.74-4.61l1.32 1.32c0 .93.15 1.86.49 2.75.04.1.08.2.08.33 0 .22-.15.42-.35.5m5.7 3.45c-.28.24-.74.5-1.1.6-1.12.4-2.24-.16-2.9-.82 1.19-.28 1.9-1.16 2.11-2.05.05-.23.05-.47.03-.7L15 16.88c-.15.23-.31.45-.5.62m4.42-1.78L9.65 6.46c.47-.81 1.07-1.54 1.81-2.14.71-.57 1.54-1.09 2.49-1.32-.95 1.85-.62 4.26.87 5.72.64.63 1.4 1.06 2.07 1.66.26.26.54.52.77.82 0 0 .56.8.77 1.26l.13.26c.4.97.5 2 .36 3Z"/></svg>
+
+    </a>
+    Risk Based Prioritization
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/contributors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/Scope/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Risk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Risk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/Vulnerability_Landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vulnerability Landscape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/Understanding_Risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/Data_Sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Likelihood of Exploit Populations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/Back_of_napkin/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18.9 6.1-6.1 2.1 2.1-6.1 6.1H13v-2.1m8.4-7.6 1.3 1.3c.2.2.2.5 0 .7l-1 1-2.1-2 1-1c.1-.1.2-.2.4-.2s.3 0 .4.2M11 21H5c-.5 0-1-.2-1.4-.6-.4-.4-.6-.9-.6-1.4V5c0-.5.2-1 .6-1.4C4 3.2 4.5 3 5 3h14c1.1 0 2 .9 2 2v4h-2V5H5v14h6v2m4-9-5-4v8l5-4Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Applied Back of Napkin Risk Prioritization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Standards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Standards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cvss/CVSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Vulnerability Scoring System (CVSS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exploit Prediction Scoring System (EPSS)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Exploit Prediction Scoring System (EPSS)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction_to_EPSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploit Prediction Scoring System (EPSS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EPSS_and_CISA_KEV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPSS and CISA Known Exploited Vulnerabilities (CISA KEV)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Counts of CVEs by EPSS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Counts of CVEs by EPSS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remediation-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-of-cves-above-epss-value-for-all-cves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Count of CVEs above EPSS value for All CVEs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-applied-to-an-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Applied to an Enterprise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy Applied to an Enterprise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monte Carlo Simulation for a Typical Enterprise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cisa_kev/cisa_kev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CISA Known Exploited Vulnerabilities (CISA KEV)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cisa_ssvc/SSVC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cisa_ssvc/decision_trees_from_scratch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Trees From Scratch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cisa_ssvc/decision_trees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Trees Example Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../risk/Log4Shell/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13 18.9 6.1-6.1 2.1 2.1-6.1 6.1H13v-2.1m8.4-7.6 1.3 1.3c.2.2.2.5 0 .7l-1 1-2.1-2 1-1c.1-.1.2-.2.4-.2s.3 0 .4.2M11 21H5c-.5 0-1-.2-1.4-.6-.4-.4-.6-.9-.6-1.4V5c0-.5.2-1 .6-1.4C4 3.2 4.5 3 5 3h14c1.1 0 2 .9 2 2v4h-2V5H5v14h6v2m4-9-5-4v8l5-4Z"/></svg>
+  
+  <span class="md-ellipsis">
+    Applied Log4Shell Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vendors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vendors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/vendors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vendors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/Qualys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vendors/Microsoft_Exploitability_Index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microsoft Exploitability Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Organizations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Organizations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../organizations/Yahoo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yahoo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Annex
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Annex
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/Requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remediation-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-of-cves-above-epss-value-for-all-cves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Count of CVEs above EPSS value for All CVEs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-applied-to-an-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Applied to an Enterprise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy Applied to an Enterprise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monte Carlo Simulation for a Typical Enterprise
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="count-of-cves-by-epss">Count of CVEs by <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#count-of-cves-by-epss" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Overview</p>
+<p>As we saw from the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> section, (and we'll see later in the Vendor and
+Organizations section), focusing on known exploited, known weaponized
+exploits, or a significant probability of exploit, is an effective
+approach to risk mitigation and prevention.</p>
+<p>In this section</p>
+<ul>
+<li>we take an example Remediation Policy for an organization, and see what the impact is of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold</li>
+</ul>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb&lt;">Source Code</a> </p>
+</div>
+<h2 id="remediation-policy">Remediation Policy<a class="headerlink" href="#remediation-policy" title="Permanent link">&para;</a></h2>
+<p>For this analysis, our policy will be (for our first pass triage
+independent of business and runtime context):</p>
+<ol>
+<li>Remediate vulnerabilities that have weaponized exploits or evidence
+    of exploitation in the wild or in our organization i.e. Weaponized
+    Exploitation and above in our Likelihood of Exploitation diagram. <ol>
+<li>independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score</li>
+</ol>
+</li>
+<li>Remediate CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold<ol>
+<li><strong>we need to understand the effect of picking a threshold, so we do some analysis...</strong></li>
+<li>This is the same policy used in our back of the napkin Model Remediation Policy, but here we additionally "remediate CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold".</li>
+</ol>
+</li>
+</ol>
+<p>Let's assume we'll use the different groups for Likelihood of
+Exploitation that we defined earlier - and used the data sources we have
+available to determine the CVEs in each group</p>
+<ol>
+<li><strong>Active Exploitation:</strong><ol>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></li>
+</ol>
+</li>
+<li><strong>Active Exploitation + Weaponized Exploits</strong>:<ol>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei</li>
+</ol>
+</li>
+<li><strong>Active Exploitation + Weaponized Exploits: + Exploits with Proof
+    of Concepts</strong>:<ol>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei + ExploitDB</li>
+</ol>
+</li>
+<li><strong>All CVEs</strong></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Commercial CTI as used by the author has ~100K CVEs
+with Exploit PoC (versus the ~25K in the ExploitDB data
+source we used) so this number is not representative of
+reality. Users can repeat the analysis with additional data.</p>
+</div>
+<h2 id="count-of-cves-above-epss-value-for-all-cves">Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for All CVEs<a class="headerlink" href="#count-of-cves-above-epss-value-for-all-cves" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Plot Type</th>
+<th>Plot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value (Linear scale Y-axis)</strong></td>
+<td><img alt="" src="../../assets/images/CountofCVEsaboveEPSSvalue.png" /></td>
+</tr>
+<tr>
+<td><strong>Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value (Log scale Y-axis)</strong></td>
+<td><img alt="" src="../../assets/images/CountofCVEsaboveEPSSvalueLog.png" /></td>
+</tr>
+<tr>
+<td><strong>Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value (Graph range <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.01 to 1.0 Linear Scale Y-Axis)</strong></td>
+<td><img alt="" src="../../assets/images/CountofCVEsaboveEPSSvalue01.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Here we're showing the counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for the groups
+(because we want to pick an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold above which we would fix the
+CVEs)</p>
+<p>Per the policy we defined, we're going to remediate CVEs in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and
+Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score). So later we'll remove these from our counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
+    values. In other words, subtract the pink line from the blue line in
+    the graphs above</p>
+<div class="admonition observations">
+<p class="admonition-title">Observations</p>
+<ol>
+<li>For All CVEs, and Exploit Proof Of Concept, the vast majority of
+    CVEs are below some low <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score</li>
+<li>For <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &lt; 0.01, the count of CVEs increases significantly so it
+    makes it harder to see the details for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt;= 0.01. So we can
+    either:<ol>
+<li>use a Log scale on the Y axis </li>
+<li>plot only for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt;= 0.01, and use a linear y-axis </li>
+</ol>
+</li>
+<li>The plot shows <ol>
+<li>the count of CVEs above the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for the given thresholds - because we will fix CVEs <strong>above</strong> an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value, and we want to see <strong>how many we would need to fix based on the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value</strong></li>
+<li>All CVEs ~220K (our enterprise environment will contain a subset of these)</li>
+</ol>
+</li>
+<li>We can see that below <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.1, there's a
+    significant increase in the count of CVEs for All CVEs, and Exploit
+    PoC<ol>
+<li>in other words, <strong>below <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.1, for a small change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score, there's a very large change in count of CVEs we would need to fix</strong></li>
+</ol>
+</li>
+<li>We can see that between <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.9 and 0.1,
+    there's a relatively small increase in the count of CVEs as we
+    decrease <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score<ol>
+<li>in other words, <strong>for a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9, there's a relatively small change in count of CVEs we would need to fix - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.1 means we cover a very large range of probability of exploitation for a relatively small increase in the count of CVEs</strong></li>
+</ol>
+</li>
+</ol>
+</div>
+<h2 id="policy-applied-to-an-enterprise">Policy Applied to an Enterprise<a class="headerlink" href="#policy-applied-to-an-enterprise" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>We know what the shape of the graph looks like for the count of CVEs above
+<abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for <strong>All CVEs</strong> (~220K) as above.</p>
+<p><strong>An organization is only concerned with the CVEs in its environment -
+not all CVEs.</strong></p>
+<ul>
+<li>A typical enterprise will have 10K's of CVEs (depending on their
+    tech stacks and ability to detect CVEs).</li>
+<li>The ~40K CVEs observed in the Cisco data set across 1000
+    enterprises likely represents the upper bound because it's the
+    collation of CVEs from each of the 1000 enterprises.</li>
+</ul>
+</div>
+<h3 id="monte-carlo-simulation-for-a-typical-enterprise">Monte Carlo Simulation for a Typical Enterprise<a class="headerlink" href="#monte-carlo-simulation-for-a-typical-enterprise" title="Permanent link">&para;</a></h3>
+<p><strong>Monte Carlo Analysis</strong></p>
+<p>CVEs in an Organization vs All CVEs</p>
+<ul>
+<li>We're more interested in a sample of CVEs (not all CVEs) e.g. the
+    sample in our organization which will likely be a much smaller
+    subset of all CVEs.</li>
+<li>Each organization will have a different subset of CVEs, and this
+    data is private, so we can't do an analysis of that.</li>
+<li>A typical enterprise will have ~10K's of CVEs i.e. <strong>we know the
+    counts of CVEs - but not the CVEs themselves.</strong><ul>
+<li>So we can plot a random sample of that count of CVEs, and repeat
+    many times to see what the overall plot looks like and if it is
+    useful.</li>
+<li>And we can do this for different counts of CVEs e.g. 1K, 11K
+    (5%) CVEs, or 44K (20%) CVEs</li>
+</ul>
+</li>
+</ul>
+<p>We need to understand the count of CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some
+threshold</p>
+<ol>
+<li>So we pick a sample of ~40K CVEs</li>
+<li>But we don't know which ~40K subset of CVEs are relevant for a
+    typical Enterprise</li>
+<li>Instead of picking an exact ~40K subset of CVEs, we can pick lots
+    of ~40K subsets of CVEs randomly, and plot them all.<ol>
+<li><strong>We would know that any Enterprise with the number of CVEs would be
+    represented in those plots</strong></li>
+<li>In other words, Monte Carlo Simulation for a Typical Enterprise</li>
+</ol>
+</li>
+</ol>
+<div class="admonition abstract">
+<p class="admonition-title">Recipe</p>
+<ol>
+<li>Take random % sample of CVEs <ol>
+<li>where, e.g. 20%, corresponds to ~44K CVEs of ~220K CVEs<ol>
+<li>where this number is chosen to be close to (but greater than
+    to give a worst case scenario) the ~40K CVEs observed in
+    the Cisco data set across 1000 enterprises</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Plot the result</li>
+<li>Repeat steps 1,2, e.g. 10,000, times<ol>
+<li>It turns out that the result (shape) i pretty much the same if we repeat
+    100,000 times</li>
+</ol>
+</li>
+<li>With a large number of iterations (e.g. 10,000), the result is a thick band (composed of 10,000 individual lines)<ol>
+<li>The gray band represents any and all possible outcomes for the sample.</li>
+</ol>
+</li>
+<li>We apply this recipe to<ol>
+<li>CVEs: CVEs of different population sizes (# CVEs)</li>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed (<abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01): The same populations <ol>
+<li>with <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed because we want to see the effect of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold and our example policy says we need to fix <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs anyway</li>
+<li>with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01 to zoom in on the detail.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<table>
+<thead>
+<tr>
+<th># CVEs</th>
+<th>CVEs</th>
+<th><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed (<abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.5% (~1.1K)</strong></td>
+<td><img alt="" src="../../assets/images/monte_carlo_1k.png" /></td>
+<td><img alt="" src="../../assets/images/monte_carlo_1k_removed.png" /></td>
+</tr>
+<tr>
+<td><strong>5% (~11K)</strong></td>
+<td><img alt="" src="../../assets/images/monte_carlo_11k.png" /></td>
+<td><img alt="" src="../../assets/images/monte_carlo_11k_removed.png" /></td>
+</tr>
+<tr>
+<td><strong>20% (~44K)</strong></td>
+<td><img alt="" src="../../assets/images/monte_carlo_44k.png" /></td>
+<td><img alt="" src="../../assets/images/monte_carlo_44k_removed.png" /></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This analysis is independent of the counts of each <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>
+in the organization i.e. how many occurrences of each <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>, e.g.
+<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2021-44228, are there in the organization. </p>
+</div>
+<div class="admonition observations">
+<p class="admonition-title">Observations</p>
+<ol>
+<li>We can see that below <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.1, there's a
+    significant increase in the count of CVEs for All CVEs<ol>
+<li>in other words, for a small decrease in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score, there's a
+    very large increase in count of CVEs we would need to fix</li>
+</ol>
+</li>
+<li>We can see that between <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.9 and 0.1,
+    there's a relatively small increase in the count of CVEs as we
+    decrease <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score<ol>
+<li>in other words, for a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range
+    0.1 to 0.9, there's a relatively small change in count of CVEs
+    we would need to fix - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
+    0.1 means we cover a very large range of probability of exploit</li>
+<li>in other words, if we're going to fix CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt;= 0.9,
+    then it doesn't cost us much to fix CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.1 (while
+    covering a relatively large range of probability of exploit)</li>
+</ol>
+</li>
+<li>For 0.5% (~1.1K) of CVEs plot, the width of the band for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.2 is ~250 and for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.9 is ~200 CVEs<ol>
+<li>For much bigger populations, e.g. 20% (~44K), the width of the band is not much wider (as we'd expect given only a small percentage of CVEs have an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above 0.1)</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Takeaways</p>
+<ol>
+<li>For any organization, a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to fix - for a very large range of probability of exploitation (10%-100%).</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Contributors to the Risk Based Prioritization Guide.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io" target="_blank" rel="noopener" title="Risk Based Prioritization Guide" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/" target="_blank" rel="noopener" title="Report an Issue or Suggest a Change" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.4c-15.7 0-28.4-12.7-28.4-28.4V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7.7 1.3 1.4 1.9 2.1 14.2-7.3 30.4-11.4 47.5-11.4H312c17.1 0 33.2 4.1 47.5 11.4.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7.7-1.4 1.3-2.1 1.9 6.2 12 10.1 25.3 11.1 39.5H480c17.7 0 32 14.3 32 32s-14.3 32-32 32h-64c0 24.6-5.5 47.8-15.4 68.6 2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6V240c0-8.8-7.2-16-16-16s-16 7.2-16 16v239.2c-34.5-3.4-65.8-17.8-90.3-39.6l-63 63c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h64.3c1.1-14.1 5-27.5 11.1-39.5-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io" target="_blank" rel="noopener" title="Risk Based Prioritization source on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/print_page/" target="_blank" rel="noopener" title="Save as HTML or print to PDF / paper" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

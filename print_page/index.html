@@ -2535,11 +2535,27 @@ in the wild.</p>
 </ol>
 <h2 id="epss-introduction_to_epss-count-of-cves-at-or-above-epss-score">Count of CVEs at or above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score<a class="headerlink" href="#epss-introduction_to_epss-count-of-cves-at-or-above-epss-score" title="Permanent link">&para;</a></h2>
 <p>In stark contrast to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores and Ratings, (which are top heavy - most CVEs at the upper end of Severity), <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is bottom heavy (the vast majority of CVEs have a low <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score).</p>
-<p>TODO Count of CVEs at or above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score - diagram below is count at an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score - not above</p>
 <figure>
-<p><img alt="Image title" src="../assets/images/epss_hist.png" />
+<p><img alt="" src="../assets/images/epss_hist.png" />
   </p>
 <figcaption> How many CVEs at a given EPSS score? 
+</figcaption>
+</figure>
+<figure>
+<p><img alt="" src="../assets/images/epss_percentiles.png" />
+  </p>
+<figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins
+</figcaption>
+</figure>
+<h2 id="epss-introduction_to_epss-using-epss-with-known-exploitation">Using <abbr title="Exploit Prediction Scoring System">EPSS</abbr> with Known Exploitation<a class="headerlink" href="#epss-introduction_to_epss-using-epss-with-known-exploitation" title="Permanent link">&para;</a></h2>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq</p>
+</div>
+<figure>
+<p><img alt="" src="../assets/images/worry_quadrant.png" width="600" />
+  </p>
+<figcaption> Using EPSS with Known Exploitation
 </figcaption>
 </figure>
 <div class="admonition success">
@@ -2553,10 +2569,14 @@ in the wild.</p>
 <li><abbr title="Exploit Prediction Scoring System">EPSS</abbr> provides <ol>
 <li>a score for all published CVEs on how likely they are to be exploited (in the next 30 days)</li>
 <li>information on tradeoffs on coverage, efficiency, and level of
-   effort </li>
+   effort</li>
 </ol>
 </li>
 </ol>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq</p>
+</div>
 </div></section><section class="print-page" id="epss-epss_and_cisa_kev"><h1 id="epss-epss_and_cisa_kev-epss-and-cisa-kev"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr><a class="headerlink" href="#epss-epss_and_cisa_kev-epss-and-cisa-kev" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>

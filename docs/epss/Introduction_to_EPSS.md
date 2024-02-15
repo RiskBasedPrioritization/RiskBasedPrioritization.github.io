@@ -74,13 +74,32 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
 
 In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most CVEs at the upper end of Severity), EPSS is bottom heavy (the vast majority of CVEs have a low EPSS score).
 
-TODO Count of CVEs at or above EPSS Score - diagram below is count at an EPSS score - not above
 <figure markdown>
-  ![Image title](../assets/images/epss_hist.png)
+  ![](../assets/images/epss_hist.png)
   <figcaption> How many CVEs at a given EPSS score? 
 </figcaption>
 </figure>
-  
+
+<figure markdown>
+  ![](../assets/images/epss_percentiles.png)
+  <figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins
+</figcaption> 
+</figure>
+
+## Using EPSS with Known Exploitation 
+
+!!! quote
+
+    If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq
+
+<figure markdown>
+  ![](../assets/images/worry_quadrant.png){width="600"}
+  <figcaption> Using EPSS with Known Exploitation
+</figcaption>
+</figure>
+
+
+
 
 !!! success "Takeaways"
 
@@ -90,4 +109,8 @@ TODO Count of CVEs at or above EPSS Score - diagram below is count at an EPSS sc
     2. EPSS provides 
           1. a score for all published CVEs on how likely they are to be exploited (in the next 30 days)
           2. information on tradeoffs on coverage, efficiency, and level of
-           effort 
+           effort
+
+    !!! quote
+
+        If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq

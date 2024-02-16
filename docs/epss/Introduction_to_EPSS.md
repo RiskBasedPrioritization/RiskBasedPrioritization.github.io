@@ -6,6 +6,7 @@
 
     -   what it is and what it gives us
     -   why we should care 
+    -   how to use it together with evidence of known exploitation
     -   a plot of EPSS scores for all CVEs
 
 
@@ -70,6 +71,32 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
         optimal remediation strategy: coverage, efficiency, and level of
         effort 
 
+## Using EPSS with Known Exploitation 
+
+!!! quote
+
+    If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq
+
+<figure markdown>
+  ![](../assets/images/worry_quadrant.png){width="600"}
+  <figcaption> Using EPSS with Known Exploitation</figcaption>
+</figure>
+
+
+!!! quote "Active Exploitation"
+    If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel.
+    
+    https://www.first.org/epss/faq
+
+!!! tip  "Using EPSS when there is no Known Evidence of Active Exploitation"
+    - [There isn't an authoritative common public list of ALL CVEs that are Known Actively Exploited in the wild](#what-vulnerabilities-are-being-exploited)
+    - So as a user, it will be common to see CVEs with a High EPSS score, where you have no other intel on their exploitation.
+
+    !!! quote
+        If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited. 
+        
+        https://www.first.org/epss/faq
+
 ## Count of CVEs at or above EPSS Score
 
 In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most CVEs at the upper end of Severity), EPSS is bottom heavy (the vast majority of CVEs have a low EPSS score).
@@ -85,18 +112,6 @@ In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most C
   <figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins</figcaption> 
 </figure>
 
-## Using EPSS with Known Exploitation 
-
-!!! quote
-
-    If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq
-
-<figure markdown>
-  ![](../assets/images/worry_quadrant.png){width="600"}
-  <figcaption> Using EPSS with Known Exploitation</figcaption>
-</figure>
-
-
 
 
 !!! success "Takeaways"
@@ -108,7 +123,8 @@ In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most C
           1. a score for all published CVEs on how likely they are to be exploited (in the next 30 days)
           2. information on tradeoffs on coverage, efficiency, and level of
            effort
+    !!! quote 
+        If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel.         If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited. 
+        
+        https://www.first.org/epss/faq
 
-    !!! quote
-
-        If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq

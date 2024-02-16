@@ -24,5 +24,5 @@
 | **Edgescan**  | EPSS is visible as a floating point score (0.00) alongside CVSS, CISAKEV (boolean) and EVSS (Edgescan Validated Security Score).  Edgescan has also implemented an overall priority score combining CVSS, EPSS and CISA KEV with some weightings to deliver an overall priority score, we call this the Edgescan eXposure Factor (EXF). https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/                                                                                                                     |               ✅              |
 | **Mend.io**  | SCA tool shows CVSS score, EPSS score, and public exploits per https://docs.mend.io/bundle/sca_user_guide/page/public_exploits_in_mend_sca.html                                                                                                                                                                                                                                                                                                                                                                                                                       |                             |
 
-!!! warning
-    This data is subject to change as vendors add more support for EPSS. Check vendor documentation.
+{!includes/vendor_warning.md!}
+

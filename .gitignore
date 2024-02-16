@@ -4,8 +4,6 @@ site
 checklinks_report.txt
 .DS_Store
 
-epss/Applying_EPSS_to_your_environment.md
 docs/vendors/EdgeScan.md
 organizations/acme/Applied.md
 organizations/acme/EDA.md
-introduction/code_and_data.md

@@ -8,3 +8,4 @@
 *[CISA]: Cybersecurity & Infrastructure Security Agency
 *[NVD]: National Vulnerability Database
 *[Risk]: The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.
+*[CTI]: CTI Cyber Threat Intelligence. 

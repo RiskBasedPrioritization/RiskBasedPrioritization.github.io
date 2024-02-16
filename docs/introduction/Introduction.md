@@ -72,17 +72,17 @@ If you're looking for the "easy button", or the one scheme to rule them all for 
 
 ## How to Contribute to This Guide
 
-You can contribute content or suggest changes via a Github PR or comment TODO insert link.
+ You can contribute content or suggest changes:
 
-Multiple independent data and reference inputs would really help:
-
-- If you're a tool/solution vendor, and would like to provide anonymized, sanitized data - or what scoring system you use and why
-- If you'd like to share what your organization is doing (anonymized, sanitized as required) as a good reference example
+* :fontawesome-solid-lightbulb: [Suggest content ](https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/)
+* :fontawesome-solid-bug: [Report Errors, typos](https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/)
+* :fontawesome-solid-database: If you're a tool/solution vendor, and would like to provide anonymized, sanitized data - or what scoring system you use and why
+* :fontawesome-solid-people-carry-box: If you'd like to share what your organization is doing (anonymized, sanitized as required) as a good reference example
 
 ## Foreword by Chris Madden
 I embarked on this Risk Based Prioritization journey because, as a Product Security engineer, my role is to enable the flow of software/value to our customers by helping deliver high quality software efficiently and securely.
 
-A large part of that was to be able to prioritize vulnerabilities by Real Risk. Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. There's a friendly vibrant community in this space.
+A large part of that was to be able to prioritize vulnerabilities by Real Risk. Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. There's a friendly vibrant community in this space - many of whom have contributed to this guide.
 
 
 ## Source Code

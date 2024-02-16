@@ -63,9 +63,9 @@ In addition, there are many more Vulnerability Data Sources:
 2. [Red Hat Security Advisories/RHSB](https://access.redhat.com/security/updates/advisory/)
 3. [Go Vulnerability Database](https://vuln.go.dev/)
 4. [Dell Security Advisory](https://www.dell.com/support/security/en-ie)
-5.  Qualys Vulnerability database
-6.  Tenable Vulnerability database
-7.  BID TODO
+5. Qualys Vulnerability database
+6. Tenable Vulnerability database
+7. [Trickest](https://github.com/trickest/cve) "Almost every publicly available CVE PoC"
 
 Cyber Threat Intelligence vendors may provide an aggregation of this data.
 

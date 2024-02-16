@@ -9,7 +9,7 @@ nav:
     - Introduction: introduction/Introduction.md
     - Contributors: introduction/contributors.md
     - Scope: introduction/Scope.md
-#    - Source Code and Data: introduction/code_and_data.md
+    - Source Code and Data: introduction/code_and_data.md
   - Risk: 
     - Vulnerability Landscape: risk/Vulnerability_Landscape.md
     - Understanding Risk: risk/Understanding_Risk.md
@@ -19,9 +19,9 @@ nav:
     - Common Vulnerability Scoring System (CVSS): cvss/CVSS.md
     - Exploit Prediction Scoring System (EPSS):
       - Exploit Prediction Scoring System (EPSS): epss/Introduction_to_EPSS.md
+      - Applying EPSS to your environment: epss/Applying_EPSS_to_your_environment.md
       - EPSS and CISA Known Exploited Vulnerabilities (CISA KEV): epss/EPSS_and_CISA_KEV.md
       - Counts of CVEs by EPSS: epss/Count_of_CVEs_by_EPSS.md
-      - Applying EPSS to your environment: epss/Applying_EPSS_to_your_environment.md
     - CISA Known Exploited Vulnerabilities (CISA KEV): cisa_kev/cisa_kev.md
     - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): 
       - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): cisa_ssvc/SSVC.md

@@ -130,6 +130,7 @@ and the reason for the unscored CVEs by Qualys. 
 <figcaption>Qualys QVS vs EPSS  </figcaption> 
 </figure>
 
+{!includes/vendor_warning.md!}
 
 !!! success "Takeaways"
     1. "The focus should be given to CVEs known to be exploited in the wild (CISA KEV), those with a high likelihood of exploitation (indicated by a high EPSS score), and those with weaponized exploit code available"

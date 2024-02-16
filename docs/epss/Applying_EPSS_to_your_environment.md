@@ -2,12 +2,12 @@
 
 !!! abstract "Overview"
 
-    In this section we look at some of the considerations in interpreting EPSS scores for CVEs in our environment.
+    In this section we look at some of the considerations in interpreting EPSS scores for CVEs in YOUR environment:
 
-At the time of writing this guide, [CISA Warns of Active Exploitation Apple iOS and macOS Vulnerability](https://thehackernews.com/2024/02/cisa-warns-of-active-exploitation-of.html).
-This CVE has a consistently low EPSS score near zero https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series.
+    - Type of Environment where EPSS works best
+    - Types of CVEs that EPSS works best for
 
-#### What does the EPSS score actually mean?
+## EPSS for YOUR Environment
 
 The [EPSS Model](https://www.first.org/epss/model) ground truth and validation is based on exploitation observations from
 network- or host-layer intrusion detection/prevention systems (IDS/IPS),
@@ -15,65 +15,33 @@ and honeypots, deployed globally at scale by the EPSS commercial data
 partners.
 
 The EPSS score is the likelihood the observations will contain a
-specific CVE in the next 30 days in this "EPSS Environment". 
+specific CVE in the next 30 days in this **"EPSS Environment"**. 
 
-The EPSS score for a CVE does not depend on count of observations i.e. 1 or many observations results in the same score.
+- The EPSS score for a CVE does not depend on count of observations i.e. 1 or many observations results in the same score.
 
-If our environment is similar to the environment of the EPSS model then we can assume that similar probability of exploitation activity would apply to our environment, and therefore the EPSS score. 
-We can apply this score to our environment.
-
-!!! quote
-    Organizations should measure and validate the usefulness of EPSS in their environments. No organization should assume that its environment matches the data used to train EPSS. However, many organizations’ environments should be a near-enough match. 
+!!! tip "If YOUR environment is similar to the EPSS model environment, then a similar probability of exploitation activity should apply to YOUR environment, and therefore the EPSS scores for the CVEs in your environment."
 
 
-#### Remediation Prioritization for your Environment
+    !!! quote
+        Organizations should measure and validate the usefulness of EPSS in their environments. No organization should assume that its environment matches the data used to train EPSS. However, many organizations’ environments should be a near-enough match.  
 
-The number of CVEs found in your environment will be a subset of all
-published CVEs, and will depend on:
+        [Probably Don’t Rely on EPSS Yet](https://insights.sei.cmu.edu/blog/probably-dont-rely-on-epss-yet/), Jonathan Spring, June 6, 2022
 
-1.  the technology stacks in your environment
-2.  your ability to detect these CVEs
+### Enterprise Environment
 
-  
+!!! tip "EPSS is best suited to enterprise environments"
+    
 
-The graph of Coverage vs Efficiency vs Effort is based on CVEs detected
-in the EPSS Model Environment
+    !!! quote
+        Similarly, these detection systems will be typically installed on
+        public-facing perimeter internet devices, and therefore less suited to
+        detecting computer attacks against internet of things (IoT) devices,
+        automotive networks, ICS, SCADA, operational technology (OT), medical
+        devices, etc
 
+        [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
 
-
-It does not differentiate between 1 instance of a CVE versus many
-i.e. in an organization, there may be many instances of a small
-number of CVEs, and then fewer instances of other CVEs.
-1.  E.g. if there's a CVE in a software component that's pervasive
-    in your organization, there will be many counts of that CVE. 
-2.  Your Remediation effort will be based on the counts per CVEs in
-    your environment
-  
-
-#### EPSS Percentile Score for your Environment
-
-Percentiles are a direct transformation from probabilities and provide a measure of an EPSS probability relative to all other scores. That is, the percentile is the proportion of all values less than or equal to the current rank. 
-
-The EPSS Percentile score is relative to all ~~220K published CVEs
-that have an EPSS score.
-
-A fraction of those CVEs will apply to a typical organization e.g.
-~~20K.
-
-A user is likely more interested in the EPSS Percentile for their
-organization - than for all CVEs.
-
-A CVE's EPSS Percentile could be e.g. 60% - but in the 90% percentile
-for the CVEs in the organization (if the organization has few CVEs with
-high EPSS score).
-
-The EPSS Percentile is easily calculated for your organization (based on
-the subset of CVEs applicable to your organization and their EPSS
-scores).
-
-  
-
-#### Higher Exploitability
+### Network Attacks
 
 Vulnerabilities that are remotely exploitable (i.e. Network Attack
 Vector in CVSS Base Score terms) have a higher Exploitability (CVSS Base
@@ -86,36 +54,36 @@ Score Exploitability metrics group)  
 
 EPSS is best suited to these types of vulnerabilities.
 
-> *Moreover, the nature of the detection devices generating the events
-> will be biased toward detecting network based attacks, as opposed to
-> attacks from other attack vectors such as host-based attacks or
-> methods requiring physical proximity*
+!!! quote
+    Moreover, the nature of the detection devices generating the events
+    will be biased toward detecting network based attacks, as opposed to
+    attacks from other attack vectors such as host-based attacks or
+    methods requiring physical proximity
 
-#### Enterprise Environment
-
-EPSS is best suited to enterprise environments. 
-
-> *Similarly, these detection systems will be typically installed on
-> public-facing perimeter internet devices, and therefore less suited to
-> detecting computer attacks against internet of things (IoT) devices,
-> automotive networks, ICS, SCADA, operational technology (OT), medical
-> devices, etc*
+    [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
 
 
+!!! example
 
+    At the time of writing this guide, [CISA Warns of Active Exploitation Apple iOS and macOS Vulnerability](https://thehackernews.com/2024/02/cisa-warns-of-active-exploitation-of.html).
 
-#### False Positives and Negatives
+    This CVE has a consistently low EPSS score near zero [(https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series)](https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series).
 
-Exploitation Observations
+    This is to be expected because the CVE Attack Vector is "Local", not Network, per [(https://nvd.nist.gov/vuln/detail/CVE-2022-48618)](https://nvd.nist.gov/vuln/detail/CVE-2022-48618) 
+
+## False Positives and Negatives
 
 As with any tool, with these IDS/IPS and honeypot exploitation
-observations, there will be False Positives (though these are typically
+observations used to feed the EPSS model, there will be False Positives (though these are typically
 low with signature-based detection systems), and False Negatives:
 
-> *any signature-based detection device is only able to alert on events
-> that it was programmed to observe. Therefore, we are not able to
-> observe vulnerabilities that were exploited but undetected by the
-> sensor because a signature was not written*
+!!! quote
+    Any signature-based detection device is only able to alert on events
+    that it was programmed to observe. Therefore, we are not able to
+    observe vulnerabilities that were exploited but undetected by the
+    sensor because a signature was not written.
+
+    [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
 
 The
 <u><a href="https://www.first.org/epss/model" rel="nofollow">EPSS Model</a></u>
@@ -137,17 +105,62 @@ Exploitation Types and Environment that EPSS is less suited for.
 
 
 
+#### Remediation Prioritization for your Environment
+
+The number of CVEs found in your environment will be a subset of all
+published CVEs, and will depend on:
+
+1.  the technology stacks in your environment
+2.  your ability to detect these CVEs
+
+Per [What Does EPSS Provide?](Introduction_to_EPSS.md/#what-does-epss-provide), 
+
+The EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.
+  
+<figure markdown>
+  ![](../assets/images/epss_coverage.jpeg)
+  <figcaption>Picking Thresholds for EPSS</figcaption>
+</figure>
+This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp) will be superseded by a blog post on first.org/epss when published
 
 
+!!! note
+    It does not differentiate between 1 instance of a CVE versus many
+    i.e. in an organization, there may be many instances of a small
+    number of CVEs, and then fewer instances of other CVEs.
+
+    -  E.g. if there's a CVE in a software component that's pervasive
+        in your organization, there will be many counts of that CVE. 
+    -  Your Remediation effort will be based on the counts per CVEs in
+        your environment
   
 
-  
+#### EPSS Percentile Score for your Environment
 
-  
-## References
-1.   [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
-2.   [Probably Don’t Rely on EPSS Yet](https://insights.sei.cmu.edu/blog/probably-dont-rely-on-epss-yet/), Jonathan Spring, June 6, 2022
+Percentiles are a direct transformation from probabilities and provide a measure of an EPSS probability relative to all other scores. That is, the percentile is the proportion of all values less than or equal to the current rank. 
+
+- The EPSS Percentile score is relative to all ~~220K published CVEs
+that have an EPSS score.
+- A fraction of those CVEs will apply to a typical organization e.g.
+~~20K.
+- A user is likely more interested in the EPSS Percentile for their
+organization - than for all CVEs.
+- A CVE's EPSS Percentile could be e.g. 60% - but in the 90% percentile
+for the CVEs in the organization (if the organization has few CVEs with
+high EPSS score).
+
+!!! tip
+    The EPSS Percentile is easily calculated for your organization (based on
+    the subset of CVEs applicable to your organization and their EPSS
+    scores). 
+
+    Source code is provided with this guide to calculate EPSS percentiles for a list of CVEs.
+
 
 !!! success "Takeaways"        
     
-    1. F
+    1. When applying EPSS to your environment, you should understand that EPSS is best suited to 
+          1. Enterprise environments
+          2. Detect Network attacks
+    2. Code is provided to calculate EPSS score percentiles for your environment/CVEs
+    3. The EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies

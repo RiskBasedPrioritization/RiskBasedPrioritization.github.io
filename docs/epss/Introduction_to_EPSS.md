@@ -82,8 +82,7 @@ In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most C
 
 <figure markdown>
   ![](../assets/images/epss_percentiles.png)
-  <figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins
-</figcaption> 
+  <figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins</figcaption> 
 </figure>
 
 ## Using EPSS with Known Exploitation 
@@ -94,8 +93,7 @@ In stark contrast to CVSS Base Scores and Ratings, (which are top heavy - most C
 
 <figure markdown>
   ![](../assets/images/worry_quadrant.png){width="600"}
-  <figcaption> Using EPSS with Known Exploitation
-</figcaption>
+  <figcaption> Using EPSS with Known Exploitation</figcaption>
 </figure>
 
 

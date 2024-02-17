@@ -115,7 +115,7 @@ likely on top  
         is most likely to be exploited again in your organization in the
         future.
 2.  **Known Actively Exploited in the wild**
-    1.  CISA KEV lists **a subset** (~~10%) of known actively
+    1.  CISA KEV lists **a subset** of known actively
         exploited Vulnerabilities in the wild.
     2.  **There isn't an authoritative common public list of ALL Vulnerabilities that are Known Actively Exploited in the wild.**
 3.  **Weaponized Exploit**
@@ -213,7 +213,10 @@ likely on top  
 
 ## Zero Days
 
-EPSS scores won’t be available for Zero Days (because EPSS depends on the CVE being published and it can take several days for the associated CVE to be published) per "[The State of Exploit Development: 80% of Exploits Publish Faster than CVEs](https://unit42.paloaltonetworks.com/state-of-exploit-development/)".
+!!! quote
+    EPSS scores won’t be available for Zero Days (because EPSS depends on the CVE being published and it can take several days for the associated CVE to be published).
+    
+    "[The State of Exploit Development: 80% of Exploits Publish Faster than CVEs](https://unit42.paloaltonetworks.com/state-of-exploit-development/)".
 
 !!! quote
     A zero-day vulnerability is a flaw in software or hardware that is unknown to a vendor prior to its public disclosure, or has been publicly disclosed prior to a patch being made available. As soon as a zero day is disclosed and a patch is made available it, of course, joins the pantheon of known vulnerabilities.  
@@ -242,5 +245,7 @@ EPSS scores won’t be available for Zero Days (because EPSS depends on the CVE 
     3. EPSS scores won't be available for Zero-Days
     4. "Don’t go chasing zero days, patch your known vulnerabilities instead"
     5. It is the responsibility of the CVSS Consumer/user to populate the CVSS Exploit Maturity values i.e. unlike the CVSS Base Score, these are not provided.
+    6. Criteria for "Exploitation" are different for EPSS and CISA KEV.
+
 
 

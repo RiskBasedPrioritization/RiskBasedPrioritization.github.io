@@ -1,16 +1,16 @@
-# CISA Stakeholder-Specific Vulnerability Categorization (SSVC)
+# Stakeholder-Specific Vulnerability Categorization (SSVC)
 
 !!! abstract "Overview"
 
-    This section covers [CISA Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459)
+    This section covers [Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459)
     and how EPSS can be used with it.
 
     :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_ssvc_dt/DT_analysis.ipynb) 
   
 
-## CISA SSVC
+## SSVC
 
-[CISA Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459) is proposed as an alternative to CVSS.
+[Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459) is proposed as an alternative to CVSS Base Scores.
 
 It is based on CMU SEI (Carnegie Mellon University Software
 Engineering Institute):
@@ -22,12 +22,6 @@ Engineering Institute):
 -   <a
     href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886543"
     rel="nofollow">Coordinated Vulnerability Disclosure User Stories</a>
-
-
-!!! quote
-    The authors outline challenges with the Common Vulnerability Scoring System (CVSS) published standard and propose changes to improve it. This paper focuses on common misconceptions and misuses of CVSS. For an alternative system of vulnerability prioritization, see Prioritizing Vulnerability Response: A [Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459)
-
-    [Towards Improving CVSS](https://insights.sei.cmu.edu/library/towards-improving-cvss/)
 
 !!! quote
 
@@ -49,12 +43,12 @@ Engineering Institute):
   
 <figure markdown>
 ![Image title](../assets/images/cisa_ssvcdt.png){ width="700" }
-<figcaption>CISA SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption> 
+<figcaption>SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
   
 <figure markdown>
 ![Image title](../assets/images/cisadt_decisions.png){ width="700" }
-<figcaption>CISA SSVC Decision Tree Decisions https://www.cisa.gov/ssvc-calculator</figcaption> 
+<figcaption>SSVC Decision Tree Decisions https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
 
 

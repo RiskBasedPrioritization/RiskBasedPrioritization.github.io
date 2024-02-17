@@ -30,8 +30,8 @@
 !!! info
 
     1.  All CVEs in CISA KEV are actively exploited (see [criteria for inclusion in CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities))
-    2.  Only ~~10% of exploited CVEs are in CISA KEV
-    3.  Only ~~5% of CVEs are exploited
+    3.  Only ~~5% of CVEs are known exploited
+    2.  CISA KEV contains a subset if known exploited CVEs
 
 
 ## What does EPSS look like for CISA KEV?

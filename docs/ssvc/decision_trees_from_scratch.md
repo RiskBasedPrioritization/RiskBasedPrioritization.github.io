@@ -3,8 +3,7 @@
 !!! abstract "Overview"
 
     In this section, we walk-through building a Risk-Based Prioritization Decision
-    Tree for use as a first-pass triage of CVEs based on https://resources.sei.cmu.edu/asset_files/WhitePaper/2021_019_001_653461.pdf"
-    rel="nofollow">CISA SSVC, from scratch, in code.
+    Tree for use as a first-pass triage of CVEs based on [Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)](https://resources.sei.cmu.edu/asset_files/WhitePaper/2021_019_001_653461.pdf) from scratch, in code.
 
     The recipe:
 

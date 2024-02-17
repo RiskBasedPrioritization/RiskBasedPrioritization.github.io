@@ -37,6 +37,7 @@ TODO update venn with latest data - and add weaponized exploits
 
 ## Likelihood of Exploit Data Sources
 
+This table shows the number of CVEs (from all published CVEs) that are listed in that data source:
 
 | Data Source |    Detail     | ~~ CVE count K | 
 |-------------|:-------------:|---------------:|
@@ -44,7 +45,9 @@ TODO update venn with latest data - and add weaponized exploits
 | [Metasploit modules](https://github.com/rapid7/metasploit-framework)  | **Weaponized** Exploit |              3 | 
 | [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates)      |  **Weaponized** Exploit           |              2 | 
 | [ExploitDB](https://gitlab.com/exploit-database/exploitdb)   |  **Published** Exploit Code             |            25 | 
-| [EPSS](https://www.first.org/epss/api)        |    **Predictor** of Exploitation   |        220 | 
+
+[EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. 
+
 
 !!! tip
     **The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).**

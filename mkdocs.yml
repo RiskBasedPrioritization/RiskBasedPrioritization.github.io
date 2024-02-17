@@ -23,10 +23,10 @@ nav:
       - EPSS and CISA Known Exploited Vulnerabilities (CISA KEV): epss/EPSS_and_CISA_KEV.md
       - Counts of CVEs by EPSS: epss/Count_of_CVEs_by_EPSS.md
     - CISA Known Exploited Vulnerabilities (CISA KEV): cisa_kev/cisa_kev.md
-    - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): 
-      - CISA Stakeholder-Specific Vulnerability Categorization (CISA SSVC): cisa_ssvc/SSVC.md
-      - Decision Trees From Scratch: cisa_ssvc/decision_trees_from_scratch.md
-      - Decision Trees Example Usage: cisa_ssvc/decision_trees.md
+    - Stakeholder-Specific Vulnerability Categorization (SSVC): 
+      - Stakeholder-Specific Vulnerability Categorization (SSVC): ssvc/SSVC.md
+      - Decision Trees From Scratch: ssvc/decision_trees_from_scratch.md
+      - Decision Trees Example Usage: ssvc/decision_trees.md
     - Applied Log4Shell Example: risk/Log4Shell.md
   - Vendors: 
     - Vendors: vendors/vendors.md

@@ -103,7 +103,7 @@ rel="nofollow">https://youtu.be/oMZN810xfck?t=896</a>.
 
   
 <figure markdown>
-  ![](../assets/images/YahooCVEsCVSSscorescountsofCVEsEPSSscores.png)
+  ![](../assets/images/YahooCVEsCVSSscorescountsofCVEsEPSSscores.jpg)
   <figcaption> Plot of CVEs CVSS scores, counts of CVEs, EPSS scores <br>The plots are based on real data (the pattern is the same whether 1 or several tools in the DevOps pipeline are viewed, or an aggregate of CVEs across those tools).
 </figcaption>
 </figure>

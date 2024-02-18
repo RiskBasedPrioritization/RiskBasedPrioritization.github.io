@@ -88,7 +88,7 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
-
+  - pymdownx.magiclink # to hyperlink all urls
   - admonition
   - pymdownx.arithmatex:
       generic: true

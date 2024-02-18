@@ -42,3 +42,8 @@ mkdocs gh-deploy --force
 # All "!!! info/tip/note" should have text to summarize
 # !!! abstract "Overview"
 # !!! success "Takeaways"
+
+# optimize image sizes/formats for web rendering / speed
+
+# mkdocs setup examples
+# https://roadie.io/docs/details/techdocs/ 

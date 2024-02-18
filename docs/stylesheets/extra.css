@@ -1,4 +1,21 @@
 :root {
+  --md-admonition-icon--userstory: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0-160 0 80 80 0 1 0 160 0zm-208 0a128 128 0 1 1 256 0 128 128 0 1 1-256 0zM49.3 464h349.4c-8.9-63.3-63.3-112-129-112h-91.4c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>')
+.md-typeset .admonition.userstory,
+.md-typeset details.userstory {
+  border-color: rgb(255,140,0);
+}
+.md-typeset .userstory > .admonition-title,
+.md-typeset .userstory > summary {
+  background-color: rgba(255,140,0, 0.1);
+}
+.md-typeset .userstory > .admonition-title::before,
+.md-typeset .userstory > summary::before {
+  background-color: rgb(255,140,0);
+  -webkit-mask-image: var(--md-admonition-icon--userstory);
+          mask-image: var(--md-admonition-icon--userstory);
+}
+
+:root {
     --md-admonition-icon--observations: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24v464c0 13.3 10.7 24 24 24s24-10.7 24-24V388l80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4 44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0-35.1-17.6-75.4-22-113.5-12.5L48 52V24zm0 77.5 96.6-24.2c27-6.7 55.5-3.6 80.4 8.8 54.9 27.4 118.7 29.7 175 6.8v241.8l-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5v-237z"/></svg>')
   }
   .md-typeset .admonition.observations,
@@ -15,6 +32,8 @@
     -webkit-mask-image: var(--md-admonition-icon--observations);
             mask-image: var(--md-admonition-icon--observations);
   }
+
+
 
 
   h1 {

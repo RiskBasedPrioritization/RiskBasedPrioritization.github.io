@@ -1257,9 +1257,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-and-fix-vulnerabilities-by-risk" class="md-nav__link">
+  <a href="#find-and-remediate-vulnerabilities-by-risk" class="md-nav__link">
     <span class="md-ellipsis">
-      Find and Fix Vulnerabilities By Risk
+      Find and remediate Vulnerabilities By Risk
     </span>
   </a>
   
@@ -1560,9 +1560,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#find-and-fix-vulnerabilities-by-risk" class="md-nav__link">
+  <a href="#find-and-remediate-vulnerabilities-by-risk" class="md-nav__link">
     <span class="md-ellipsis">
-      Find and Fix Vulnerabilities By Risk
+      Find and remediate Vulnerabilities By Risk
     </span>
   </a>
   
@@ -1802,9 +1802,9 @@ context and should be written by real users.</p>
 <p>It is useful to describe a scenario from 2 perspectives: how things look
 now, and how the user would like things to look in the future
 (aspirational).</p>
-<h3 id="find-and-fix-vulnerabilities-by-risk">Find and Fix Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr><a class="headerlink" href="#find-and-fix-vulnerabilities-by-risk" title="Permanent link">&para;</a></h3>
+<h3 id="find-and-remediate-vulnerabilities-by-risk">Find and <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr><a class="headerlink" href="#find-and-remediate-vulnerabilities-by-risk" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Product Engineer - DevOps:Find and Fix Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
+<p class="admonition-title">Product Engineer - DevOps:Find and <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
 <p><strong>Background</strong>: There are several tools and services running in the
 DevOps pipeline that detect vulnerabilities in OSS (Open Source
 Software)</p>
@@ -1832,7 +1832,7 @@ coming, more and more every year - it’s relentless!</p>
 <ul>
 <li>tools report <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores.</li>
 </ul>
-<p>But most CVEs have a high <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score, so we have to fix most things.
+<p>But most CVEs have a high <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score, so we have to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> most things.
 It’s whack-a-mole!</p>
 <p>I don’t have a good understanding of all the tools in our DevOps
 pipeline and the vulnerability data they produce. And I don’t know how
@@ -1840,7 +1840,7 @@ to get it. DevOps Tools don’t help us here.</p>
 <p><strong>Post-Narrative</strong>
 <sub><em>(how we want things to be in the future - aspirational)</em></sub></p>
 <p>As a Product Engineer, I care most about my effort vs risk i.e. the
-effort to fix the vulnerabilities in my environment.</p>
+effort to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the vulnerabilities in my environment.</p>
 <p>I use <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as a key part of my risk-based prioritization (along with
 Reachability analysis, and Exploratory Data Analysis to understand the
 root systemic causes for my CVEs).</p>
@@ -1897,7 +1897,7 @@ used to from <abbr title="Common Vulnerability Scoring System Standard. A framew
 <h3 id="compliance-prioritized-by-risk">Compliance Prioritized by <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr><a class="headerlink" href="#compliance-prioritized-by-risk" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Audit and Compliance - Compliance Prioritized by <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
-<p><strong>Background</strong>: There are industry requirements to remediate CVEs above a
+<p><strong>Background</strong>: There are industry requirements to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs above a
 certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score.</p>
 <ul>
 <li>e.g. PCI DSS 4.0 11.3.2.1 “External vulnerability scans are
@@ -1917,8 +1917,8 @@ effort proportional to the threat against a specific asset. A
 database is likely to be subjected to more threat than the canteen menu.</p>
 <p><strong>Post-Narrative</strong>
 <sub><em>(how we want things to be in the future - aspirational)</em></sub></p>
-<p>Even though we need to remediate all CVEs above a certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score,
-we prioritize CVEs by risk so we remediate the highest risk ones first.
+<p>Even though we need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> all CVEs above a certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score,
+we prioritize CVEs by risk so we <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the highest risk ones first.
 In other words, we focus on security and compliance. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores help in
 prioritization efforts.~~</p>
 <p>A guidance on calculating asset and organization specific patching
@@ -1931,7 +1931,7 @@ rel="nofollow">https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customi
 <h3 id="prioritized-by-epss-score-and-remediated-accordingly">Prioritized by <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score and remediated accordingly<a class="headerlink" href="#prioritized-by-epss-score-and-remediated-accordingly" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Management - Prioritized by <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score and remediated accordingly</p>
-<p>Across the board, there is an expectation to remediate CVEs
+<p>Across the board, there is an expectation to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs
 above a certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score. Usually, a <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score of 7 and over. With
 adopting <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores in the risk program, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold needs to be
 defined in the organization policies.</p>
@@ -1952,7 +1952,7 @@ bodies as an acceptable metric. </p>
 <p>How <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is deployed and can be used by a tool vendor to assist with
 vulnerability prioritization at scale. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can provide additional
 embellishment/metadata of a discovered vulnerability and focus and
-organisation efforts on what to fix first. </p>
+organisation efforts on what to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> first. </p>
 <p><strong>Background</strong></p>
 <p>Current state of play: </p>
 <p>Most cyber security teams are drowning in <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>'s and high scoring <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>
@@ -1994,7 +1994,7 @@ The landscape is a twofold beast;</p>
 hundreds, of open vulnerabilities. Most organizations have a stretched
 cyber security team and product development teams should be focusing on
 new product not retrofitting. These challenges combined, result in not
-having the ability to fix all the vulnerabilities all the time. We must
+having the ability to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> all the vulnerabilities all the time. We must
 be able to prioritize based on real-world data. Vulnerability severity
 score alone does not necessarily mean such a vulnerability is commonly
 used to breach a system.  <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to provide real-world breach
@@ -2214,9 +2214,9 @@ of vulnerabilities.</p>
 </div>
 <hr />
 <h2 id="user-stories">User Stories<a class="headerlink" href="#user-stories" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>A User Story takes the form As a [type of user], I want [some goal] so that [some reason]</p>
+<div class="admonition tip">
+<p class="admonition-title">Writing a User Story</p>
+<p>A User Story takes the form As a [type of user], I want [some goal], so that [some reason]</p>
 <p>They should be written by real users e.g. the real users representing
 the Personas (not by the people developing the solution)</p>
 </div>
@@ -2225,14 +2225,14 @@ the Personas (not by the people developing the solution)</p>
 <p class="admonition-title">Focused Vulnerability Fix</p>
 <p>As a Product <strong>Engineer</strong> and user of any vulnerability detection or
 ranking tool, I want to minimize the False Negatives, and the False
-Positives, so I fix the vulnerabilities that should be fixed, and only
+Positives, so I <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the vulnerabilities that should be fixed, and only
 the vulnerabilities that should be fixed.</p>
 </div>
 <h3 id="my-effort-in-my-environment">My Effort in My Environment<a class="headerlink" href="#my-effort-in-my-environment" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">My Effort in My Environment</p>
 <p>As a Product <strong>Engineer,</strong> I care most about my effort i.e. the effort
-to fix the vulnerabilities in my environment. My effort is affected by
+to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the vulnerabilities in my environment. My effort is affected by
 counts of instances for a given <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> ID.</p>
 </div>
 <h3 id="unified-prioritized-personalized-achievable-view">Unified Prioritized Personalized Achievable view<a class="headerlink" href="#unified-prioritized-personalized-achievable-view" title="Permanent link">&para;</a></h3>

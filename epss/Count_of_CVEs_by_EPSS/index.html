@@ -1336,7 +1336,7 @@ independent of business and runtime context):</p>
 </li>
 <li>Remediate CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold<ol>
 <li><strong>we need to understand the effect of picking a threshold, so we do some analysis...</strong></li>
-<li>This is the same policy used in our back of the napkin Model Remediation Policy, but here we additionally "remediate CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold".</li>
+<li>This is the same policy used in our back of the napkin Model Remediation Policy, but here we additionally "<abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold".</li>
 </ol>
 </li>
 </ol>
@@ -1360,7 +1360,7 @@ available to determine the CVEs in each group</p>
 <li><strong>All CVEs</strong></li>
 </ol>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">ExploitDB contains a subset of CVEs with PoC</p>
 <p>A Commercial <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr> as used by the author has ~100K CVEs
 with Exploit PoC (versus the ~25K in the ExploitDB data
 source we used) so this number is not representative of
@@ -1390,9 +1390,9 @@ reality. Users can repeat the analysis with additional data.</p>
 </tbody>
 </table>
 <p>Here we're showing the counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for the groups
-(because we want to pick an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold above which we would fix the
+(because we want to pick an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold above which we would <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the
 CVEs)</p>
-<p>Per the policy we defined, we're going to remediate CVEs in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and
+<p>Per the policy we defined, we're going to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and
 Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score). So later we'll remove these from our counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
     values. In other words, subtract the pink line from the blue line in
     the graphs above</p>
@@ -1409,7 +1409,7 @@ Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS<
 </ol>
 </li>
 <li>The plot shows <ol>
-<li>the count of CVEs above the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for the given thresholds - because we will fix CVEs <strong>above</strong> an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value, and we want to see <strong>how many we would need to fix based on the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value</strong></li>
+<li>the count of CVEs above the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for the given thresholds - because we will <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs <strong>above</strong> an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value, and we want to see <strong>how many we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> based on the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value</strong></li>
 <li>All CVEs ~220K (our enterprise environment will contain a subset of these)</li>
 </ol>
 </li>
@@ -1422,7 +1422,7 @@ Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS<
 <li>We can see that between <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of approximately 0.9 and 0.1,
     there's a relatively small increase in the count of CVEs as we
     decrease <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score<ol>
-<li>in other words, <strong>for a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9, there's a relatively small change in count of CVEs we would need to fix - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.1 means we cover a very large range of probability of exploitation for a relatively small increase in the count of CVEs</strong></li>
+<li>in other words, <strong>for a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9, there's a relatively small change in count of CVEs we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.1 means we cover a very large range of probability of exploitation for a relatively small increase in the count of CVEs</strong></li>
 </ol>
 </li>
 </ol>
@@ -1500,7 +1500,7 @@ threshold</p>
 <li>We apply this recipe to<ol>
 <li>CVEs: CVEs of different population sizes (# CVEs)</li>
 <li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed (<abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01): The same populations <ol>
-<li>with <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed because we want to see the effect of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold and our example policy says we need to fix <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs anyway</li>
+<li>with <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs removed because we want to see the effect of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold and our example policy says we need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and Weaponized CVEs anyway</li>
 <li>with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01 to zoom in on the detail.</li>
 </ol>
 </li>
@@ -1554,10 +1554,10 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
     decrease <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score<ol>
 <li>in other words, for a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range
     0.1 to 0.9, there's a relatively small change in count of CVEs
-    we would need to fix - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
+    we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> - so picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value at or near <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
     0.1 means we cover a very large range of probability of exploit</li>
-<li>in other words, if we're going to fix CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt;= 0.9,
-    then it doesn't cost us much to fix CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.1 (while
+<li>in other words, if we're going to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt;= 0.9,
+    then it doesn't cost us much to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.1 (while
     covering a relatively large range of probability of exploit)</li>
 </ol>
 </li>
@@ -1570,7 +1570,7 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
-<li>For any organization, a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to fix - for a very large range of probability of exploitation (10%-100%).</li>
+<li>For any organization, a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> - for a very large range of probability of exploitation (10%-100%).</li>
 </ol>
 </div>
 

@@ -111,7 +111,7 @@ The data sources used 
                 e.g. "Remote Code Execution", "Denial of Service",
                 "Arbitrary File Read", "Arbitrary File Write",...
 
-!!! tip
+!!! tip "This Exploitation Decision data can be used for any risk prioritization scheme"
     This Exploitation Decision data can be used for any risk prioritization scheme i.e. not specific to SSVC.
     
     * It could be used to inform [CVSS Exploit Maturity (E)](https://www.first.org/cvss/v4.0/specification-document#Exploit-Maturity-E)
@@ -185,7 +185,7 @@ sankey diagram to show how CVEs flow through the tree Decision Nodes
           2. Automatable - Yes
           3. Technical Impact - Total
     2. This fine granularity and clarity is in stark contrast to the coarse granularity of CVSS ratings
-    3. The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to fix by higest priority first!
+    3. The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to remediate by higest priority first!
 
 ## Triage CVEs by Priority
 

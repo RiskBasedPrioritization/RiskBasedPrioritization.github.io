@@ -21,7 +21,7 @@ These can be run
 * locally or offline (requires that you have a Jupyter Notebooks environment setup)
 * online via browser in [Colab](https://colab.research.google.com/). (No environment setup required)
 
-!!! tip
+!!! tip "The source code notebooks are available in Colab to run from your browser"
 
     !!! quote
         Colab, or "Colaboratory", allows you to write and execute Python in your browser, with
@@ -114,7 +114,7 @@ See [https://github.com/CERTCC/SSVC/issues/309](https://github.com/CERTCC/SSVC/i
 
 ## Getting Data from Data Sources
 
-!!! tip
+!!! tip "A snapshot of the data used for this guide is available"
     A snapshot of this data is already available with the source in [data_in](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in)
 
     * A date.txt file is included in each folder with the data that contains the date of downloaded.

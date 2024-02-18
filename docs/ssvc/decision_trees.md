@@ -15,7 +15,7 @@
     2.  Determine what threshold(s) to use when making decisions with EPSS
         scores
 
-    So that I can effectively prioritize which vulnerabilities to fix given
+    So that I can effectively prioritize which vulnerabilities to remediate given
     my remediation capacity.
 
 

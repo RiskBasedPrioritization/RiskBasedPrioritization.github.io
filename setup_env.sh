@@ -27,6 +27,8 @@ mkdocs gh-deploy --force
 
 # push source to main branch
 
+#==================================================
+
 # check spelling an grammar
 # print to pdf and import to GDocs/other and check
 
@@ -35,3 +37,8 @@ mkdocs gh-deploy --force
 
 # remove site header about under construction
 # edit / remove docs/overrides/main.html
+
+# Admonitions guidelines:
+# All "!!! info/tip/note" should have text to summarize
+# !!! abstract "Overview"
+# !!! success "Takeaways"

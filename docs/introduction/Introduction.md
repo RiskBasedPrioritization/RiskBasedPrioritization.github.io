@@ -35,7 +35,7 @@ The guide covers:
     2.  How some users are using them in their environments
 3.  Applying all this for Risk Based Prioritization 
 
-!!! tip
+!!! tip "The guide includes Applied material"
     :material-play-box-edit-outline: on a menu item indicates the content is more hands on - applying the content from the guide.
 
     "🧑‍💻 Source Code" on a page is a link to the source code used to generate any plots or analysis on public data.

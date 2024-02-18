@@ -41,7 +41,7 @@ available to determine the CVEs in each group
     1.  CISA KEV + Metasploit + Nuclei + ExploitDB
 4.  **All CVEs**
 
-!!! note
+!!! note "ExploitDB contains a subset of CVEs with PoC"
     A Commercial CTI as used by the author has ~100K CVEs
     with Exploit PoC (versus the ~25K in the ExploitDB data
     source we used) so this number is not representative of
@@ -56,7 +56,7 @@ available to determine the CVEs in each group
 | **Count of CVEs above EPSS value (Graph range EPSS 0.01 to 1.0 Linear Scale Y-Axis)**   | ![](../assets/images/CountofCVEsaboveEPSSvalue01.png) |
 
 Here we're showing the counts of CVEs above EPSS values for the groups
-(because we want to pick an EPSS threshold above which we would fix the
+(because we want to pick an EPSS threshold above which we would remediate the
 CVEs)
 
 
@@ -75,7 +75,7 @@ Weaponized (independent of EPSS score). So later we'll remove these from our cou
         1.  use a Log scale on the Y axis 
         2.  plot only for EPSS \>= 0.01, and use a linear y-axis 
     3.  The plot shows 
-        1.  the count of CVEs above the EPSS value for the given thresholds - because we will fix CVEs **above** an EPSS value, and we want to see **how many we would need to fix based on the EPSS value**
+        1.  the count of CVEs above the EPSS value for the given thresholds - because we will remediate CVEs **above** an EPSS value, and we want to see **how many we would need to remediate based on the EPSS value**
         2.  All CVEs ~220K (our enterprise environment will contain a subset of these)
     4.  We can see that below EPSS score of approximately 0.1, there's a
         significant increase in the count of CVEs for All CVEs, and Exploit
@@ -84,7 +84,7 @@ Weaponized (independent of EPSS score). So later we'll remove these from our cou
     5.  We can see that between EPSS score of approximately 0.9 and 0.1,
         there's a relatively small increase in the count of CVEs as we
         decrease EPSS score
-        1.  in other words, **for a large change in EPSS score in the range 0.1 to 0.9, there's a relatively small change in count of CVEs we would need to fix - so picking an EPSS value at or near EPSS 0.1 means we cover a very large range of probability of exploitation for a relatively small increase in the count of CVEs**
+        1.  in other words, **for a large change in EPSS score in the range 0.1 to 0.9, there's a relatively small change in count of CVEs we would need to remediate - so picking an EPSS value at or near EPSS 0.1 means we cover a very large range of probability of exploitation for a relatively small increase in the count of CVEs**
 
   
 
@@ -152,7 +152,7 @@ threshold
     5.  We apply this recipe to
         1.  CVEs: CVEs of different population sizes (# CVEs)
         2.  CISA KEV and Weaponized CVEs removed (EPSS > 0.01): The same populations 
-            1.  with CISA KEV and Weaponized CVEs removed because we want to see the effect of picking an EPSS threshold and our example policy says we need to fix CISA KEV and Weaponized CVEs anyway
+            1.  with CISA KEV and Weaponized CVEs removed because we want to see the effect of picking an EPSS threshold and our example policy says we need to remediate CISA KEV and Weaponized CVEs anyway
             2.  with EPSS > 0.01 to zoom in on the detail.
 
 
@@ -184,10 +184,10 @@ threshold
         decrease EPSS score
         1.  in other words, for a large change in EPSS score in the range
             0.1 to 0.9, there's a relatively small change in count of CVEs
-            we would need to fix - so picking an EPSS value at or near EPSS
+            we would need to remediate - so picking an EPSS value at or near EPSS
             0.1 means we cover a very large range of probability of exploit
-        2.  in other words, if we're going to fix CVEs with EPSS \>= 0.9,
-            then it doesn't cost us much to fix CVEs with EPSS \> 0.1 (while
+        2.  in other words, if we're going to remediate CVEs with EPSS \>= 0.9,
+            then it doesn't cost us much to remediate CVEs with EPSS \> 0.1 (while
             covering a relatively large range of probability of exploit)
     3.  For 0.5% (~1.1K) of CVEs plot, the width of the band for EPSS 0.2 is ~250 and for EPSS 0.9 is ~200 CVEs
         1.  For much bigger populations, e.g. 20% (~44K), the width of the band is not much wider (as we'd expect given only a small percentage of CVEs have an EPSS score above 0.1)
@@ -199,4 +199,4 @@ threshold
 
 !!! success "Takeaways"        
     
-    1. For any organization, a large change in EPSS score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to fix - for a very large range of probability of exploitation (10%-100%).
+    1. For any organization, a large change in EPSS score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to remediate - for a very large range of probability of exploitation (10%-100%).

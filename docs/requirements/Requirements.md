@@ -68,9 +68,9 @@ now, and how the user would like things to look in the future
 (aspirational).
 
 
-### Find and Fix Vulnerabilities By Risk
+### Find and remediate Vulnerabilities By Risk
 
-!!! example "Product Engineer - DevOps:Find and Fix Vulnerabilities By Risk"
+!!! example "Product Engineer - DevOps:Find and remediate Vulnerabilities By Risk"
 
 
     **Background**: There are several tools and services running in the
@@ -107,7 +107,7 @@ now, and how the user would like things to look in the future
 
     -   tools report CVSS scores.
 
-    But most CVEs have a high CVSS score, so we have to fix most things.
+    But most CVEs have a high CVSS score, so we have to remediate most things.
     It’s whack-a-mole!
 
     I don’t have a good understanding of all the tools in our DevOps
@@ -120,7 +120,7 @@ now, and how the user would like things to look in the future
     <sub>*(how we want things to be in the future - aspirational)*</sub>
 
     As a Product Engineer, I care most about my effort vs risk i.e. the
-    effort to fix the vulnerabilities in my environment.
+    effort to remediate the vulnerabilities in my environment.
 
     I use EPSS as a key part of my risk-based prioritization (along with
     Reachability analysis, and Exploratory Data Analysis to understand the
@@ -265,7 +265,7 @@ now, and how the user would like things to look in the future
     How EPSS is deployed and can be used by a tool vendor to assist with
     vulnerability prioritization at scale. EPSS can provide additional
     embellishment/metadata of a discovered vulnerability and focus and
-    organisation efforts on what to fix first. 
+    organisation efforts on what to remediate first. 
 
     **Background**
 
@@ -314,7 +314,7 @@ now, and how the user would like things to look in the future
     hundreds, of open vulnerabilities. Most organizations have a stretched
     cyber security team and product development teams should be focusing on
     new product not retrofitting. These challenges combined, result in not
-    having the ability to fix all the vulnerabilities all the time. We must
+    having the ability to remediate all the vulnerabilities all the time. We must
     be able to prioritize based on real-world data. Vulnerability severity
     score alone does not necessarily mean such a vulnerability is commonly
     used to breach a system.  EPSS can be used to provide real-world breach
@@ -582,8 +582,8 @@ now, and how the user would like things to look in the future
 
 ## User Stories
 
-!!! info
-    A User Story takes the form As a \[type of user\], I want \[some goal\] so that \[some reason\]
+!!! tip "Writing a User Story"
+    A User Story takes the form As a \[type of user\], I want \[some goal\], so that \[some reason\]
 
     They should be written by real users e.g. the real users representing
     the Personas (not by the people developing the solution)
@@ -594,14 +594,14 @@ now, and how the user would like things to look in the future
 
     As a Product **Engineer** and user of any vulnerability detection or
     ranking tool, I want to minimize the False Negatives, and the False
-    Positives, so I fix the vulnerabilities that should be fixed, and only
+    Positives, so I remediate the vulnerabilities that should be fixed, and only
     the vulnerabilities that should be fixed.
 
 ### My Effort in My Environment
 !!! example "My Effort in My Environment"
 
     As a Product **Engineer,** I care most about my effort i.e. the effort
-    to fix the vulnerabilities in my environment. My effort is affected by
+    to remediate the vulnerabilities in my environment. My effort is affected by
     counts of instances for a given CVE ID.
 
 ### Unified Prioritized Personalized Achievable view 

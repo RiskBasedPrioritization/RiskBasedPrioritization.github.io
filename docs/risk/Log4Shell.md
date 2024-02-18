@@ -202,7 +202,7 @@ Log4Shell CVE-2021-44228 is weaponized. Templates exist in MetaSploit and Nuclei
           1. adds enhanced information to the CVE record [https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228).
           2. uses CVSS standard to assign scores to the CVE.
           3. does not list the [Exploit Maturity](#risk/Understanding_Risk/#cvss-exploit-maturity) because it is up to the user/consumer to provide that.
-    2. CVE-2021-45046 (the vulnerability associated with the incomplete fix of CVE-2021-44228) was added to CISA KEV 16 months after CVE-2021-44228.
+    2. CVE-2021-45046 (the vulnerability associated with the incomplete remediate of CVE-2021-44228) was added to CISA KEV 16 months after CVE-2021-44228.
     3. The CWE associated with Log4Shell has more detailed Technical Impact than the CVE
          1. CVE-2021-44228: Impact
              1. Confidentiality: High

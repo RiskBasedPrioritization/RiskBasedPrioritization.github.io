@@ -1,4 +1,4 @@
-!!! info
+!!! info "Explanation of the Plot"
 
     1. The dot colors indicate what population the CVE is associated with e.g. if the CVE is red, then it's in CISA KEV:
           1. red: CISA KEV

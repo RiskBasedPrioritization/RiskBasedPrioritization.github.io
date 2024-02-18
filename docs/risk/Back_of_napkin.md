@@ -4,8 +4,8 @@ icon: material/play-box-edit-outline
 # Applied Back of the napkin Likelihood of Exploitation Model
 
 !!! abstract "Overview"
-    As users, we want to know which CVEs we need to fix first based on our
-    available resources/capacity to fix them.
+    As users, we want to know which CVEs we need to remediate first based on our
+    available resources/capacity to remediate them.
 
     To develop an understanding of EPSS, we'll build a** back of the napkin**
     Risk Based Prioritization model that focuses on Likelihood of
@@ -83,17 +83,17 @@ the Count of CVEs:
     exploit being available (3.7%).
 
     -   In this case, there's ~~100K CVEs below this threshold in the back
-        of napkin model, and ~~120K above it (to fix based on our
-        threshold). So we fix a lot more CVEs (and a lot more than the
+        of napkin model, and ~~120K above it (to remediate based on our
+        threshold). So we remediate a lot more CVEs (and a lot more than the
         ~~5% that are exploited), but we miss a lot less of the ones we
         should have fixed).
 
-!!! tip
+!!! tip "Probability of Exploitation and associated population counts informs Remediation"
     Having these Probability of Exploitation values vs associated count of CVEs
     allows us make an informed decision based on our
 
     -   risk posture - using Likelihood of Exploitation
-    -   resources/capacity available to fix CVEs
+    -   resources/capacity available to remediate CVEs
 
   
 
@@ -110,7 +110,7 @@ So our Remediation Policy (for our first pass triage) could be:
 -   for all CVEs that are at Weaponized Exploitation and above in our
     Likelihood of Exploitation diagram (~~10% using our beyond worst
     case figure)  
-    -   fix all CVEs that have a High or Critical CVSS score (~~65%)
+    -   remediate all CVEs that have a High or Critical CVSS score (~~65%)
 
 This would require fixing 6.5% of CVEs (10% x 65%).
 
@@ -119,4 +119,4 @@ This would require fixing 6.5% of CVEs (10% x 65%).
 
 
 !!! success "Takeaways"
-    **With this very simple back of the napkin model, and very exaggerated counts of weaponized exploitation, we see that by using Likelihood of Exploitation, we need to fix 1/10 of CVEs versus using CVSS alone!!!**
+    **With this very simple back of the napkin model, and very exaggerated counts of weaponized exploitation, we see that by using Likelihood of Exploitation, we need to remediate 1/10 of CVEs versus using CVSS alone!!!**

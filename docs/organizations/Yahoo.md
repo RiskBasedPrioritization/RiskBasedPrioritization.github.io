@@ -52,7 +52,7 @@
     3.  **Risk Based Prioritization**
         1.  As seen throughout this guide, focusing on CVEs that are, or are
             likely to be, exploited, gives a very significant reduction in
-            CVEs to fix and associated effort!
+            CVEs to remediate and associated effort!
 
   
 

@@ -4,8 +4,8 @@
     
     Our ability to remediate depends on 
 
-    1. the priority (risk) of CVEs - the ones we want to fix based on our security posture
-          1.  In the "Understanding Risk" chapter, we saw the ordered Likelihood of Exploit for different populations of CVEs in the Risk Remediation Taxonomy.
+    1. the priority (risk) of CVEs - the ones we want to remediate based on our security posture
+          1.  In the [Understanding Risk](./Understanding_Risk.md) chapter, we saw the ordered Likelihood of Exploit for different populations of CVEs in the Risk Remediation Taxonomy.
     2. the number of CVEs for that priority (risk) - that we have the capacity/resources to fix
 
    
@@ -29,7 +29,7 @@ TODO update venn with latest data - and add weaponized exploits
 4. ~~0.5% (~1K) of all CVEs (~200K) are in CISA Known Exploited Vulnerability 
 5. ~~5% (50) of all CISA KEV CVEs (~1K) are not listed in Vendor DBs
 
-!!! note
+!!! note "CVEs represent a subset of all vulnerabilities. Your organization will have a subset of these CVEs"
      1. Not all exploits are public/known.
      2. Not all [public exploits have CVEs](https://unit42.paloaltonetworks.com/state-of-exploit-development/).
      3. A typical enterprise will have a subset of exploits/CVEs: ~~10K order of magnitude unique CVE IDs.
@@ -49,7 +49,7 @@ This table shows the number of CVEs (from all published CVEs) that are listed in
 [EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. 
 
 
-!!! tip
+!!! tip "The population sizes for Likelihood of Exploit decrease, as Likelihood of Exploit increases"
     **The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).**
 
 This table lists the **main public** data sources.

@@ -24,14 +24,14 @@
     1.  are actively exploited or likely to be
     2.  are not actively exploited or not likely to be
 
-    So I can focus on what to fix first in my environment.
+    So I can focus on what to remediate first in my environment.
 
 
-!!! info
+!!! info "CISA KEV contains a subset of known exploited CVEs"
 
     1.  All CVEs in CISA KEV are actively exploited (see [criteria for inclusion in CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities))
     3.  Only ~~5% of CVEs are known exploited
-    2.  CISA KEV contains a subset if known exploited CVEs
+    2.  CISA KEV contains a subset of known exploited CVEs
 
 
 ## What does EPSS look like for CISA KEV?
@@ -43,7 +43,7 @@ TODO: redo colors for other
 
 ### What does EPSS look like for CISA KEV CyberSecurity Advisories (CSA)?
 
-!!! info 
+!!! info "CISA Cybersecurity Advisories (CSA) represent the Top Routinely Exploited Vulnerabilities from the CISA KEV Catalog"
     CISA (Cybersecurity and Infrastructure Security Agency) co authors (with
     several international cybersecurity agencies) separate Cybersecurity
     Advisories (CSA) on the Top Routinely Exploited Vulnerabilities from the

@@ -21,8 +21,7 @@
     https://www.cisa.gov/known-exploited-vulnerabilities 
 
     
-!!! info
-    There are three criteria for CISA to add a vulnerability to the KEV catalog:
+!!! info "There are three criteria for CISA to add a vulnerability to the KEV catalog"
 
     - The vulnerability has an assigned Common Vulnerabilities and Exposures (CVE) ID.
 

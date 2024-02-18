@@ -49,7 +49,8 @@
     3.  ~~60% of CVSS v3 CVEs are ranked Critical or High (7+)
     4.  \>96% of CVEs are ranked Medium or higher (4+)
 
-!!! tip
+!!! tip "Don't use CVSS Scores alone to assess risk."
+
     Many organizations use CVSS Scores alone to assess risk despite repeated guidance against this.  
     **A Critical or High CVSS Severity is not the same as a Critical or High Risk. There's a >10x difference in counts of CVEs** for these 2 groups:
 

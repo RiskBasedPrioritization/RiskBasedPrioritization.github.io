@@ -155,7 +155,7 @@ likely on top  
         href="https://www.cybersecuritydive.com/news/gartner-vulnerability-management-cisa-cve-patching/610253/"
         rel="nofollow">Gartner, Nov 2021</a>
     -   "CVSS score performs no better than randomly picking
-        vulnerabilities to fix and may lead to negligible risk reductions"
+        vulnerabilities to remediate and may lead to negligible risk reductions"
         <a href="https://lallodi.github.io/publications/allodi-tissec-14.pdf"
         rel="nofollow">Comparing Vulnerability Severity and Exploits Using
         Case-Control Studies</a>, 2014
@@ -189,7 +189,7 @@ likely on top  
 
     The Threat Likelihood of Exploit Data Sources can be used here.
 
-    !!! tip
+    !!! tip "This project enriches NVD CVSS scores to include Temporal & Threat Metrics"
         "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
         where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
         is continuously updated.

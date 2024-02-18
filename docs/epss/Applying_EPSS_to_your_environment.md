@@ -124,8 +124,8 @@ The EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeo
 This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp) will be superseded by a blog post on first.org/epss when published
 
 
-!!! note
-    It does not differentiate between 1 instance of a CVE versus many
+!!! note "EPSS does not differentiate between 1 detection of a CVE versus many"
+    EPSS does not differentiate between 1 instance of a CVE versus many
     i.e. in an organization, there may be many instances of a small
     number of CVEs, and then fewer instances of other CVEs.
 
@@ -149,7 +149,7 @@ organization - than for all CVEs.
 for the CVEs in the organization (if the organization has few CVEs with
 high EPSS score).
 
-!!! tip
+!!! tip "Source Code is provided to calculate EPSS percentiles for a list of CVEs"
     The EPSS Percentile is easily calculated for your organization (based on
     the subset of CVEs applicable to your organization and their EPSS
     scores). 

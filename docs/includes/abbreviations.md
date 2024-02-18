@@ -9,3 +9,4 @@
 *[NVD]: National Vulnerability Database
 *[Risk]: The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.
 *[CTI]: CTI Cyber Threat Intelligence. 
+*[remediate]: The neutralization or elimination of a vulnerability or the likelihood of its exploitation.

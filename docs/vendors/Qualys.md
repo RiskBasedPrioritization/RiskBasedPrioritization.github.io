@@ -87,7 +87,7 @@ Several other examples of vulnerabilities with low EPSS scores and high TruRisk 
     4.  Most of the CVEs have a low EPSS score.
 
 
-!!! info
+!!! info "Explanation of the plot"
 
     1. The dot colors indicate what population the CVE is associated with e.g. if the CVE is red, then it's in CISA KEV:
           1. red: CISA KEV

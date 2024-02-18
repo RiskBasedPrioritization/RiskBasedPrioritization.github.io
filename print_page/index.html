@@ -1534,7 +1534,7 @@
 <p>A large part of that was to be able to prioritize vulnerabilities by Real <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>. Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. There's a friendly vibrant community in this space - many of whom have contributed to this guide.</p>
 <h2 id="introduction-introduction-source-code">Source Code<a class="headerlink" href="#introduction-introduction-source-code" title="Permanent link">&para;</a></h2>
 <ol>
-<li>See https://github.com/epss-sig/epss-interoperability TODO
+<li>See <a href="https://github.com/epss-sig/epss-interoperability">https://github.com/epss-sig/epss-interoperability</a> TODO
     for the code<ol>
 <li>This includes the data used in the analysis (downloaded
     Jan 13) and how to download it</li>
@@ -1651,7 +1651,7 @@ we all benefit and are truly grateful!</p>
 <li>Access to GPUs free of charge</li>
 <li>Easy sharing</li>
 </ul>
-<p>https://colab.research.google.com/</p>
+<p><a href="https://colab.research.google.com/">https://colab.research.google.com/</a></p>
 </div>
 </div>
 <h2 id="introduction-code_and_data-data-sources">Data Sources<a class="headerlink" href="#introduction-code_and_data-data-sources" title="Permanent link">&para;</a></h2>
@@ -1789,7 +1789,7 @@ we all benefit and are truly grateful!</p>
 <ul>
 <li>A notebook or script in <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/nvd">nvd</a> downloads the <abbr title="National Vulnerability Database">NVD</abbr> data.</li>
 <li>The data is ouput to data_out/CVSSData.csv.gz</li>
-<li>Note: The download method used will be deprecated some time after Dec 2023 per https://nvd.nist.gov/vuln/data-feeds</li>
+<li>Note: The download method used will be deprecated some time after Dec 2023 per <a href="https://nvd.nist.gov/vuln/data-feeds">https://nvd.nist.gov/vuln/data-feeds</a></li>
 </ul>
 <h3 id="introduction-code_and_data-google-project-zero-gpz">Google Project Zero (GPZ)<a class="headerlink" href="#introduction-code_and_data-google-project-zero-gpz" title="Permanent link">&para;</a></h3>
 <p>See <a href="https://docs.google.com/spreadsheets/d/1lkNJ0uQwbeC1ZTRrxdtuPLCIl7mlUreoKfSIgajnSyY/edit#gid=1190662839">0day "In the Wild" GoogleSheet</a> </p>
@@ -1799,7 +1799,7 @@ we all benefit and are truly grateful!</p>
 </ul>
 <h3 id="introduction-code_and_data-microsoft-security-response-center-msrc">Microsoft Security Response Center (MSRC)<a class="headerlink" href="#introduction-code_and_data-microsoft-security-response-center-msrc" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Go to https://msrc.microsoft.com/update-guide/vulnerability</li>
+<li>Go to <a href="https://msrc.microsoft.com/update-guide/vulnerability">https://msrc.microsoft.com/update-guide/vulnerability</a></li>
 <li>Edit columns - ensure these columns are selected "Exploitability Assessment" and "Exploited"</li>
 <li>Download</li>
 </ul>
@@ -1808,13 +1808,13 @@ we all benefit and are truly grateful!</p>
 This data is static so a date.txt is not included.</p>
 <h3 id="introduction-code_and_data-exploitdb">ExploitDB<a class="headerlink" href="#introduction-code_and_data-exploitdb" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Download https://gitlab.com/exploit-database/exploitdb/-/blob/main/files_exploits.csv (manually for now - credentials required for automation)</li>
+<li>Download <a href="https://gitlab.com/exploit-database/exploitdb/-/blob/main/files_exploits.csv">https://gitlab.com/exploit-database/exploitdb/-/blob/main/files_exploits.csv</a> (manually for now - credentials required for automation)</li>
 <li>Extract the CVEs using the script in the directory i.e. some entries don't have CVEs - and have only Open Source Vulnerability Database (OSVDB) entries instead.</li>
 </ul>
 <h3 id="introduction-code_and_data-other-data-sources">Other Data Sources<a class="headerlink" href="#introduction-code_and_data-other-data-sources" title="Permanent link">&para;</a></h3>
 <p>Other data sources to consider - these are not currently used here:</p>
 <ul>
-<li>https://github.com/trickest/cve for a list of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> PoCs</li>
+<li><a href="https://github.com/trickest/cve">https://github.com/trickest/cve</a> for a list of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> PoCs</li>
 </ul></section><h1 class='nav-section-title-end'>Ended: Introduction</h1>
                         <h1 class='nav-section-title' id='section-risk'>
                             Risk <a class='headerlink' href='#section-risk' title='Permanent link'>↵</a>
@@ -1866,7 +1866,7 @@ This data is static so a date.txt is not included.</p>
 </li>
 <li>
 <p>“A vulnerability is an occurrence of one or more weaknesses within a product, in which the weakness can be used by a party to cause the product to modify or access unintended data, interrupt proper execution, or perform actions that were not specifically granted to the party who uses the weakness.”
-https://cwe.mitre.org/documents/cwe_usage/guidance.html</p>
+<a href="https://cwe.mitre.org/documents/cwe_usage/guidance.html">https://cwe.mitre.org/documents/cwe_usage/guidance.html</a></p>
 </li>
 </ul>
 </div>
@@ -1882,13 +1882,13 @@ https://cwe.mitre.org/documents/cwe_usage/guidance.html</p>
 <li>A <abbr title="CWE Common Weakness Enumeration">CWE</abbr> may have zero or more Common Consequences/Technical Impacts associated with it e.g. Log4Shell <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2021-44228 has 2</li>
 <li>A <abbr title="CWE Common Weakness Enumeration">CWE</abbr> may be associated with zero or more CVEs.</li>
 </ol>
-<p>To understand MITRE <a href="https://capec.mitre.org/">CAPEC</a> vs MITRE <a href="https://attack.mitre.org/">ATT&amp;CK</a>, see https://capec.mitre.org/about/attack_comparison.html.</p>
+<p>To understand MITRE <a href="https://capec.mitre.org/">CAPEC</a> vs MITRE <a href="https://attack.mitre.org/">ATT&amp;CK</a>, see <a href="https://capec.mitre.org/about/attack_comparison.html">https://capec.mitre.org/about/attack_comparison.html</a>.</p>
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“<abbr title="National Vulnerability Database">NVD</abbr> is using <abbr title="CWE Common Weakness Enumeration">CWE</abbr> as a classification mechanism that differentiates CVEs by the type of vulnerability they represent.”</p>
 <p>“The <abbr title="National Vulnerability Database">NVD</abbr> makes use of a subset of the entire <abbr title="CWE Common Weakness Enumeration">CWE</abbr> List, which is enumerated by the <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-1003 (Weaknesses for Simplified Mapping of Published Vulnerabilities) view. <abbr title="National Vulnerability Database">NVD</abbr> analysts will associate the most specific <abbr title="CWE Common Weakness Enumeration">CWE</abbr> value within the <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-1003 view based on the publicly available information at the time of analysis.”
-https://nvd.nist.gov/vuln/cvmap/How-We-Assess-Acceptance-Levels, https://nvd.nist.gov/vuln/categories</p>
+<a href="https://nvd.nist.gov/vuln/cvmap/How-We-Assess-Acceptance-Levels">https://nvd.nist.gov/vuln/cvmap/How-We-Assess-Acceptance-Levels</a>, <a href="https://nvd.nist.gov/vuln/categories">https://nvd.nist.gov/vuln/categories</a></p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
@@ -2099,7 +2099,7 @@ in the wild.</p>
     rel="nofollow">Qualys</a></li>
 <li>“Only 3 percent of critical vulnerabilities are worth prioritizing,”
     <a href="https://www.datadoghq.com/state-of-application-security/"
-    rel="nofollow">https://www.datadoghq.com/state-of-application-security/</a></li>
+    rel="nofollow"><a href="https://www.datadoghq.com/state-of-application-security/">https://www.datadoghq.com/state-of-application-security/</a></a></li>
 <li>“Less than 4% of the total number of CVEs have been publicly
     exploited”, <a
     href="https://www.cisa.gov/sites/default/files/publications/Reducing_the_Significant_Risk_of_Known_Exploited_Vulnerabilities_20211103.pdf"
@@ -2137,7 +2137,7 @@ in the wild.</p>
     * Scanning
     * Security research of an exploit
     * Proof of Concept (PoC)</p>
-<p>https://www.cisa.gov/known-exploited-vulnerabilities </p>
+<p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
 </div>
 <div class="admonition info">
@@ -2156,7 +2156,7 @@ in the wild.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores are designed to measure the severity of a vulnerability and should not be used alone to assess risk.
-https://www.first.org/cvss/v4.0/user-guide#<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-Base-Score-<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B-Measures-Severity-not-<abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
+<a href="https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk">https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk</a></p>
 </div>
 <p><strong>The <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base score is not a good indicator of likelihood of
 exploit</strong> (it is not designed or intended to be)</p>
@@ -2223,7 +2223,7 @@ is continuously updated.</p>
     then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say,
     because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of
     exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the
-    probability it will be exploited.</strong>" https://www.first.org/epss/faq</p>
+    probability it will be exploited.</strong>" <a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 <p>The "Known Evidence or Activity branch" lists data sources where we can get that evidence of exploitation.</p>
 </div>
 <h2 id="risk-understanding_risk-zero-days">Zero Days<a class="headerlink" href="#risk-understanding_risk-zero-days" title="Permanent link">&para;</a></h2>
@@ -2532,7 +2532,7 @@ vulnerability management processes."</p>
 <img alt="Image title" src="../assets/images/cvss_ratings_table.png" />
 <figcaption><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Rating for all CVEs</figcaption>
 </figure></p>
-<p><em>https://www.first.org/cvss/v3.1/specification-document#Qualitative-Severity-Rating-Scale</em></p>
+<p><em><a href="https://www.first.org/cvss/v3.1/specification-document#Qualitative-Severity-Rating-Scale">https://www.first.org/cvss/v3.1/specification-document#Qualitative-Severity-Rating-Scale</a></em></p>
 </div>
 <figure>
 <p><img alt="Image title" src="../assets/images/cvss_ratings_all.png" width="500" />
@@ -2564,12 +2564,12 @@ vulnerability management processes."</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores are designed to measure the severity of a vulnerability and should not be used alone to assess risk. </p>
-<p>https://www.first.org/cvss/v4.0/user-guide#<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-Base-Score-<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B-Measures-Severity-not-<abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
+<p><a href="https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk">https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk</a></p>
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>PCI DSS 4.0 11.3.2.1 “External vulnerability scans are performed after any significant change as follows: Vulnerabilities that are scored <strong>4.0 or higher by the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></strong> are resolved.”</p>
-<p>https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf</p>
+<p><a href="https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf">https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf</a></p>
 </div>
 </div>
 <h2 id="cvss-cvss-cvss-confidentiality-integrity-availability-impacts"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts<a class="headerlink" href="#cvss-cvss-cvss-confidentiality-integrity-availability-impacts" title="Permanent link">&para;</a></h2>
@@ -2585,7 +2585,7 @@ vulnerability management processes."</p>
     performance and operation of the service itself – not the
     availability of the data.”</li>
 </ul>
-<p>https://www.first.org/cvss/v3.1/user-guide#3-2-Confidentiality-and-Integrity-Versus-Availability-Impacts</p>
+<p><a href="https://www.first.org/cvss/v3.1/user-guide#3-2-Confidentiality-and-Integrity-Versus-Availability-Impacts">https://www.first.org/cvss/v3.1/user-guide#3-2-Confidentiality-and-Integrity-Versus-Availability-Impacts</a></p>
 </div>
 <figure>
 <p><img alt="Image title" src="../assets/images/cvss1.png" width="500" />
@@ -2667,11 +2667,11 @@ who volunteer their time to improve this industry standard. <abbr title="Exploit
 managed under
 <u><a href="https://www.first.org/" rel="nofollow">FIRST</a></u>
 (<a href="https://www.first.org/epss" rel="nofollow"
-style="letter-spacing: 0.0px;">https://www.first.org/epss</a>), the same
+style="letter-spacing: 0.0px;"><a href="https://www.first.org/epss">https://www.first.org/epss</a></a>), the same
 international non-profit organization that manages the Common
 Vulnerability Scoring System (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>),
 <a href="https://www.first.org/cvss/" rel="nofollow"
-style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.</p>
+style="letter-spacing: 0.0px;"><a href="https://www.first.org/cvss/">https://www.first.org/cvss/</a></a>.</p>
 <ul>
 <li><abbr title="Exploit Prediction Scoring System">EPSS</abbr> produces probability scores for <strong>all known published CVEs</strong> based on current
     exploitation ability, and updates these scores daily</li>
@@ -2732,7 +2732,7 @@ in the wild.</p>
     rel="nofollow">Qualys</a></li>
 <li>“Only 3 percent of critical vulnerabilities are worth prioritizing,”
     <a href="https://www.datadoghq.com/state-of-application-security/"
-    rel="nofollow">https://www.datadoghq.com/state-of-application-security/</a></li>
+    rel="nofollow"><a href="https://www.datadoghq.com/state-of-application-security/">https://www.datadoghq.com/state-of-application-security/</a></a></li>
 <li>“Less than 4% of the total number of CVEs have been publicly
     exploited”, <a
     href="https://www.cisa.gov/sites/default/files/publications/Reducing_the_Significant_Risk_of_Known_Exploited_Vulnerabilities_20211103.pdf"
@@ -2770,7 +2770,7 @@ in the wild.</p>
     * Scanning
     * Security research of an exploit
     * Proof of Concept (PoC)</p>
-<p>https://www.cisa.gov/known-exploited-vulnerabilities </p>
+<p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
 </div>
 <div class="admonition info">
@@ -2824,7 +2824,7 @@ in the wild.</p>
 <h2 id="epss-introduction_to_epss-using-epss-with-known-exploitation">Using <abbr title="Exploit Prediction Scoring System">EPSS</abbr> with Known Exploitation<a class="headerlink" href="#epss-introduction_to_epss-using-epss-with-known-exploitation" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq</p>
+<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." <a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 <figure>
 <p><img alt="" src="../assets/images/worry_quadrant.png" width="600" />
@@ -2834,7 +2834,7 @@ in the wild.</p>
 <div class="admonition quote">
 <p class="admonition-title">Active Exploitation</p>
 <p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel.</p>
-<p>https://www.first.org/epss/faq</p>
+<p><a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Using <abbr title="Exploit Prediction Scoring System">EPSS</abbr> when there is no Known Evidence of Active Exploitation</p>
@@ -2845,7 +2845,7 @@ in the wild.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited. </p>
-<p>https://www.first.org/epss/faq</p>
+<p><a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 </div>
 <h2 id="epss-introduction_to_epss-count-of-cves-at-or-above-epss-score">Count of CVEs at or above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score<a class="headerlink" href="#epss-introduction_to_epss-count-of-cves-at-or-above-epss-score" title="Permanent link">&para;</a></h2>
@@ -2879,7 +2879,7 @@ in the wild.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel.         If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited. </p>
-<p>https://www.first.org/epss/faq</p>
+<p><a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 </div></section><section class="print-page" id="epss-applying_epss_to_your_environment"><h1 id="epss-applying_epss_to_your_environment-applying-epss-to-your-environment">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment<a class="headerlink" href="#epss-applying_epss_to_your_environment-applying-epss-to-your-environment" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
@@ -3194,7 +3194,7 @@ base score.</p>
 </ol>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq</p>
+<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." <a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 </div></section><section class="print-page" id="epss-count_of_cves_by_epss"><h1 id="epss-count_of_cves_by_epss-count-of-cves-by-epss">Count of CVEs by <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#epss-count_of_cves_by_epss-count-of-cves-by-epss" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
@@ -3466,11 +3466,11 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>For the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity — <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> maintains the authoritative source of vulnerabilities that have been exploited in the wild: the Known Exploited Vulnerability (<abbr title="Known Exploited Vulnerability">KEV</abbr>) catalog https://www.cisa.gov/known-exploited-vulnerabilities-catalog. </p>
+<p>For the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity — <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> maintains the authoritative source of vulnerabilities that have been exploited in the wild: the Known Exploited Vulnerability (<abbr title="Known Exploited Vulnerability">KEV</abbr>) catalog <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a>. </p>
 <p>The <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog sends a clear message to all organizations to prioritize remediation efforts on the subset of vulnerabilities that are causing immediate harm based on adversary activity. </p>
 <p><strong>Organizations should use the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog as an input to their vulnerability management prioritization framework.</strong></p>
 <p>Vulnerability management frameworks—such as the Stakeholder-Specific Vulnerability Categorization (<abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>) model—consider a vulnerability's exploitation status.</p>
-<p>https://www.cisa.gov/known-exploited-vulnerabilities </p>
+<p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">There are three criteria for <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> to add a vulnerability to the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog</p>
@@ -3489,7 +3489,7 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“All federal civilian executive branch (FCEB) agencies are required to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> vulnerabilities in the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog within prescribed timeframes under Binding Operational Directive (BOD) 22-01, Reducing the Significant <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> of Known Exploited Vulnerabilities.  Although not bound by BOD 22-01, every organization, including those in state, local, tribal, and territorial (SLTT) governments and <strong>private industry can significantly strengthen their security and resilience posture by prioritizing the remediation of the vulnerabilities listed in the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalogue as well</strong>. <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> strongly recommends all stakeholders include a requirement to immediately address <abbr title="Known Exploited Vulnerability">KEV</abbr> catalogue vulnerabilities as part of their vulnerability management plan.</p>
-<p>https://www.cisa.gov/known-exploited-vulnerabilities </p>
+<p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
@@ -3525,14 +3525,14 @@ Engineering Institute):</p>
 <p>“<abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> encourages every organization to use a vulnerability management
 framework that considers a <strong>vulnerability’s exploitation status</strong>, such
 as <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>.”</p>
-<p>https://www.cisa.gov/news-events/news/transforming-vulnerability-management-landscape</p>
+<p><a href="https://www.cisa.gov/news-events/news/transforming-vulnerability-management-landscape">https://www.cisa.gov/news-events/news/transforming-vulnerability-management-landscape</a></p>
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“The goal of <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> is to assist in <strong>prioritizing the remediation of a
 vulnerability based on the impact exploitation would have to the
 particular organization(s)</strong>.”</p>
-<p>https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf</p>
+<p><a href="https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf">https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf</a></p>
 </div>
 <figure>
 <p><img alt="Image title" src="../assets/images/cisa_ssvcdt.png" width="700" /></p>
@@ -3951,7 +3951,7 @@ vulnerability more than once.</p>
 </figure>
 <p>See <a href="https://medium.com/@CWE_CAPEC/neutralizing-your-inputs-a-log4shell-weakness-story-89954c8b25c9">Neutralizing Your Inputs: A Log4Shell Weakness Story</a> for an informative article by the <abbr title="CWE Common Weakness Enumeration">CWE</abbr> Program on assigning CWEs for this <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>.</p>
 <h2 id="risk-log4shell-epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#risk-log4shell-epss" title="Permanent link">&para;</a></h2>
-<p>https://www.first.org/epss/api details the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> API.
+<p><a href="https://www.first.org/epss/api">https://www.first.org/epss/api</a> details the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> API.
 Some examples are given here.</p>
 <h3 id="risk-log4shell-score">Score<a class="headerlink" href="#risk-log4shell-score" title="Permanent link">&para;</a></h3>
 <p><a href="https://api.first.org/data/v1/epss?cve=CVE-2021-44228">https://api.first.org/data/v1/epss?cve=<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2021-44228</a></p>
@@ -4064,8 +4064,8 @@ The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on 2024-02
 <h2 id="risk-log4shell-weaponized-exploit">Weaponized Exploit<a class="headerlink" href="#risk-log4shell-weaponized-exploit" title="Permanent link">&para;</a></h2>
 <p>Log4Shell <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2021-44228 is weaponized. Templates exist in MetaSploit and Nuclei:</p>
 <ul>
-<li><strong>MetaSploit</strong>: https://www.rapid7.com/db/modules/auxiliary/scanner/http/log4shell_scanner/ </li>
-<li><strong>Nuclei</strong>: https://github.com/projectdiscovery/nuclei-templates/blob/master/cves/2021/<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2021-44228.yaml</li>
+<li><strong>MetaSploit</strong>: <a href="https://www.rapid7.com/db/modules/auxiliary/scanner/http/log4shell_scanner/">https://www.rapid7.com/db/modules/auxiliary/scanner/http/log4shell_scanner/</a> </li>
+<li><strong>Nuclei</strong>: <a href="https://github.com/projectdiscovery/nuclei-templates/blob/master/cves/2021/CVE-2021-44228.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/master/cves/2021/CVE-2021-44228.yaml</a></li>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
@@ -4125,17 +4125,17 @@ This section of the guide</p>
 </tr>
 <tr>
 <td><strong>Cisco</strong></td>
-<td>https://blogs.cisco.com/security/epss-and-its-role-in-cisco-vulnerability-management-risk-scoring. <a href="https://help.kennasecurity.com/hc/en-us/articles/360026160592-Vulnerability-Scoring-in-Cisco-Vulnerability-Management">Kenna Security Vulnerability <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Score</a></td>
+<td><a href="https://blogs.cisco.com/security/epss-and-its-role-in-cisco-vulnerability-management-risk-scoring">https://blogs.cisco.com/security/epss-and-its-role-in-cisco-vulnerability-management-risk-scoring</a>. <a href="https://help.kennasecurity.com/hc/en-us/articles/360026160592-Vulnerability-Scoring-in-Cisco-Vulnerability-Management">Kenna Security Vulnerability <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Score</a></td>
 <td>✅</td>
 </tr>
 <tr>
 <td><strong>Tenable</strong></td>
-<td>Tenable Vulnerability Priority Rating (VPR) uses the severity and the facility to be exploited, similar to <abbr title="Exploit Prediction Scoring System">EPSS</abbr>. See also https://www.tenable.com/blog/you-cant-fix-everything-how-to-take-a-risk-informed-approach-to-vulnerability-remediation</td>
+<td>Tenable Vulnerability Priority Rating (VPR) uses the severity and the facility to be exploited, similar to <abbr title="Exploit Prediction Scoring System">EPSS</abbr>. See also <a href="https://www.tenable.com/blog/you-cant-fix-everything-how-to-take-a-risk-informed-approach-to-vulnerability-remediation">https://www.tenable.com/blog/you-cant-fix-everything-how-to-take-a-risk-informed-approach-to-vulnerability-remediation</a></td>
 <td></td>
 </tr>
 <tr>
 <td><strong>Snyk</strong></td>
-<td><a href="https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score">Snyk created their own score (Snyk Priority Score) for prioritization</a> by using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> and other factors mentioned above, such as exploit maturity, remediation process, or mentions in the community <br> https://snyk.io/blog/improved-risk-assessment-with-epss-scores-in-snyk/ <br> https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly <br>https://snyk.io/blog/introducing-new-risk-score/ <br>https://docs.snyk.io/scan-with-snyk/find-and-manage-priority-issues/priority-score</td>
+<td><a href="https://docs.snyk.io/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score">Snyk created their own score (Snyk Priority Score) for prioritization</a> by using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> and other factors mentioned above, such as exploit maturity, remediation process, or mentions in the community <br> <a href="https://snyk.io/blog/improved-risk-assessment-with-epss-scores-in-snyk/">https://snyk.io/blog/improved-risk-assessment-with-epss-scores-in-snyk/</a> <br> <a href="https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly">https://snyk.io/blog/whats-so-wild-about-exploits-in-the-wild-and-how-can-we-prioritize-accordingly</a> <br><a href="https://snyk.io/blog/introducing-new-risk-score/">https://snyk.io/blog/introducing-new-risk-score/</a> <br><a href="https://docs.snyk.io/scan-with-snyk/find-and-manage-priority-issues/priority-score">https://docs.snyk.io/scan-with-snyk/find-and-manage-priority-issues/priority-score</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4145,7 +4145,7 @@ This section of the guide</p>
 </tr>
 <tr>
 <td><strong>Rapid7</strong></td>
-<td>Rapid7 created a proprietary scoring methodology called Active <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>. It "takes into account the latest version of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> available for a vulnerability and enriches it with multiple threat intelligence feeds, including proprietary Rapid7 research, to provide security teams with a threat-aware vulnerability risk score." Data sources include: <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>, Metasploit, Rapid7's Project Heisenberg and AttackerKB. https://www.rapid7.com/products/insightvm/features/active-risk-score/  https://www.rapid7.com/blog/post/2023/09/25/introducing-active-risk/</td>
+<td>Rapid7 created a proprietary scoring methodology called Active <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>. It "takes into account the latest version of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> available for a vulnerability and enriches it with multiple threat intelligence feeds, including proprietary Rapid7 research, to provide security teams with a threat-aware vulnerability risk score." Data sources include: <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>, Metasploit, Rapid7's Project Heisenberg and AttackerKB. <a href="https://www.rapid7.com/products/insightvm/features/active-risk-score/">https://www.rapid7.com/products/insightvm/features/active-risk-score/</a>  <a href="https://www.rapid7.com/blog/post/2023/09/25/introducing-active-risk/">https://www.rapid7.com/blog/post/2023/09/25/introducing-active-risk/</a></td>
 <td></td>
 </tr>
 <tr>
@@ -4155,12 +4155,12 @@ This section of the guide</p>
 </tr>
 <tr>
 <td><strong>Edgescan</strong></td>
-<td><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is visible as a floating point score (0.00) alongside <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, CISAKEV (boolean) and EVSS (Edgescan Validated Security Score).  Edgescan has also implemented an overall priority score combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> with some weightings to deliver an overall priority score, we call this the Edgescan eXposure Factor (EXF). https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/</td>
+<td><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is visible as a floating point score (0.00) alongside <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, CISAKEV (boolean) and EVSS (Edgescan Validated Security Score).  Edgescan has also implemented an overall priority score combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> with some weightings to deliver an overall priority score, we call this the Edgescan eXposure Factor (EXF). <a href="https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/">https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/</a></td>
 <td>✅</td>
 </tr>
 <tr>
 <td><strong>Mend.io</strong></td>
-<td>SCA tool shows <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score, and public exploits per https://docs.mend.io/bundle/sca_user_guide/page/public_exploits_in_mend_sca.html</td>
+<td>SCA tool shows <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score, and public exploits per <a href="https://docs.mend.io/bundle/sca_user_guide/page/public_exploits_in_mend_sca.html">https://docs.mend.io/bundle/sca_user_guide/page/public_exploits_in_mend_sca.html</a></td>
 <td></td>
 </tr>
 </tbody>
@@ -4477,7 +4477,7 @@ and the reason for the unscored CVEs by Qualys.   </p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>"If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then 
-<abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq</p>
+<abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." <a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
 </div></section><h1 class='nav-section-title-end'>Ended: Vendors</h1>
                         <h1 class='nav-section-title' id='section-organizations'>
@@ -4546,7 +4546,7 @@ to fix):</p>
 </div>
 <h3 id="organizations-yahoo-risk-based-prioritization"><strong><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization</strong><a class="headerlink" href="#organizations-yahoo-risk-based-prioritization" title="Permanent link">&para;</a></h3>
 <p><a href="https://github.com/theparanoids/PrioritizedRiskRemediation"
-rel="nofollow">https://github.com/theparanoids/PrioritizedRiskRemediation</a>
+rel="nofollow"><a href="https://github.com/theparanoids/PrioritizedRiskRemediation">https://github.com/theparanoids/PrioritizedRiskRemediation</a></a>
 gives the background and detail to this section.</p>
 <p>A <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Remediation Taxonomy is defined here to support <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based
 Prioritization of CVEs:</p>
@@ -4562,7 +4562,7 @@ Prioritization of CVEs:</p>
 <p>The <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Remediation Taxonomy and Decision Tree are part of a conference
 presentation by Yahoo Chris
 Madden: <a href="https://www.bsidesdub.ie/" rel="nofollow"
-style="text-decoration: underline;">https://www.bsidesdub.ie/</a> May 27
+style="text-decoration: underline;"><a href="https://www.bsidesdub.ie/">https://www.bsidesdub.ie/</a></a> May 27
 2023.</p>
 <ul>
 <li>See the <a
@@ -4579,7 +4579,7 @@ style="text-decoration: underline;">https://www.bsidesdub.ie/</a> May 27
 paretos i.e. a relatively small number of unique CVEs account for a
 large number of overall CVEs per
 <a href="https://youtu.be/oMZN810xfck?t=896"
-rel="nofollow">https://youtu.be/oMZN810xfck?t=896</a>.</p>
+rel="nofollow"><a href="https://youtu.be/oMZN810xfck?t=896">https://youtu.be/oMZN810xfck?t=896</a></a>.</p>
 <figure>
 <p><img alt="" src="../assets/images/YahooCVEsCVSSscorescountsofCVEsEPSSscores.jpg" />
   </p>
@@ -4796,7 +4796,7 @@ threshold based on <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, 
 This approach can be adopted, for example, under PCI DSS V4 Customized
 Approach assessment method (<a
 href="https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization"
-rel="nofollow">https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization</a>)</p>
+rel="nofollow"><a href="https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization">https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization</a></a>)</p>
 </div>
 <h3 id="requirements-requirements-prioritized-by-epss-score-and-remediated-accordingly">Prioritized by <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score and remediated accordingly<a class="headerlink" href="#requirements-requirements-prioritized-by-epss-score-and-remediated-accordingly" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
@@ -5026,7 +5026,7 @@ controls.</p>
 <p><strong>Objective</strong>: Have a holistic unified view of risk i.e. reconcile the
 Top-down and Bottom-Up view of <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> - and understand <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> in context.</p>
 <p>E.g. taking a recent Research Analysis "Commonalities in Vehicle
-Vulnerabilities" https://ioac.tv/3Pp13bE as an example:</p>
+Vulnerabilities" <a href="https://ioac.tv/3Pp13bE">https://ioac.tv/3Pp13bE</a> as an example:</p>
 <blockquote>
 <p>Automotive manufacturers and vendors should not hyper-focus on
 critical-risk and high-risk vulnerabilities, and thus overlook
@@ -5196,7 +5196,7 @@ heavily relied upon.</p>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>Tool Provider</strong></td>
-<td style="text-align: center;">Eoin Keary  https://www.edgescan.com/  Edgescan is the first fully-integrated cybersecurity platform that unifies five robust solutions into a single combative platform. These solutions include: external attack surface management, risk-based vulnerability management, application security testing, API security testing, and pentesting as a service. Edgescan was listed as one of the “notable vendors” for EASM in the Q1 2023 Forrester Landscape for External Attack Surface Management <br><br>Steve Finegan AppSOC  <br><br>Jeffrey Martin Mend.io  SCA/SAST/Image+cloud scanning. The first SCA vendor to support Reachability analysis Mend.io has been recognized as a Visionary in the 2023 Gartner® Magic Quadrant™ for Application Security Testing.</td>
+<td style="text-align: center;">Eoin Keary  <a href="https://www.edgescan.com/">https://www.edgescan.com/</a>  Edgescan is the first fully-integrated cybersecurity platform that unifies five robust solutions into a single combative platform. These solutions include: external attack surface management, risk-based vulnerability management, application security testing, API security testing, and pentesting as a service. Edgescan was listed as one of the “notable vendors” for EASM in the Q1 2023 Forrester Landscape for External Attack Surface Management <br><br>Steve Finegan AppSOC  <br><br>Jeffrey Martin Mend.io  SCA/SAST/Image+cloud scanning. The first SCA vendor to support Reachability analysis Mend.io has been recognized as a Visionary in the 2023 Gartner® Magic Quadrant™ for Application Security Testing.</td>
 <td></td>
 <td></td>
 </tr>

@@ -21,6 +21,7 @@ nav:
       - Exploit Prediction Scoring System (EPSS): epss/Introduction_to_EPSS.md
       - Applying EPSS to your environment: epss/Applying_EPSS_to_your_environment.md
       - EPSS and CISA Known Exploited Vulnerabilities (CISA KEV): epss/EPSS_and_CISA_KEV.md
+      - What Users Ask For: epss/What_users_ask_for.md
       - EPSS Thresholds: epss/EPSS_Thresholds.md
     - CISA Known Exploited Vulnerabilities (CISA KEV): cisa_kev/cisa_kev.md
     - Stakeholder-Specific Vulnerability Categorization (SSVC): 

@@ -105,24 +105,14 @@ Exploitation Types and Environment that EPSS is less suited for.
 
 
 
-#### Remediation Prioritization for your Environment
+
+#### EPSS Percentile Score for your Environment
 
 The number of CVEs found in your environment will be a subset of all
 published CVEs, and will depend on:
 
 1.  the technology stacks in your environment
 2.  your ability to detect these CVEs
-
-Per [What Does EPSS Provide?](Introduction_to_EPSS.md/#what-does-epss-provide), 
-
-The EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.
-  
-<figure markdown>
-  ![](../assets/images/epss_coverage.jpeg)
-  <figcaption>Picking Thresholds for EPSS</figcaption>
-</figure>
-This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp) will be superseded by a blog post on first.org/epss when published
-
 
 !!! note "EPSS does not differentiate between 1 detection of a CVE versus many"
     EPSS does not differentiate between 1 instance of a CVE versus many
@@ -133,9 +123,6 @@ This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanageme
         in your organization, there will be many counts of that CVE. 
     -  Your Remediation effort will be based on the counts per CVEs in
         your environment
-  
-
-#### EPSS Percentile Score for your Environment
 
 Percentiles are a direct transformation from probabilities and provide a measure of an EPSS probability relative to all other scores. That is, the percentile is the proportion of all values less than or equal to the current rank. 
 

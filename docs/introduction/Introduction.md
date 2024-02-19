@@ -6,7 +6,9 @@
 
     It is written by, or contributed to, some of the thought leaders in this space **for YOU.**
 
-    [CISA](https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities), [Gartner](https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized) and others, recommend focusing on vulnerabilities that are known-exploited as an effective approach to risk mitigation and prevention, yet very few organizations do this. Maybe because they don't know they should, why they should, or how they should? This guide will cover all these points.
+    [CISA](https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities), [Gartner](https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized), and others, recommend focusing on vulnerabilities that are known-exploited as an effective approach to risk mitigation and prevention, yet very few organizations do this. 
+    
+    Maybe because they don't know they should, why they should, or how they should? This guide will cover all these points.
 
 
 !!! success "After reading this guide you should be able to"
@@ -49,7 +51,7 @@ The intended audience is people in these roles:
 - Cyber Defender: network defenders,  IT/infosec
 - Tool Provider: Tool providers: Tool Vendors, open source tools,...
 
-This is a subset of the Personas/Roles defined in the Requirements chapter.
+This is a subset of the [Personas/Roles defined in the Requirements](../requirements/Requirements.md#personas) chapter.
 
 No prior knowledge is assumed to read the guide - it provides just enough information to understand the advanced topics covered.
 
@@ -74,11 +76,20 @@ If you're looking for the "easy button", or the one scheme to rule them all for 
 
  You can contribute content or suggest changes:
 
-* :fontawesome-solid-lightbulb: [Suggest content ](https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/)
+* :fontawesome-solid-lightbulb: [Suggest content](https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/)
 * :fontawesome-solid-bug: [Report Errors, typos](https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/)
 * :fontawesome-solid-database: If you're a tool/solution vendor, and would like to provide anonymized, sanitized data - or what scoring system you use and why
 * :fontawesome-solid-people-carry-box: If you'd like to share what your organization is doing (anonymized, sanitized as required) as a good reference example
 
+The "writing style" in this guide is "succinct, and leads with an opinion with data and code to back it up" i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess - and apply to your data and environment. This allows the reader to assess the opinion and the data and rationale behind it.
+
+Different, and especially opposite, opinions with the data to back them up, are especially welcome! 
+
+!!! quote
+    If we have data, let’s look at data. If all we have are opinions, let’s go with mine.
+    
+    Jim Barksdale, former CEO of Netscape https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all
+  
 ## Foreword by Chris Madden
 I embarked on this Risk Based Prioritization journey because, as a Product Security engineer, my role is to enable the flow of software/value to our customers by helping deliver high quality software efficiently and securely.
 
@@ -99,11 +110,10 @@ A large part of that was to be able to prioritize vulnerabilities by Real Risk. 
 
 2.  This guide is a living document i.e. it will change and grow over time - with your input.
 
+
+  
 ## Alternative or Additional Guidance
 
-The "writing style" in this guide is "succinct and opinionated" i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess against your data and environment.
-
-It is not a verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the author): 
+This guide is not a verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the author): 
 
 -  [Effective Vulnerability Management: Managing Risk in the Vulnerable Digital Ecosystem](https://www.amazon.com/Effective-Vulnerability-Management-Vulnerable-Ecosystem/dp/1394221207) 
-  

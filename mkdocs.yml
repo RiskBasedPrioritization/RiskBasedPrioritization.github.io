@@ -40,6 +40,7 @@ nav:
 #      - Exploratory Data Analysis: organizations/acme/EDA.md
   - Annex:
     - Requirements: requirements/Requirements.md
+    - Glossary: annex/Glossary.md
   
     
 

@@ -73,10 +73,6 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
 
 ## Using EPSS with Known Exploitation 
 
-!!! quote
-
-    If there is evidence that a vulnerability is being exploited, then that information should supersede anything EPSS has to say, because again, EPSS is pre-threat intel. If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited." https://www.first.org/epss/faq
-
 <figure markdown>
   ![](../assets/images/worry_quadrant.png){width="600"}
   <figcaption> Using EPSS with Known Exploitation</figcaption>

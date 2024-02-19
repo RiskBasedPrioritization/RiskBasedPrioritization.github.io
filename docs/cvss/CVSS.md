@@ -105,8 +105,6 @@
 is HIGH, Availability Impact is HIGH</figcaption>
 </figure>
 
-
-
 !!! observations
 
     1.  Greater than 50% of CVE Confidentiality Impact, Integrity Impact,
@@ -130,10 +128,67 @@ is HIGH, Availability Impact is HIGH</figcaption>
 </figcaption>
 </figure>
 
+
+## CVSS Exploit Maturity
+
+In addition to the CVSS Base Metrics which are commonly used, CVSS supports other Metrics, including Threat Metrics.
+
+!!! quote
+    It is the responsibility of the CVSS consumer to populate the values of Exploit Maturity (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.
+
+    Operational Recommendation: Threat intelligence sources that provide Exploit Maturity information for all vulnerabilities should be preferred over those with only partial coverage. Also, it is recommended to use multiple sources of threat intelligence as many are not comprehensive. This information should be updated as frequently as possible and its application to CVSS assessment should be automated.
+
+    https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics
+
+### CVSS v3.1
+The "[Temporal Metrics - Exploit Code Maturity (E)](https://www.first.org/cvss/v3.1/specification-document#3-1-Exploit-Code-Maturity-E)" causes the CVSS v3.1 Score to vary slightly.
+
+* [High (H): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H)
+* [Functional (F): 9.6](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F)
+* [Proof-Of-Concept (P): 9.3](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P)
+* [Unproven (U): 9.0](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U) 
+* [Not Defined (X): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) results in the same score as [High (H): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H)
+### CVSS v4.0 
+
+The Threat Metrics - Exploit Maturity (E) value causes the CVSS v4.0 Score to vary slightly
+
+* [Unreported: 8.1: High](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U) 
+* [POC (P): 8.9: High](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P)
+* [Attacked (A): 9.3: Critical](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A).
+* [Not Defined (X)](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N) results in the same score as [Attacked (A)](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A)
+
+!!! quote
+    The Threat Metric Group adjusts the “reasonable worst case” Base score by using threat intelligence to reduce the CVSS-BTE score, addressing concerns that many CVSS (Base) scores are too high.
+
+    https://www.first.org/cvss/v4.0/user-guide
+
+There's a big difference in likelihood of exploitation, and associated populations of CVEs, in Attacked vs POC.
+
+However, the CVSS Score changes only slightly between these - and that slight variation in score does not significantly change the counts of CVEs above the score per [Count of CVEs at or above CVSS Base Score](#count-of-cves-at-or-above-cvss-base-score).
+
+**The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.**
+
+!!! tip "An example project that enriches NVD CVSS scores to include Temporal & Threat Metrics"
+    "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
+    where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
+    is continuously updated.
+
+    -   Fetches EPSS scores every morning
+    -   Fetches CVSS scores from NVD if there are new EPSS scores.
+    -   Calculates the Exploit Code Maturity/Exploitability (E) Metric when
+        new data is found.
+    -   Provides a resulting CVSS-BT score for each CVE
+
+    It uses an EPSS threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).
+
+
 !!! success "Takeaways"
     1. Don't use CVSS Base (CVSS-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!
     2. CVSS Base (CVSS-B) scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)
     3. CVSS Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH values)
+    4. CVSS Threat Metrics - Exploit Maturity values don't allow for useful prioritization (because they change the overall score only slightly and there's too many CVEs with HIGH values)
+    5. The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively.
+
 
   
 

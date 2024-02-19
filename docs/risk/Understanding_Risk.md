@@ -171,6 +171,8 @@ likely on top  
 !!!info "The [CVSS Threat Metric Group](https://www.first.org/cvss/v4.0/specification-document#Metrics) contains an [Exploit Maturity](https://www.first.org/cvss/v4.0/specification-document#Exploit-Maturity-E) but it is the responsibility of the CVSS Consumer/user to populate the values"
     #### CVSS Exploit Maturity
     
+    See section [CVSS Exploit Maturity](../cvss/CVSS.md#cvss-exploit-maturity) for more details.
+
     !!! quote
         **This metric measures the likelihood of the vulnerability being
         attacked, and is based on the current state of exploit techniques,
@@ -188,17 +190,6 @@ likely on top  
         tools.
 
     The Threat Likelihood of Exploit Data Sources can be used here.
-
-    !!! tip "This project enriches NVD CVSS scores to include Temporal & Threat Metrics"
-        "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
-        where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
-        is continuously updated.
-
-        -   Fetches EPSS scores every morning
-        -   Fetches CVSS scores from NVD if there are new EPSS scores.
-        -   Calculates the Exploit Code Maturity/Exploitability (E) Metric when
-            new data is found.
-        -   Provides a resulting CVSS-BT score for each CVE
 
 
 !!!info "If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited"

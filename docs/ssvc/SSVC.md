@@ -1,8 +1,13 @@
 # Stakeholder-Specific Vulnerability Categorization (SSVC)
 
+<!-- 
+note: the SSVC documentation site certcc.github.io/SSVC is slated to go online in mid-March 2024.
+Until then, it just redirects to an SSVC calculator https://certcc.github.io/SSVC/ssvc-calc/
+-->
+
 !!! abstract "Overview"
 
-    This section covers [Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459)
+    This section covers [Stakeholder-Specific Vulnerability Categorization](https://certcc.github.io/SSVC/)
     and how EPSS can be used with it.
 
     :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_ssvc_dt/DT_analysis.ipynb) 
@@ -10,18 +15,21 @@
 
 ## SSVC
 
-[Stakeholder-Specific Vulnerability Categorization](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459) is proposed as an alternative to CVSS Base Scores.
+[Stakeholder-Specific Vulnerability Categorization](https://certcc.github.io/SSVC/) is proposed as an alternative to 
+CVSS Base Scores. SSVC provides a method for developing vulnerability management decision models that are tailored to the
+specific needs of different stakeholders. 
 
-It is based on CMU SEI (Carnegie Mellon University Software
-Engineering Institute):
+It is based on research performed by the [CERT Division](https://www.sei.cmu.edu/about/divisions/cert/)
+of the [Software Engineering Institute](https://www.sei.cmu.edu) (SEI) at [Carnegie Mellon University](https://www.cmu.edu) (CMU):
 
--   "<a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459"
-    rel="nofollow">Prioritizing Vulnerability Response: A
-    Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a>"
--   <a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886543"
-    rel="nofollow">Coordinated Vulnerability Disclosure User Stories</a>
+- [Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459)
+- [Github SSVC project](https://github.com/CERTCC/SSVC)
+- [SSVC Calculator](https://certcc.github.io/SSVC/ssvc-calc/)
+- [Stakeholder-Specific Vulnerability Categorization documentation](https://certcc.github.io/SSVC/)
+
+### CISA and SSVC
+
+CISA has adopted a customized version of SSVC as a framework for their vulnerability management decisions.
 
 !!! quote
 
@@ -43,12 +51,12 @@ Engineering Institute):
   
 <figure markdown>
 ![Image title](../assets/images/cisa_ssvcdt.png){ width="700" }
-<figcaption>SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption> 
+<figcaption>CISA's SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
   
 <figure markdown>
 ![Image title](../assets/images/cisadt_decisions.png){ width="700" }
-<figcaption>SSVC Decision Tree Decisions https://www.cisa.gov/ssvc-calculator</figcaption> 
+<figcaption>CISA's SSVC Decision Tree Outcomes https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
 
 

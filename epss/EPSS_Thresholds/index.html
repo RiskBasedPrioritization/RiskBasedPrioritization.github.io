@@ -811,9 +811,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remediation-policy" class="md-nav__link">
+  <a href="#remediation-policy-for-an-enterprise" class="md-nav__link">
     <span class="md-ellipsis">
-      Remediation Policy
+      Remediation Policy for an Enterprise
     </span>
   </a>
   
@@ -837,6 +837,15 @@
   
     <nav class="md-nav" aria-label="Policy Applied to an Enterprise">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edgescan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      EdgeScan Data
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
@@ -1345,9 +1354,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#remediation-policy" class="md-nav__link">
+  <a href="#remediation-policy-for-an-enterprise" class="md-nav__link">
     <span class="md-ellipsis">
-      Remediation Policy
+      Remediation Policy for an Enterprise
     </span>
   </a>
   
@@ -1371,6 +1380,15 @@
   
     <nav class="md-nav" aria-label="Policy Applied to an Enterprise">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edgescan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      EdgeScan Data
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
@@ -1409,18 +1427,28 @@ Organizations section), focusing on known exploited, known weaponized
 exploits, or a significant probability of exploit, is an effective
 approach to risk mitigation and prevention.</p>
 <ul>
-<li>we take an example Remediation Policy for an organization, and see what the impact is of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold</li>
+<li>
+<p>We start by looking at the <a href="../Introduction_to_EPSS/#what-does-epss-provide"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Coverage, Efficiency, Effort figure</a> to understand the tradeoffs between three key parameters that you may use when determining your optimal remediation strategy: coverage, efficiency, and level of effort.</p>
+</li>
+<li>
+<p>We then define an example Remediation Policy for an organization, and see what the impact is of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold using 2 data sets</p>
+<ul>
+<li>EdgeScan Detected CVEs</li>
+<li>Monte Carlo Random Sample</li>
+</ul>
+</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">The guidance here is highly opinionated and prescriptive and applied to a user context - not official <abbr title="Exploit Prediction Scoring System">EPSS</abbr> guidance as FIRST <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can't be prescriptive for your context</p>
 <p>At the beginning of the guide it was stated that <a href="../../introduction/Introduction/#alternative-or-additional-guidance">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
 <p>This section "leads with an opinion", and associated rationale.</p>
 </div>
-<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb">Source Code</a> </p>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="TODO">Source Code</a> </p>
 </div>
 <h2 id="epss-model"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Model<a class="headerlink" href="#epss-model" title="Permanent link">&para;</a></h2>
 <h3 id="remediation-prioritization-for-your-environment">Remediation Prioritization for your Environment<a class="headerlink" href="#remediation-prioritization-for-your-environment" title="Permanent link">&para;</a></h3>
-<p>Per <a href="../Introduction_to_EPSS/#what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.</p>
+<p>Per <a href="../Introduction_to_EPSS/#what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.
+This is based on CVEs detected by the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Environment (representative of an Enterprise environment).</p>
 <figure>
 <p><img alt="" src="../../assets/images/epss_coverage.jpeg" />
   </p>
@@ -1442,7 +1470,7 @@ approach to risk mitigation and prevention.</p>
 <p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
 <p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
-<h2 id="remediation-policy">Remediation Policy<a class="headerlink" href="#remediation-policy" title="Permanent link">&para;</a></h2>
+<h2 id="remediation-policy-for-an-enterprise">Remediation Policy for an Enterprise<a class="headerlink" href="#remediation-policy-for-an-enterprise" title="Permanent link">&para;</a></h2>
 <p>For this analysis, our policy will be (for our first pass triage
 independent of business and runtime context per the <a href="../../introduction/Scope/">Scope of this guide</a>):</p>
 <ol>
@@ -1470,9 +1498,11 @@ independent of business and runtime context per the <a href="../../introduction/
 <li><a href="../Applying_EPSS_to_your_environment/">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment</a></li>
 </ul>
 <p>In this case, we're taking the same approach; overall <a href="../../introduction/code_and_data/">the population for weaponized is small</a> - and an org will have a subset of these - so the extra effort is generally low.
-Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as pre-threat intel 
-* e.g. <a href="../../vendors/Qualys/">Qualys</a>
-* e.g. <a href="https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs">https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs</a></p>
+Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as pre-threat intel e.g.</p>
+<ul>
+<li><a href="../../vendors/Qualys/">Qualys</a></li>
+<li><a href="https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs">https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs</a></li>
+</ul>
 </div>
 <p>Let's assume we'll use the different groups for Likelihood of
 Exploitation that we defined earlier - and used the data sources we have
@@ -1522,13 +1552,14 @@ reality. Users can repeat the analysis with additional data.</p>
 </tr>
 </tbody>
 </table>
-<p>Here we're showing the counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for the groups
-(because we want to pick an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold above which we would <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the
+<p>Here we're showing the counts of CVEs <strong>above</strong> <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for the groups
+(because we want to pick an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold <strong>above</strong> which we would <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the
 CVEs)</p>
 <p>Per the policy we defined, we're going to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and
-Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score). So later we'll remove these from our counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
-    values. In other words, subtract the pink line from the blue line in
-    the graphs above</p>
+Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score). </p>
+<ul>
+<li>So later we'll remove these from our counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values. In other words, subtract the pink line from the blue line in the graphs above</li>
+</ul>
 <div class="admonition observations">
 <p class="admonition-title">Observations</p>
 <ol>
@@ -1570,10 +1601,38 @@ not all CVEs.</strong></p>
 <ul>
 <li>A typical enterprise will have 10K's of CVEs (depending on their
     tech stacks and ability to detect CVEs).</li>
-<li>The ~40K CVEs observed in the Cisco data set across 1000
-    enterprises likely represents the upper bound because it's the
-    collation of CVEs from each of the 1000 enterprises.</li>
+<li>Here we will look at all the CVEs detected by EdgeScan scans of many enterprises.</li>
 </ul>
+</div>
+<h3 id="edgescan-data">EdgeScan Data<a class="headerlink" href="#edgescan-data" title="Permanent link">&para;</a></h3>
+<p>Here we use <a href="../../vendors/EdgeScan/">EdgeScan</a> detected CVEs as the representative data set for our Enterprise.</p>
+<figure>
+<p><img alt="" src="../../assets/images/edgescan_epss.png" />
+  </p>
+<figcaption></figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The plot only shows <abbr title="Exploit Prediction Scoring System">EPSS</abbr> &gt; 0.01, so we can see the detail in the higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (rather than using a log y scale).</li>
+<li>The blue line represents the count of CVEs above an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Value for all CVEs detected by EdgeScan.</li>
+<li>The red line is when the <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>, and Weaponized (Metasploit, Nuclei) CVEs are removed per the Remediation Policy we defined above i.e. the actual effect of choosing an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold for our Remediation Policy.</li>
+</ul>
+</div>
+<div class="admonition observations">
+<p class="admonition-title">Observations</p>
+<p>We can see that, for both lines, the percentage of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score 0.1 (10%) is 5% and 7%.</p>
+<p>The difference in % of CVEs between 0.9 and 0.1 <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score </p>
+<ul>
+<li>for red (actual) is ~3% </li>
+<li>for blue (all) is ~5%</li>
+</ul>
+<p>The takeaways are the same as per the <a href="#remediation-prioritization-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Model - Remediation Prioritization for your Environment</a>:</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
+<p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
 <h3 id="monte-carlo-simulation-for-a-typical-enterprise">Monte Carlo Simulation for a Typical Enterprise<a class="headerlink" href="#monte-carlo-simulation-for-a-typical-enterprise" title="Permanent link">&para;</a></h3>
 <p><strong>Monte Carlo Analysis</strong></p>
@@ -1608,6 +1667,14 @@ threshold</p>
 </ol>
 </li>
 </ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>Random sampling is used here to create the samples.</li>
+<li>The distribution of counts of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values for a typical enterprise won't be a random distribution i.e. the counts of CVEs with high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> values will be higher.</li>
+<li>But the % change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores between <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score 0.9 and 0.1 is consistent with the examples above.</li>
+</ul>
+</div>
 <div class="admonition abstract">
 <p class="admonition-title">Recipe</p>
 <ol>
@@ -1700,10 +1767,19 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 </li>
 </ol>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
+<p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
 <li>For any organization, a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> - for a very large range of probability of exploitation (10%-100%).</li>
+<li>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).<ol>
+<li>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</li>
+</ol>
+</li>
 </ol>
 </div>
 

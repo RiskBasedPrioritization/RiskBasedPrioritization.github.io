@@ -1220,6 +1220,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#edgescan-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      EdgeScan Scoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#analysis" class="md-nav__link">
     <span class="md-ellipsis">
       Analysis
@@ -1249,9 +1258,8 @@
 <p>In this section we look at</p>
 <ul>
 <li>how EdgeScan uses <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> as part of their scoring</li>
-<li>what <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> looks like versus EdgeScan scores</li>
+<li>what <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> looks like for CVEs detected by EdgeScan scans</li>
 </ul>
-<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/edgescan.ipynb">Source Code</a> </p>
 </div>
 <h2 id="edgescan-data">EdgeScan Data<a class="headerlink" href="#edgescan-data" title="Permanent link">&para;</a></h2>
 <p>TODO To Be Completed by Eoin Keary </p>
@@ -1259,7 +1267,9 @@
 <p>The data........ the CVEs detected are determined to be exploitable (but
 not exploited as part of a typical engagement).
 The PenTest is carried out remotely.</p>
-<p>\~14K unique CVEs across X findings...</p>
+<h2 id="edgescan-scoring">EdgeScan Scoring<a class="headerlink" href="#edgescan-scoring" title="Permanent link">&para;</a></h2>
+<p><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is visible as a floating point score (0.00) alongside <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, CISAKEV (boolean) and EVSS (Edgescan Validated Security Score). </p>
+<p>Edgescan has also implemented an overall priority score combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> with some weightings to deliver an overall priority score, called the Edgescan eXposure Factor (EXF). <a href="https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/">https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/</a></p>
 <h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="Image title" src="../../assets/images/edgescan1.png" width="700" />
@@ -1283,7 +1293,6 @@ The PenTest is carried out remotely.</p>
 <li>The vast majority of detected CVEs have a low <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score near zero.</li>
 <li>Zooming in on the lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores below 0.1, there's CVEs are in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (Active), Metasploit and Nuclei (Weaponized), ExploitDB (PoC). Though the vast majority are not.</li>
 <li>Zooming in on the higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores above 0.1, there's a concentration of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.9 that are in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (Active), Metasploit and Nuclei (Weaponized), ExploitDB (PoC)</li>
-<li>Given these CVEs are determined to be exploitable, this suggests </li>
 </ol>
 </div>
 <div class="admonition info">

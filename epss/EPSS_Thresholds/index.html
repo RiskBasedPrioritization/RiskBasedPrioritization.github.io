@@ -848,6 +848,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#enterprise-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
     <span class="md-ellipsis">
       Monte Carlo Simulation for a Typical Enterprise
@@ -1391,6 +1400,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#enterprise-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#monte-carlo-simulation-for-a-typical-enterprise" class="md-nav__link">
     <span class="md-ellipsis">
       Monte Carlo Simulation for a Typical Enterprise
@@ -1468,6 +1486,7 @@ This is based on CVEs detected by the <abbr title="Exploit Prediction Scoring Sy
 <div class="admonition tip">
 <p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
 <p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>Plotting the data for your organization can help refine this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold value.</p>
 <p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
 <h2 id="remediation-policy-for-an-enterprise">Remediation Policy for an Enterprise<a class="headerlink" href="#remediation-policy-for-an-enterprise" title="Permanent link">&para;</a></h2>
@@ -1632,8 +1651,18 @@ not all CVEs.</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
 <p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>Plotting the data for your organization can help refine this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold value.</p>
 <p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
+<h3 id="enterprise-data">Enterprise Data<a class="headerlink" href="#enterprise-data" title="Permanent link">&para;</a></h3>
+<p>Looking at real <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from different enterprises, there is a significant variation in the graphs of counts of CVEs above an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score, and associated "inflection point".</p>
+<p>In other words, the general guidance to "Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%" stands, but picking the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value from the plot for your data will give you better coverage/efficiency/effort.</p>
+<p>We can generalize as follows:</p>
+<figure>
+<p><img alt="" src="../../assets/images/epss_shift.png" />
+  </p>
+<figcaption></figcaption>
+</figure>
 <h3 id="monte-carlo-simulation-for-a-typical-enterprise">Monte Carlo Simulation for a Typical Enterprise<a class="headerlink" href="#monte-carlo-simulation-for-a-typical-enterprise" title="Permanent link">&para;</a></h3>
 <p><strong>Monte Carlo Analysis</strong></p>
 <p>CVEs in an Organization vs All CVEs</p>
@@ -1770,16 +1799,13 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <div class="admonition tip">
 <p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
 <p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>Plotting the data for your organization can help refine this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold value.</p>
 <p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
 <li>For any organization, a large change in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> - for a very large range of probability of exploitation (10%-100%).</li>
-<li>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).<ol>
-<li>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</li>
-</ol>
-</li>
 </ol>
 </div>
 

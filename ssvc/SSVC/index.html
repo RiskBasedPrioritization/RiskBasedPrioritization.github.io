@@ -720,11 +720,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../epss/Count_of_CVEs_by_EPSS/" class="md-nav__link">
+      <a href="../../epss/What_users_ask_for/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    What Users Ask For
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epss/EPSS_Thresholds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPSS Thresholds
   </span>
   
 
@@ -860,6 +881,21 @@
       SSVC
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="SSVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisa-and-ssvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      CISA and SSVC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1258,6 +1294,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="SSVC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cisa-and-ssvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      CISA and SSVC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1285,25 +1336,31 @@
 
 
 <h1 id="stakeholder-specific-vulnerability-categorization-ssvc">Stakeholder-Specific Vulnerability Categorization (<abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>)<a class="headerlink" href="#stakeholder-specific-vulnerability-categorization-ssvc" title="Permanent link">&para;</a></h1>
+<!-- 
+note: the SSVC documentation site certcc.github.io/SSVC is slated to go online in mid-March 2024.
+Until then, it just redirects to an SSVC calculator https://certcc.github.io/SSVC/ssvc-calc/
+-->
+
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
-<p>This section covers <a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Stakeholder-Specific Vulnerability Categorization</a>
+<p>This section covers <a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization</a>
 and how <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used with it.</p>
 <p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_ssvc_dt/DT_analysis.ipynb">Source Code</a> </p>
 </div>
 <h2 id="ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr><a class="headerlink" href="#ssvc" title="Permanent link">&para;</a></h2>
-<p><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Stakeholder-Specific Vulnerability Categorization</a> is proposed as an alternative to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores.</p>
-<p>It is based on CMU SEI (Carnegie Mellon University Software
-Engineering Institute):</p>
+<p><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization</a> is proposed as an alternative to 
+<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores. <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> provides a method for developing vulnerability management decision models that are tailored to the
+specific needs of different stakeholders. </p>
+<p>It is based on research performed by the <a href="https://www.sei.cmu.edu/about/divisions/cert/">CERT Division</a>
+of the <a href="https://www.sei.cmu.edu">Software Engineering Institute</a> (SEI) at <a href="https://www.cmu.edu">Carnegie Mellon University</a> (CMU):</p>
 <ul>
-<li>"<a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459"
-    rel="nofollow">Prioritizing Vulnerability Response: A
-    Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a>"</li>
-<li><a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886543"
-    rel="nofollow">Coordinated Vulnerability Disclosure User Stories</a></li>
+<li><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a></li>
+<li><a href="https://github.com/CERTCC/SSVC">Github <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> project</a></li>
+<li><a href="https://certcc.github.io/SSVC/ssvc-calc/"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Calculator</a></li>
+<li><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization documentation</a></li>
 </ul>
+<h3 id="cisa-and-ssvc"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> and <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr><a class="headerlink" href="#cisa-and-ssvc" title="Permanent link">&para;</a></h3>
+<p><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> has adopted a customized version of <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> as a framework for their vulnerability management decisions.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“<abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> encourages every organization to use a vulnerability management
@@ -1320,11 +1377,11 @@ particular organization(s)</strong>.”</p>
 </div>
 <figure>
 <p><img alt="Image title" src="../../assets/images/cisa_ssvcdt.png" width="700" /></p>
-<figcaption>SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption>
+<figcaption>CISA's SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption>
 </figure>
 <figure>
 <p><img alt="Image title" src="../../assets/images/cisadt_decisions.png" width="700" /></p>
-<figcaption>SSVC Decision Tree Decisions https://www.cisa.gov/ssvc-calculator</figcaption>
+<figcaption>CISA's SSVC Decision Tree Outcomes https://www.cisa.gov/ssvc-calculator</figcaption>
 </figure>
 <h2 id="exploitation-evidence-of-active-exploitation-of-a-vulnerability">Exploitation: Evidence of Active Exploitation of a Vulnerability<a class="headerlink" href="#exploitation-evidence-of-active-exploitation-of-a-vulnerability" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">

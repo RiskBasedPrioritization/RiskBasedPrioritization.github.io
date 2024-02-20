@@ -767,15 +767,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remediation-prioritization-for-your-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remediation Prioritization for your Environment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#epss-percentile-score-for-your-environment" class="md-nav__link">
     <span class="md-ellipsis">
       EPSS Percentile Score for your Environment
@@ -826,11 +817,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../Count_of_CVEs_by_EPSS/" class="md-nav__link">
+      <a href="../What_users_ask_for/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    What Users Ask For
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EPSS_Thresholds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPSS Thresholds
   </span>
   
 
@@ -1343,15 +1355,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#remediation-prioritization-for-your-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remediation Prioritization for your Environment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#epss-percentile-score-for-your-environment" class="md-nav__link">
     <span class="md-ellipsis">
       EPSS Percentile Score for your Environment
@@ -1472,21 +1475,13 @@ only)</p>
 <p>This partially compensates for the False Positives and False Negatives
 from the IDS/IPS and honeypot exploitation observations, and the
 Exploitation Types and Environment that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is less suited for.</p>
-<h4 id="remediation-prioritization-for-your-environment">Remediation Prioritization for your Environment<a class="headerlink" href="#remediation-prioritization-for-your-environment" title="Permanent link">&para;</a></h4>
+<h4 id="epss-percentile-score-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile Score for your Environment<a class="headerlink" href="#epss-percentile-score-for-your-environment" title="Permanent link">&para;</a></h4>
 <p>The number of CVEs found in your environment will be a subset of all
 published CVEs, and will depend on:</p>
 <ol>
 <li>the technology stacks in your environment</li>
 <li>your ability to detect these CVEs</li>
 </ol>
-<p>Per <a href="../Introduction_to_EPSS/#what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, </p>
-<p>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.</p>
-<figure>
-<p><img alt="" src="../../assets/images/epss_coverage.jpeg" />
-  </p>
-<figcaption>Picking Thresholds for EPSS</figcaption>
-</figure>
-<p>This <a href="https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp">plot</a> will be superseded by a blog post on first.org/epss when published</p>
 <div class="admonition note">
 <p class="admonition-title"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> does not differentiate between 1 detection of a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> versus many</p>
 <p><abbr title="Exploit Prediction Scoring System">EPSS</abbr> does not differentiate between 1 instance of a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> versus many
@@ -1499,7 +1494,6 @@ number of CVEs, and then fewer instances of other CVEs.</p>
     your environment</li>
 </ul>
 </div>
-<h4 id="epss-percentile-score-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile Score for your Environment<a class="headerlink" href="#epss-percentile-score-for-your-environment" title="Permanent link">&para;</a></h4>
 <p>Percentiles are a direct transformation from probabilities and provide a measure of an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> probability relative to all other scores. That is, the percentile is the proportion of all values less than or equal to the current rank. </p>
 <ul>
 <li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile score is relative to all ~~220K published CVEs

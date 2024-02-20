@@ -722,11 +722,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../epss/Count_of_CVEs_by_EPSS/" class="md-nav__link">
+      <a href="../epss/What_users_ask_for/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    What Users Ask For
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epss/EPSS_Thresholds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPSS Thresholds
   </span>
   
 
@@ -1480,7 +1501,8 @@
 <p class="admonition-title">About this Guide</p>
 <p>This <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Guide is a pragmatic user-centric view of risk, the related standards and data sources, and how you can apply them for an effective <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization for your organization.</p>
 <p>It is written by, or contributed to, some of the thought leaders in this space <strong>for YOU.</strong></p>
-<p><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr></a>, <a href="https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized">Gartner</a> and others, recommend focusing on vulnerabilities that are known-exploited as an effective approach to risk mitigation and prevention, yet very few organizations do this. Maybe because they don't know they should, why they should, or how they should? This guide will cover all these points.</p>
+<p><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr></a>, <a href="https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized">Gartner</a>, and others, recommend focusing on vulnerabilities that are known-exploited as an effective approach to risk mitigation and prevention, yet very few organizations do this. </p>
+<p>Maybe because they don't know they should, why they should, or how they should? This guide will cover all these points.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">After reading this guide you should be able to</p>
@@ -1535,7 +1557,7 @@
 <li>Cyber Defender: network defenders,  IT/infosec</li>
 <li>Tool Provider: Tool providers: Tool Vendors, open source tools,...</li>
 </ul>
-<p>This is a subset of the Personas/Roles defined in the Requirements chapter.</p>
+<p>This is a subset of the <a href="#requirements-requirements-personas">Personas/Roles defined in the Requirements</a> chapter.</p>
 <p>No prior knowledge is assumed to read the guide - it provides just enough information to understand the advanced topics covered.</p>
 <p>A basic knowledge of Jupyter Python is required to run the code (with the data provided or on your data).</p>
 <h2 id="introduction-introduction-how-to-use-this-guide">How to Use This Guide<a class="headerlink" href="#introduction-introduction-how-to-use-this-guide" title="Permanent link">&para;</a></h2>
@@ -1554,11 +1576,18 @@
 <h2 id="introduction-introduction-how-to-contribute-to-this-guide">How to Contribute to This Guide<a class="headerlink" href="#introduction-introduction-how-to-contribute-to-this-guide" title="Permanent link">&para;</a></h2>
 <p>You can contribute content or suggest changes:</p>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zm-80 128c44.2 0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80zm-80-336c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg></span> <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/">Suggest content </a></li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2 5.2-7.1 10.4-14.2 15.4-21.4 19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3 5 7.2 10.2 14.3 15.4 21.4 19.8 27.1 39.7 54.4 49.2 86.2h160zm-80 128c44.2 0 80-35.8 80-80v-16H112v16c0 44.2 35.8 80 80 80zm-80-336c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112 8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg></span> <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/">Suggest content</a></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.4c-15.7 0-28.4-12.7-28.4-28.4V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7.7 1.3 1.4 1.9 2.1 14.2-7.3 30.4-11.4 47.5-11.4H312c17.1 0 33.2 4.1 47.5 11.4.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7.7-1.4 1.3-2.1 1.9 6.2 12 10.1 25.3 11.1 39.5H480c17.7 0 32 14.3 32 32s-14.3 32-32 32h-64c0 24.6-5.5 47.8-15.4 68.6 2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6V240c0-8.8-7.2-16-16-16s-16 7.2-16 16v239.2c-34.5-3.4-65.8-17.8-90.3-39.6l-63 63c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h64.3c1.1-14.1 5-27.5 11.1-39.5-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"/></svg></span> <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/issues/">Report Errors, typos</a></li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0s224 35.8 224 80zm-54.8 134.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432v-85.9z"/></svg></span> If you're a tool/solution vendor, and would like to provide anonymized, sanitized data - or what scoring system you use and why</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M80 48a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm64 193.7v65.1l51 51c7.1 7.1 11.8 16.2 13.4 26.1l15.2 90.9c2.9 17.4-8.9 33.9-26.3 36.8s-33.9-8.9-36.8-26.3l-14.3-85.9L66.8 320c-12-12-18.8-28.3-18.8-45.3v-88.1c0-32.4 26.2-58.6 58.6-58.6 24.1 0 46.5 12 59.9 32l47.4 71.1 10.1 5V160c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v76.2l10.1-5 47.4-71.2c13.3-20 35.8-32 59.9-32 32.4 0 58.6 26.2 58.6 58.6v88.1c0 17-6.7 33.3-18.7 45.3l-79.4 79.4-14.3 85.9c-2.9 17.4-19.4 29.2-36.8 26.3s-29.2-19.4-26.3-36.8l15.2-90.9c1.6-9.9 6.3-19 13.4-26.1l51-51v-65.1l-19 28.5c-4.6 7-11 12.6-18.5 16.3L399 316.3c-2.4 1.3-4.9 2.2-7.6 2.8-2.6.6-5.3.9-7.9.8H256.7c-2.5.1-5-.2-7.5-.7-2.9-.6-5.6-1.6-8.1-3l-59.5-29.8c-7.5-3.7-13.8-9.4-18.5-16.3l-19-28.5zM2.3 468.1l47.8-119.5 49.2 49.2-37.6 94c-6.6 16.4-25.2 24.4-41.6 17.8s-24.4-25.1-17.8-41.5zM512 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm77.9 348.6 47.8 119.5c6.6 16.4-1.4 35-17.8 41.6s-35-1.4-41.6-17.8l-37.6-94 49.2-49.2z"/></svg></span> If you'd like to share what your organization is doing (anonymized, sanitized as required) as a good reference example</li>
 </ul>
+<p>The "writing style" in this guide is "succinct, and leads with an opinion with data and code to back it up" i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess - and apply to your data and environment. This allows the reader to assess the opinion and the data and rationale behind it.</p>
+<p>Different, and especially opposite, opinions with the data to back them up, are especially welcome! </p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>If we have data, let’s look at data. If all we have are opinions, let’s go with mine.</p>
+<p>Jim Barksdale, former CEO of Netscape <a href="https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all">https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all</a></p>
+</div>
 <h2 id="introduction-introduction-foreword-by-chris-madden">Foreword by Chris Madden<a class="headerlink" href="#introduction-introduction-foreword-by-chris-madden" title="Permanent link">&para;</a></h2>
 <p>I embarked on this <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization journey because, as a Product Security engineer, my role is to enable the flow of software/value to our customers by helping deliver high quality software efficiently and securely.</p>
 <p>A large part of that was to be able to prioritize vulnerabilities by Real <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>. Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. There's a friendly vibrant community in this space - many of whom have contributed to this guide.</p>
@@ -1588,8 +1617,7 @@
 </li>
 </ol>
 <h2 id="introduction-introduction-alternative-or-additional-guidance">Alternative or Additional Guidance<a class="headerlink" href="#introduction-introduction-alternative-or-additional-guidance" title="Permanent link">&para;</a></h2>
-<p>The "writing style" in this guide is "succinct and opinionated" i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess against your data and environment.</p>
-<p>It is not a verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the author): </p>
+<p>This guide is not a verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the author): </p>
 <ul>
 <li><a href="https://www.amazon.com/Effective-Vulnerability-Management-Vulnerable-Ecosystem/dp/1394221207">Effective Vulnerability Management: Managing <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> in the Vulnerable Digital Ecosystem</a> </li>
 </ul></section><section class="print-page" id="introduction-contributors"><p>Thanks to all who contributed! <img alt="🙏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64f.svg" title=":pray:" /></p>
@@ -2214,6 +2242,7 @@ exploit</strong> (it is not designed or intended to be)</p>
 <div class="admonition info">
 <p class="admonition-title">The <a href="https://www.first.org/cvss/v4.0/specification-document#Metrics"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metric Group</a> contains an <a href="https://www.first.org/cvss/v4.0/specification-document#Exploit-Maturity-E">Exploit Maturity</a> but it is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Consumer/user to populate the values</p>
 <h4 id="risk-understanding_risk-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity<a class="headerlink" href="#risk-understanding_risk-cvss-exploit-maturity" title="Permanent link">&para;</a></h4>
+<p>See section <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for more details.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p><strong>This metric measures the likelihood of the vulnerability being
@@ -2232,19 +2261,6 @@ the payload of a network-based worm or virus or other automated attack
 tools.</p>
 </div>
 <p>The Threat Likelihood of Exploit Data Sources can be used here.</p>
-<div class="admonition tip">
-<p class="admonition-title">This project enriches <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</p>
-<p>"<a href="https://github.com/t0sche/cvss-bt">Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</a>" is an example project
-where the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Code Maturity/Exploitability (E) Temporal Metric
-is continuously updated.</p>
-<ul>
-<li>Fetches <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores every morning</li>
-<li>Fetches <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores from <abbr title="National Vulnerability Database">NVD</abbr> if there are new <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores.</li>
-<li>Calculates the Exploit Code Maturity/Exploitability (E) Metric when
-    new data is found.</li>
-<li>Provides a resulting <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BT score for each <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr></li>
-</ul>
-</div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited</p>
@@ -2666,12 +2682,61 @@ is HIGH, Availability Impact is HIGH</figcaption>
   The continuous line is a polynomial regression of order 2.
 </figcaption>
 </figure>
+<h2 id="cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity<a class="headerlink" href="#cvss-cvss-cvss-exploit-maturity" title="Permanent link">&para;</a></h2>
+<p>In addition to the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Metrics which are commonly used, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> supports other Metrics, including Threat Metrics.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>It is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> consumer to populate the values of Exploit Maturity (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.</p>
+<p>Operational Recommendation: Threat intelligence sources that provide Exploit Maturity information for all vulnerabilities should be preferred over those with only partial coverage. Also, it is recommended to use multiple sources of threat intelligence as many are not comprehensive. This information should be updated as frequently as possible and its application to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> assessment should be automated.</p>
+<p><a href="https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics">https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics</a></p>
+</div>
+<h3 id="cvss-cvss-cvss-v31"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3.1<a class="headerlink" href="#cvss-cvss-cvss-v31" title="Permanent link">&para;</a></h3>
+<p>The "<a href="https://www.first.org/cvss/v3.1/specification-document#3-1-Exploit-Code-Maturity-E">Temporal Metrics - Exploit Code Maturity (E)</a>" causes the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3.1 Score to vary slightly.</p>
+<ul>
+<li><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H">High (H): 9.8</a></li>
+<li><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F">Functional (F): 9.6</a></li>
+<li><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P">Proof-Of-Concept (P): 9.3</a></li>
+<li><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U">Unproven (U): 9.0</a> </li>
+<li><a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H">Not Defined (X): 9.8</a> results in the same score as <a href="https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H">High (H): 9.8</a></li>
+</ul>
+<h3 id="cvss-cvss-cvss-v40"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v4.0<a class="headerlink" href="#cvss-cvss-cvss-v40" title="Permanent link">&para;</a></h3>
+<p>The Threat Metrics - Exploit Maturity (E) value causes the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v4.0 Score to vary slightly</p>
+<ul>
+<li><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U">Unreported: 8.1: High</a> </li>
+<li><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P">POC (P): 8.9: High</a></li>
+<li><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A">Attacked (A): 9.3: Critical</a>.</li>
+<li><a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N">Not Defined (X)</a> results in the same score as <a href="https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A">Attacked (A)</a></li>
+</ul>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The Threat Metric Group adjusts the “reasonable worst case” Base score by using threat intelligence to reduce the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BTE score, addressing concerns that many <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> (Base) scores are too high.</p>
+<p><a href="https://www.first.org/cvss/v4.0/user-guide">https://www.first.org/cvss/v4.0/user-guide</a></p>
+</div>
+<p>There's a big difference in likelihood of exploitation, and associated populations of CVEs, in Attacked vs POC.</p>
+<p>However, the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Score changes only slightly between these - and that slight variation in score does not significantly change the counts of CVEs above the score per <a href="#cvss-cvss-count-of-cves-at-or-above-cvss-base-score">Count of CVEs at or above <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score</a>.</p>
+<p><strong>The convenience of a single <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">An example project that enriches <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</p>
+<p>"<a href="https://github.com/t0sche/cvss-bt">Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</a>" is an example project
+where the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Code Maturity/Exploitability (E) Temporal Metric
+is continuously updated.</p>
+<ul>
+<li>Fetches <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores every morning</li>
+<li>Fetches <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores from <abbr title="National Vulnerability Database">NVD</abbr> if there are new <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores.</li>
+<li>Calculates the Exploit Code Maturity/Exploitability (E) Metric when
+    new data is found.</li>
+<li>Provides a resulting <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BT score for each <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr></li>
+</ul>
+<p>It uses an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
 <li>Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!</li>
 <li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)</li>
 <li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH values)</li>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metrics - Exploit Maturity values don't allow for useful prioritization (because they change the overall score only slightly and there's too many CVEs with HIGH values)</li>
+<li>The convenience of a single <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively.</li>
 </ol>
 </div></section>
                         <h2 class='nav-section-title' id='section-exploit-prediction-scoring-system-epss-'>
@@ -2999,21 +3064,13 @@ only)</p>
 <p>This partially compensates for the False Positives and False Negatives
 from the IDS/IPS and honeypot exploitation observations, and the
 Exploitation Types and Environment that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is less suited for.</p>
-<h4 id="epss-applying_epss_to_your_environment-remediation-prioritization-for-your-environment">Remediation Prioritization for your Environment<a class="headerlink" href="#epss-applying_epss_to_your_environment-remediation-prioritization-for-your-environment" title="Permanent link">&para;</a></h4>
+<h4 id="epss-applying_epss_to_your_environment-epss-percentile-score-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile Score for your Environment<a class="headerlink" href="#epss-applying_epss_to_your_environment-epss-percentile-score-for-your-environment" title="Permanent link">&para;</a></h4>
 <p>The number of CVEs found in your environment will be a subset of all
 published CVEs, and will depend on:</p>
 <ol>
 <li>the technology stacks in your environment</li>
 <li>your ability to detect these CVEs</li>
 </ol>
-<p>Per <a href="#epss-introduction_to_epss-what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, </p>
-<p>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.</p>
-<figure>
-<p><img alt="" src="../assets/images/epss_coverage.jpeg" />
-  </p>
-<figcaption>Picking Thresholds for EPSS</figcaption>
-</figure>
-<p>This <a href="https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp">plot</a> will be superseded by a blog post on first.org/epss when published</p>
 <div class="admonition note">
 <p class="admonition-title"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> does not differentiate between 1 detection of a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> versus many</p>
 <p><abbr title="Exploit Prediction Scoring System">EPSS</abbr> does not differentiate between 1 instance of a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> versus many
@@ -3026,7 +3083,6 @@ number of CVEs, and then fewer instances of other CVEs.</p>
     your environment</li>
 </ul>
 </div>
-<h4 id="epss-applying_epss_to_your_environment-epss-percentile-score-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile Score for your Environment<a class="headerlink" href="#epss-applying_epss_to_your_environment-epss-percentile-score-for-your-environment" title="Permanent link">&para;</a></h4>
 <p>Percentiles are a direct transformation from probabilities and provide a measure of an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> probability relative to all other scores. That is, the percentile is the proportion of all values less than or equal to the current rank. </p>
 <ul>
 <li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Percentile score is relative to all ~~220K published CVEs
@@ -3222,26 +3278,157 @@ base score.</p>
 <p class="admonition-title">Quote</p>
 <p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited." <a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
 </div>
-</div></section><section class="print-page" id="epss-count_of_cves_by_epss"><h1 id="epss-count_of_cves_by_epss-count-of-cves-by-epss">Count of CVEs by <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#epss-count_of_cves_by_epss-count-of-cves-by-epss" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="epss-what_users_ask_for"><h1 id="epss-what_users_ask_for-what-users-ask-for">What Users Ask For<a class="headerlink" href="#epss-what_users_ask_for-what-users-ask-for" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Overview</p>
+<p>Any solution should be informed by what the user wants, and the rationale behind the solution implementation. This allows understanding and validation of the solution against the requirements and rationale. </p>
+<p>In this section, we look at users' requirements as expressed as <a href="#requirements-requirements">User Scenarios and User Stories</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first step of this Guide was asking users that represent stakeholders/roles to provide their requirements as (<a href="#requirements-requirements">User Scenarios and User Stories</a>, and to introduce the <a href="https://scaledagileframework.com/design-thinking/">Design Thinking</a> process. Extracts are provided below from <a href="#requirements-requirements">User Scenarios and User Stories</a>.</p>
+<ul>
+<li>We have not yet iterated on these requirements per <a href="https://scaledagileframework.com/design-thinking/">Design Thinking</a> to get to the underlying problem definition. It is common for users to express an implementation of what they want - similar to what they know, rather than the underlying reasons why they want it. </li>
+</ul>
+</div>
+<h3 id="epss-what_users_ask_for-epss-ratings-similar-to-cvss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Ratings Similar to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr><a class="headerlink" href="#epss-what_users_ask_for-epss-ratings-similar-to-cvss" title="Permanent link">&para;</a></h3>
+<p>Coming from <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, users naturally want/expect similar ratings ala Critical, High, Medium, Low severities.</p>
+<div class="admonition example">
+<p class="admonition-title">Related User Scenarios and User Stories</p>
+<p><a href="#requirements-requirements-fit-epss-scores-into-existing-cvss-focused-prioritization-policies">Fit <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings</a></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>This is put into easy-to-understand severity levels that additionally factor in the confidence of the likelihood score and are aligned with the existing Critical, High, Medium, Low severities I am used to from <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>.</p>
+</div>
+<p><a href="#requirements-requirements-severity-categories">Severity Categories</a></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>As a Tool Provider I want to provide my customers with not just an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score, but a standard Severity level that is familiar to me and officially provided by the same organization that provides the scores. Critical, High, Medium, Low are values I understand and can be mapped to existing policies and processes easily - especially for communication to less security-fluent stakeholders.</p>
+</div>
+</div>
+<h4 id="epss-what_users_ask_for-feedback">Feedback<a class="headerlink" href="#epss-what_users_ask_for-feedback" title="Permanent link">&para;</a></h4>
+<p><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> already includes support for Exploitation in <a href="#risk-understanding_risk-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a>.</p>
+<ul>
+<li>See section <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for more details, including <ul>
+<li>the limitations of using <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for risk-based prioritization</li>
+<li>an example project that calculates <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> and includes <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores and thresholds</li>
+</ul>
+</li>
+</ul>
+<p>This guide gives alternatives.</p>
+<p>In the content below, it will be shown that  </p>
+<ul>
+<li><abbr title="Exploit Prediction Scoring System">EPSS</abbr> allows for effective risk-based prioritization</li>
+<li>The difference in level of effort to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> issues between <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score of ~10% to ~90% is relatively small.</li>
+</ul>
+<h3 id="epss-what_users_ask_for-epss-as-the-single-score-for-exploitation"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> as the Single Score for Exploitation<a class="headerlink" href="#epss-what_users_ask_for-epss-as-the-single-score-for-exploitation" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>”Ideally, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores would factor in already published exploits"</p>
+<p><a href="#requirements-requirements-existing-public-exploits">Existing Public Exploits</a></p>
+</div>
+<p>A similar common request is to</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>"set the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to 1 if there are already published exploits"</p>
+</div>
+<h4 id="epss-what_users_ask_for-feedback_1">Feedback<a class="headerlink" href="#epss-what_users_ask_for-feedback_1" title="Permanent link">&para;</a></h4>
+<p>Per <a href="#epss-introduction_to_epss-using-epss-with-known-exploitation">Using <abbr title="Exploit Prediction Scoring System">EPSS</abbr> with Known Exploitation</a>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel and should be used in conjunction with evidence that a vulnerability is being exploited. 
+    <strong><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is by design not "the Single Score for Exploitation"</strong></p>
+<p>Per <a href="https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></a>:</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>it is recommended to use multiple sources of threat intelligence as many are not comprehensive.</p>
+</div>
+<p>Technically a Single Score exists that includes Exploitation and Severity:</p>
+<ul>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> already includes support for Exploitation in <a href="#risk-understanding_risk-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a>.</li>
+<li>See section <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for more details, including <ul>
+<li>the limitations of using <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for risk-based prioritization</li>
+<li>an example project that calculates <a href="#cvss-cvss-cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> and includes <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores and thresholds</li>
+</ul>
+</li>
+</ul>
+<p>This guide gives alternatives.</p>
+<h3 id="epss-what_users_ask_for-confidence-level-of-epss-scores">Confidence Level of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores<a class="headerlink" href="#epss-what_users_ask_for-confidence-level-of-epss-scores" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Related User Scenarios and User Stories</p>
+<p><a href="#requirements-requirements-confidence-level-of-epss-scores">Confidence Level of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores</a></p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>As a Tool Provider I want to provide my customers with not just an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score, but the Confidence level of that assessment. The estimation of score accuracy has a direct impact on my ability to de-prioritize lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores. Low Confidence should ideally be communicated, and ideally influence Severity levels.</p>
+</div>
+</div>
+<h4 id="epss-what_users_ask_for-feedback_2">Feedback<a class="headerlink" href="#epss-what_users_ask_for-feedback_2" title="Permanent link">&para;</a></h4>
+<p>Throughout this guide, it's been shown that in some cases <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores will be persistently low even when there is evidence of exploitation e.g. </p>
+<ul>
+<li><a href="#vendors-microsoft_exploitability_index">Microsoft Exploitability Index</a></li>
+<li><a href="#vendors-qualys">Qualys</a></li>
+<li><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a></li>
+<li><a href="#epss-applying_epss_to_your_environment">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment</a></li>
+</ul>
+<p>This evidence of exploitation exists outside the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> should be used in conjunction with evidence of exploitation. </p>
+<p>In other words, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model can't give a confidence level on overall exploitation.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>If there is evidence that a vulnerability is being exploited, then that information should supersede anything <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has to say, because again, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is pre-threat intel. If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited. </p>
+<p><a href="https://www.first.org/epss/faq">https://www.first.org/epss/faq</a></p>
+</div>
+<h3 id="epss-what_users_ask_for-epss-to-guide-my-effort-in-my-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> to Guide My Effort in My Environment<a class="headerlink" href="#epss-what_users_ask_for-epss-to-guide-my-effort-in-my-environment" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Related User Scenarios and User Stories</p>
+<p><a href="#requirements-requirements-focused-vulnerability-fix">Focused Vulnerability Fix Requirements</a></p>
+<p><a href="#requirements-requirements-my-effort-in-my-environment">My Effort in My Environment</a></p>
+</div>
+<h4 id="epss-what_users_ask_for-feedback_3">Feedback<a class="headerlink" href="#epss-what_users_ask_for-feedback_3" title="Permanent link">&para;</a></h4>
+<p>These points will be covered in the <a href="#epss-epss_thresholds"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Thresholds</a> section. </p></section><section class="print-page" id="epss-epss_thresholds"><h1 id="epss-epss_thresholds-epss-thresholds"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Thresholds<a class="headerlink" href="#epss-epss_thresholds-epss-thresholds" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
 <p>As we saw from the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> section, (and we'll see later in the Vendor and
 Organizations section), focusing on known exploited, known weaponized
 exploits, or a significant probability of exploit, is an effective
 approach to risk mitigation and prevention.</p>
-<p>In this section</p>
 <ul>
 <li>we take an example Remediation Policy for an organization, and see what the impact is of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold</li>
 </ul>
-<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb&lt;">Source Code</a> </p>
+<div class="admonition warning">
+<p class="admonition-title">The guidance here is highly opinionated and prescriptive and applied to a user context - not official <abbr title="Exploit Prediction Scoring System">EPSS</abbr> guidance as FIRST <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can't be prescriptive for your context</p>
+<p>At the beginning of the guide it was stated that <a href="#introduction-introduction-alternative-or-additional-guidance">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
+<p>This section "leads with an opinion", and associated rationale.</p>
 </div>
-<h2 id="epss-count_of_cves_by_epss-remediation-policy">Remediation Policy<a class="headerlink" href="#epss-count_of_cves_by_epss-remediation-policy" title="Permanent link">&para;</a></h2>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb">Source Code</a> </p>
+</div>
+<h2 id="epss-epss_thresholds-epss-model"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Model<a class="headerlink" href="#epss-epss_thresholds-epss-model" title="Permanent link">&para;</a></h2>
+<h3 id="epss-epss_thresholds-remediation-prioritization-for-your-environment">Remediation Prioritization for your Environment<a class="headerlink" href="#epss-epss_thresholds-remediation-prioritization-for-your-environment" title="Permanent link">&para;</a></h3>
+<p>Per <a href="#epss-introduction_to_epss-what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.</p>
+<figure>
+<p><img alt="" src="../assets/images/epss_coverage.jpeg" />
+  </p>
+<figcaption>Picking Thresholds for EPSS (A log scale for EPSS Probability makes it easier to see the detail in the lower range of EPSS Probability)</figcaption>
+</figure>
+<p>This <a href="https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp">plot</a> will be superseded by a blog post on first.org/epss when published. TODO</p>
+<figure>
+<p><img alt="" src="../assets/images/EPSS_threshold_emoji.png" />
+  </p>
+<figcaption>Picking Thresholds for EPSS Linear Scale (linear scale for EPSS Probability)(a plot from first.org/epss overlayed with grey annotations by authors of this guide)</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Linear scale is used here because, while a log scale shows more detail at the lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Probability range, people not used to thinking in log scales <a href="https://idioms.thefreedictionary.com/can%27t+see+the+wood+for+the+trees">may not be able to see the forest for the trees</a> i.e. not see the bigger picture because of the detailed log view.</p>
+<p>The linear and log scale plots represent the same data.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
+<p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
+</div>
+<h2 id="epss-epss_thresholds-remediation-policy">Remediation Policy<a class="headerlink" href="#epss-epss_thresholds-remediation-policy" title="Permanent link">&para;</a></h2>
 <p>For this analysis, our policy will be (for our first pass triage
-independent of business and runtime context):</p>
+independent of business and runtime context per the <a href="#introduction-scope">Scope of this guide</a>):</p>
 <ol>
 <li>Remediate vulnerabilities that have weaponized exploits or evidence
     of exploitation in the wild or in our organization i.e. Weaponized
-    Exploitation and above in our Likelihood of Exploitation diagram. <ol>
+    Exploitation and above <img alt="Exploitation Known evidence or activity" src="../assets/images/napkin1.png" width="600" /><ol>
 <li>independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score</li>
 </ol>
 </li>
@@ -3251,6 +3438,22 @@ independent of business and runtime context):</p>
 </ol>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Weaponized Exploits and <abbr title="Exploit Prediction Scoring System">EPSS</abbr></p>
+<p>One could make the argument for not using "Weaponized Exploits" as part of our policy: <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has all those other variables in the model, basically it's extracted all the information out of those, so trying to do something with those next to <abbr title="Exploit Prediction Scoring System">EPSS</abbr> doesn't make sense.</p>
+<p>But this could also be said of <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>. </p>
+<p>Throughout this guide, it's been shown that in some cases <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores will be persistently low even when there is evidence of exploitation, (and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> should be used in conjunction with evidence of exploitation) e.g. </p>
+<ul>
+<li><a href="#vendors-microsoft_exploitability_index">Microsoft Exploitability Index</a></li>
+<li><a href="#vendors-qualys">Qualys</a></li>
+<li><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a></li>
+<li><a href="#epss-applying_epss_to_your_environment">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment</a></li>
+</ul>
+<p>In this case, we're taking the same approach; overall <a href="#introduction-code_and_data">the population for weaponized is small</a> - and an org will have a subset of these - so the extra effort is generally low.
+Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as pre-threat intel 
+* e.g. <a href="#vendors-qualys">Qualys</a>
+* e.g. <a href="https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs">https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs</a></p>
+</div>
 <p>Let's assume we'll use the different groups for Likelihood of
 Exploitation that we defined earlier - and used the data sources we have
 available to determine the CVEs in each group</p>
@@ -3263,8 +3466,7 @@ available to determine the CVEs in each group</p>
 <li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei</li>
 </ol>
 </li>
-<li><strong>Active Exploitation + Weaponized Exploits: + Exploits with Proof
-    of Concepts</strong>:<ol>
+<li><strong>Active Exploitation + Weaponized Exploits: + Exploits with Proof of Concepts</strong>:<ol>
 <li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei + ExploitDB</li>
 </ol>
 </li>
@@ -3277,7 +3479,7 @@ with Exploit PoC (versus the ~25K in the ExploitDB data
 source we used) so this number is not representative of
 reality. Users can repeat the analysis with additional data.</p>
 </div>
-<h2 id="epss-count_of_cves_by_epss-count-of-cves-above-epss-value-for-all-cves">Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for All CVEs<a class="headerlink" href="#epss-count_of_cves_by_epss-count-of-cves-above-epss-value-for-all-cves" title="Permanent link">&para;</a></h2>
+<h2 id="epss-epss_thresholds-count-of-cves-above-epss-value-for-all-cves">Count of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> value for All CVEs<a class="headerlink" href="#epss-epss_thresholds-count-of-cves-above-epss-value-for-all-cves" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -3338,7 +3540,7 @@ Weaponized (independent of <abbr title="Exploit Prediction Scoring System">EPSS<
 </li>
 </ol>
 </div>
-<h2 id="epss-count_of_cves_by_epss-policy-applied-to-an-enterprise">Policy Applied to an Enterprise<a class="headerlink" href="#epss-count_of_cves_by_epss-policy-applied-to-an-enterprise" title="Permanent link">&para;</a></h2>
+<h2 id="epss-epss_thresholds-policy-applied-to-an-enterprise">Policy Applied to an Enterprise<a class="headerlink" href="#epss-epss_thresholds-policy-applied-to-an-enterprise" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>We know what the shape of the graph looks like for the count of CVEs above
@@ -3353,7 +3555,7 @@ not all CVEs.</strong></p>
     collation of CVEs from each of the 1000 enterprises.</li>
 </ul>
 </div>
-<h3 id="epss-count_of_cves_by_epss-monte-carlo-simulation-for-a-typical-enterprise">Monte Carlo Simulation for a Typical Enterprise<a class="headerlink" href="#epss-count_of_cves_by_epss-monte-carlo-simulation-for-a-typical-enterprise" title="Permanent link">&para;</a></h3>
+<h3 id="epss-epss_thresholds-monte-carlo-simulation-for-a-typical-enterprise">Monte Carlo Simulation for a Typical Enterprise<a class="headerlink" href="#epss-epss_thresholds-monte-carlo-simulation-for-a-typical-enterprise" title="Permanent link">&para;</a></h3>
 <p><strong>Monte Carlo Analysis</strong></p>
 <p>CVEs in an Organization vs All CVEs</p>
 <ul>
@@ -3527,25 +3729,31 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
                             Stakeholder-Specific Vulnerability Categorization (SSVC) <a class='headerlink' href='#section-stakeholder-specific-vulnerability-categorization-ssvc-' title='Permanent link'>↵</a>
                         </h2>
                         <section class="print-page" id="ssvc-ssvc"><h1 id="ssvc-ssvc-stakeholder-specific-vulnerability-categorization-ssvc">Stakeholder-Specific Vulnerability Categorization (<abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>)<a class="headerlink" href="#ssvc-ssvc-stakeholder-specific-vulnerability-categorization-ssvc" title="Permanent link">&para;</a></h1>
+<!-- 
+note: the SSVC documentation site certcc.github.io/SSVC is slated to go online in mid-March 2024.
+Until then, it just redirects to an SSVC calculator https://certcc.github.io/SSVC/ssvc-calc/
+-->
+
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
-<p>This section covers <a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Stakeholder-Specific Vulnerability Categorization</a>
+<p>This section covers <a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization</a>
 and how <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used with it.</p>
 <p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_ssvc_dt/DT_analysis.ipynb">Source Code</a> </p>
 </div>
 <h2 id="ssvc-ssvc-ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr><a class="headerlink" href="#ssvc-ssvc-ssvc" title="Permanent link">&para;</a></h2>
-<p><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Stakeholder-Specific Vulnerability Categorization</a> is proposed as an alternative to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores.</p>
-<p>It is based on CMU SEI (Carnegie Mellon University Software
-Engineering Institute):</p>
+<p><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization</a> is proposed as an alternative to 
+<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores. <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> provides a method for developing vulnerability management decision models that are tailored to the
+specific needs of different stakeholders. </p>
+<p>It is based on research performed by the <a href="https://www.sei.cmu.edu/about/divisions/cert/">CERT Division</a>
+of the <a href="https://www.sei.cmu.edu">Software Engineering Institute</a> (SEI) at <a href="https://www.cmu.edu">Carnegie Mellon University</a> (CMU):</p>
 <ul>
-<li>"<a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459"
-    rel="nofollow">Prioritizing Vulnerability Response: A
-    Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a>"</li>
-<li><a
-    href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886543"
-    rel="nofollow">Coordinated Vulnerability Disclosure User Stories</a></li>
+<li><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=653459">Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a></li>
+<li><a href="https://github.com/CERTCC/SSVC">Github <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> project</a></li>
+<li><a href="https://certcc.github.io/SSVC/ssvc-calc/"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Calculator</a></li>
+<li><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization documentation</a></li>
 </ul>
+<h3 id="ssvc-ssvc-cisa-and-ssvc"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> and <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr><a class="headerlink" href="#ssvc-ssvc-cisa-and-ssvc" title="Permanent link">&para;</a></h3>
+<p><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> has adopted a customized version of <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> as a framework for their vulnerability management decisions.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“<abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> encourages every organization to use a vulnerability management
@@ -3562,11 +3770,11 @@ particular organization(s)</strong>.”</p>
 </div>
 <figure>
 <p><img alt="Image title" src="../assets/images/cisa_ssvcdt.png" width="700" /></p>
-<figcaption>SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption>
+<figcaption>CISA's SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption>
 </figure>
 <figure>
 <p><img alt="Image title" src="../assets/images/cisadt_decisions.png" width="700" /></p>
-<figcaption>SSVC Decision Tree Decisions https://www.cisa.gov/ssvc-calculator</figcaption>
+<figcaption>CISA's SSVC Decision Tree Outcomes https://www.cisa.gov/ssvc-calculator</figcaption>
 </figure>
 <h2 id="ssvc-ssvc-exploitation-evidence-of-active-exploitation-of-a-vulnerability">Exploitation: Evidence of Active Exploitation of a Vulnerability<a class="headerlink" href="#ssvc-ssvc-exploitation-evidence-of-active-exploitation-of-a-vulnerability" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">

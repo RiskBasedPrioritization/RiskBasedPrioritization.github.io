@@ -880,11 +880,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../epss/Count_of_CVEs_by_EPSS/" class="md-nav__link">
+      <a href="../../epss/What_users_ask_for/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    What Users Ask For
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../epss/EPSS_Thresholds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EPSS Thresholds
   </span>
   
 
@@ -1769,6 +1790,7 @@ exploit</strong> (it is not designed or intended to be)</p>
 <div class="admonition info">
 <p class="admonition-title">The <a href="https://www.first.org/cvss/v4.0/specification-document#Metrics"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metric Group</a> contains an <a href="https://www.first.org/cvss/v4.0/specification-document#Exploit-Maturity-E">Exploit Maturity</a> but it is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Consumer/user to populate the values</p>
 <h4 id="cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity<a class="headerlink" href="#cvss-exploit-maturity" title="Permanent link">&para;</a></h4>
+<p>See section <a href="../../cvss/CVSS/#cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity</a> for more details.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p><strong>This metric measures the likelihood of the vulnerability being
@@ -1787,19 +1809,6 @@ the payload of a network-based worm or virus or other automated attack
 tools.</p>
 </div>
 <p>The Threat Likelihood of Exploit Data Sources can be used here.</p>
-<div class="admonition tip">
-<p class="admonition-title">This project enriches <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</p>
-<p>"<a href="https://github.com/t0sche/cvss-bt">Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</a>" is an example project
-where the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Code Maturity/Exploitability (E) Temporal Metric
-is continuously updated.</p>
-<ul>
-<li>Fetches <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores every morning</li>
-<li>Fetches <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores from <abbr title="National Vulnerability Database">NVD</abbr> if there are new <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores.</li>
-<li>Calculates the Exploit Code Maturity/Exploitability (E) Metric when
-    new data is found.</li>
-<li>Provides a resulting <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BT score for each <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr></li>
-</ul>
-</div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited</p>

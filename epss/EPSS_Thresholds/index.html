@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/epss/Count_of_CVEs_by_EPSS/">
+        <link rel="canonical" href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/epss/EPSS_Thresholds/">
       
       
-        <link rel="prev" href="../EPSS_and_CISA_KEV/">
+        <link rel="prev" href="../What_users_ask_for/">
       
       
         <link rel="next" href="../../cisa_kev/cisa_kev/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Counts of CVEs by EPSS - Risk Based Prioritization</title>
+        <title>EPSS Thresholds - Risk Based Prioritization</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#count-of-cves-by-epss" class="md-skip">
+        <a href="#epss-thresholds" class="md-skip">
           Skip to content
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Counts of CVEs by EPSS
+              EPSS Thresholds
             
           </span>
         </div>
@@ -717,6 +717,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../What_users_ask_for/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Users Ask For
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -733,7 +754,7 @@
           
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    EPSS Thresholds
   </span>
   
 
@@ -744,7 +765,7 @@
         
   
   <span class="md-ellipsis">
-    Counts of CVEs by EPSS
+    EPSS Thresholds
   </span>
   
 
@@ -764,6 +785,30 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#epss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      EPSS Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EPSS Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remediation-prioritization-for-your-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation Prioritization for your Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#remediation-policy" class="md-nav__link">
@@ -1276,6 +1321,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#epss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      EPSS Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EPSS Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remediation-prioritization-for-your-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remediation Prioritization for your Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#remediation-policy" class="md-nav__link">
     <span class="md-ellipsis">
       Remediation Policy
@@ -1332,26 +1401,54 @@
                   
 
 
-<h1 id="count-of-cves-by-epss">Count of CVEs by <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#count-of-cves-by-epss" title="Permanent link">&para;</a></h1>
+<h1 id="epss-thresholds"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Thresholds<a class="headerlink" href="#epss-thresholds" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
 <p>As we saw from the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> section, (and we'll see later in the Vendor and
 Organizations section), focusing on known exploited, known weaponized
 exploits, or a significant probability of exploit, is an effective
 approach to risk mitigation and prevention.</p>
-<p>In this section</p>
 <ul>
 <li>we take an example Remediation Policy for an organization, and see what the impact is of picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold</li>
 </ul>
-<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb&lt;">Source Code</a> </p>
+<div class="admonition warning">
+<p class="admonition-title">The guidance here is highly opinionated and prescriptive and applied to a user context - not official <abbr title="Exploit Prediction Scoring System">EPSS</abbr> guidance as FIRST <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can't be prescriptive for your context</p>
+<p>At the beginning of the guide it was stated that <a href="../../introduction/Introduction/#alternative-or-additional-guidance">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
+<p>This section "leads with an opinion", and associated rationale.</p>
+</div>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb">Source Code</a> </p>
+</div>
+<h2 id="epss-model"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Model<a class="headerlink" href="#epss-model" title="Permanent link">&para;</a></h2>
+<h3 id="remediation-prioritization-for-your-environment">Remediation Prioritization for your Environment<a class="headerlink" href="#remediation-prioritization-for-your-environment" title="Permanent link">&para;</a></h3>
+<p>Per <a href="../Introduction_to_EPSS/#what-does-epss-provide">What Does <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Provide?</a>, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.</p>
+<figure>
+<p><img alt="" src="../../assets/images/epss_coverage.jpeg" />
+  </p>
+<figcaption>Picking Thresholds for EPSS (A log scale for EPSS Probability makes it easier to see the detail in the lower range of EPSS Probability)</figcaption>
+</figure>
+<p>This <a href="https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp">plot</a> will be superseded by a blog post on first.org/epss when published. TODO</p>
+<figure>
+<p><img alt="" src="../../assets/images/EPSS_threshold_emoji.png" />
+  </p>
+<figcaption>Picking Thresholds for EPSS Linear Scale (linear scale for EPSS Probability)(a plot from first.org/epss overlayed with grey annotations by authors of this guide)</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A Linear scale is used here because, while a log scale shows more detail at the lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Probability range, people not used to thinking in log scales <a href="https://idioms.thefreedictionary.com/can%27t+see+the+wood+for+the+trees">may not be able to see the forest for the trees</a> i.e. not see the bigger picture because of the detailed log view.</p>
+<p>The linear and log scale plots represent the same data.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%</p>
+<p>Start by picking an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold around 10%, and adjust based on your <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data and your capacity to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the CVEs above that Threshold (in conjunction with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity or other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> factors).</p>
+<p>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</p>
 </div>
 <h2 id="remediation-policy">Remediation Policy<a class="headerlink" href="#remediation-policy" title="Permanent link">&para;</a></h2>
 <p>For this analysis, our policy will be (for our first pass triage
-independent of business and runtime context):</p>
+independent of business and runtime context per the <a href="../../introduction/Scope/">Scope of this guide</a>):</p>
 <ol>
 <li>Remediate vulnerabilities that have weaponized exploits or evidence
     of exploitation in the wild or in our organization i.e. Weaponized
-    Exploitation and above in our Likelihood of Exploitation diagram. <ol>
+    Exploitation and above <img alt="Exploitation Known evidence or activity" src="../../assets/images/napkin1.png" width="600" /><ol>
 <li>independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score</li>
 </ol>
 </li>
@@ -1361,6 +1458,22 @@ independent of business and runtime context):</p>
 </ol>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Weaponized Exploits and <abbr title="Exploit Prediction Scoring System">EPSS</abbr></p>
+<p>One could make the argument for not using "Weaponized Exploits" as part of our policy: <abbr title="Exploit Prediction Scoring System">EPSS</abbr> has all those other variables in the model, basically it's extracted all the information out of those, so trying to do something with those next to <abbr title="Exploit Prediction Scoring System">EPSS</abbr> doesn't make sense.</p>
+<p>But this could also be said of <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>. </p>
+<p>Throughout this guide, it's been shown that in some cases <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores will be persistently low even when there is evidence of exploitation, (and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> should be used in conjunction with evidence of exploitation) e.g. </p>
+<ul>
+<li><a href="../../vendors/Microsoft_Exploitability_Index/">Microsoft Exploitability Index</a></li>
+<li><a href="../../vendors/Qualys/">Qualys</a></li>
+<li><a href="../../cisa_kev/cisa_kev/"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a></li>
+<li><a href="../Applying_EPSS_to_your_environment/">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment</a></li>
+</ul>
+<p>In this case, we're taking the same approach; overall <a href="../../introduction/code_and_data/">the population for weaponized is small</a> - and an org will have a subset of these - so the extra effort is generally low.
+Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as pre-threat intel 
+* e.g. <a href="../../vendors/Qualys/">Qualys</a>
+* e.g. <a href="https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs">https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs</a></p>
+</div>
 <p>Let's assume we'll use the different groups for Likelihood of
 Exploitation that we defined earlier - and used the data sources we have
 available to determine the CVEs in each group</p>
@@ -1373,8 +1486,7 @@ available to determine the CVEs in each group</p>
 <li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei</li>
 </ol>
 </li>
-<li><strong>Active Exploitation + Weaponized Exploits: + Exploits with Proof
-    of Concepts</strong>:<ol>
+<li><strong>Active Exploitation + Weaponized Exploits: + Exploits with Proof of Concepts</strong>:<ol>
 <li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> + Metasploit + Nuclei + ExploitDB</li>
 </ol>
 </li>

@@ -6,20 +6,24 @@
     exploits, or a significant probability of exploit, is an effective
     approach to risk mitigation and prevention.
 
+    - We start by looking at the [EPSS Coverage, Efficiency, Effort figure](../epss/Introduction_to_EPSS.md#what-does-epss-provide) to understand the tradeoffs between three key parameters that you may use when determining your optimal remediation strategy: coverage, efficiency, and level of effort.
 
-    - we take an example Remediation Policy for an organization, and see what the impact is of picking an EPSS threshold
+    - We then define an example Remediation Policy for an organization, and see what the impact is of picking an EPSS threshold using 2 data sets
+        - EdgeScan Detected CVEs
+        - Monte Carlo Random Sample
   
     !!! warning "The guidance here is highly opinionated and prescriptive and applied to a user context - not official EPSS guidance as FIRST EPSS can't be prescriptive for your context"
         At the beginning of the guide it was stated that [the "writing style" in this guide is "succinct and opinionated"](../introduction/Introduction.md#alternative-or-additional-guidance).
         
         This section "leads with an opinion", and associated rationale.
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/weaponized.ipynb) 
+    :technologist: [Source Code](TODO) 
 
 ## EPSS Model 
 ### Remediation Prioritization for your Environment
 
 Per [What Does EPSS Provide?](Introduction_to_EPSS.md/#what-does-epss-provide), the EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies.
+This is based on CVEs detected by the EPSS Environment (representative of an Enterprise environment).
 
 <figure markdown>
   ![](../assets/images/epss_coverage.jpeg)
@@ -42,7 +46,7 @@ This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanageme
     
     You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
 
-## Remediation Policy
+## Remediation Policy for an Enterprise
 
 For this analysis, our policy will be (for our first pass triage
 independent of business and runtime context per the [Scope of this guide](../introduction/Scope.md)):
@@ -69,9 +73,10 @@ independent of business and runtime context per the [Scope of this guide](../int
     * [Applying EPSS to your environment](Applying_EPSS_to_your_environment.md)
 
     In this case, we're taking the same approach; overall [the population for weaponized is small](../introduction/code_and_data.md) - and an org will have a subset of these - so the extra effort is generally low.
-    Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add EPSS as pre-threat intel 
-    * e.g. [Qualys](../vendors/Qualys.md)
-    * e.g. https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs
+    Also, mature risk based prioritization schemes may be using weaponized exploits as an input already - and want to add EPSS as pre-threat intel e.g.
+
+    * [Qualys](../vendors/Qualys.md)
+    *  https://github.com/theparanoids/PrioritizedRiskRemediation?tab=readme-ov-file#risk-based-decision-tree-decision-node-inputs
 
 Let's assume we'll use the different groups for Likelihood of
 Exploitation that we defined earlier - and used the data sources we have
@@ -100,15 +105,15 @@ available to determine the CVEs in each group
 | **Count of CVEs above EPSS value (Log scale Y-axis)**    | ![](../assets/images/CountofCVEsaboveEPSSvalueLog.png) |
 | **Count of CVEs above EPSS value (Graph range EPSS 0.01 to 1.0 Linear Scale Y-Axis)**   | ![](../assets/images/CountofCVEsaboveEPSSvalue01.png) |
 
-Here we're showing the counts of CVEs above EPSS values for the groups
-(because we want to pick an EPSS threshold above which we would remediate the
+Here we're showing the counts of CVEs **above** EPSS values for the groups
+(because we want to pick an EPSS threshold **above** which we would remediate the
 CVEs)
 
 
 Per the policy we defined, we're going to remediate CVEs in CISA KEV and
-Weaponized (independent of EPSS score). So later we'll remove these from our counts of CVEs above EPSS
-    values. In other words, subtract the pink line from the blue line in
-    the graphs above
+Weaponized (independent of EPSS score). 
+
+* So later we'll remove these from our counts of CVEs above EPSS values. In other words, subtract the pink line from the blue line in the graphs above
 
 !!! observations
 
@@ -144,11 +149,37 @@ Weaponized (independent of EPSS score). So later we'll remove these from our cou
 
     -   A typical enterprise will have 10K's of CVEs (depending on their
         tech stacks and ability to detect CVEs).
-    -   The ~40K CVEs observed in the Cisco data set across 1000
-        enterprises likely represents the upper bound because it's the
-        collation of CVEs from each of the 1000 enterprises.
+    -   Here we will look at all the CVEs detected by EdgeScan scans of many enterprises.
 
-  
+### EdgeScan Data 
+
+Here we use [EdgeScan](../vendors/EdgeScan.md) detected CVEs as the representative data set for our Enterprise.
+
+<figure markdown>
+  ![](../assets/images/edgescan_epss.png)
+  <figcaption></figcaption>
+</figure>
+
+!!! note
+    * The plot only shows EPSS > 0.01, so we can see the detail in the higher EPSS scores (rather than using a log y scale).
+    * The blue line represents the count of CVEs above an EPSS Value for all CVEs detected by EdgeScan.
+    * The red line is when the CISA KEV, and Weaponized (Metasploit, Nuclei) CVEs are removed per the Remediation Policy we defined above i.e. the actual effect of choosing an EPSS threshold for our Remediation Policy.
+
+!!! observations
+    
+    We can see that, for both lines, the percentage of CVEs above EPSS Score 0.1 (10%) is 5% and 7%.
+    
+    The difference in % of CVEs between 0.9 and 0.1 EPSS score 
+    
+    * for red (actual) is ~3% 
+    * for blue (all) is ~5%
+
+    The takeaways are the same as per the [EPSS Model - Remediation Prioritization for your Environment](#remediation-prioritization-for-your-environment):
+
+!!! tip "Start by picking an EPSS Threshold around 10%"
+    Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
+    
+    You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
 
 ### Monte Carlo Simulation for a Typical Enterprise
 
@@ -180,6 +211,15 @@ threshold
     1.  **We would know that any Enterprise with the number of CVEs would be
         represented in those plots**
     2.  In other words, Monte Carlo Simulation for a Typical Enterprise
+
+
+!!! warning
+
+    - Random sampling is used here to create the samples.
+    - The distribution of counts of EPSS values for a typical enterprise won't be a random distribution i.e. the counts of CVEs with high EPSS values will be higher.
+    - But the % change in EPSS scores between EPSS score 0.9 and 0.1 is consistent with the examples above.
+
+
 
 !!! abstract "Recipe" 
 
@@ -237,10 +277,15 @@ threshold
     3.  For 0.5% (~1.1K) of CVEs plot, the width of the band for EPSS 0.2 is ~250 and for EPSS 0.9 is ~200 CVEs
         1.  For much bigger populations, e.g. 20% (~44K), the width of the band is not much wider (as we'd expect given only a small percentage of CVEs have an EPSS score above 0.1)
   
-
+!!! tip "Start by picking an EPSS Threshold around 10%"
+    Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
+    
+    You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
   
 
 
 !!! success "Takeaways"        
     
     1. For any organization, a large change in EPSS score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to remediate - for a very large range of probability of exploitation (10%-100%).
+    2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
+          1. You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.

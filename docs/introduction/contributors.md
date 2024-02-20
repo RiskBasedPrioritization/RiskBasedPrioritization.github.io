@@ -12,6 +12,7 @@ In alphabetical order by first name:
 -   Denny Wan 
 -   Derrick Lewis
 -   Jay Jacobs 
+-   Jeffrey Martin
 -   Jerry Gamblin 
 -   Jonathan Spring
 -   Joseph Manahan 

@@ -41,10 +41,7 @@ This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanageme
 
     The linear and log scale plots represent the same data.
 
-!!! tip "Start by picking an EPSS Threshold around 10%"
-    Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
-    
-    You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
+{!includes/epss_threshold.md!}
 
 ## Remediation Policy for an Enterprise
 
@@ -176,10 +173,22 @@ Here we use [EdgeScan](../vendors/EdgeScan.md) detected CVEs as the representati
 
     The takeaways are the same as per the [EPSS Model - Remediation Prioritization for your Environment](#remediation-prioritization-for-your-environment):
 
-!!! tip "Start by picking an EPSS Threshold around 10%"
-    Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
-    
-    You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
+{!includes/epss_threshold.md!}
+
+### Enterprise Data 
+
+Looking at real CVE data from different enterprises, there is a significant variation in the graphs of counts of CVEs above an EPSS score, and associated "inflection point".
+
+In other words, the general guidance to "Start by picking an EPSS Threshold around 10%" stands, but picking the EPSS value from the plot for your data will give you better coverage/efficiency/effort.
+
+We can generalize as follows:
+
+<figure markdown>
+  ![](../assets/images/epss_shift.png)
+  <figcaption></figcaption>
+</figure>
+
+
 
 ### Monte Carlo Simulation for a Typical Enterprise
 
@@ -277,15 +286,11 @@ threshold
     3.  For 0.5% (~1.1K) of CVEs plot, the width of the band for EPSS 0.2 is ~250 and for EPSS 0.9 is ~200 CVEs
         1.  For much bigger populations, e.g. 20% (~44K), the width of the band is not much wider (as we'd expect given only a small percentage of CVEs have an EPSS score above 0.1)
   
-!!! tip "Start by picking an EPSS Threshold around 10%"
-    Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
-    
-    You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
-  
+{!includes/epss_threshold.md!}
+
 
 
 !!! success "Takeaways"        
     
     1. For any organization, a large change in EPSS score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to remediate - for a very large range of probability of exploitation (10%-100%).
-    2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
-          1. You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS.
+

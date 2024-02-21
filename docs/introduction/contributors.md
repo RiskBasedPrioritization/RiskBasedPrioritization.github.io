@@ -17,7 +17,8 @@ In alphabetical order by first name:
 -   Jerry Gamblin 
 -   Jonathan Spring
 -   Joseph Manahan 
--   Maor Kuriel 
+-   Maor Kuriel
+-   Patrick Garrity 
 -   Sasha Romanosky 
 -   Stephen Shaffer
 -   Steve Finegan

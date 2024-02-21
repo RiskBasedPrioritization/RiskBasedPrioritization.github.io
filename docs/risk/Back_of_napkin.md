@@ -7,7 +7,7 @@ icon: material/play-box-edit-outline
     As users, we want to know which CVEs we need to remediate first based on our
     available resources/capacity to remediate them.
 
-    To develop an understanding of EPSS, we'll build a** back of the napkin**
+    To develop an understanding of Risk Based Prioritization, we'll build a** back of the napkin**
     Risk Based Prioritization model that focuses on Likelihood of
     Exploitation.
 
@@ -16,7 +16,7 @@ icon: material/play-box-edit-outline
 
     When we look at Risk Based Prioritization models in products and 
     production later in this guide; you'll be able to recognize many
-    of the elements in our back of the napkin model.
+    of the elements in our back of the napkin model
 
 
 ## Back of the napkin Model
@@ -119,4 +119,4 @@ This would require fixing 6.5% of CVEs (10% x 65%).
 
 
 !!! success "Takeaways"
-    **With this very simple back of the napkin model, and very exaggerated counts of weaponized exploitation, we see that by using Likelihood of Exploitation, we need to remediate 1/10 of CVEs versus using CVSS alone!!!**
+    **With this very simple back of the napkin model, and very exaggerated counts of weaponized exploitation, we see that by using Likelihood of Exploitation, we need to remediate 1/10 of CVEs versus using CVSS Base Score alone!!!**

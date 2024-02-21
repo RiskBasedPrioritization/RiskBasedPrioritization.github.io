@@ -1,3 +1,7 @@
+**~**: shorthand for "approximately"
+
+**~~**: shorthand for "very approximately"
+
 **Access Controls**: Measures limiting resource access based on user roles and permissions to prevent unauthorized exploitation.
 
 **Asset Identification**: Process of identifying and cataloging assets within a system for vulnerability assessment.
@@ -49,6 +53,8 @@
 **Penetration Testing**: Simulating cyber attacks to identify vulnerabilities and assess the effectiveness of security measures.
 
 **Phishing**: A cyber attack is a method where attackers masquerade as trustworthy entities to deceive individuals into providing sensitive information.
+
+**PSIRT**: Product Security Incident Response Team
 
 **Risk Assessment**: Evaluating the potential impact and likelihood of exploitation for identified vulnerabilities.
 

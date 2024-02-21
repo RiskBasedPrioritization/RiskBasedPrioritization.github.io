@@ -52,7 +52,7 @@ theme:
     logo: material/fire-off
   features:
     - navigation.expand
-    ##- navigation.footer
+    - navigation.footer
     ##- navigation.indexes
     ##- navigation.instant
     ###- navigation.instant.prefetch

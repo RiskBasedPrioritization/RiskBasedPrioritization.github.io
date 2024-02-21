@@ -25,7 +25,7 @@
 3.  Modular: e.g. allows change/customization of Mission & Well-being
     Decision Node for an organization. Loose coupling, high cohesion.
 4.  Decision Tree Analysis can be applied (see source code).
-5.  Trees gives a very clear visual of all the parameters and decision
+5.  Trees give a very clear visual of all the parameters and decision
     nodes e.g. Attack Trees for Threat Modelling. Formulas are opaque,
     single output.
 
@@ -71,12 +71,12 @@ value/exposure assets.
   
 
 **We’ll walk through this First Pass triage - using a Decision Tree to
-prioritze the vulnerabilities.**
+prioritize the vulnerabilities.**
 
 -   **We’ll build this Decision Tree from scratch.**
 -   **An extract of the data is shown for each step. So we can see
     what’s happening without needing to understand the code**
--   A key benfit to Decision Trees is that they are understandable. The
+-   A key benefit to Decision Trees is that they are understandable. The
     implementation of them should support that too. So the code here
     aims for clarity e.g. laid out inline.
 
@@ -184,7 +184,7 @@ sankey diagram to show how CVEs flow through the tree Decision Nodes
           1. Exploitation - Active
           2. Automatable - Yes
           3. Technical Impact - Total
-    2. This fine granularity and clarity is in stark contrast to the coarse granularity of CVSS ratings
+    2. This fine granularity and clarity is in stark contrast to the coarse granularity of [CVSS ratings](../cvss/CVSS.md).
     3. The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to remediate by higest priority first!
 
 ## Triage CVEs by Priority
@@ -211,8 +211,8 @@ to apply the Decision Tree to a list of CVEs.
 
     
 !!! success "Takeaways"
-    1. The Decision Tree gives give an effective prioritization vs population (in stark contrast to CVSS score or ratings)
-    1. Applying the Decision Trees to a list of CVEs is a simple 1 liner merge based on CVEs (see source code)
-    2. We can get the best of both worlds with
+    1. The Decision Tree gives give an effective prioritization vs population (in stark contrast to the coarse granularity of [CVSS score or ratings](../cvss/CVSS.md)).
+    2. Applying the Decision Trees to a list of CVEs is a simple 1 liner merge based on CVEs (see source code)
+    3. We can get the best of both worlds with
           1. static priority decisions based on our Decision Tree output
           2. temporal EPSS score

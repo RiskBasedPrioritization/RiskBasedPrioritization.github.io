@@ -126,7 +126,7 @@ likely on top  
             7 times as likely to be exploited in the wild*"
         2.  "If it’s ‘weaponized’ (think metasploit), the odds of a
             vulnerability being exploited in the wild really balloon
-            from about 3.7% to 37.1%." Per Jay Jacobs, Cyentia 
+            from about 3.7% to 37.1%." [Per Jay Jacobs, Cyentia](https://www.cyentia.com/github-a-source-for-exploits/) 
 4.  **Proof Of Concept Exploit**
     1.  ExploitDB is an example of where Vulnerability Proof Of Concept
         Exploits are available.

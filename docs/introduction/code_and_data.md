@@ -14,7 +14,7 @@ icon: material/play-box-edit-outline
 
 ## Running the Code
 
-The source code provide with this guide is available as Jupyter Notebooks.
+The source code provided with this guide is available as Jupyter Notebooks.
 
 These can be run 
 
@@ -62,7 +62,7 @@ See [analysis](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizatio
       1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
       2. Read the data from CISA KEV alert reports in ./data_in/cisa_kev/
       3. Plot CISA KEV datasets showing EPSS, CVSS by source of the exploitability
-      4. Write data_out/cisa_kev/csa/csa.csv.gz which is the CISA KEV CysberSecurity Alerts (CSA) subset with EPSS and other data
+      4. Write data_out/cisa_kev/csa/csa.csv.gz which is the CISA KEV CyberSecurity Alerts (CSA) subset with EPSS and other data
 3. [qualys.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/qualys.ipynb)
        1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
        2. Read the data from ./data_in/qualys
@@ -117,7 +117,7 @@ See [https://github.com/CERTCC/SSVC/issues/309](https://github.com/CERTCC/SSVC/i
 !!! tip "A snapshot of the data used for this guide is available"
     A snapshot of this data is already available with the source in [data_in](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in)
 
-    * A date.txt file is included in each folder with the data that contains the date of downloaded.
+    * A date.txt file is included in each folder with the data that contains the date of download.
 
     But you can download current data as described here. 
 
@@ -132,7 +132,7 @@ See [https://github.com/CERTCC/SSVC/issues/309](https://github.com/CERTCC/SSVC/i
 Get NVD data automatically
 
 * A notebook or script in [nvd](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/nvd) downloads the NVD data.
-* The data is ouput to data_out/CVSSData.csv.gz
+* The data is output to data_out/CVSSData.csv.gz
 * Note: The download method used will be deprecated some time after Dec 2023 per https://nvd.nist.gov/vuln/data-feeds
 
 

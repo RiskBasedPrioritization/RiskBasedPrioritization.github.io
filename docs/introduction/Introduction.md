@@ -81,20 +81,16 @@ If you're looking for the "easy button", or the one scheme to rule them all for 
 * :fontawesome-solid-database: If you're a tool/solution vendor, and would like to provide anonymized, sanitized data - or what scoring system you use and why
 * :fontawesome-solid-people-carry-box: If you'd like to share what your organization is doing (anonymized, sanitized as required) as a good reference example
 
-The "writing style" in this guide is "succinct, and leads with an opinion with data and code to back it up" i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess - and apply to your data and environment. This allows the reader to assess the opinion and the data and rationale behind it.
+## Writing Style
+The "writing style" in this guide is succinct, and leads with an opinion, with data and code to back it up i.e. data analysis plots (with source code where possible) and observations and takeaways that you can assess - and apply to your data and environment. This allows the reader to assess the opinion and the code/data and rationale behind it.
 
-Different, and especially opposite, opinions with the data to back them up, are especially welcome! 
+Different, and especially opposite, opinions with the data to back them up, are especially welcome! - and will help shape this guide.
 
 !!! quote
     If we have data, let’s look at data. If all we have are opinions, let’s go with mine.
     
-    Jim Barksdale, former CEO of Netscape https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all
+    [Jim Barksdale, former CEO of Netscape](https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all) 
   
-## Foreword by Chris Madden
-I embarked on this Risk Based Prioritization journey because, as a Product Security engineer, my role is to enable the flow of software/value to our customers by helping deliver high quality software efficiently and securely.
-
-A large part of that was to be able to prioritize vulnerabilities by Real Risk. Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. There's a friendly vibrant community in this space - many of whom have contributed to this guide.
-
 
 ## Source Code
 1.  See https://github.com/epss-sig/epss-interoperability TODO

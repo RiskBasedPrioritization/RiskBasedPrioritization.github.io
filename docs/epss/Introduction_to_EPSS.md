@@ -16,7 +16,9 @@ Exploit Prediction Scoring System (EPSS) is a data-driven effort for
 **estimating the likelihood (probability) that a software vulnerability
 will be exploited in the wild**. The Special Interest Group (SIG) consists
 of over 400 researchers, practitioners, government officials, and users
-who volunteer their time to improve this industry standard. EPSS is
+who volunteer their time to improve this industry standard. 
+
+EPSS is
 managed under
 <u><a href="https://www.first.org/" rel="nofollow">FIRST</a></u>
 (<a href="https://www.first.org/epss" rel="nofollow"
@@ -53,7 +55,7 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
 -   EPSS can be used by regulators and policy makers when defining patch
     management requirements.
 -   (More detailed User Scenarios for different Personas (written by
-    real users in that role) are provided in AnnexRequirements.)
+    real users in that role) are provided in [Requirements](../requirements/Requirements.md).)
 
 ## What Does EPSS Provide?
 

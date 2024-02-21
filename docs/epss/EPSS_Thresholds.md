@@ -293,4 +293,7 @@ threshold
 !!! success "Takeaways"        
     
     1. For any organization, a large change in EPSS score in the range 0.1 to 0.9 results in a relatively small change in count of CVEs we would need to remediate - for a very large range of probability of exploitation (10%-100%).
+    2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors).
+          1. Plotting the data for your organization can help refine this EPSS Threshold value.    
+          2. You can further adjust this EPSS Threshold as CVEs are remediated, and as you gain more experience with EPSS. 
 

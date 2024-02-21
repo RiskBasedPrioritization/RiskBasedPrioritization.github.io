@@ -21,7 +21,7 @@ These articles are worth reading in full - below are some insightful extracts.
 
     QVS scores consistently **place vulnerabilities with evidence of exploitation, such as CISA known vulnerabilities, in a higher score range even if the EPSS score is low**
 
-    Qualys TruRisk rates less than 1% of vulnerabilities as critical, and less than 7% of vulnerabilities as high. This drastically reduces the number of vulnerabilities (up to 85% fewer compared to CVSS which ranks 51% of vulnerabilities high or critical) that organizations need to focus on to reduce risk
+    **Qualys TruRisk rates less than 1% of vulnerabilities as critical, and less than 7% of vulnerabilities as high. This drastically reduces the number of vulnerabilities (up to 85% fewer compared to CVSS which ranks 51% of vulnerabilities high or critical) that organizations need to focus on to reduce risk**
 
     The QDS algorithm **rates weaponized exploits higher than PoC exploits.**
 
@@ -138,7 +138,14 @@ and the reason for the unscored CVEs by Qualys. 
           1. known to be exploited in the wild 
           2. weaponized exploits 
           3. PoC exploits.
-    3.  The Qualys scoring / priority combines CVSS Base Score rating with likelihood of exploitation for all score bands. Even Critical CVEs may be scored lower (~70) by Qualys 
-    4. Other evidence of exploitation trumps EPSS in the case of low EPSS scores consistent with [using EPSS When There is No Other Evidence of Exploitation](https://amnesia.first.org/display/EPSS/All+Pages#AllPages-WhenThereisNoOtherEvidenceofExploitation).
+    4.  The Qualys scoring / priority combines CVSS Base Score rating with likelihood of exploitation for all score bands. Even Critical CVEs may be scored lower (~70) by Qualys 
+    5. Other evidence of exploitation trumps EPSS in the case of low EPSS scores consistent with [using EPSS When There is No Other Evidence of Exploitation](https://amnesia.first.org/display/EPSS/All+Pages#AllPages-WhenThereisNoOtherEvidenceofExploitation).
        1. Some known exploited CVEs listed in 2023 Qualys TruRisk Research Report (even in the top 5 of the top 163) have low EPSS scores
+    6. Qualys TruRisk Range and Factors is a useful Risk Based Prioritization reference that is bottom heavy i.e. a lot less CVEs in the high end of risk.
+    !!! quote
+        Qualys TruRisk rates less than 1% of vulnerabilities as critical, and less than 7% of vulnerabilities as high. This drastically reduces the number of vulnerabilities (up to 85% fewer compared to CVSS which ranks 51% of vulnerabilities high or critical) that organizations need to focus on to reduce risk rates less than 1% of vulnerabilities as critical, and less than 7% of vulnerabilities as high. 
+        
+        This drastically reduces the number of vulnerabilities (up to 85% fewer compared to CVSS which ranks 51% of vulnerabilities high or critical) that organizations need to focus on to reduce risk. 
+        
+    This is in stark contrast to the coarse granularity of [CVSS score or ratings](../cvss/CVSS.md).
    

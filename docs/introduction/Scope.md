@@ -33,7 +33,7 @@ A different way of looking at this is that this guide can be used as a first pas
 </figure>
 
 !!! tip "Having good security hygiene, and a good understanding of your data, is recommended independent of Risk Based Prioritization"
-    Indepdendent of the Risk Based Prioritization in this guide:
+    Independent of the Risk Based Prioritization in this guide:
 
     - Good Security hygiene e.g. keeping software up to date, is effective in preventing and remediating vulnerabilities.
     - Understanding your vulnerability data, and root causes, should inform your remediation.
@@ -42,11 +42,11 @@ A different way of looking at this is that this guide can be used as a first pas
 
     A more complete picture of Risk Remediation Asset and Remediation branches is shown below. 
     
-    - While these are out of scope for this guide, it may be useful as a reference for your Risk Remedation.
+    - While these are out of scope for this guide, it may be useful as a reference for your Risk Remediation.
 
     <figure markdown>
     ![](https://github.com/theparanoids/PrioritizedRiskRemediation/blob/main/images/RiskRemediation.png?raw=true)
-    <figcaption>Risk Remedation Taxonomy</figcaption>
+    <figcaption>Risk Remediation Taxonomy</figcaption>
     </figure>
     
     

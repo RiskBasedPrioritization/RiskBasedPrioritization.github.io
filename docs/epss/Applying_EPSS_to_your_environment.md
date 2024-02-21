@@ -43,33 +43,35 @@ specific CVE in the next 30 days in this **"EPSS Environment"**.
 
 ### Network Attacks
 
-Vulnerabilities that are remotely exploitable (i.e. Network Attack
-Vector in CVSS Base Score terms) have a higher Exploitability (CVSS Base
-Score Exploitability metrics group)  
+!!! tip "EPSS is best suited to network based attacks"
 
-1.  remotely exploitable versus those that require physical or local
-    proximity.
-2.  can be exercised automatically over the network without requiring
-    user-interaction (e.g. clicking a button or a link).
+    Vulnerabilities that are remotely exploitable (i.e. Network Attack
+    Vector in CVSS Base Score terms) have a higher Exploitability (CVSS Base
+    Score Exploitability metrics group)  
 
-EPSS is best suited to these types of vulnerabilities.
+    1.  remotely exploitable versus those that require physical or local
+        proximity.
+    2.  can be exercised automatically over the network without requiring
+        user-interaction (e.g. clicking a button or a link).
 
-!!! quote
-    Moreover, the nature of the detection devices generating the events
-    will be biased toward detecting network based attacks, as opposed to
-    attacks from other attack vectors such as host-based attacks or
-    methods requiring physical proximity
+    EPSS is best suited to these types of vulnerabilities.
 
-    [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
+    !!! quote
+        Moreover, the nature of the detection devices generating the events
+        will be biased toward detecting network based attacks, as opposed to
+        attacks from other attack vectors such as host-based attacks or
+        methods requiring physical proximity
+
+        [Enhancing Vulnerability Prioritization: Data-Driven Exploit Predictions with Community-Driven Insights](https://arxiv.org/pdf/2302.14172.pdf), Feb 2023
 
 
-!!! example
+    !!! example
 
-    At the time of writing this guide, [CISA Warns of Active Exploitation Apple iOS and macOS Vulnerability](https://thehackernews.com/2024/02/cisa-warns-of-active-exploitation-of.html).
+        At the time of writing this guide, [CISA Warns of Active Exploitation Apple iOS and macOS Vulnerability](https://thehackernews.com/2024/02/cisa-warns-of-active-exploitation-of.html).
 
-    This CVE has a consistently low EPSS score near zero [(https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series)](https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series).
+        This CVE has a consistently low EPSS score near zero [(https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series)](https://api.first.org/data/v1/epss?cve=CVE-2022-48618&scope=time-series).
 
-    This is to be expected because the CVE Attack Vector is "Local", not Network, per [(https://nvd.nist.gov/vuln/detail/CVE-2022-48618)](https://nvd.nist.gov/vuln/detail/CVE-2022-48618) 
+        This is to be expected because the CVE Attack Vector is "Local", not Network, per [(https://nvd.nist.gov/vuln/detail/CVE-2022-48618)](https://nvd.nist.gov/vuln/detail/CVE-2022-48618) 
 
 ## False Positives and Negatives
 
@@ -129,7 +131,7 @@ Percentiles are a direct transformation from probabilities and provide a measure
 - The EPSS Percentile score is relative to all ~~220K published CVEs
 that have an EPSS score.
 - A fraction of those CVEs will apply to a typical organization e.g.
-~~20K.
+~~10K order of magnitude.
 - A user is likely more interested in the EPSS Percentile for their
 organization - than for all CVEs.
 - A CVE's EPSS Percentile could be e.g. 60% - but in the 90% percentile
@@ -150,4 +152,3 @@ high EPSS score).
           1. Enterprise environments
           2. Detect Network attacks
     2. Code is provided to calculate EPSS score percentiles for your environment/CVEs
-    3. The EPSS group provides a Coverage, Efficiency, Effort figure showing the tradeoffs between alternative remediation strategies

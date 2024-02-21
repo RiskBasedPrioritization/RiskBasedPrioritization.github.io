@@ -39,6 +39,9 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
     in enterprise environments.
 
 
+!!! tip
+    This guide does not duplicate the EPSS information, FAQ on https://www.first.org/epss.
+
 {!includes/vulns_exploited.md!}
 ## What Can EPSS Do For Me?
 

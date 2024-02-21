@@ -60,6 +60,8 @@ A similar common request is to
 Per [Using EPSS with Known Exploitation](../epss/Introduction_to_EPSS.md#using-epss-with-known-exploitation), EPSS is pre-threat intel and should be used in conjunction with evidence that a vulnerability is being exploited. 
     **EPSS is by design not "the Single Score for Exploitation"**
 
+See https://www.first.org/epss/faq#Everyone-knows-this-vulnerability-has-been-exploited-why-doesn-t-EPSS-score-it-at-100
+
 Per [CVSS](https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics):
 !!! quote
     it is recommended to use multiple sources of threat intelligence as many are not comprehensive.

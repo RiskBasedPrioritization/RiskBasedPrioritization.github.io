@@ -126,8 +126,7 @@ now, and how the user would like things to look in the future
     Reachability analysis, and Exploratory Data Analysis to understand the
     root systemic causes for my CVEs).
 
-    **Overall, applying these 3 independent measures, I get a 10x reduction
-    in effort and CVEs to fix! Now we’re sailing! **
+    **Overall, applying these 3 independent measures, I get a 10x reduction in effort and CVEs to fix! Now we’re sailing!**
 
 ### Get teams to focus on the real issues (based with real facts and trending) issues and bring the collective risk down for my organization.
 
@@ -466,19 +465,16 @@ now, and how the user would like things to look in the future
     or worse and then to be able to drill down into the risk and ascertain
     where the increases and decreases are coming from. 
 
-    Risk can be approached
+    Risk can be approached from different perspetives:
 
-    1.  top down - Generally, top-down risk is based on forecasted data, as
-        opposed to actual data, although the forecasts may be based on
-        historical data.   
-        1.  From an organization perspective, the risk associated with the
-            assets in the organization
-            1.  FAIR and <u><a
-                href="https://www.amazon.com/How-Measure-Anything-Cybersecurity-Risk/dp/1119892309"
-                rel="nofollow" style="text-decoration: none;text-align: left;">How to
-                Measure Anything in Cybersecurity Risk</a></u> (Bayesian)
-                are examples of this top-down risk approach
-    2.  bottom up - Generally, based on actual data, such as threats and
+    1.  From an organization perspective, the risk associated with the
+        assets in the organization
+        1.  FAIR and <u><a
+            href="https://www.amazon.com/How-Measure-Anything-Cybersecurity-Risk/dp/1119892309"
+            rel="nofollow" style="text-decoration: none;text-align: left;">How to
+            Measure Anything in Cybersecurity Risk</a></u> (Bayesian)
+            are examples of this top-down risk approach
+    2.  From a per vulnerability perspective - Generally, based on actual data, such as threats and
         vulnerabilities.
         1.  For a given vulnerability, the Impact of the Vulnerability being
             exploited by a Threat for a given Asset.
@@ -491,7 +487,7 @@ now, and how the user would like things to look in the future
     successful, such as due to reachability issues and compensating
     controls.
 
-    1.  e.g. see "<a
+    3.  e.g. see "<a
         href="https://www.servicenow.com/community/secops-forum/exploit-prediction-scoring-system-epss-scoring-coming-to/td-p/1296592"
         rel="nofollow">EPSS Can Scale, to Produce System, Network, and
         Enterprise-level Exploit Predictions</a>".

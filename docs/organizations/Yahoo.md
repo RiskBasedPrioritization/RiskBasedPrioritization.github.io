@@ -117,7 +117,7 @@ rel="nofollow">https://youtu.be/oMZN810xfck?t=896</a>.
 
 ### Decision Trees and Multiple Data Sources to get more Targeted Prioritization
 
-The "Decision Tree From Scratch" section gives a simplified view of the Decision Tree used.
+The [Decision Tree From Scratch](../ssvc/decision_trees_from_scratch.md) section gives a simplified view of the Decision Tree used.
 
 Using the same real data, using CVSS Base Parameters (not CVSS Score),
 and combining EPSS with CISA KEV and other industry and internal threat
@@ -129,7 +129,7 @@ code provided but
 1.  additionally uses commercial CTI for Exploitation
 2.  uses other sources of Impact (because CVSS Base Score Impact
     Confidentiality, Integrity, Availability do not offer enough
-    granularity)
+     granularity per [CVSS ratings](../cvss/CVSS.md).)
 
 <figure markdown>
   ![](../assets/images/yahoo_dt.png)

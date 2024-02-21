@@ -6,21 +6,22 @@ we all benefit and we're truly grateful!
 
 In alphabetical order by first name:
 
+-   Allen Householder, CERT
 -   Aruneesh Salhotra 
 -   Buddy Bergman 
--   Chris Madden
+-   Chris Madden, Yahoo
 -   Christian Heinrich
 -   Denny Wan 
 -   Derrick Lewis
--   Jay Jacobs 
+-   Jay Jacobs, Cyentia, EPSS Co-creator
 -   Jeffrey Martin
 -   Jerry Gamblin 
--   Jonathan Spring
+-   Jonathan Spring, CISA
 -   Joseph Manahan 
 -   Maor Kuriel
--   Patrick Garrity 
--   Sasha Romanosky 
--   Stephen Shaffer
+-   Patrick Garrity, VulnCheck
+-   Sasha Romanosky, EPSS Co-creator, CVSS author
+-   Stephen Shaffer, Peleton
 -   Steve Finegan
 
 ## Chris Madden

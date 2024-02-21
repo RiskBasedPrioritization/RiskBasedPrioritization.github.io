@@ -31,6 +31,14 @@ These articles are worth reading in full - below are some insightful extracts.
     </figure>
 
     [In-Depth Look Into Data-Driven Science Behind Qualys TruRisk, October 10, 2022](https://blog.qualys.com/vulnerabilities-threat-research/2022/10/10/in-depth-look-into-data-driven-science-behind-qualys-trurisk)
+
+
+!!! tip
+    When  [In-Depth Look Into Data-Driven Science Behind Qualys TruRisk, October 10, 2022](https://blog.qualys.com/vulnerabilities-threat-research/2022/10/10/in-depth-look-into-data-driven-science-behind-qualys-trurisk) was written, it did not include EPSS.
+    
+    However EPSS informs "likelihood of exploitation" (one of the three attributes Qualys TruRisk is hyper focused on).
+
+    EPSS could be added by Qualys, (or by any user using a similar risk rating system), per [Using EPSS with Known Exploitation](../epss/Introduction_to_EPSS.md#using-epss-with-known-exploitation).
 ### An In-Depth Look at the Latest Vulnerability Threat Landscape
     
 
@@ -131,6 +139,7 @@ and the reason for the unscored CVEs by Qualys. 
 </figure>
 
 {!includes/vendor_warning.md!}
+
 
 !!! success "Takeaways"
     1. "The focus should be given to CVEs known to be exploited in the wild (CISA KEV), those with a high likelihood of exploitation (indicated by a high EPSS score), and those with weaponized exploit code available"

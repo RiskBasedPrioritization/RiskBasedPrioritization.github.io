@@ -239,7 +239,7 @@ threshold
                 the Cisco data set across 1000 enterprises
     2.  Plot the result
     3.  Repeat steps 1,2, e.g. 10,000, times
-        1.  It turns out that the result (shape) i pretty much the same if we repeat
+        1.  It turns out that the result (shape) is pretty much the same if we repeat
             100,000 times
     4.  With a large number of iterations (e.g. 10,000), the result is a thick band (composed of 10,000 individual lines)
         1.   The gray band represents any and all possible outcomes for the sample.

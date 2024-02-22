@@ -33,11 +33,3 @@ Specifically it uses:
 4.  EPSS scores above a Threshold
 
   
-
-  
-
-  
-
--    complete 
-
-  

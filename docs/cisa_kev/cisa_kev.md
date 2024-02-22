@@ -4,9 +4,11 @@
 
     This section gives an overview of CISA KEV.
 
-    See [EPSS and CISA KEV](../epss/EPSS_and_CISA_KEV.md) for an analysis of CISA KEV CVEs.
-    
-    See [Log4Shell Example](../risk/Log4Shell.md) for an example of a CISA KEV entry.
+    See also:
+
+    * [Where CVSS, EPSS, CISA KEV Fit](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit) in the Risk Taxonomy.
+    * [EPSS and CISA KEV](../epss/EPSS_and_CISA_KEV.md) for an analysis of CISA KEV CVEs.
+    * [Log4Shell Example](../risk/Log4Shell.md) for an example of a CISA KEV entry.
 
 !!! quote
 
@@ -38,4 +40,5 @@
 
 
 !!! success "Takeaways"
-    1. Organizations should use the KEV catalog as an input to their vulnerability management prioritization framework.
+    1. CISA maintains a catalog of vulnerabilities that have been exploited in the wild.
+    2. Organizations should use this KEV catalog as an input to their vulnerability management prioritization framework to prioritize by Risk.

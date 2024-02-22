@@ -26,6 +26,7 @@ mkdocs build
 mkdocs gh-deploy --force 
 
 # push source to main branch
+git push -u origin main 
 
 #==================================================
 

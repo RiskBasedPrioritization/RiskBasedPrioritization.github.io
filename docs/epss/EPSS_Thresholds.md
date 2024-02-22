@@ -13,7 +13,7 @@
         - Monte Carlo Random Sample
   
     !!! warning "The guidance here is highly opinionated and prescriptive and applied to a user context - not official EPSS guidance as FIRST EPSS can't be prescriptive for your context"
-        At the beginning of the guide it was stated that [the "writing style" in this guide is "succinct and opinionated"](../introduction/Introduction.md#alternative-or-additional-guidance).
+        At the beginning of the guide it was stated that [the "writing style" in this guide is "succinct and opinionated"](../introduction/Introduction.md#writing-style).
         
         This section "leads with an opinion", and associated rationale.
 
@@ -51,10 +51,10 @@ independent of business and runtime context per the [Scope of this guide](../int
 1.  Remediate vulnerabilities that have weaponized exploits or evidence
     of exploitation in the wild or in our organization i.e. Weaponized
     Exploitation and above ![Exploitation Known evidence or activity](../assets/images/napkin1.png){ width="600" }
-    1.  independent of EPSS score
+    1.  independent of EPSS score per [Using EPSS with Known Exploitation](../epss/Introduction_to_EPSS.md#using-epss-with-known-exploitation)
 2.  Remediate CVEs with EPSS score above some threshold
     1.  **we need to understand the effect of picking a threshold, so we do some analysis...**
-    2.  This is the same policy used in our back of the napkin Model Remediation Policy, but here we additionally "remediate CVEs with EPSS score above some threshold".
+    2.  This is the same policy used in our [back of the napkin Model Remediation Policy](../risk/Back_of_napkin.md), but here we additionally "remediate CVEs with EPSS score above some threshold".
 
 !!! note "Weaponized Exploits and EPSS"
     

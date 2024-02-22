@@ -7,7 +7,7 @@
     -   Qualys scoring based on their public posts
     -   Qualys scores
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/qualys.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/qualys.ipynb) 
 
 ## Qualys Articles
 

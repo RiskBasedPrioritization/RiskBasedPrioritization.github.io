@@ -9,7 +9,7 @@
     2.  Risk Taxonomy or orientation map, showing where CVSS, CISA KEV, EPSS fit
     3.  The different data sources that can be used to inform the key risk factors
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
 
   
 ## Risk Definition

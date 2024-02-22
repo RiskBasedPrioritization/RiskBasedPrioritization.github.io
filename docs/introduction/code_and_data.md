@@ -51,24 +51,24 @@ These can be run
 
 
 ## Analysis
-See [analysis](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis) directory for these files.
+See [analysis](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/analysis) directory for these files.
 
-1. [enrich_cves.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis/enrich_cves.ipynb) 
-    1. Take the data sources from [data_in/](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/) 
+1. [enrich_cves.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/enrich_cves.ipynb) 
+    1. Take the data sources from [data_in/](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in/) 
     2. Enrich the CVE data from NVD with the other data sources
     3. Add an "Exploit" column to indicate the source of the exploitability (used later to set colors of CVE data in plots)
     4. store the output in data_out/nvd_cves_v3_enriched.csv.gz
-2. [kev_epss_cvss.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis/kev_epss_cvss.ipynb)
+2. [kev_epss_cvss.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb)
       1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
       2. Read the data from CISA KEV alert reports in ./data_in/cisa_kev/
       3. Plot CISA KEV datasets showing EPSS, CVSS by source of the exploitability
       4. Write data_out/cisa_kev/csa/csa.csv.gz which is the CISA KEV CyberSecurity Alerts (CSA) subset with EPSS and other data
-3. [qualys.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/qualys.ipynb)
+3. [qualys.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/qualys.ipynb)
        1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
        2. Read the data from ./data_in/qualys
        3. Plot Qualys dataset showing EPSS, CVSS by source of the exploitability
        4. Write data_out/qualys/qualys.csv.gz which is the Qualys data with EPSS and other data
- 4. [msrc.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/msrc.ipynb)
+ 4. [msrc.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/msrc.ipynb)
        1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
        2. Read the data from ./data_in/msrc
        3. Plot Microsoft Exploitability Index dataset showing EPSS, CVSS by source of the exploitability
@@ -76,11 +76,11 @@ See [analysis](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizatio
 
 
 ### CISA SSVC Decision Trees
-See [cisa_ssvc_dt](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/) directory for these files.
+See [cisa_ssvc_dt](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/) directory for these files.
 
 #### CISA SSVC Decision Tree From Scratch Example Implementation
 
-[DT_from_scratch.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/DT_from_scratch.ipynb) 
+[DT_from_scratch.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/DT_from_scratch.ipynb) 
 
 1. Read the enriched CVE data from data_out/CVSSData_enriched.csv.gz
 2. Read the Decision Tree definition cisa_ssvc_dt/DT_rbp.csv
@@ -98,7 +98,7 @@ See [cisa_ssvc_dt](https://github.com/RiskBasedPrioritization/RiskBasedPrioritiz
 
 #### CISA SSVC Decision Tree Analysis for Feature Importance
 
-[DT_analysis.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/DT_analysis.ipynb) 
+[DT_analysis.ipynb](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/DT_analysis.ipynb) 
 
 1. Read the Decision Tree definition cisa_ssvc_dt/DT_rbp.csv
 2. Perform Feature Importance using 2 methods
@@ -115,13 +115,13 @@ See [https://github.com/CERTCC/SSVC/issues/309](https://github.com/CERTCC/SSVC/i
 ## Getting Data from Data Sources
 
 !!! tip "A snapshot of the data used for this guide is available"
-    A snapshot of this data is already available with the source in [data_in](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in)
+    A snapshot of this data is already available with the source in [data_in](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in)
 
     * A date.txt file is included in each folder with the data that contains the date of download.
 
     But you can download current data as described here. 
 
-* [get_data.sh](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data/get_data.sh) gets the data that can be downloaded automatically and used as-is.
+* [get_data.sh](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data/get_data.sh) gets the data that can be downloaded automatically and used as-is.
 * Other data is manually downloaded - see instructions below.
     * MSRC
     * ExploitDB
@@ -131,7 +131,7 @@ See [https://github.com/CERTCC/SSVC/issues/309](https://github.com/CERTCC/SSVC/i
 ### National Vulnerability Database (NVD)
 Get NVD data automatically
 
-* A notebook or script in [nvd](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/nvd) downloads the NVD data.
+* A notebook or script in [nvd](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in/nvd) downloads the NVD data.
 * The data is output to data_out/CVSSData.csv.gz
 * Note: The download method used will be deprecated some time after Dec 2023 per https://nvd.nist.gov/vuln/data-feeds
 

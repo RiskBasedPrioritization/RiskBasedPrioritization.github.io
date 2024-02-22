@@ -1,0 +1,468 @@
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.252 seconds to check links
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.255 seconds to check links
+Total files checked: 1
+Total links checked: 3
+        Local links: 0
+       Remote links: 3
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/organizations/Organization_requlated.md:
+[✖] https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf
+0.35 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 7
+        Local links: 2
+       Remote links: 5
+        Empty links: 0
+       Broken links: 2
+      Skipped links: 3
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/organizations/Yahoo.md:
+[/] ../assets/images/csa_devops.png
+[/] ../assets/images/YahooCVEsCVSSscorescountsofCVEsEPSSscores.jpg
+[/] ../assets/images/yahoo_dt.png
+[✖] ../ssvc/decision_trees_from_scratch.md
+[✖] ../cvss/CVSS.md
+1.05 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 13
+        Local links: 0
+       Remote links: 13
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 1
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/vendors/Microsoft_Exploitability_Index.md:
+[/] ../assets/images/msie1.png
+0.809 seconds to check links
+Total files checked: 1
+Total links checked: 3
+        Local links: 0
+       Remote links: 3
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/vendors/vendors.md:
+[✖] https://help.kennasecurity.com/hc/en-us/articles/360026160592-Vulnerability-Scoring-in-Cisco-Vulnerability-Management
+1.52 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 3
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/vendors/EdgeScan.md:
+[/] ../assets/images/edgescan1.png
+[/] ../assets/images/edgescan2.png
+[/] ../assets/images/edgescan3.png
+0.253 seconds to check links
+Total files checked: 1
+Total links checked: 3
+        Local links: 3
+       Remote links: 0
+        Empty links: 0
+       Broken links: 3
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/cisa_kev/cisa_kev.md:
+[✖] ../risk/Understanding_Risk.md
+[✖] ../epss/EPSS_and_CISA_KEV.md
+[✖] ../risk/Log4Shell.md
+0.254 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 3
+        Local links: 1
+       Remote links: 2
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 2
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/introduction/Scope.md:
+[/] ../assets/images/risk_remediation_taxonomy.png
+[/] ../assets/images/stages.png
+[✖] ../risk/Understanding_Risk.md
+0.724 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 6
+        Local links: 1
+       Remote links: 5
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 1
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/introduction/Introduction.md:
+[/] https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized
+[✖] ../requirements/Requirements.md
+1.19 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.252 seconds to check links
+Total files checked: 1
+Total links checked: 25
+        Local links: 1
+       Remote links: 24
+        Empty links: 0
+       Broken links: 2
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/introduction/code_and_data.md:
+[✖] ../risk/Data_Sources.md
+[✖] https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data/get_data.sh
+2.17 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.253 seconds to check links
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.254 seconds to check links
+Total files checked: 1
+Total links checked: 6
+        Local links: 1
+       Remote links: 5
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 1
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/includes/vulns_exploited.md:
+[/] https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized
+[✖] ../cvss/CVSS.md
+1.3 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.255 seconds to check links
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.253 seconds to check links
+Total files checked: 1
+Total links checked: 0
+        Local links: 0
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.253 seconds to check links
+Total files checked: 1
+Total links checked: 6
+        Local links: 0
+       Remote links: 6
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/requirements/Requirements.md:
+[✖] https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1#7-4-Service-Vulnerability-coordination
+1.17 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 1
+        Local links: 1
+       Remote links: 0
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+0.26 seconds to check links
+Total files checked: 1
+Total links checked: 15
+        Local links: 0
+       Remote links: 15
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 8
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/cvss/CVSS.md:
+[/] ../assets/images/cvss_ratings_table.png
+[/] ../assets/images/cvss_ratings_all.png
+[/] ../assets/images/cvss_ratings_v3.png
+[/] ../assets/images/cvss1.png
+[/] ../assets/images/cvss2.png
+[/] ../assets/images/cvss3.png
+[/] ../assets/images/cvss4.png
+[/] ../assets/images/cvss_hist.png
+0.775 seconds to check links
+Total files checked: 1
+Total links checked: 11
+        Local links: 0
+       Remote links: 11
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 2
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/ssvc/SSVC.md:
+[/] ../assets/images/cisa_ssvcdt.png
+[/] ../assets/images/cisadt_decisions.png
+1.62 seconds to check links
+Total files checked: 1
+Total links checked: 6
+        Local links: 2
+       Remote links: 4
+        Empty links: 0
+       Broken links: 3
+      Skipped links: 6
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/ssvc/decision_trees_from_scratch.md:
+[/] ../assets/images/dt_decision_inputs.png
+[/] ../assets/images/dt_nodes_venn.png
+[/] ../assets/images/df_node_outputs.png
+[/] ../assets/images/df_node_outputs_epss01.png
+[/] ../assets/images/dt_sankey.png
+[/] ../assets/images/dt_triage.png
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/TODO
+1.03 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 2
+        Local links: 0
+       Remote links: 2
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 3
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/ssvc/decision_trees.md:
+[/] ../assets/images/ss_ssvc_dt3.png
+[/] ../assets/images/ss_ssvc_dt.png
+[/] ../assets/images/cisadt_flowchart.png
+1.0 seconds to check links
+Total files checked: 1
+Total links checked: 16
+        Local links: 14
+       Remote links: 2
+        Empty links: 0
+       Broken links: 14
+      Skipped links: 14
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/epss/EPSS_Thresholds.md:
+[/] ../assets/images/epss_coverage.jpeg
+[/] ../assets/images/EPSS_threshold_emoji.png
+[/] ../assets/images/napkin1.png
+[/] ../assets/images/CountofCVEsaboveEPSSvalue.png
+[/] ../assets/images/CountofCVEsaboveEPSSvalueLog.png
+[/] ../assets/images/CountofCVEsaboveEPSSvalue01.png
+[/] ../assets/images/edgescan_epss.png
+[/] ../assets/images/epss_shift.png
+[/] ../assets/images/monte_carlo_1k.png
+[/] ../assets/images/monte_carlo_1k_removed.png
+[/] ../assets/images/monte_carlo_11k.png
+[/] ../assets/images/monte_carlo_11k_removed.png
+[/] ../assets/images/monte_carlo_44k.png
+[/] ../assets/images/monte_carlo_44k_removed.png
+[✖] ../epss/Introduction_to_EPSS.md
+[✖] ../introduction/Introduction.md
+[✖] TODO
+[✖] Introduction_to_EPSS.md/
+[✖] ../introduction/Scope.md
+[✖] ../epss/Introduction_to_EPSS.md
+[✖] ../risk/Back_of_napkin.md
+[✖] ../vendors/Microsoft_Exploitability_Index.md
+[✖] ../vendors/Qualys.md
+[✖] ../cisa_kev/cisa_kev.md
+[✖] Applying_EPSS_to_your_environment.md
+[✖] ../introduction/code_and_data.md
+[✖] ../vendors/Qualys.md
+[✖] ../vendors/EdgeScan.md
+1.81 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 9
+        Local links: 0
+       Remote links: 9
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 0
+1.05 seconds to check links
+Total files checked: 1
+Total links checked: 4
+        Local links: 1
+       Remote links: 3
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 3
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/epss/Introduction_to_EPSS.md:
+[/] ../assets/images/worry_quadrant.png
+[/] ../assets/images/epss_hist.png
+[/] ../assets/images/epss_percentiles.png
+[✖] ../requirements/Requirements.md
+0.511 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 26
+        Local links: 23
+       Remote links: 3
+        Empty links: 0
+       Broken links: 23
+      Skipped links: 0
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/epss/What_users_ask_for.md:
+[✖] ../requirements/Requirements.md
+[✖] ../requirements/Requirements.md
+[✖] ../requirements/Requirements.md
+[✖] ../requirements/Requirements.md
+[✖] ../requirements/Requirements.md
+[✖] ../risk/Understanding_Risk.md
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] ../requirements/Requirements.md
+[✖] ../epss/Introduction_to_EPSS.md
+[✖] ../risk/Understanding_Risk.md
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] ../requirements/Requirements.md
+[✖] ../vendors/Microsoft_Exploitability_Index.md
+[✖] ../vendors/Qualys.md
+[✖] ../cisa_kev/cisa_kev.md
+[✖] Applying_EPSS_to_your_environment.md
+[✖] ../requirements/Requirements.md
+[✖] ../requirements/Requirements.md
+[✖] ./EPSS_Thresholds.md
+0.751 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 7
+        Local links: 1
+       Remote links: 6
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 7
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/epss/EPSS_and_CISA_KEV.md:
+[/] ../assets/images/cisakev_vs_epss.png
+[/] ../assets/images/cisakev_csa_vs_epss.png
+[/] ../assets/images/epss_vs_cisakev.png
+[/] ../assets/images/epss_days_observed.png
+[/] ../assets/images/epss_vars_lower_cisakev.png
+[/] ../assets/images/effort_vs_signal_kev_only.png
+[/] ../assets/images/effort_vs_signal.png
+[✖] ../risk/Understanding_Risk.md
+0.341 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 14
+        Local links: 0
+       Remote links: 14
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 4
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/risk/Vulnerability_Landscape.md:
+[/] ../assets/images/vuln_timeline_per_year.png
+[/] ../assets/images/vuln_timeline.png
+[/] ../assets/images/vuln_landscape.png
+[/] ../assets/images/cwe-cve-capec.png
+[✖] https://attack.mitre.org/
+0.725 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 16
+        Local links: 1
+       Remote links: 15
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 1
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/risk/Data_Sources.md:
+[/] ../assets/images/cve_exploit_venn.png
+[✖] ./Understanding_Risk.md
+1.21 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 8
+        Local links: 7
+       Remote links: 1
+        Empty links: 0
+       Broken links: 7
+      Skipped links: 1
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/risk/Takeaway.md:
+[/] ../assets/images/stages.png
+[✖] ../introduction/Introduction.md
+[✖] ../risk/Understanding_Risk.md
+[✖] ../cvss/CVSS.md
+[✖] ../cvss/CVSS.md
+[✖] ../vendors/Qualys.md
+[✖] ../ssvc/SSVC.md
+[✖] ../risk/Understanding_Risk.md
+0.343 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 19
+        Local links: 1
+       Remote links: 18
+        Empty links: 0
+       Broken links: 1
+      Skipped links: 3
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/risk/Understanding_Risk.md:
+[/] ../assets/images/nist_risk.png
+[/] ../assets/images/risk_remediation_taxonomy.png
+[/] https://www.gartner.com/smarterwithgartner/focus-on-the-biggest-security-threats-not-the-most-publicized
+[✖] ../cvss/CVSS.md
+0.97 seconds to check links
+Bad links were found. Exiting with an error.
+Total files checked: 1
+Total links checked: 1
+        Local links: 0
+       Remote links: 1
+        Empty links: 0
+       Broken links: 0
+      Skipped links: 2
+
+/Users/cmadden01/work/my_OSS/RiskBasedPrioritization.github.io/docs/risk/Back_of_napkin.md:
+[/] ../assets/images/napkin1.png
+[/] ../assets/images/napkin2.png
+1.13 seconds to check links

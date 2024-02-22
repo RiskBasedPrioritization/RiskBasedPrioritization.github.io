@@ -6,15 +6,26 @@
     
     In this final section, we summarize the Takeaways and provide specific recommendations and options to implement Risk Based Prioritization.
 
-    Code and analysis is provided for Acme Inc CVEs. You can apply the same code and analysis for your CVEs. TODO 
+    Code and analysis is provided for Acme Inc CVEs to help understand their CVEs:
 
-    Code and analysis is provided for 3 schemes to allow comparison and refinement: (TODO)
+    1. The key risk factors
+    2. What CVEs are in CISA KEV, Weaponized (Metasploit, Nuclei), PoC (ExploitDB)
+    3. The effect of changing the EPSS Threshold
+    4. The effect of changing the CVSS Base Score Threshold
+    5. EPSS Percentiles
+    6. Exploratory Data Analysis of their CVE data
+    
 
-    1. CVSS Temporal & Threat Metrics
-    2. CVSS Base Score Ratings with Exploitation Focus (TODO code and analysis for this)
-    3. SSVC Decision Trees
+    Code and analysis is provided for 3 Risk Based Prioritization schemes to allow comparison and refinement: (TODO)
 
-    Public data is used, but it can be easily augmented with commercial CTI.
+    5. CVSS Temporal & Threat Metrics
+    6. CVSS Base Score Ratings with Exploitation Focus (TODO code and analysis for this)
+    7. SSVC Decision Trees
+
+    In both cases:
+
+    1. **These can be applied to your CVEs**
+    2. **Public data is used, but it can be easily augmented with commercial CTI.**
 
 
     !!! warning 

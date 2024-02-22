@@ -10,7 +10,7 @@ Until then, it just redirects to an SSVC calculator https://certcc.github.io/SSV
     This section covers [Stakeholder-Specific Vulnerability Categorization](https://certcc.github.io/SSVC/)
     and how EPSS can be used with it.
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_ssvc_dt/DT_analysis.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/cisa_ssvc_dt/DT_analysis.ipynb) 
   
 
 ## SSVC

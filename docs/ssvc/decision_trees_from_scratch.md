@@ -13,7 +13,7 @@
     3.  Visualize the flow / distribution of vulnerabilities across our
         Decision Tree branches
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/TODO) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/cisa_ssvc_dt/DT_from_scratch.ipynb) 
 
 
 

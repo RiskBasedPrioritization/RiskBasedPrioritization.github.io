@@ -4,7 +4,7 @@
     Example usage and implementation are provided by different users who
     are using Decision Trees in their organization.
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
 
 
 !!! example "User Story"

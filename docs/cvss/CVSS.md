@@ -11,7 +11,7 @@
     -   CVSS Severity Rating
     -   CVSS Confidentiality, Integrity, Availability Impacts
 
-    :technologist: [Source Code](https://github.com/epss-sig/epss-interoperability/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
 
 ## CVSS Severity Rating Scale
 

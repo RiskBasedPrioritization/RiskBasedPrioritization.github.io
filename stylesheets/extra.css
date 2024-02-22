@@ -3,15 +3,15 @@
 }
 .md-typeset .admonition.userstory,
 .md-typeset details.userstory {
-  border-color: rgb(255,140,0);
+  border-color:  rgb(144, 189, 115);
 }
 .md-typeset .userstory > .admonition-title,
 .md-typeset .userstory > summary {
-  background-color: rgba(255,140,0, 0.1);
+  background-color: rgba(144, 189, 115, 0.1);
 }
 .md-typeset .userstory > .admonition-title::before,
 .md-typeset .userstory > summary::before {
-  background-color: rgb(255,140,0);
+  background-color: rgb(144, 189, 115);
   -webkit-mask-image: var(--md-admonition-icon--userstory);
           mask-image: var(--md-admonition-icon--userstory);
 }

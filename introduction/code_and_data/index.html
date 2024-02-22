@@ -1644,30 +1644,30 @@
 </tbody>
 </table>
 <h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
-<p>See <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis">analysis</a> directory for these files.</p>
+<p>See <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/analysis">analysis</a> directory for these files.</p>
 <ol>
-<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis/enrich_cves.ipynb">enrich_cves.ipynb</a> <ol>
-<li>Take the data sources from <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/">data_in/</a> </li>
+<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/enrich_cves.ipynb">enrich_cves.ipynb</a> <ol>
+<li>Take the data sources from <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in/">data_in/</a> </li>
 <li>Enrich the <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from <abbr title="National Vulnerability Database">NVD</abbr> with the other data sources</li>
 <li>Add an "Exploit" column to indicate the source of the exploitability (used later to set colors of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data in plots)</li>
 <li>store the output in data_out/nvd_cves_v3_enriched.csv.gz</li>
 </ol>
 </li>
-<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/analysis/kev_epss_cvss.ipynb">kev_epss_cvss.ipynb</a><ol>
+<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb">kev_epss_cvss.ipynb</a><ol>
 <li>Read the enriched <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from data_out/CVSSData_enriched.csv.gz</li>
 <li>Read the data from <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> alert reports in ./data_in/cisa_kev/</li>
 <li>Plot <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> datasets showing <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> by source of the exploitability</li>
 <li>Write data_out/cisa_kev/csa/csa.csv.gz which is the <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> CyberSecurity Alerts (CSA) subset with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and other data</li>
 </ol>
 </li>
-<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/qualys.ipynb">qualys.ipynb</a><ol>
+<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/qualys.ipynb">qualys.ipynb</a><ol>
 <li>Read the enriched <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from data_out/CVSSData_enriched.csv.gz</li>
 <li>Read the data from ./data_in/qualys</li>
 <li>Plot Qualys dataset showing <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> by source of the exploitability</li>
 <li>Write data_out/qualys/qualys.csv.gz which is the Qualys data with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and other data</li>
 </ol>
 </li>
-<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/msrc.ipynb">msrc.ipynb</a><ol>
+<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/msrc.ipynb">msrc.ipynb</a><ol>
 <li>Read the enriched <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from data_out/CVSSData_enriched.csv.gz</li>
 <li>Read the data from ./data_in/msrc</li>
 <li>Plot Microsoft Exploitability Index dataset showing <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> by source of the exploitability</li>
@@ -1676,9 +1676,9 @@
 </li>
 </ol>
 <h3 id="cisa-ssvc-decision-trees"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees<a class="headerlink" href="#cisa-ssvc-decision-trees" title="Permanent link">&para;</a></h3>
-<p>See <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/">cisa_ssvc_dt</a> directory for these files.</p>
+<p>See <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/">cisa_ssvc_dt</a> directory for these files.</p>
 <h4 id="cisa-ssvc-decision-tree-from-scratch-example-implementation"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Tree From Scratch Example Implementation<a class="headerlink" href="#cisa-ssvc-decision-tree-from-scratch-example-implementation" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/DT_from_scratch.ipynb">DT_from_scratch.ipynb</a> </p>
+<p><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/DT_from_scratch.ipynb">DT_from_scratch.ipynb</a> </p>
 <ol>
 <li>Read the enriched <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data from data_out/CVSSData_enriched.csv.gz</li>
 <li>Read the Decision Tree definition cisa_ssvc_dt/DT_rbp.csv</li>
@@ -1694,7 +1694,7 @@
 <li>Plot </li>
 </ol>
 <h4 id="cisa-ssvc-decision-tree-analysis-for-feature-importance"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Tree Analysis for Feature Importance<a class="headerlink" href="#cisa-ssvc-decision-tree-analysis-for-feature-importance" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/cisa_ssvc_dt/DT_analysis.ipynb">DT_analysis.ipynb</a> </p>
+<p><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/cisa_ssvc_dt/DT_analysis.ipynb">DT_analysis.ipynb</a> </p>
 <ol>
 <li>Read the Decision Tree definition cisa_ssvc_dt/DT_rbp.csv</li>
 <li>Perform Feature Importance using 2 methods</li>
@@ -1705,14 +1705,14 @@
 <h2 id="getting-data-from-data-sources">Getting Data from Data Sources<a class="headerlink" href="#getting-data-from-data-sources" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">A snapshot of the data used for this guide is available</p>
-<p>A snapshot of this data is already available with the source in <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in">data_in</a></p>
+<p>A snapshot of this data is already available with the source in <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in">data_in</a></p>
 <ul>
 <li>A date.txt file is included in each folder with the data that contains the date of download.</li>
 </ul>
 <p>But you can download current data as described here. </p>
 </div>
 <ul>
-<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data/get_data.sh">get_data.sh</a> gets the data that can be downloaded automatically and used as-is.</li>
+<li><a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data/get_data.sh">get_data.sh</a> gets the data that can be downloaded automatically and used as-is.</li>
 <li>Other data is manually downloaded - see instructions below.<ul>
 <li>MSRC</li>
 <li>ExploitDB</li>
@@ -1724,7 +1724,7 @@
 <h3 id="national-vulnerability-database-nvd">National Vulnerability Database (<abbr title="National Vulnerability Database">NVD</abbr>)<a class="headerlink" href="#national-vulnerability-database-nvd" title="Permanent link">&para;</a></h3>
 <p>Get <abbr title="National Vulnerability Database">NVD</abbr> data automatically</p>
 <ul>
-<li>A notebook or script in <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/data_in/nvd">nvd</a> downloads the <abbr title="National Vulnerability Database">NVD</abbr> data.</li>
+<li>A notebook or script in <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/tree/main/data_in/nvd">nvd</a> downloads the <abbr title="National Vulnerability Database">NVD</abbr> data.</li>
 <li>The data is output to data_out/CVSSData.csv.gz</li>
 <li>Note: The download method used will be deprecated some time after Dec 2023 per <a href="https://nvd.nist.gov/vuln/data-feeds">https://nvd.nist.gov/vuln/data-feeds</a></li>
 </ul>

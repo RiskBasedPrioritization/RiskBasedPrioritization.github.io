@@ -1844,7 +1844,7 @@ we all benefit and we're truly grateful!</p>
 <li>Calculate the Decision Node Values for all CVEs</li>
 <li>Do some Exploratory Data Analysis with Venn Diagrams to understand our data</li>
 <li>Calculate the Output Decision from the Decision Node Values</li>
-<li>Plot Flow of All CVES across the Decision Tree aka Sankey</li>
+<li>Plot Flow of All CVEs across the Decision Tree aka Sankey</li>
 <li>Read the Sankey Diagram template definition cisa_ssvc_dt/DT_sankey.csv</li>
 <li>Triage some CVEs</li>
 <li>Read a list of CVEs to triage cisa_ssvc_dt/triage/cves2triage.csv</li>
@@ -1906,11 +1906,8 @@ This data is static so a date.txt is not included.</p>
 <li>Download <a href="https://gitlab.com/exploit-database/exploitdb/-/blob/main/files_exploits.csv">https://gitlab.com/exploit-database/exploitdb/-/blob/main/files_exploits.csv</a> (manually for now - credentials required for automation)</li>
 <li>Extract the CVEs using the script in the directory i.e. some entries don't have CVEs - and have only Open Source Vulnerability Database (OSVDB) entries instead.</li>
 </ul>
-<h3 id="introduction-code_and_data-other-data-sources">Other Data Sources<a class="headerlink" href="#introduction-code_and_data-other-data-sources" title="Permanent link">&para;</a></h3>
-<p>Other data sources to consider - these are not currently used here:</p>
-<ul>
-<li><a href="https://github.com/trickest/cve">https://github.com/trickest/cve</a> for a list of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> PoCs</li>
-</ul></section><h1 class='nav-section-title-end'>Ended: Introduction</h1>
+<h3 id="introduction-code_and_data-other-vulnerability-data-sources">Other Vulnerability Data Sources<a class="headerlink" href="#introduction-code_and_data-other-vulnerability-data-sources" title="Permanent link">&para;</a></h3>
+<p>See <a href="#risk-data_sources-other-vulnerability-data-sources">other vulnerability data sources</a> that are not currently used here.</p></section><h1 class='nav-section-title-end'>Ended: Introduction</h1>
                         <h1 class='nav-section-title' id='section-risk'>
                             Risk <a class='headerlink' href='#section-risk' title='Permanent link'>↵</a>
                         </h1>
@@ -2996,7 +2993,7 @@ in the wild.</p>
 <figure>
 <p><img alt="" src="../assets/images/epss_percentiles.png" />
   </p>
-<figcaption> How many CVEs above an EPSS score (substract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins</figcaption>
+<figcaption> How many CVEs above an EPSS score (subtract the Percentile Rank from 100% to get the answer in % terms)<br>Image from https://www.first.org/epss/articles/prob_percentile_bins</figcaption>
 </figure>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
@@ -4644,7 +4641,7 @@ This section of the guide</p>
 <li>purple: both metasploit and nuclei</li>
 <li>orange: metasploit only</li>
 <li>yellow: nuclei only</li>
-<li>green: exploitdb only, and not in metasploit or nucle</li>
+<li>green: exploitdb only, and not in metasploit or nuclei</li>
 </ol>
 </li>
 <li>The histogram on top represents the counts of CVEs (in bins) at that QVS Score.</li>
@@ -4910,7 +4907,7 @@ to fix):</p>
     SCA, image scanners are not reachable.</li>
 </ol>
 </li>
-<li>There are also tools that check Network reachability of vulnerabilites, 
+<li>There are also tools that check Network reachability of vulnerabilities, 
     and some validate exploitability.</li>
 </ol>
 </li>
@@ -5039,7 +5036,7 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 </ol>
 </li>
 <li><strong>Independent</strong><ol>
-<li>Prefereably uses Public information</li>
+<li>Preferably uses Public information</li>
 <li>Not dependent on a specific Tool or Vendor or the data from it<ol>
 <li>Many <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr> vendors provide aggregated curated <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr></li>
 </ol>
@@ -5093,7 +5090,7 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 <li>TODO provide code to implement this or similar</li>
 </ul>
 <h3 id="risk-takeaway-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees<a class="headerlink" href="#risk-takeaway-ssvc-decision-trees" title="Permanent link">&para;</a></h3>
-<p><a href="#ssvc-ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Trees can give more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Explotation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
+<p><a href="#ssvc-ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Trees can give more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Exploitation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
 <p>The <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base score parameters are used instead of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores.</p>
 <ul>
 <li>Reference Code is provided in this guide.</li>
@@ -5130,7 +5127,7 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 are captured here and used to inform the solution.</p>
 <h2 id="requirements-requirements-personas">Personas<a class="headerlink" href="#requirements-requirements-personas" title="Permanent link">&para;</a></h2>
 <h3 id="requirements-requirements-product-engineer">Product Engineer<a class="headerlink" href="#requirements-requirements-product-engineer" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for Finding and Fixing vulnerabilities in the software Products that they develop</p>
 <p>~80% of the software in these Products is Open Source Software -
     and has associated CVEs and Zero Days.</p>
@@ -5138,37 +5135,37 @@ are captured here and used to inform the solution.</p>
 DevSecOps</p>
 </div>
 <h3 id="requirements-requirements-security-manager">Security Manager<a class="headerlink" href="#requirements-requirements-security-manager" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for delivering value for the organization - and focused on Time-To-Value</p>
 <p>'Wants to optimize the flow of software/value versus security risk.</p>
 <p><strong>Represents:</strong> the non-technical business roles: includes CISO</p>
 </div>
 <h3 id="requirements-requirements-cyber-defender">Cyber Defender<a class="headerlink" href="#requirements-requirements-cyber-defender" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for defending an organization from cyber security attacks.</p>
 <p>Represents: network defenders,  IT/infosec</p>
 </div>
 <h3 id="requirements-requirements-tool-provider">Tool Provider<a class="headerlink" href="#requirements-requirements-tool-provider" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Provide tools to help vulnerability risk management</p>
 <p>Represents: Tool providers: Tool Vendors, open source
 tools,...</p>
 </div>
 <h3 id="requirements-requirements-audit-and-compliance">Audit and Compliance<a class="headerlink" href="#requirements-requirements-audit-and-compliance" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for ensuring Products are compliant with regulation and security requirements for their organization</p>
 <p>Includes internal GRC and industry e.g. PCI.</p>
 <p><strong>Represents:</strong> Audit, Compliance</p>
 </div>
 <h3 id="requirements-requirements-risk-management"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Management<a class="headerlink" href="#requirements-requirements-risk-management" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for ensuring the policies are defined and signed-off</p>
 <p>Policies signed-off by various teams (development, security, compliance) and
 works alongside the regulatory requirements.</p>
 <p><strong>Represents:</strong> <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
 </div>
 <h3 id="requirements-requirements-cyber-insurance">Cyber Insurance<a class="headerlink" href="#requirements-requirements-cyber-insurance" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
+<div class="admonition userstory">
 <p class="admonition-title">Responsible for cybsersecurity insurance (the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Transfer part of risk)</p>
 <p><strong>Represents:</strong> cybsersecurity insurance and underwriting process</p>
 </div>
@@ -5181,7 +5178,7 @@ context and should be written by real users.</p>
 now, and how the user would like things to look in the future
 (aspirational).</p>
 <h3 id="requirements-requirements-find-and-remediate-vulnerabilities-by-risk">Find and <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr><a class="headerlink" href="#requirements-requirements-find-and-remediate-vulnerabilities-by-risk" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Product Engineer - DevOps:Find and <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> Vulnerabilities By <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
 <p><strong>Background</strong>: There are several tools and services running in the
 DevOps pipeline that detect vulnerabilities in OSS (Open Source
@@ -5225,7 +5222,7 @@ root systemic causes for my CVEs).</p>
 <p><strong>Overall, applying these 3 independent measures, I get a 10x reduction in effort and CVEs to fix! Now we’re sailing!</strong></p>
 </div>
 <h3 id="requirements-requirements-get-teams-to-focus-on-the-real-issues-based-with-real-facts-and-trending-issues-and-bring-the-collective-risk-down-for-my-organization">Get teams to focus on the real issues (based with real facts and trending) issues and bring the collective risk down for my organization.<a class="headerlink" href="#requirements-requirements-get-teams-to-focus-on-the-real-issues-based-with-real-facts-and-trending-issues-and-bring-the-collective-risk-down-for-my-organization" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Security Manager - Get teams to focus on the real issues</p>
 <p><strong>Background</strong>: CVEs provide a standardized way to identify and track
 security vulnerabilities across software, services, hardware, SaaS,
@@ -5242,7 +5239,7 @@ should be addressed first.</p>
 <p>Taking <abbr title="Exploit Prediction Scoring System">EPSS</abbr> along with Business Context into account will really help organizations to sift through the CVEs. Focus from VM and Applications teams can be tailored towards fixing the most critical of issues. This will also help with the conversation with Business and App Teams, and reduce (if not eliminate) friction between Security and non-security Teams.</sub></p>
 </div>
 <h3 id="requirements-requirements-fit-epss-scores-into-existing-cvss-focused-prioritization-policies">Fit <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores into existing <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-focused Prioritization Policies<a class="headerlink" href="#requirements-requirements-fit-epss-scores-into-existing-cvss-focused-prioritization-policies" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Tool Provider - Fit <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores into existing <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-focused Prioritization Policies</p>
 <p><strong>Background</strong>: Our software provides many risk factors that combine via
 customizable policies to prioritize the risks that matter most. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is
@@ -5272,7 +5269,7 @@ aligned with the existing Critical, High, Medium, Low severities I am
 used to from <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>.</p>
 </div>
 <h3 id="requirements-requirements-compliance-prioritized-by-risk">Compliance Prioritized by <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr><a class="headerlink" href="#requirements-requirements-compliance-prioritized-by-risk" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Audit and Compliance - Compliance Prioritized by <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
 <p><strong>Background</strong>: There are industry requirements to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs above a
 certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score.</p>
@@ -5286,7 +5283,7 @@ certain <abbr title="Common Vulnerability Scoring System Standard. A framework f
 <p>As a <u>Compliance Analyst</u>, we are required to comply with certain
 regulations that prescribe remediation based on the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score of a
 vulnerability when externally facing. ~~Is this feasible?~~ There is no
-allowance for asset or organizarion specific variation in patching
+allowance for asset or organization specific variation in patching
 threshold. This rigid vulnerability management practice places an unfair
 burden on cyber defenders constraining their ability to target their
 effort proportional to the threat against a specific asset. A
@@ -5306,7 +5303,7 @@ href="https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-appro
 rel="nofollow"><a href="https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization">https://blog.pcisecuritystandards.org/pci-dss-v4-0-is-the-customized-approach-right-for-your-organization</a></a>)</p>
 </div>
 <h3 id="requirements-requirements-prioritized-by-epss-score-and-remediated-accordingly">Prioritized by <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score and remediated accordingly<a class="headerlink" href="#requirements-requirements-prioritized-by-epss-score-and-remediated-accordingly" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Management - Prioritized by <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score and remediated accordingly</p>
 <p>Across the board, there is an expectation to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs
 above a certain <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score. Usually, a <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score of 7 and over. With
@@ -5324,26 +5321,26 @@ bodies as an acceptable metric. </p>
 <p>Taking <abbr title="Exploit Prediction Scoring System">EPSS</abbr> along with Business Context into account will really help organizations to sift through the CVEs. A clear policy not only needs to be defined and accepted by different functions in the organizations, the process of prioritization needs to be automated to consider business context, criticality of the application. Defining and making sure there is acceptance via the policies will reduce (if not eliminate) friction between Security and non-security Teams.</p>
 </div>
 <h3 id="requirements-requirements-provide-users-of-the-solution-a-roadmap-and-priority-list-of-vulnerabilities-to-address-as-the-landscape-evolves">Provide users of the solution a roadmap and priority list of vulnerabilities to address as the landscape evolves<a class="headerlink" href="#requirements-requirements-provide-users-of-the-solution-a-roadmap-and-priority-list-of-vulnerabilities-to-address-as-the-landscape-evolves" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Management - Provide users of the solution a roadmap and priority list of vulnerabilities to address as the landscape evolves</p>
 <p>How <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is deployed and can be used by a tool vendor to assist with
 vulnerability prioritization at scale. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can provide additional
 embellishment/metadata of a discovered vulnerability and focus and
-organisation efforts on what to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> first. </p>
+organization efforts on what to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> first. </p>
 <p><strong>Background</strong></p>
 <p>Current state of play: </p>
 <p>Most cyber security teams are drowning in <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>'s and high scoring <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>
 (Common Vulnerability Scoring System). This is the result of treating
 vulnerabilities with little or no context. The intelligent approach is
-to address vulnerabilitis based on risk of breach. Which vulnerabilities
+to address vulnerabilities based on risk of breach. Which vulnerabilities
 should I address to lower the probability of breach?   </p>
 <p>A vulnerability management programme should be designed in such a way
-that weaknesses and risks to an organisation are addressed first. The
+that weaknesses and risks to an organization are addressed first. The
 reality of vulnerability management and mitigation is that "we can’t fix
 all the vulnerabilities". This is due to resource, cost and value
 considerations. It makes no financial sense focusing on fixing all
-vulnerabilities faced by an organisation, there are generally too many.
-When mitigating vulnerabilities and protecting an organisation attention
+vulnerabilities faced by an organization, there are generally too many.
+When mitigating vulnerabilities and protecting an organization attention
 needs to be paid to vulnerabilities which have a significant statistical
 chance of being exploited and damaging an enterprise. The return on
 investment of addressing vulnerabilities which have a low probability of
@@ -5375,15 +5372,15 @@ having the ability to <abbr title="The neutralization or elimination of a vulner
 be able to prioritize based on real-world data. Vulnerability severity
 score alone does not necessarily mean such a vulnerability is commonly
 used to breach a system.  <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to provide real-world breach
-prediction metadata per vulnerability in order to guide an organisation
+prediction metadata per vulnerability in order to guide an organization
 on which issues need to be addressed first relative to the long backlog
-of vulnerabilities most organisation are faced with.   </p>
+of vulnerabilities most organization are faced with.   </p>
 <p>It's not uncommon to combine <abbr title="Exploit Prediction Scoring System">EPSS</abbr> with other vulnerability severity
 rating metadata, In the case of Edgescan this is <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (<abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> Known
 Exploitable Vulnerability Catalog), <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> (Common Vulnerability Scoring
 System) and  in the case of Edgescan, EVSS (Edgescan Validated Security
 Score). Combining such metadata can provide much higher fidelity in
-terms of priortization. </p>
+terms of prioritization. </p>
 <p><strong>Narrative</strong></p>
 <p>Vulnerability management programmes generally have a number of metrics
 to measure by. Most common are <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, A tool risk score (generally
@@ -5403,7 +5400,7 @@ proprietary risk models.  It reflects the real world without any
 commercial bias; this is important.</p>
 </div>
 <h3 id="requirements-requirements-knowing-risk-for-a-vulnerability-before-or-without-a-cve">Knowing <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> for a Vulnerability Before or Without a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr><a class="headerlink" href="#requirements-requirements-knowing-risk-for-a-vulnerability-before-or-without-a-cve" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Any - Knowing <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> for a Vulnerability Before or Without a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr></p>
 <p><strong>Background</strong>: </p>
 <p>Many vulnerabilities don't have CVEs but represent a real risk - these
@@ -5467,7 +5464,7 @@ focusing on <abbr title="The likelihood of a vulnerability being exploited and t
 vulnerability</u> based on the meta-data / parameters for that
 vulnerability.</p>
 <p>This "risk rating" (including exploitation probability) is available via
-a unique globally recognised identifier for that vulnerability e.g.
+a unique globally recognized identifier for that vulnerability e.g.
 OSVD, GHSA, <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>....</p>
 <p>I recognize that this "risk rating" is very volatile initially in the
 case of zero-days - but it is fresh (reflects current known
@@ -5477,7 +5474,7 @@ zero-day)</p>
 for all known vulnerabilities!</p>
 </div>
 <h3 id="requirements-requirements-_1"><a class="headerlink" href="#requirements-requirements-_1" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Any - A Holistic Unified View of <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></p>
 <p><strong>Background</strong>: </p>
 <p>"<abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> is per Asset and depends on Impact of a Vulnerability being
@@ -5494,7 +5491,7 @@ components. A key point in being able to track risk is to be able to
 measure by area of responsibility whether overall risk is getting better
 or worse and then to be able to drill down into the risk and ascertain
 where the increases and decreases are coming from. </p>
-<p><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> can be approached from different perspetives:</p>
+<p><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> can be approached from different perspectives:</p>
 <ol>
 <li>From an organization perspective, the risk associated with the
     assets in the organization<ol>
@@ -5558,7 +5555,7 @@ top-down view, so I have more context to inform my risk-based
 prioritization and remediation.</p>
 </div>
 <p><strong>Cyber Defender</strong></p>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Cyber Defender (CSIRT or ISAC) - Communicate and amplify critical guidance about a vulnerability report to stakeholders for action</p>
 <p><strong>Background</strong>: Vulnerability coordinators serve an amplifying role,
 especially for small or medium-sized stakeholders that have limited
@@ -5593,7 +5590,7 @@ of vulnerabilities.</p>
 the Personas (not by the people developing the solution)</p>
 </div>
 <h3 id="requirements-requirements-focused-vulnerability-fix">Focused Vulnerability Fix<a class="headerlink" href="#requirements-requirements-focused-vulnerability-fix" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Focused Vulnerability Fix</p>
 <p>As a Product <strong>Engineer</strong> and user of any vulnerability detection or
 ranking tool, I want to minimize the False Negatives, and the False
@@ -5601,27 +5598,27 @@ Positives, so I <abbr title="The neutralization or elimination of a vulnerabilit
 the vulnerabilities that should be fixed.</p>
 </div>
 <h3 id="requirements-requirements-my-effort-in-my-environment">My Effort in My Environment<a class="headerlink" href="#requirements-requirements-my-effort-in-my-environment" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">My Effort in My Environment</p>
 <p>As a Product <strong>Engineer,</strong> I care most about my effort i.e. the effort
 to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> the vulnerabilities in my environment. My effort is affected by
 counts of instances for a given <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> ID.</p>
 </div>
 <h3 id="requirements-requirements-unified-prioritized-personalized-achievable-view">Unified Prioritized Personalized Achievable view<a class="headerlink" href="#requirements-requirements-unified-prioritized-personalized-achievable-view" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Unified Prioritized Personalized Achievable view </p>
 <p>As a Product Engineer / Security Manager, I want a unified prioritized
 personalized achievable view (across tools and teams) of what to fix
 first</p>
 </div>
 <h3 id="requirements-requirements-know-risk-and-remediation">Know <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> and Remediation<a class="headerlink" href="#requirements-requirements-know-risk-and-remediation" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Know <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> and Remediation</p>
 <p>As a Security Manager, I want to know risk and remediation per Asset and
 for the organization</p>
 </div>
 <h3 id="requirements-requirements-confidence-level-of-epss-scores">Confidence Level of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores<a class="headerlink" href="#requirements-requirements-confidence-level-of-epss-scores" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Confidence Level of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores</p>
 <p>As a Tool Provider I want to provide my customers with not just an <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
 Score, but the Confidence level of that assessment. The estimation of
@@ -5630,7 +5627,7 @@ score accuracy has a direct impact on my ability to de-prioritize lower
 influence Severity levels.</p>
 </div>
 <h3 id="requirements-requirements-severity-categories">Severity Categories<a class="headerlink" href="#requirements-requirements-severity-categories" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Severity Categories</p>
 <p>As a Tool Provider I want to provide my customers with not just an <abbr title="Exploit Prediction Scoring System">EPSS</abbr>
 Score, but a standard Severity level that is familiar to me and
@@ -5640,7 +5637,7 @@ existing policies and processes easily - especially for communication to
 less security-fluent stakeholders.</p>
 </div>
 <h3 id="requirements-requirements-existing-public-exploits">Existing Public Exploits<a class="headerlink" href="#requirements-requirements-existing-public-exploits" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Existing Public Exploits</p>
 <p>As a Tool Provider I want to provide my customers with a complete Public
 Exploit workflow and decision tree without having to add additional data
@@ -5654,7 +5651,7 @@ are telling me it already has a public exploit?” Ideally, <abbr title="Exploit
 would factor in already published exploits and skip this step.</p>
 </div>
 <h3 id="requirements-requirements-remediation-sla">Remediation SLA<a class="headerlink" href="#requirements-requirements-remediation-sla" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
+<div class="admonition userstory">
 <p class="admonition-title">Remediation SLA</p>
 <p>As Any, I want to have a Service Level Agreement (SLA) based on risk, so
 there is a clear definition of when a vulnerability should be fixed.</p>

@@ -2,8 +2,6 @@
 icon: material/play-box-edit-outline 
 ---
 
-https://www.schneier.com/blog/archives/2011/04/schneiers_law.html
-
 # Putting it all Together
 
 

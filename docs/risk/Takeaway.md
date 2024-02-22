@@ -6,6 +6,8 @@
     
     In this final section, we summarize the Takeaways and provide specific recommendations and options to implement Risk Based Prioritization.
 
+    Code and analysis is provided for Acme Inc CVEs. You can apply the same code and analysis for your CVEs. TODO 
+
     Code and analysis is provided for 3 schemes to allow comparison and refinement: (TODO)
 
     1. CVSS Temporal & Threat Metrics

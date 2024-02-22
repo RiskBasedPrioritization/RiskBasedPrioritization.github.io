@@ -3451,7 +3451,7 @@ approach to risk mitigation and prevention.</p>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">The guidance here is highly opinionated and prescriptive and applied to a user context - not official <abbr title="Exploit Prediction Scoring System">EPSS</abbr> guidance as FIRST <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can't be prescriptive for your context</p>
-<p>At the beginning of the guide it was stated that <a href="#introduction-introduction-alternative-or-additional-guidance">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
+<p>At the beginning of the guide it was stated that <a href="#introduction-introduction-writing-style">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
 <p>This section "leads with an opinion", and associated rationale.</p>
 </div>
 <p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="#epss-epss_thresholds-todo">Source Code</a> </p>
@@ -3491,12 +3491,12 @@ independent of business and runtime context per the <a href="#introduction-scope
 <li>Remediate vulnerabilities that have weaponized exploits or evidence
     of exploitation in the wild or in our organization i.e. Weaponized
     Exploitation and above <img alt="Exploitation Known evidence or activity" src="../assets/images/napkin1.png" width="600" /><ol>
-<li>independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score</li>
+<li>independent of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score per <a href="#epss-introduction_to_epss-using-epss-with-known-exploitation">Using <abbr title="Exploit Prediction Scoring System">EPSS</abbr> with Known Exploitation</a></li>
 </ol>
 </li>
 <li>Remediate CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold<ol>
 <li><strong>we need to understand the effect of picking a threshold, so we do some analysis...</strong></li>
-<li>This is the same policy used in our back of the napkin Model Remediation Policy, but here we additionally "<abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold".</li>
+<li>This is the same policy used in our <a href="#risk-back_of_napkin">back of the napkin Model Remediation Policy</a>, but here we additionally "<abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> CVEs with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score above some threshold".</li>
 </ol>
 </li>
 </ol>
@@ -3815,8 +3815,12 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
 <p>This section gives an overview of <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>.</p>
-<p>See <a href="#epss-epss_and_cisa_kev"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> for an analysis of <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> CVEs.</p>
-<p>See <a href="#risk-log4shell">Log4Shell Example</a> for an example of a <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> entry.</p>
+<p>See also:</p>
+<ul>
+<li><a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit">Where <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> Fit</a> in the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Taxonomy.</li>
+<li><a href="#epss-epss_and_cisa_kev"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> for an analysis of <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> CVEs.</li>
+<li><a href="#risk-log4shell">Log4Shell Example</a> for an example of a <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> entry.</li>
+</ul>
 </div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
@@ -3848,7 +3852,8 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
-<li>Organizations should use the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog as an input to their vulnerability management prioritization framework.</li>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> maintains a catalog of vulnerabilities that have been exploited in the wild.</li>
+<li>Organizations should use this <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog as an input to their vulnerability management prioritization framework to prioritize by <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>.</li>
 </ol>
 </div></section>
                         <h2 class='nav-section-title' id='section-stakeholder-specific-vulnerability-categorization-ssvc-'>
@@ -4989,11 +4994,132 @@ decisions to prioritize across a decision band.</li>
 </div></section><h1 class='nav-section-title-end'>Ended: Organizations</h1><section class="print-page" id="risk-takeaway"><h1 id="risk-takeaway-takeaways">Takeaways<a class="headerlink" href="#risk-takeaway-takeaways" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
-<p>In this final section, we summarize the Takeaways and provide specific recommendations to implement <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
+<p>Throughout this guide, the building blocks have been detailed and analyzed.</p>
+<p>In this final section, we summarize the Takeaways and provide specific recommendations and options to implement <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
+<p>Code and analysis is provided for the 3 schemes to allow comparison and refinement: (TODO)</p>
+<ol>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal &amp; Threat Metrics</li>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus (TODO code and analysis for this)</li>
+<li><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</li>
+</ol>
+<p>Public data is used, but it can be easily augmented with commercial <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>"The guidance here is highly opinionated and prescriptive and applied to a user context.
+At the beginning of the guide it was stated that <a href="#introduction-introduction-writing-style">the "writing style" in this guide is "succinct and opinionated"</a>.</p>
+<p>This section "leads with an opinion", and associated rationale.</p>
 </div>
-<h2 id="risk-takeaway-todo">TODO<a class="headerlink" href="#risk-takeaway-todo" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="risk-takeaway-building-blocks-for-a-risk-based-prioritization-scheme-for-first-pass-triage">Building Blocks for a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Scheme for First Pass Triage<a class="headerlink" href="#risk-takeaway-building-blocks-for-a-risk-based-prioritization-scheme-for-first-pass-triage" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="Image title" src="../assets/images/stages.png" /></p>
+<figcaption>The scope for this guide is up to and including the First Pass Triage</figcaption>
+</figure>
+<p><abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> data is public.</p>
+<p><abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> Enrichment</p>
+<ul>
+<li>a commercial <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr> solution is recommended <ul>
+<li>while it can be done using public data (as shown in the code for this guide), there's a lot of effort in getting current, comprehensive <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr>.</li>
+</ul>
+</li>
+<li>should include data from your organization (e.g. Incident Response, Bug Bounty, PenTesting findings) to inform <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></li>
+</ul>
+<h2 id="risk-takeaway-requirements-for-a-risk-based-prioritization-scheme-for-first-pass-triage">Requirements for a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Scheme for First Pass Triage<a class="headerlink" href="#risk-takeaway-requirements-for-a-risk-based-prioritization-scheme-for-first-pass-triage" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Effective Prioritization</strong><ol>
+<li><a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit">Focus on Exploitation</a>, and include the other <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Factors</li>
+<li>The output (score/rating) should be wedge shaped with the sharp end representing the high risk end i.e. there should be a relatively small number of CVEs at the top end of risk.</li>
+</ol>
+</li>
+<li><strong>Understandable</strong><ol>
+<li>The rationale, and preferably the requirements or problem statement, should be stated so it's clear what problem the solution is trying to solve, and the rationale for how it solves it.</li>
+<li>Given the output (score/rating), it should be possible to easily and uniquely identify the input parameters(s), and the contribution of the input parameters(s) values to the output.</li>
+<li>A non-technical person should be able to understand it</li>
+</ol>
+</li>
+<li><strong>Independent</strong><ol>
+<li>Prefereably uses Public information</li>
+<li>Not dependent on a specific Tool or Vendor or the data from it<ol>
+<li>Many <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr> vendors provide aggregated curated <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="risk-takeaway-risk-based-prioritization-summary-against-requirements"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Summary against Requirements<a class="headerlink" href="#risk-takeaway-risk-based-prioritization-summary-against-requirements" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></th>
+<th>Qualys</th>
+<th><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Tree</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Effective Prioritization</td>
+<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Understandable</td>
+<td><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Independent</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="risk-takeaway-cvss-temporal-threat-metrics"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal &amp; Threat Metrics<a class="headerlink" href="#risk-takeaway-cvss-temporal-threat-metrics" title="Permanent link">&para;</a></h3>
+<p>It is possible to combine all the key risk factors into an overall <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score but...</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The convenience of a single <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.</p>
+<p><a href="#cvss-cvss"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></a></p>
+</div>
+<p>But if you do chose this option then, see "Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics" project referenced in <a href="#cvss-cvss"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></a>.</p>
+<h3 id="risk-takeaway-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus<a class="headerlink" href="#risk-takeaway-cvss-base-score-ratings-with-exploitation-focus" title="Permanent link">&para;</a></h3>
+<p><a href="#vendors-qualys-in-depth-look-into-data-driven-science-behind-qualys-trurisk">Qualys TruRisk Approach</a> is a good starting point. Any organization can apply this approach or similar.</p>
+<p><abbr title="Exploit Prediction Scoring System">EPSS</abbr> should be included to inform "likelihood of exploitation".</p>
+<ul>
+<li>TODO provide code to implement this or similar</li>
+</ul>
+<h3 id="risk-takeaway-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees<a class="headerlink" href="#risk-takeaway-ssvc-decision-trees" title="Permanent link">&para;</a></h3>
+<p><a href="#ssvc-ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Trees can give more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Explotation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
+<p>The <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base score parameters are used instead of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores.</p>
+<ul>
+<li>Reference Code is provided in this guide.</li>
+</ul>
+<h3 id="risk-takeaway-proprietary">Proprietary<a class="headerlink" href="#risk-takeaway-proprietary" title="Permanent link">&para;</a></h3>
+<p>If you <strong>implement</strong> a proprietary <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme, keep the following in mind:</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Any person can invent a security system so clever that she or he can't think of how to break it.</p>
+<p><a href="https://en.wikipedia.org/wiki/Bruce_Schneier#:~:text=The%20law%20is%20phrased%20as,of%20how%20to%20break%20it.">Schneier's Law</a></p>
+</div>
+<p>If you <strong>use</strong> a proprietary third-party <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme, keep the <a href="#risk-takeaway-requirements-for-a-risk-based-prioritization-scheme-for-first-pass-triage">requirements</a> above, and the following, in mind:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware of claims of "secret sauce", "special Intellectual Property", "unique proprietary intel" as reasons to prevent you understanding the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme.</p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
+<ol>
+<li>Prioritizing vulnerabilities that are being exploited in the wild, or are more likely to be exploited, reduces the<ol>
+<li>cost of vulnerability management</li>
+<li>risk by reducing the time adversaries have access to vulnerable systems they are trying to exploit</li>
+</ol>
+</li>
+<li>Either <a href="#risk-takeaway-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#risk-takeaway-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit">Focus on Exploitation</a>, are good starting points or references for a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme.</li>
+<li>Apply and a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme based on your environment, and refine it based on your data.</li>
+</ol>
 </div></section>
                         <h1 class='nav-section-title' id='section-annex'>
                             Annex <a class='headerlink' href='#section-annex' title='Permanent link'>↵</a>

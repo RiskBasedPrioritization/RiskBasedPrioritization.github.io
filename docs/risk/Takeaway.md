@@ -53,7 +53,7 @@ CVE Enrichment
       2. Given the output (score/rating), it should be possible to easily and uniquely identify the input parameters(s), and the contribution of the input parameters(s) values to the output.
       3. A non-technical person should be able to understand it
 3. **Independent**
-      1. Prefereably uses Public information
+      1. Preferably uses Public information
       2. Not dependent on a specific Tool or Vendor or the data from it
          1. Many CTI vendors provide aggregated curated CTI
 
@@ -88,7 +88,7 @@ EPSS should be included to inform "likelihood of exploitation".
 
 ### SSVC Decision Trees
 
-[SSVC](../ssvc/SSVC.md) Decision Trees can give more granularity than combining CVSS Ratings and Explotation factors i.e. better Risk Based Prioritization.
+[SSVC](../ssvc/SSVC.md) Decision Trees can give more granularity than combining CVSS Ratings and Exploitation factors i.e. better Risk Based Prioritization.
 
 The CVSS Base score parameters are used instead of CVSS scores.
 

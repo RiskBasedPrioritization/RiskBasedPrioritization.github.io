@@ -8,7 +8,7 @@ are captured here and used to inform the solution.
 ## Personas
 
 ### Product Engineer
-!!! info "Responsible for Finding and Fixing vulnerabilities in the software Products that they develop"
+!!! userstory "Responsible for Finding and Fixing vulnerabilities in the software Products that they develop"
 
 
     ~80% of the software in these Products is Open Source Software -
@@ -18,32 +18,32 @@ are captured here and used to inform the solution.
     DevSecOps
 
 ### Security Manager
-!!! info "Responsible for delivering value for the organization - and focused on Time-To-Value"
+!!! userstory "Responsible for delivering value for the organization - and focused on Time-To-Value"
 
 
     'Wants to optimize the flow of software/value versus security risk.
 
     **Represents:** the non-technical business roles: includes CISO
 ### Cyber Defender
-!!! info "Responsible for defending an organization from cyber security attacks."
+!!! userstory "Responsible for defending an organization from cyber security attacks."
 
     Represents: network defenders,  IT/infosec
 
 ### Tool Provider
-!!! info "Provide tools to help vulnerability risk management"
+!!! userstory "Provide tools to help vulnerability risk management"
 
     Represents: Tool providers: Tool Vendors, open source
     tools,...
 
 ### Audit and Compliance
 
-!!! info "Responsible for ensuring Products are compliant with regulation and security requirements for their organization"
+!!! userstory "Responsible for ensuring Products are compliant with regulation and security requirements for their organization"
     Includes internal GRC and industry e.g. PCI.
 
     **Represents:** Audit, Compliance
 
 ### Risk Management
-!!! info "Responsible for ensuring the policies are defined and signed-off"
+!!! userstory "Responsible for ensuring the policies are defined and signed-off"
 
     Policies signed-off by various teams (development, security, compliance) and
     works alongside the regulatory requirements.
@@ -51,7 +51,7 @@ are captured here and used to inform the solution.
     **Represents:** Risk
 
 ### Cyber Insurance
-!!! info "Responsible for cybsersecurity insurance (the Risk Transfer part of risk)"
+!!! userstory "Responsible for cybsersecurity insurance (the Risk Transfer part of risk)"
 
     **Represents:** cybsersecurity insurance and underwriting process
 
@@ -70,7 +70,7 @@ now, and how the user would like things to look in the future
 
 ### Find and remediate Vulnerabilities By Risk
 
-!!! example "Product Engineer - DevOps:Find and remediate Vulnerabilities By Risk"
+!!! userstory "Product Engineer - DevOps:Find and remediate Vulnerabilities By Risk"
 
 
     **Background**: There are several tools and services running in the
@@ -130,7 +130,7 @@ now, and how the user would like things to look in the future
 
 ### Get teams to focus on the real issues (based with real facts and trending) issues and bring the collective risk down for my organization.
 
-!!! example "Security Manager - Get teams to focus on the real issues"
+!!! userstory "Security Manager - Get teams to focus on the real issues"
 
     **Background**: CVEs provide a standardized way to identify and track
     security vulnerabilities across software, services, hardware, SaaS,
@@ -156,7 +156,7 @@ now, and how the user would like things to look in the future
 
 ### Fit EPSS scores into existing CVSS-focused Prioritization Policies
 
-!!! example "Tool Provider - Fit EPSS scores into existing CVSS-focused Prioritization Policies"
+!!! userstory "Tool Provider - Fit EPSS scores into existing CVSS-focused Prioritization Policies"
 
     **Background**: Our software provides many risk factors that combine via
     customizable policies to prioritize the risks that matter most. EPSS is
@@ -193,7 +193,7 @@ now, and how the user would like things to look in the future
 
 ### Compliance Prioritized by Risk
 
-!!! example "Audit and Compliance - Compliance Prioritized by Risk"
+!!! userstory "Audit and Compliance - Compliance Prioritized by Risk"
 
     **Background**: There are industry requirements to remediate CVEs above a
     certain CVSS score.
@@ -209,7 +209,7 @@ now, and how the user would like things to look in the future
     As a <u>Compliance Analyst</u>, we are required to comply with certain
     regulations that prescribe remediation based on the CVSS score of a
     vulnerability when externally facing. ~~Is this feasible?~~ There is no
-    allowance for asset or organizarion specific variation in patching
+    allowance for asset or organization specific variation in patching
     threshold. This rigid vulnerability management practice places an unfair
     burden on cyber defenders constraining their ability to target their
     effort proportional to the threat against a specific asset. A
@@ -234,7 +234,7 @@ now, and how the user would like things to look in the future
 
 ### Prioritized by EPSS score and remediated accordingly
 
-!!! example "Risk Management - Prioritized by EPSS score and remediated accordingly"
+!!! userstory "Risk Management - Prioritized by EPSS score and remediated accordingly"
 
     Across the board, there is an expectation to remediate CVEs
     above a certain CVSS score. Usually, a CVSS score of 7 and over. With
@@ -259,12 +259,12 @@ now, and how the user would like things to look in the future
 
 ### Provide users of the solution a roadmap and priority list of vulnerabilities to address as the landscape evolves
 
-!!! example "Risk Management - Provide users of the solution a roadmap and priority list of vulnerabilities to address as the landscape evolves"
+!!! userstory "Risk Management - Provide users of the solution a roadmap and priority list of vulnerabilities to address as the landscape evolves"
 
     How EPSS is deployed and can be used by a tool vendor to assist with
     vulnerability prioritization at scale. EPSS can provide additional
     embellishment/metadata of a discovered vulnerability and focus and
-    organisation efforts on what to remediate first. 
+    organization efforts on what to remediate first. 
 
     **Background**
 
@@ -273,16 +273,16 @@ now, and how the user would like things to look in the future
     Most cyber security teams are drowning in CVE's and high scoring CVSS
     (Common Vulnerability Scoring System). This is the result of treating
     vulnerabilities with little or no context. The intelligent approach is
-    to address vulnerabilitis based on risk of breach. Which vulnerabilities
+    to address vulnerabilities based on risk of breach. Which vulnerabilities
     should I address to lower the probability of breach?   
 
     A vulnerability management programme should be designed in such a way
-    that weaknesses and risks to an organisation are addressed first. The
+    that weaknesses and risks to an organization are addressed first. The
     reality of vulnerability management and mitigation is that "we can’t fix
     all the vulnerabilities". This is due to resource, cost and value
     considerations. It makes no financial sense focusing on fixing all
-    vulnerabilities faced by an organisation, there are generally too many.
-    When mitigating vulnerabilities and protecting an organisation attention
+    vulnerabilities faced by an organization, there are generally too many.
+    When mitigating vulnerabilities and protecting an organization attention
     needs to be paid to vulnerabilities which have a significant statistical
     chance of being exploited and damaging an enterprise. The return on
     investment of addressing vulnerabilities which have a low probability of
@@ -317,16 +317,16 @@ now, and how the user would like things to look in the future
     be able to prioritize based on real-world data. Vulnerability severity
     score alone does not necessarily mean such a vulnerability is commonly
     used to breach a system.  EPSS can be used to provide real-world breach
-    prediction metadata per vulnerability in order to guide an organisation
+    prediction metadata per vulnerability in order to guide an organization
     on which issues need to be addressed first relative to the long backlog
-    of vulnerabilities most organisation are faced with.   
+    of vulnerabilities most organization are faced with.   
 
     It's not uncommon to combine EPSS with other vulnerability severity
     rating metadata, In the case of Edgescan this is CISA KEV (CISA Known
     Exploitable Vulnerability Catalog), CVSS (Common Vulnerability Scoring
     System) and  in the case of Edgescan, EVSS (Edgescan Validated Security
     Score). Combining such metadata can provide much higher fidelity in
-    terms of priortization. 
+    terms of prioritization. 
 
     **Narrative**
 
@@ -351,7 +351,7 @@ now, and how the user would like things to look in the future
 
 ### Knowing Risk for a Vulnerability Before or Without a CVE
 
-!!! example "Any - Knowing Risk for a Vulnerability Before or Without a CVE"
+!!! userstory "Any - Knowing Risk for a Vulnerability Before or Without a CVE"
 
     **Background**: 
 
@@ -431,7 +431,7 @@ now, and how the user would like things to look in the future
     vulnerability.
 
     This "risk rating" (including exploitation probability) is available via
-    a unique globally recognised identifier for that vulnerability e.g.
+    a unique globally recognized identifier for that vulnerability e.g.
     OSVD, GHSA, CVE....
 
     I recognize that this "risk rating" is very volatile initially in the
@@ -444,7 +444,7 @@ now, and how the user would like things to look in the future
 
 ### 
 
-!!! example "Any - A Holistic Unified View of Risk"
+!!! userstory "Any - A Holistic Unified View of Risk"
 
 
 
@@ -465,7 +465,7 @@ now, and how the user would like things to look in the future
     or worse and then to be able to drill down into the risk and ascertain
     where the increases and decreases are coming from. 
 
-    Risk can be approached from different perspetives:
+    Risk can be approached from different perspectives:
 
     1.  From an organization perspective, the risk associated with the
         assets in the organization
@@ -538,7 +538,7 @@ now, and how the user would like things to look in the future
 
 **Cyber Defender**
 
-!!! example "Cyber Defender (CSIRT or ISAC) - Communicate and amplify critical guidance about a vulnerability report to stakeholders for action"
+!!! userstory "Cyber Defender (CSIRT or ISAC) - Communicate and amplify critical guidance about a vulnerability report to stakeholders for action"
 
 
     **Background**: Vulnerability coordinators serve an amplifying role,
@@ -586,7 +586,7 @@ now, and how the user would like things to look in the future
 
 
 ### Focused Vulnerability Fix
-!!! example "Focused Vulnerability Fix"
+!!! userstory "Focused Vulnerability Fix"
 
     As a Product **Engineer** and user of any vulnerability detection or
     ranking tool, I want to minimize the False Negatives, and the False
@@ -594,27 +594,27 @@ now, and how the user would like things to look in the future
     the vulnerabilities that should be fixed.
 
 ### My Effort in My Environment
-!!! example "My Effort in My Environment"
+!!! userstory "My Effort in My Environment"
 
     As a Product **Engineer,** I care most about my effort i.e. the effort
     to remediate the vulnerabilities in my environment. My effort is affected by
     counts of instances for a given CVE ID.
 
 ### Unified Prioritized Personalized Achievable view 
-!!! example "Unified Prioritized Personalized Achievable view "
+!!! userstory "Unified Prioritized Personalized Achievable view "
     As a Product Engineer / Security Manager, I want a unified prioritized
     personalized achievable view (across tools and teams) of what to fix
     first
 
 ### Know Risk and Remediation
-!!! example "Know Risk and Remediation"
+!!! userstory "Know Risk and Remediation"
     As a Security Manager, I want to know risk and remediation per Asset and
     for the organization
 
   
 
 ### Confidence Level of EPSS Scores
-!!! example "Confidence Level of EPSS Scores"
+!!! userstory "Confidence Level of EPSS Scores"
 
     As a Tool Provider I want to provide my customers with not just an EPSS
     Score, but the Confidence level of that assessment. The estimation of
@@ -623,7 +623,7 @@ now, and how the user would like things to look in the future
     influence Severity levels.
 
 ### Severity Categories
-!!! example "Severity Categories"
+!!! userstory "Severity Categories"
     As a Tool Provider I want to provide my customers with not just an EPSS
     Score, but a standard Severity level that is familiar to me and
     officially provided by the same organization that provides the scores.
@@ -632,7 +632,7 @@ now, and how the user would like things to look in the future
     less security-fluent stakeholders.
 
 ### Existing Public Exploits
-!!! example "Existing Public Exploits"
+!!! userstory "Existing Public Exploits"
     As a Tool Provider I want to provide my customers with a complete Public
     Exploit workflow and decision tree without having to add additional data
     feeds beyond EPSS into my application data. For my customers to
@@ -645,7 +645,7 @@ now, and how the user would like things to look in the future
     would factor in already published exploits and skip this step.
 
 ### Remediation SLA
-!!! example "Remediation SLA"
+!!! userstory "Remediation SLA"
     As Any, I want to have a Service Level Agreement (SLA) based on risk, so
     there is a clear definition of when a vulnerability should be fixed.
 

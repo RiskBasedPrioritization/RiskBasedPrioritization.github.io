@@ -47,7 +47,7 @@
             or not
             1.  in general, a significant number of CVEs reported by
                 SCA, image scanners are not reachable.
-        2.  There are also tools that check Network reachability of vulnerabilites, 
+        2.  There are also tools that check Network reachability of vulnerabilities, 
             and some validate exploitability.
     3.  **Risk Based Prioritization**
         1.  As seen throughout this guide, focusing on CVEs that are, or are

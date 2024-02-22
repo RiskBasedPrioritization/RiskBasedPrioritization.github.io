@@ -102,7 +102,7 @@ Several other examples of vulnerabilities with low EPSS scores and high TruRisk 
           2. purple: both metasploit and nuclei
           3. orange: metasploit only
           4. yellow: nuclei only
-          5. green: exploitdb only, and not in metasploit or nucle
+          5. green: exploitdb only, and not in metasploit or nuclei
     2. The histogram on top represents the counts of CVEs (in bins) at that QVS Score.
     3. The histogram on the right represents the counts of CVEs (in bins) at that EPSS Score.
 

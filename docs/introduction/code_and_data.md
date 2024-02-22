@@ -88,7 +88,7 @@ See [cisa_ssvc_dt](https://github.com/RiskBasedPrioritization/RiskBasedPrioritiz
 4. Calculate the Decision Node Values for all CVEs
 5. Do some Exploratory Data Analysis with Venn Diagrams to understand our data
 6. Calculate the Output Decision from the Decision Node Values
-7. Plot Flow of All CVES across the Decision Tree aka Sankey
+7. Plot Flow of All CVEs across the Decision Tree aka Sankey
    1. Read the Sankey Diagram template definition cisa_ssvc_dt/DT_sankey.csv
 8. Triage some CVEs
    1. Read a list of CVEs to triage cisa_ssvc_dt/triage/cves2triage.csv
@@ -156,10 +156,7 @@ This data is static so a date.txt is not included.
 * Extract the CVEs using the script in the directory i.e. some entries don't have CVEs - and have only Open Source Vulnerability Database (OSVDB) entries instead.
 
 
-### Other Data Sources 
-Other data sources to consider - these are not currently used here:
+### Other Vulnerability Data Sources 
 
-* https://github.com/trickest/cve for a list of CVE PoCs
-
-
+See [other vulnerability data sources](../risk/Data_Sources.md#other-vulnerability-data-sources) that are not currently used here.
 

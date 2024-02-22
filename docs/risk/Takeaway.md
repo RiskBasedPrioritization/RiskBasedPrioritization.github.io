@@ -2,11 +2,11 @@
 
 !!! abstract "Overview"
     
-    Throughout this guide, the building blocks have been detailed and analyzed.
+    Throughout this guide, the building blocks for Risk Based Prioritization have been detailed and analyzed.
     
     In this final section, we summarize the Takeaways and provide specific recommendations and options to implement Risk Based Prioritization.
 
-    Code and analysis is provided for the 3 schemes to allow comparison and refinement: (TODO)
+    Code and analysis is provided for 3 schemes to allow comparison and refinement: (TODO)
 
     1. CVSS Temporal & Threat Metrics
     2. CVSS Base Score Ratings with Exploitation Focus (TODO code and analysis for this)
@@ -24,7 +24,7 @@
 
 
 
-## Building Blocks for a Risk Based Prioritization Scheme for First Pass Triage
+## Risk Based Prioritization Scheme for First Pass Triage
 
 <figure markdown>
 ![Image title](../assets/images/stages.png)
@@ -111,7 +111,7 @@ If you **use** a proprietary third-party Risk Based Prioritization scheme, keep 
           1. cost of vulnerability management
           2. risk by reducing the time adversaries have access to vulnerable systems they are trying to exploit
     2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [Focus on Exploitation](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are good starting points or references for a Risk Based Prioritization scheme.
-    3. Apply and a Risk Based Prioritization scheme based on your environment, and refine it based on your data.
+    3. Apply a Risk Based Prioritization scheme based on your environment, and refine it based on your data.
 
  
 

@@ -72,6 +72,13 @@ Each of the Risk Based Prioritization Models above use similar risk factors (kno
 
 If you're looking for the "easy button", or the one scheme to rule them all for Risk Based Prioritization, you won't find it (here or anywhere else).
 
+## Who Contributed to This Guide
+
+Various experts and thought leaders [contributed to this guide](./contributors.md), including those that:
+
+* developed the standards or solutions described in this guide as used in industry
+* have many years of experience in vulnerability management across various [roles](../requirements/Requirements.md#personas)
+
 ## How to Contribute to This Guide
 
  You can contribute content or suggest changes:
@@ -90,7 +97,6 @@ Different, and especially opposite, opinions with the data to back them up, are 
     If we have data, let’s look at data. If all we have are opinions, let’s go with mine.
     
     [Jim Barksdale, former CEO of Netscape](https://www.goodreads.com/quotes/655987-if-we-have-data-let-s-look-at-data-if-all) 
-  
 
 ## Source Code
 1.  
@@ -98,18 +104,20 @@ Different, and especially opposite, opinions with the data to back them up, are 
     1.  This includes the data used in the analysis (downloaded
         Jan 13) and how to download it
 2.  This code is licensed under the Apache 2 Open Source License.
-## Notes
-
-1. This guide is not affiliated with any Tool/Company/Vendor/Standard/Forum/Data source. 
-    1. Mention of a vendor in this guide is not a recommendation or endorsement of that vendor. 
-          1. The choice of vendors was determined by different contributors who had an interest in that vendor.
-
-2.  This guide is a living document i.e. it will change and grow over time - with your input.
-
-
-  
+   
 ## Alternative or Additional Guidance
 
-This guide is not a verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the author): 
+This guide is not an introductory or verbose treatment of topics with broader or background context. For that, consider the following (no affiliation to the authors): 
 
 -  [Effective Vulnerability Management: Managing Risk in the Vulnerable Digital Ecosystem](https://www.amazon.com/Effective-Vulnerability-Management-Vulnerable-Ecosystem/dp/1394221207) 
+-  [Software Transparency: Supply Chain Security in an Era of a Software-Driven Society](https://www.amazon.com/Software-Transparency-Security-Software-Driven-Society/dp/1394158483/)
+-  [Software Supply Chain Security: Securing the End-to-end Supply Chain for Software, Firmware, and Hardware](https://www.amazon.com/Software-Supply-Chain-Security-End/dp/1098133706)
+
+
+
+## Notes
+!!! notes
+      1. This guide is not affiliated with any Tool/Company/Vendor/Standard/Forum/Data source. 
+          1. Mention of a vendor in this guide is not a recommendation or endorsement of that vendor. 
+                1. The choice of vendors was determined by different contributors who had an interest in that vendor.
+      2.  This guide is a living document i.e. it will change and grow over time - with your input.

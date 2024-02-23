@@ -33,4 +33,8 @@ Lots of dumb questions and data analysis later, this guide represents the distil
 
 There's a friendly vibrant community in this space - many of whom have contributed to this guide.
 
-Special thanks to my colleague Lisa for the expert input, keeping all this real, and tolerating more dumb questions than any human should endure in one lifetime!
+:pray: Special thanks to
+
+1. My family :heart: 
+2. My employer Yahoo for cultivating such a rich environment for people to thrive.
+3. My colleague Lisa for the expert input, keeping all this real, and tolerating more dumb questions than any human should endure in one lifetime!

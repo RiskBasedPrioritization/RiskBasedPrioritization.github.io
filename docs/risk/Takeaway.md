@@ -67,14 +67,10 @@ CVE Enrichment
       1. Preferably uses Public information
       2. Not dependent on a specific Tool or Vendor or the data from it
          1. Many CTI vendors provide aggregated curated CTI
+4. **Extensible**
+      1. Organizations may want to extend, customize, or optimize a Risk Based Prioritization Scheme for their environment e.g. change the prioritization associated with a data source or add a new data source.
+      2. Some schemes do this by design e.g. *"[SSVC](https://github.com/CERTCC/SSVC) aims to avoid one-size-fits-all solutions in favor of a modular decision-making system with clearly defined and tested parts that vulnerability managers can select and use as appropriate to their context."*
 
-## Risk Based Prioritization Summary against Requirements
-
-| Requirement              | CVSS   | Qualys | SSVC Decision Tree |
-|--------------------------|--------|--------|--------------------|
-| Effective Prioritization | :x:    | ✅ | ✅            |
-| Understandable           | :x:    | ✅ | ✅            |
-| Independent              | ✅ | ✅ | ✅             |
 
 
 ### CVSS Temporal & Threat Metrics
@@ -104,6 +100,17 @@ EPSS should be included to inform "likelihood of exploitation".
 The CVSS Base score parameters are used instead of CVSS scores.
 
 * Reference Code is provided in this guide.
+
+## Risk Based Prioritization Summary against Requirements
+
+| Requirement              | CVSS   | CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Tree |
+|--------------------------|--------|--------|--------------------|
+| Effective Prioritization | :x:    | ✅ | ✅            |
+| Understandable           | :x:    | ✅ | ✅            |
+| Independent              | ✅ | ✅ | ✅             |
+| Extensible               | :x: | ✅ | ✅             |
+
+
 ### Proprietary
 If you **implement** a proprietary Risk Based Prioritization scheme, keep the following in mind:
 

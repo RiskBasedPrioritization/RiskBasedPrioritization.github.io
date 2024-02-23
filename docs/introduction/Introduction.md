@@ -118,6 +118,6 @@ This guide is not an introductory or verbose treatment of topics with broader or
 ## Notes
 !!! notes
       1. This guide is not affiliated with any Tool/Company/Vendor/Standard/Forum/Data source. 
-          1. Mention of a vendor in this guide is not a recommendation or endorsement of that vendor. 
-                1. The choice of vendors was determined by different contributors who had an interest in that vendor.
+           1. Mention of a vendor in this guide is not a recommendation or endorsement of that vendor. 
+              1. The choice of vendors was determined by different contributors who had an interest in that vendor.
       2.  This guide is a living document i.e. it will change and grow over time - with your input.

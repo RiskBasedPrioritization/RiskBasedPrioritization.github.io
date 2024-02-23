@@ -31,6 +31,22 @@
 
     - There is a clear remediation action for the vulnerability, such as a vendor-provided update.
 
+!!! info "CISA KEV currently includes ~1.1K CVEs, and defines criteria for inclusion"
+
+    CISA Known Exploited Vulnerabilities Catalog (CISA KEV) is a source of vulnerabilities that have been exploited in the wild
+
+    There's several criteria including:
+
+    !!! quote
+        "A vulnerability under active exploitation is one for which there is reliable evidence that execution of malicious code was performed by an actor on a system without permission of the system owner." 
+
+        "Events that do not constitute as active exploitation, in relation to the KEV catalog, include:
+
+         * Scanning
+         * Security research of an exploit
+         * Proof of Concept (PoC)
+        
+        https://www.cisa.gov/known-exploited-vulnerabilities 
  
 !!! quote
     “All federal civilian executive branch (FCEB) agencies are required to remediate vulnerabilities in the KEV catalog within prescribed timeframes under Binding Operational Directive (BOD) 22-01, Reducing the Significant Risk of Known Exploited Vulnerabilities.  Although not bound by BOD 22-01, every organization, including those in state, local, tribal, and territorial (SLTT) governments and **private industry can significantly strengthen their security and resilience posture by prioritizing the remediation of the vulnerabilities listed in the KEV catalogue as well**. CISA strongly recommends all stakeholders include a requirement to immediately address KEV catalogue vulnerabilities as part of their vulnerability management plan.

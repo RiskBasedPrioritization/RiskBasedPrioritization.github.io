@@ -11,7 +11,7 @@
     -   CVSS Severity Rating
     -   CVSS Confidentiality, Integrity, Availability Impacts
 
-    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cisa_kev_epss_cvss.ipynb) and [CVSS Base vs CVSS Base & Threat Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
 
 ## CVSS Severity Rating Scale
 
@@ -52,7 +52,10 @@
 !!! tip "Don't use CVSS Scores alone to assess risk."
 
     Many organizations use CVSS Scores alone to assess risk despite repeated guidance against this.  
-    **A Critical or High CVSS Severity is not the same as a Critical or High Risk. There's a >10x difference in counts of CVEs** for these 2 groups:
+
+    **A Critical or High CVSS Severity is not the same as a Critical or High Risk.**
+    
+    **There's a ~10x difference in counts of CVEs** for these 2 groups:
 
     * **\>50% of CVEs are ranked Critical or High CVSS rating (CVSS score 7+)**
     * **~~5% of CVEs are exploited in the wild**
@@ -119,15 +122,6 @@ is HIGH, Availability Impact is HIGH</figcaption>
         1.  **CVSS Base Score or Rating**
         2.  **CVSS Impact values**
 
-## Count of CVEs at or above CVSS Base Score
-
-<figure markdown>
-  ![Image title](../assets/images/cvss_hist.png)
-  <figcaption> How many CVEs are at/above a given CVSS score? <br>
-  The continuous line is a polynomial regression of order 2.
-</figcaption>
-</figure>
-
 
 ## CVSS Exploit Maturity
 
@@ -148,6 +142,36 @@ The "[Temporal Metrics - Exploit Code Maturity (E)](https://www.first.org/cvss/v
 * [Proof-Of-Concept (P): 9.3](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P)
 * [Unproven (U): 9.0](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U) 
 * [Not Defined (X): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) results in the same score as [High (H): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H)
+
+!!! tip "An example project that enriches NVD CVSS scores to include Temporal & Threat Metrics"
+    "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
+    where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
+    is continuously updated.
+
+    -   Fetches EPSS scores every morning
+    -   Fetches CVSS scores from NVD if there are new EPSS scores.
+    -   Calculates the Exploit Code Maturity/Exploitability (E) Metric when
+        new data is found.
+    -   Provides a resulting CVSS-BT score for each CVE
+
+    It uses an EPSS threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).
+### Count of CVEs at or above CVSS Base Score and CVSS Base and Threat Score 
+
+The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is used.
+
+:technologist: [CVSS Base vs CVSS Base & Threat Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
+
+<figure markdown>
+  ![Image title](../assets/images/cvss_b_bt.png)
+  <figcaption> How many CVEs are at/above a given CVSS score? <br>
+  The continuous line is a polynomial regression of order 2.
+</figcaption>
+</figure>
+
+!!! observations
+
+    1. There is a significant difference in the count of CVEs above CVSS Score ~9 for CVSS Base, and CVSS Base and Threat. In other words, for CVSS Base and Threat there's a lot less CVEs above a score of ~9.
+
 ### CVSS v4.0 
 
 The Threat Metrics - Exploit Maturity (E) value causes the CVSS v4.0 Score to vary slightly
@@ -168,18 +192,7 @@ However, the CVSS Score changes only slightly between these - and that slight va
 
 **The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.**
 
-!!! tip "An example project that enriches NVD CVSS scores to include Temporal & Threat Metrics"
-    "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
-    where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
-    is continuously updated.
 
-    -   Fetches EPSS scores every morning
-    -   Fetches CVSS scores from NVD if there are new EPSS scores.
-    -   Calculates the Exploit Code Maturity/Exploitability (E) Metric when
-        new data is found.
-    -   Provides a resulting CVSS-BT score for each CVE
-
-    It uses an EPSS threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).
 
 
 !!! success "Takeaways"

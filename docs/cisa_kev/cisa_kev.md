@@ -10,6 +10,8 @@
     * [EPSS and CISA KEV](../epss/EPSS_and_CISA_KEV.md) for an analysis of CISA KEV CVEs.
     * [Log4Shell Example](../risk/Log4Shell.md) for an example of a CISA KEV entry.
 
+## CISA KEV
+
 !!! quote
 
     For the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity — CISA maintains the authoritative source of vulnerabilities that have been exploited in the wild: the Known Exploited Vulnerability (KEV) catalog https://www.cisa.gov/known-exploited-vulnerabilities-catalog. 
@@ -22,6 +24,7 @@
 
     https://www.cisa.gov/known-exploited-vulnerabilities 
 
+## Criteria For Cisa To Add A Vulnerability To The Kev Catalog
     
 !!! info "There are three criteria for CISA to add a vulnerability to the KEV catalog"
 
@@ -47,7 +50,9 @@
          * Proof of Concept (PoC)
         
         https://www.cisa.gov/known-exploited-vulnerabilities 
- 
+
+## Applying CISA KEV
+
 !!! quote
     “All federal civilian executive branch (FCEB) agencies are required to remediate vulnerabilities in the KEV catalog within prescribed timeframes under Binding Operational Directive (BOD) 22-01, Reducing the Significant Risk of Known Exploited Vulnerabilities.  Although not bound by BOD 22-01, every organization, including those in state, local, tribal, and territorial (SLTT) governments and **private industry can significantly strengthen their security and resilience posture by prioritizing the remediation of the vulnerabilities listed in the KEV catalogue as well**. CISA strongly recommends all stakeholders include a requirement to immediately address KEV catalogue vulnerabilities as part of their vulnerability management plan.
 

@@ -2129,8 +2129,9 @@ likely on top  </p>
 </ol>
 </li>
 <li><strong>Known Actively Exploited in the wild</strong><ol>
-<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> lists <strong>a subset</strong> of known actively
-    exploited Vulnerabilities in the wild.</li>
+<li><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> lists <strong>a subset</strong> of known actively
+    exploited Vulnerabilities in the wild. </li>
+<li><a href="https://vulncheck.com/kev">Vulncheck <abbr title="Known Exploited Vulnerability">KEV</abbr></a> lists additional known actively exploited Vulnerabilities in the wild (and includes <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> CVEs)</li>
 <li><strong>There isn't an authoritative common public list of ALL Vulnerabilities that are Known Actively Exploited in the wild.</strong></li>
 </ol>
 </li>
@@ -2420,6 +2421,11 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 <td style="text-align: right;">1</td>
 </tr>
 <tr>
+<td><a href="https://vulncheck.com/kev">Vulncheck <abbr title="Known Exploited Vulnerability">KEV</abbr></a></td>
+<td style="text-align: center;"><strong>Active</strong> Exploitation</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
 <td><a href="https://github.com/rapid7/metasploit-framework">Metasploit modules</a></td>
 <td style="text-align: center;"><strong>Weaponized</strong> Exploit</td>
 <td style="text-align: right;">3</td>
@@ -2436,6 +2442,11 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://vulncheck.com/press/vulncheck-kev">Vulncheck <abbr title="Known Exploited Vulnerability">KEV</abbr></a> was launched just before this guide was released.
+So it has not been included in any analysis for this guide initial release - but will likely be for future releases.</p>
+</div>
 <p><a href="https://www.first.org/epss/api"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores</a> are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. </p>
 <div class="admonition tip">
 <p class="admonition-title">The population sizes for Likelihood of Exploit decrease, as Likelihood of Exploit increases</p>
@@ -3841,6 +3852,7 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <li><a href="#risk-log4shell">Log4Shell Example</a> for an example of a <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> entry.</li>
 </ul>
 </div>
+<h2 id="cisa_kev-cisa_kev-cisa-kev_1"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr><a class="headerlink" href="#cisa_kev-cisa_kev-cisa-kev_1" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>For the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity — <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> maintains the authoritative source of vulnerabilities that have been exploited in the wild: the Known Exploited Vulnerability (<abbr title="Known Exploited Vulnerability">KEV</abbr>) catalog <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a>. </p>
@@ -3849,6 +3861,7 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <p>Vulnerability management frameworks—such as the Stakeholder-Specific Vulnerability Categorization (<abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>) model—consider a vulnerability's exploitation status.</p>
 <p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
+<h2 id="cisa_kev-cisa_kev-criteria-for-cisa-to-add-a-vulnerability-to-the-kev-catalog">Criteria For Cisa To Add A Vulnerability To The Kev Catalog<a class="headerlink" href="#cisa_kev-cisa_kev-criteria-for-cisa-to-add-a-vulnerability-to-the-kev-catalog" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">There are three criteria for <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> to add a vulnerability to the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog</p>
 <ul>
@@ -3879,6 +3892,7 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <p><a href="https://www.cisa.gov/known-exploited-vulnerabilities">https://www.cisa.gov/known-exploited-vulnerabilities</a> </p>
 </div>
 </div>
+<h2 id="cisa_kev-cisa_kev-applying-cisa-kev">Applying <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr><a class="headerlink" href="#cisa_kev-cisa_kev-applying-cisa-kev" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>“All federal civilian executive branch (FCEB) agencies are required to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> vulnerabilities in the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalog within prescribed timeframes under Binding Operational Directive (BOD) 22-01, Reducing the Significant <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> of Known Exploited Vulnerabilities.  Although not bound by BOD 22-01, every organization, including those in state, local, tribal, and territorial (SLTT) governments and <strong>private industry can significantly strengthen their security and resilience posture by prioritizing the remediation of the vulnerabilities listed in the <abbr title="Known Exploited Vulnerability">KEV</abbr> catalogue as well</strong>. <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> strongly recommends all stakeholders include a requirement to immediately address <abbr title="Known Exploited Vulnerability">KEV</abbr> catalogue vulnerabilities as part of their vulnerability management plan.</p>

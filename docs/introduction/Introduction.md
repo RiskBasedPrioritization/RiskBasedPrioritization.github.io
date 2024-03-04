@@ -2,7 +2,7 @@
 
 !!! abstract "About this Guide"
 
-    This Risk Based Prioritization Guide is a pragmatic user-centric view of risk, the related standards and data sources, and how you can apply them for an effective Risk Based Prioritization for your organization.
+    This Risk Based Prioritization Guide is a pragmatic user-centric view of [Relative Risk per Vulnerability](./Scope.md#per-vulnerability), the related standards and data sources, and how you can apply them for an effective Risk Based Prioritization for your organization.
 
     It is written by, or contributed to, some of the thought leaders in this space **for YOU.**
 

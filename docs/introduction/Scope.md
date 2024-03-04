@@ -18,7 +18,9 @@ The scope is
 - "Per Vulnerability" branch in the diagram below
 - Generic vulnerability data - not the organization-specific context
 
-A different way of looking at this is that this guide can be used as a first pass triage and prioritization of vulnerabilities, before the overall asset-specific business and runtime context, and remediation context, is considered, and all the context-specific dependencies that go with that.
+A different way of looking at this is that this guide (and the prioritization schemes herein), can be used as a first pass triage and prioritization of vulnerabilities, before the overall asset-specific business and runtime context, and remediation context, is considered, and all the context-specific dependencies that go with that.
+
+In other words, Relative Risk per vulnerability.
 
 
 

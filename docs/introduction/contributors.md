@@ -9,6 +9,7 @@ In alphabetical order by first name:
 -   Allen Householder, CERT
 -   Aruneesh Salhotra 
 -   Buddy Bergman 
+-   Casey Douglas
 -   Chris Madden, Yahoo
 -   Christian Heinrich
 -   Denny Wan 

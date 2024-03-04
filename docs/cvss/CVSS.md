@@ -173,6 +173,8 @@ The "[Temporal Metrics - Exploit Code Maturity (E)](https://www.first.org/cvss/v
 * [Unproven (U): 9.0](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U) 
 * [Not Defined (X): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H) results in the same score as [High (H): 9.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H)
 
+
+   
 !!! tip "An example project that enriches NVD CVSS scores to include Temporal & Threat Metrics"
     "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is an example project
     where the CVSS Exploit Code Maturity/Exploitability (E) Temporal Metric
@@ -187,20 +189,29 @@ The "[Temporal Metrics - Exploit Code Maturity (E)](https://www.first.org/cvss/v
     It uses an EPSS threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).
 ### Count of CVEs at or above CVSS Base Score and CVSS Base and Threat Score 
 
-The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is used.
+The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is used here.
 
 :technologist: [CVSS Base vs CVSS Base & Threat Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
 
 <figure markdown>
-  ![Image title](../assets/images/cvss_b_bt.png)
+  ![](../assets/images/cvss_b_bt.png)
   <figcaption> How many CVEs are at/above a given CVSS score? <br>
   The continuous line is a polynomial regression of order 2.
 </figcaption>
 </figure>
 
+<figure markdown>
+  ![](../assets/images/cvss_b_bt_ratings.png)
+  <figcaption> What % of CVEs are in each CVSS Rating? <br>
+</figcaption>
+</figure>
+
+
 !!! observations
 
-    1. There is a significant difference in the count of CVEs above CVSS Score ~9 for CVSS Base, and CVSS Base and Threat. In other words, for CVSS Base and Threat there's a lot less CVEs above a score of ~9.
+    1. For CVSS Base and Threat 
+          1. there's a lot less CVEs above a score of ~9 (relative to CVSS Base)
+          2. ~~35% of CVEs are High or Critical (versus ~~55% for CVSS Base)
 
 ### CVSS v4.0 
 
@@ -216,9 +227,7 @@ The Threat Metrics - Exploit Maturity (E) value causes the CVSS v4.0 Score to va
 
     https://www.first.org/cvss/v4.0/user-guide
 
-There's a big difference in likelihood of exploitation, and associated populations of CVEs, in Attacked vs POC.
 
-However, the CVSS Score changes only slightly between these - and that slight variation in score does not significantly change the counts of CVEs above the score per [Count of CVEs at or above CVSS Base Score](#count-of-cves-at-or-above-cvss-base-score).
 
 **The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.**
 
@@ -227,10 +236,10 @@ However, the CVSS Score changes only slightly between these - and that slight va
 
 !!! success "Takeaways"
     1. Don't use CVSS Base (CVSS-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!
-    2. CVSS Base (CVSS-B) scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)
-    3. CVSS Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH values)
-    4. CVSS Threat Metrics - Exploit Maturity values don't allow for useful prioritization (because they change the overall score only slightly and there's too many CVEs with HIGH values)
-    5. The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively.
+    2. CVSS Base  scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)
+    4. CVSS Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values)
+    5. CVSS Threat Metrics - Exploit Maturity (CVSS-BT) values don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values) - but are still useful as the number of CVEs with HIGH or CRITICAL ratings is reduced.
+    6. The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively.
 
 
   

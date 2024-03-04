@@ -49,9 +49,11 @@
     3.  ~~60% of CVSS v3 CVEs are ranked Critical or High (7+)
     4.  \>96% of CVEs are ranked Medium or higher (4+)
 
-!!! tip "Don't use CVSS Scores alone to assess risk."
+## Don't use CVSS Base Scores alone to assess risk
 
-    Many organizations use CVSS Scores alone to assess risk despite repeated guidance against this.  
+!!! tip "Don't use CVSS Base Scores alone to assess risk."
+
+    Many organizations use CVSS Base Scores alone to assess risk despite repeated guidance against this.  
 
     **A Critical or High CVSS Severity is not the same as a Critical or High Risk.**
     
@@ -66,11 +68,39 @@
         
         https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk
 
+### CVSS Requirements for Regulated Environments 
 
-    !!! quote
-        PCI DSS 4.0 11.3.2.1 “External vulnerability scans are performed after any significant change as follows: Vulnerabilities that are scored **4.0 or higher by the CVSS** are resolved.”
+Some Regulated Environments requirements appear to conflict with this guidance 🤔
+#### PCI
 
-        https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf
+!!! quote
+
+    The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard used to handle credit cards from major card brands. The standard is administered by the Payment Card Industry Security Standards Council, and its use is mandated by the card brands. It was created to better control cardholder data and reduce credit card fraud. Validation of compliance is performed annually or quarterly with a method suited to the volume of transactions
+
+    https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard
+
+!!! quote
+
+    PCI DSS 4.0 11.3.2.1 “External vulnerability scans are performed after any significant change as follows: Vulnerabilities that are scored **4.0 or higher by the CVSS** are resolved.”
+
+    https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf
+
+
+#### FedRAMP
+
+!!! quote
+
+    The Federal Risk and Authorization Management Program (FedRAMP) is a United States federal government-wide compliance program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services https://en.wikipedia.org/wiki/FedRAMP
+
+!!! quote
+
+    3.0 Scanning Requirements
+
+    Common Vulnerability Scoring System (CVSS) Risk Scoring: For any vulnerability with a CVSSv3 base score assigned in the latest version of the NVD, **the CVSSv3 base score must be used as the original risk rating**. If no CVSSv3 score is available, a CVSSv2 base score is acceptable where available. If no CVSS score is available, the native scanner base risk score can be used.
+
+    https://www.fedramp.gov/assets/resources/documents/CSP_Vulnerability_Scanning_Requirements.pdf
+
+ 
 
 ## CVSS Confidentiality, Integrity, Availability Impacts
 

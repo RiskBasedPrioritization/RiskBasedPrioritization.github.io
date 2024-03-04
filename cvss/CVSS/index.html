@@ -1678,19 +1678,29 @@ is continuously updated.</p>
 <p>It uses an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> threshold of 36% as the threshold for High for Exploit Code Maturity/Exploitability (E).</p>
 </div>
 <h3 id="count-of-cves-at-or-above-cvss-base-score-and-cvss-base-and-threat-score">Count of CVEs at or above <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score and <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base and Threat Score<a class="headerlink" href="#count-of-cves-at-or-above-cvss-base-score-and-cvss-base-and-threat-score" title="Permanent link">&para;</a></h3>
-<p>The data from "<a href="https://github.com/t0sche/cvss-bt">Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</a>" is used.</p>
+<p>The data from "<a href="https://github.com/t0sche/cvss-bt">Enriching the <abbr title="National Vulnerability Database">NVD</abbr> <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores to include Temporal &amp; Threat Metrics</a>" is used here.</p>
 <p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base vs <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base &amp; Threat Source Code</a></p>
 <figure>
-<p><img alt="Image title" src="../../assets/images/cvss_b_bt.png" />
+<p><img alt="" src="../../assets/images/cvss_b_bt.png" />
   </p>
 <figcaption> How many CVEs are at/above a given CVSS score? <br>
   The continuous line is a polynomial regression of order 2.
 </figcaption>
 </figure>
+<figure>
+<p><img alt="" src="../../assets/images/cvss_b_bt_ratings.png" />
+  </p>
+<figcaption> What % of CVEs are in each CVSS Rating? <br>
+</figcaption>
+</figure>
 <div class="admonition observations">
 <p class="admonition-title">Observations</p>
 <ol>
-<li>There is a significant difference in the count of CVEs above <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Score ~9 for <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base, and <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base and Threat. In other words, for <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base and Threat there's a lot less CVEs above a score of ~9.</li>
+<li>For <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base and Threat <ol>
+<li>there's a lot less CVEs above a score of ~9 (relative to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base)</li>
+<li>~~35% of CVEs are High or Critical (versus ~~55% for <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base)</li>
+</ol>
+</li>
 </ol>
 </div>
 <h3 id="cvss-v40"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v4.0<a class="headerlink" href="#cvss-v40" title="Permanent link">&para;</a></h3>
@@ -1706,16 +1716,14 @@ is continuously updated.</p>
 <p>The Threat Metric Group adjusts the “reasonable worst case” Base score by using threat intelligence to reduce the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BTE score, addressing concerns that many <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> (Base) scores are too high.</p>
 <p><a href="https://www.first.org/cvss/v4.0/user-guide">https://www.first.org/cvss/v4.0/user-guide</a></p>
 </div>
-<p>There's a big difference in likelihood of exploitation, and associated populations of CVEs, in Attacked vs POC.</p>
-<p>However, the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Score changes only slightly between these - and that slight variation in score does not significantly change the counts of CVEs above the score per <a href="#count-of-cves-at-or-above-cvss-base-score">Count of CVEs at or above <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score</a>.</p>
 <p><strong>The convenience of a single <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.</strong></p>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
 <li>Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!</li>
-<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)</li>
-<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH values)</li>
-<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metrics - Exploit Maturity values don't allow for useful prioritization (because they change the overall score only slightly and there's too many CVEs with HIGH values)</li>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base  scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)</li>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values)</li>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metrics - Exploit Maturity (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BT) values don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values) - but are still useful as the number of CVEs with HIGH or CRITICAL ratings is reduced.</li>
 <li>The convenience of a single <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively.</li>
 </ol>
 </div>

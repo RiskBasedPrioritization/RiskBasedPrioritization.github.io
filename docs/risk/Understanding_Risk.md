@@ -117,7 +117,7 @@ likely on top  
 2.  **Known Actively Exploited in the wild**
     1.  [CISA KEV](../cisa_kev/cisa_kev.md) lists **a subset** of known actively
         exploited Vulnerabilities in the wild. 
-    2.  [Vulncheck KEV](https://vulncheck.com/kev) lists additional known actively exploited Vulnerabilities in the wild (and includes CISA KEV CVEs)
+    2.  [VulnCheck KEV](https://vulncheck.com/kev) lists additional known actively exploited Vulnerabilities in the wild (and includes CISA KEV CVEs)
     3.  **There isn't an authoritative common public list of ALL Vulnerabilities that are Known Actively Exploited in the wild.**
 3.  **Weaponized Exploit**
     1.  A Vulnerability with a "Weaponized Exploit" (but not yet Known

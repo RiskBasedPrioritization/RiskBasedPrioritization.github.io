@@ -42,13 +42,13 @@ This table shows the number of CVEs (from all published CVEs) that are listed in
 | Data Source |    Detail     | ~~ CVE count K | 
 |-------------|:-------------:|---------------:|
 | [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)    |  **Active** Exploitation|              1 | 
-| [Vulncheck KEV](https://vulncheck.com/kev)    |  **Active** Exploitation|              2 | 
+| [VulnCheck KEV](https://vulncheck.com/kev)    |  **Active** Exploitation|              2 | 
 | [Metasploit modules](https://github.com/rapid7/metasploit-framework)  | **Weaponized** Exploit |              3 | 
 | [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates)      |  **Weaponized** Exploit           |              2 | 
 | [ExploitDB](https://gitlab.com/exploit-database/exploitdb)   |  **Published** Exploit Code             |            25 | 
 
 !!! note
-    [Vulncheck KEV](https://vulncheck.com/press/vulncheck-kev) was launched just before this guide was released.
+    [VulnCheck KEV](https://vulncheck.com/press/vulncheck-kev) was launched just before this guide was released.
     So it has not been included in any analysis for this guide initial release - but will likely be for future releases.
 
 [EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. 

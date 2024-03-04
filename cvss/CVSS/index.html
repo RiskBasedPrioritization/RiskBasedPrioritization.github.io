@@ -652,6 +652,54 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dont-use-cvss-base-scores-alone-to-assess-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't use CVSS Base Scores alone to assess risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Don't use CVSS Base Scores alone to assess risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cvss-requirements-for-regulated-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVSS Requirements for Regulated Environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVSS Requirements for Regulated Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedramp" class="md-nav__link">
+    <span class="md-ellipsis">
+      FedRAMP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cvss-confidentiality-integrity-availability-impacts" class="md-nav__link">
     <span class="md-ellipsis">
       CVSS Confidentiality, Integrity, Availability Impacts
@@ -1344,6 +1392,54 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dont-use-cvss-base-scores-alone-to-assess-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't use CVSS Base Scores alone to assess risk
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Don't use CVSS Base Scores alone to assess risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cvss-requirements-for-regulated-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVSS Requirements for Regulated Environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CVSS Requirements for Regulated Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pci" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedramp" class="md-nav__link">
+    <span class="md-ellipsis">
+      FedRAMP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cvss-confidentiality-integrity-availability-impacts" class="md-nav__link">
     <span class="md-ellipsis">
       CVSS Confidentiality, Integrity, Availability Impacts
@@ -1454,9 +1550,10 @@ vulnerability management processes."</p>
 <li>&gt;96% of CVEs are ranked Medium or higher (4+)</li>
 </ol>
 </div>
+<h2 id="dont-use-cvss-base-scores-alone-to-assess-risk">Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores alone to assess risk<a class="headerlink" href="#dont-use-cvss-base-scores-alone-to-assess-risk" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores alone to assess risk.</p>
-<p>Many organizations use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores alone to assess risk despite repeated guidance against this.  </p>
+<p class="admonition-title">Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores alone to assess risk.</p>
+<p>Many organizations use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores alone to assess risk despite repeated guidance against this.  </p>
 <p><strong>A Critical or High <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity is not the same as a Critical or High <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>.</strong></p>
 <p><strong>There's a ~10x difference in counts of CVEs</strong> for these 2 groups:</p>
 <ul>
@@ -1468,11 +1565,30 @@ vulnerability management processes."</p>
 <p><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores are designed to measure the severity of a vulnerability and should not be used alone to assess risk. </p>
 <p><a href="https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk">https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk</a></p>
 </div>
+</div>
+<h3 id="cvss-requirements-for-regulated-environments"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Requirements for Regulated Environments<a class="headerlink" href="#cvss-requirements-for-regulated-environments" title="Permanent link">&para;</a></h3>
+<p>Some Regulated Environments requirements appear to conflict with this guidance 🤔</p>
+<h4 id="pci">PCI<a class="headerlink" href="#pci" title="Permanent link">&para;</a></h4>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The Payment Card Industry Data Security Standard (PCI DSS) is an information security standard used to handle credit cards from major card brands. The standard is administered by the Payment Card Industry Security Standards Council, and its use is mandated by the card brands. It was created to better control cardholder data and reduce credit card fraud. Validation of compliance is performed annually or quarterly with a method suited to the volume of transactions</p>
+<p><a href="https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard">https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard</a></p>
+</div>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>PCI DSS 4.0 11.3.2.1 “External vulnerability scans are performed after any significant change as follows: Vulnerabilities that are scored <strong>4.0 or higher by the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></strong> are resolved.”</p>
 <p><a href="https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf">https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf</a></p>
 </div>
+<h4 id="fedramp">FedRAMP<a class="headerlink" href="#fedramp" title="Permanent link">&para;</a></h4>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The Federal <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> and Authorization Management Program (FedRAMP) is a United States federal government-wide compliance program that provides a standardized approach to security assessment, authorization, and continuous monitoring for cloud products and services <a href="https://en.wikipedia.org/wiki/FedRAMP">https://en.wikipedia.org/wiki/FedRAMP</a></p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>3.0 Scanning Requirements</p>
+<p>Common Vulnerability Scoring System (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>) <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Scoring: For any vulnerability with a CVSSv3 base score assigned in the latest version of the <abbr title="National Vulnerability Database">NVD</abbr>, <strong>the CVSSv3 base score must be used as the original risk rating</strong>. If no CVSSv3 score is available, a CVSSv2 base score is acceptable where available. If no <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score is available, the native scanner base risk score can be used.</p>
+<p><a href="https://www.fedramp.gov/assets/resources/documents/CSP_Vulnerability_Scanning_Requirements.pdf">https://www.fedramp.gov/assets/resources/documents/CSP_Vulnerability_Scanning_Requirements.pdf</a></p>
 </div>
 <h2 id="cvss-confidentiality-integrity-availability-impacts"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts<a class="headerlink" href="#cvss-confidentiality-integrity-availability-impacts" title="Permanent link">&para;</a></h2>
 <div class="admonition quote">

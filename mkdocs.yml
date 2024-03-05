@@ -39,7 +39,9 @@ nav:
 #    - ACME Corporation: 
 #      - Risk Based Prioritization: organizations/acme/Applied.md
 #      - Exploratory Data Analysis: organizations/acme/EDA.md
-  - Takeaway: risk/Takeaway.md
+  - Takeaway:
+    - Risk Based Prioritization Schemes: risk/Rbp_schemes.md
+    - Takeaway: risk/Takeaway.md
   - Annex:
     - Requirements: requirements/Requirements.md
     - Glossary: annex/Glossary.md

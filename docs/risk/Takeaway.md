@@ -15,19 +15,6 @@
     5. EPSS Percentiles
     6. Exploratory Data Analysis of their CVE data
     
-
-    Code and analysis is provided for 3 Risk Based Prioritization schemes to allow comparison and refinement: (TODO)
-
-    5. CVSS Temporal & Threat Metrics
-    6. CVSS Base Score Ratings with Exploitation Focus (TODO code and analysis for this)
-    7. SSVC Decision Trees
-
-    In both cases:
-
-    1. **These can be applied to your CVEs**
-    2. **Public data is used, but it can be easily augmented with commercial CTI.**
-
-
     !!! warning 
 
         "The guidance here is highly opinionated and prescriptive and applied to a user context.
@@ -71,35 +58,6 @@ CVE Enrichment
       1. Organizations may want to extend, customize, or optimize a Risk Based Prioritization Scheme for their environment e.g. change the prioritization associated with a data source or add a new data source.
       2. Some schemes do this by design e.g. *"[SSVC](https://github.com/CERTCC/SSVC) aims to avoid one-size-fits-all solutions in favor of a modular decision-making system with clearly defined and tested parts that vulnerability managers can select and use as appropriate to their context."*
 
-
-
-### CVSS Temporal & Threat Metrics
-
-It is possible to combine all the key risk factors into an overall CVSS score but...
-!!! quote
-
-    The convenience of a single CVSS score comes with the cost of not being able to understand or differentiate between the risk factors from the score, and not being able to prioritize effectively using the score.
-
-    [CVSS](../cvss/CVSS.md)
-
-But if you do chose this option then, see "Enriching the NVD CVSS scores to include Temporal & Threat Metrics" project referenced in [CVSS](../cvss/CVSS.md).
-
-
-### CVSS Base Score Ratings with Exploitation Focus
-
-[Qualys TruRisk Approach](../vendors/Qualys.md#in-depth-look-into-data-driven-science-behind-qualys-trurisk) is a good starting point. Any organization can apply this approach or similar.
-
-EPSS should be included to inform "likelihood of exploitation".
-
-* TODO provide code to implement this or similar
-
-### SSVC Decision Trees
-
-[SSVC](../ssvc/SSVC.md) Decision Trees can give more granularity than combining CVSS Ratings and Exploitation factors i.e. better Risk Based Prioritization.
-
-The CVSS Base score parameters are used instead of CVSS scores.
-
-* Reference Code is provided in this guide.
 
 ## Risk Based Prioritization Summary against Requirements
 

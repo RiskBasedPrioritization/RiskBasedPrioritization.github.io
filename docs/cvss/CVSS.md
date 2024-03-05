@@ -206,6 +206,10 @@ The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metri
 </figcaption>
 </figure>
 
+<figure markdown>
+![Image title](../assets/images/cvss_bt_parcat.png)
+<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs are move to High</figcaption>
+</figure>
 
 !!! observations
 

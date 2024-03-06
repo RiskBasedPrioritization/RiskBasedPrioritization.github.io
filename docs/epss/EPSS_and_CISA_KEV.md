@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
 
-    In this section, we apply interpretation and guidance of EPSS to CISA KEV:
+    In this section, we apply interpretation of, and guidance on, EPSS to CISA KEV:
  
     - CISA KEV will be used as the reference (source of
     truth) for active exploitation.
@@ -30,7 +30,7 @@
 !!! info "CISA KEV contains a subset of known exploited CVEs"
 
     1.  All CVEs in CISA KEV are actively exploited (see [criteria for inclusion in CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities))
-    3.  Only ~~5% of CVEs are known exploited
+    3.  [Only ~~5% of CVEs are known exploited](../risk/Understanding_Risk.md#how-many-vulnerabilities-are-being-exploited)
     2.  CISA KEV contains a subset of known exploited CVEs
 
 
@@ -168,7 +168,7 @@ base score.
 !!! observations
 
     1. Closest to the top left is best i.e. the CVEs on the List/Tool are prioritized more than all published CVEs. 
-       1. e.g Using EPSS, Metasploit CVEs (weaponized exploits) are prioritized much better than all published CVEs (much better than using CVSS).
+          1. e.g Using EPSS, Metasploit CVEs (weaponized exploits) are prioritized much better than all published CVEs (much better than using CVSS).
 
 !!! success "Takeaways"
 

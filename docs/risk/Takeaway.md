@@ -1,4 +1,15 @@
-# Takeaways
+# Takeaway
+
+TODO TODO
+
+<figure markdown>
+![](../assets/images/takeaway.jpg){ width="500" }
+<figcaption></figcaption>
+</figure>
+
+
+
+
 
 !!! abstract "Overview"
     

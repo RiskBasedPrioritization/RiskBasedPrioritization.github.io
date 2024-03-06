@@ -158,7 +158,7 @@ is HIGH, Availability Impact is HIGH</figcaption>
 In addition to the CVSS Base Metrics which are commonly used, CVSS supports other Metrics, including Threat Metrics.
 
 !!! quote
-    It is the responsibility of the CVSS consumer to populate the values of Exploit Maturity (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.
+    **It is the responsibility of the CVSS consumer to populate the values of Exploit Maturity** (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.
 
     Operational Recommendation: Threat intelligence sources that provide Exploit Maturity information for all vulnerabilities should be preferred over those with only partial coverage. Also, it is recommended to use multiple sources of threat intelligence as many are not comprehensive. This information should be updated as frequently as possible and its application to CVSS assessment should be automated.
 
@@ -239,7 +239,7 @@ The Threat Metrics - Exploit Maturity (E) value causes the CVSS v4.0 Score to va
 
 
 !!! success "Takeaways"
-    1. Don't use CVSS Base (CVSS-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!
+    1. [Don't use CVSS Base (CVSS-B) scores alone to assess risk](https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk) - you will waste a LOT of time/effort/$ if you do! 
     2. CVSS Base  scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)
     4. CVSS Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values)
     5. CVSS Threat Metrics - Exploit Maturity (CVSS-BT) values don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values) - but are still useful as the number of CVEs with HIGH or CRITICAL ratings is reduced.

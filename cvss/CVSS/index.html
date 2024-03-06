@@ -14,7 +14,7 @@
         <link rel="prev" href="../../risk/Back_of_napkin/">
       
       
-        <link rel="next" href="../../epss/Introduction_to_EPSS/">
+        <link rel="next" href="../../cisa_kev/cisa_kev/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -380,6 +380,27 @@
   
   <span class="md-ellipsis">
     Scope
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/Requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
   </span>
   
 
@@ -765,6 +786,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../cisa_kev/cisa_kev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CISA Known Exploited Vulnerabilities (CISA KEV)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -777,10 +819,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -791,8 +833,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Exploit Prediction Scoring System (EPSS)
           </label>
@@ -906,27 +948,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../cisa_kev/cisa_kev/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CISA Known Exploited Vulnerabilities (CISA KEV)
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1718,7 +1739,7 @@ is HIGH, Availability Impact is HIGH</figcaption>
 <p>In addition to the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Metrics which are commonly used, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> supports other Metrics, including Threat Metrics.</p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-<p>It is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> consumer to populate the values of Exploit Maturity (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.</p>
+<p><strong>It is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> consumer to populate the values of Exploit Maturity</strong> (E) based on information regarding the availability of exploitation code/processes and the state of exploitation techniques. This information will be referred to as “threat intelligence” throughout this document.</p>
 <p>Operational Recommendation: Threat intelligence sources that provide Exploit Maturity information for all vulnerabilities should be preferred over those with only partial coverage. Also, it is recommended to use multiple sources of threat intelligence as many are not comprehensive. This information should be updated as frequently as possible and its application to <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> assessment should be automated.</p>
 <p><a href="https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics">https://www.first.org/cvss/v4.0/specification-document#Threat-Metrics</a></p>
 </div>
@@ -1792,7 +1813,7 @@ is continuously updated.</p>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
-<li>Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores alone to assess risk - you will waste a LOT of time/effort/$ if you do!</li>
+<li><a href="https://www.first.org/cvss/v4.0/user-guide#CVSS-Base-Score-CVSS-B-Measures-Severity-not-Risk">Don't use <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-B) scores alone to assess risk</a> - you will waste a LOT of time/effort/$ if you do! </li>
 <li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base  scores and ratings don't allow for useful prioritization (because there's too many CVEs at the high end)</li>
 <li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability Impacts don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values)</li>
 <li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Threat Metrics - Exploit Maturity (<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>-BT) values don't allow for useful prioritization (because there's too many CVEs with HIGH or CRITICAL values) - but are still useful as the number of CVEs with HIGH or CRITICAL ratings is reduced.</li>
@@ -1847,13 +1868,13 @@ is continuously updated.</p>
         
         
           
-          <a href="../../epss/Introduction_to_EPSS/" class="md-footer__link md-footer__link--next" aria-label="Next: Exploit Prediction Scoring System (EPSS)">
+          <a href="../../cisa_kev/cisa_kev/" class="md-footer__link md-footer__link--next" aria-label="Next: CISA Known Exploited Vulnerabilities (CISA KEV)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exploit Prediction Scoring System (EPSS)
+                CISA Known Exploited Vulnerabilities (CISA KEV)
               </div>
             </div>
             <div class="md-footer__button md-icon">

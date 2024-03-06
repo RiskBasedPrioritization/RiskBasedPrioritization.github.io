@@ -36,7 +36,9 @@
 
 !!! info "CISA KEV currently includes ~1.1K CVEs, and defines criteria for inclusion"
 
-    CISA Known Exploited Vulnerabilities Catalog (CISA KEV) is a source of vulnerabilities that have been exploited in the wild
+    CISA Known Exploited Vulnerabilities Catalog (CISA KEV) is a source of vulnerabilities that have been exploited in the wild.
+
+    - It contains a [subset of known exploited CVEs](../risk/Understanding_Risk.md#how-many-vulnerabilities-are-being-exploited).
 
     There's several criteria including:
 
@@ -62,4 +64,5 @@
 
 !!! success "Takeaways"
     1. CISA maintains a catalog of vulnerabilities that have been exploited in the wild.
-    2. Organizations should use this KEV catalog as an input to their vulnerability management prioritization framework to prioritize by Risk.
+    2. CISA KEV contains a [subset of known exploited CVEs](../risk/Understanding_Risk.md#how-many-vulnerabilities-are-being-exploited).
+    3. Organizations should use this KEV catalog as an input to their vulnerability management prioritization framework to prioritize by Risk.

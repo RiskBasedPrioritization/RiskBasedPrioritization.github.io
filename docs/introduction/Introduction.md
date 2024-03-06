@@ -46,10 +46,10 @@ The guide covers:
 
 The intended audience is people in these roles:
 
-- Product Engineer: the technical roles: Developer, Product Security, DevSecOps
-- Security Manager: the non-technical business roles: includes CISO
-- Cyber Defender: network defenders,  IT/infosec
-- Tool Provider: Tool providers: Tool Vendors, open source tools,...
+- **Product Engineer**: the technical roles: Developer, Product Security, DevSecOps
+- **Security Manager**: the non-technical business roles: includes CISO
+- **Cyber Defender**: network defenders,  IT/infosec
+- **Tool Provider**: Tool providers: Tool Vendors, open source tools,...
 
 This is a subset of the [Personas/Roles defined in the Requirements](../requirements/Requirements.md#personas) chapter.
 

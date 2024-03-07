@@ -33,7 +33,7 @@ nav:
   - Vendors: 
     - Vendors: vendors/vendors.md
     - Qualys: vendors/Qualys.md
-#    - EdgeScan: vendors/EdgeScan.md
+    - EdgeScan: vendors/Edgescan.md
     - Microsoft Exploitability Index: vendors/Microsoft_Exploitability_Index.md
   - Organizations: 
     - Yahoo: organizations/Yahoo.md

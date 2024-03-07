@@ -14,6 +14,7 @@ In alphabetical order by first name:
 -   Christian Heinrich
 -   Denny Wan 
 -   Derrick Lewis
+-   Eoin Keary, Edgescan
 -   Jay Jacobs, Cyentia, EPSS Co-creator
 -   Jeffrey Martin
 -   Jerry Gamblin 

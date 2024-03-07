@@ -23,7 +23,7 @@
 
 
     <figure markdown>
-    ![Image title](../assets/images/cvss_ratings_table.png)
+    ![](../assets/images/cvss_ratings_table.png)
     <figcaption>CVSS Rating for all CVEs</figcaption>
     </figure>
 
@@ -31,13 +31,13 @@
 
 
 <figure markdown>
-  ![Image title](../assets/images/cvss_ratings_all.png){ width="500" }
+  ![](../assets/images/cvss_ratings_all.png){ width="500" }
   <figcaption>CVSS Rating for all CVEs</figcaption>
 </figure>
 
 
 <figure markdown>
-  ![Image title](../assets/images/cvss_ratings_v3.png){ width="500" }
+  ![](../assets/images/cvss_ratings_v3.png){ width="500" }
   <figcaption>CVSS Rating for all CVSS v3 CVEs</figcaption>
 </figure>
 
@@ -118,22 +118,22 @@ Some Regulated Environments requirements appear to conflict with this guidance ð
 
 
 <figure markdown>
-  ![Image title](../assets/images/cvss1.png){ width="500" }
+  ![](../assets/images/cvss1.png){ width="500" }
   <figcaption>Confidentiality Values for CVSS v3 CVEs (HIGH, LOW, NONE)</figcaption>
 </figure>
 
 <figure markdown>
-  ![Image title](../assets/images/cvss2.png){ width="500" }
+  ![](../assets/images/cvss2.png){ width="500" }
   <figcaption>Integrity Values for CVSS v3 CVEs</figcaption>
 </figure>
 
 <figure markdown>
-  ![Image title](../assets/images/cvss3.png){ width="500" }
+  ![](../assets/images/cvss3.png){ width="500" }
   <figcaption>Availability Values for CVSS v3 CVEs (HIGH, LOW, NONE)</figcaption>
 </figure>
 
 <figure markdown>
-  ![Image title](../assets/images/cvss4.png){ width="500" }
+  ![](../assets/images/cvss4.png){ width="500" }
   <figcaption>Counts of Combinations of CIA for CVSS v3 CVEs <br>e.g. CIA_HHH means that Confidentiality Impact is HIGH, Integrity Impact
 is HIGH, Availability Impact is HIGH</figcaption>
 </figure>
@@ -207,8 +207,8 @@ The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metri
 </figure>
 
 <figure markdown>
-![Image title](../assets/images/cvss_bt_parcat.png)
-<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs are move to High</figcaption>
+![](../assets/images/cvss_bt_parcat.png)
+<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</figcaption>
 </figure>
 
 !!! observations

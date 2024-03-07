@@ -36,8 +36,8 @@
 Exploitation data is added per the CVSS standard as described in [CVSS](../cvss/CVSS.md#cvss-exploit-maturity).
 
 <figure markdown>
-![Image title](../assets/images/cvss_bt_parcat.png)
-<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs are move to High</figcaption>
+![](../assets/images/cvss_bt_parcat.png)
+<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</figcaption>
 </figure>
 
 
@@ -47,20 +47,20 @@ A simple illustrative scheme that combines Base Score Ratings with Exploitation 
 
 * [Qualys TruRisk](../vendors/Qualys.md#in-depth-look-into-data-driven-science-behind-qualys-trurisk) is an example of this type of scheme.
 
-|   | base_score_category | Exploitation           | Score |
-|---|---------------------|------------------------|-------|
-|   | critical            | kev                    | 10    |
-|   | critical            | weaponized             | 9     |
-|   | high                | kev | 8     |
-|   | high                | weaponized  | 7     |
-|   | critical            | poc and not kev and not weaponized| 6     |
-|   | high                | poc and not kev and not weaponized                | 5     |
-|   | critical                | -                  | 4     |
-|   | high              | -                    | 3     |
-|   | medium               | -                  | 2     |
-|   | -               | -                  | 1     |
+|  Score | CVSS Base Score Rating | Exploitation           | 
+|---|---------------------|------------------------|
+| 10  | critical            | kev                    |    
+|  9 | critical            | weaponized             |
+|  8 | high                | kev | 8     |
+|  7 | high                | weaponized  |
+|  6 | critical            | poc | 6     |
+|  5 | high                | poc                 |
+|  4 | critical                | -                  | 
+|  3 | high              | -                    | 
+|  2 | medium               | -                  |
+|  1 | -               | -                  | 
 
-where a CVE is assigned to a Group if it appears in the Data Source listed:
+where a CVE is assigned to a group if it appears in the Data Source listed:
 
 | Group                               | Data Source               |
 |-------------------------------------|---------------------------|
@@ -69,7 +69,7 @@ where a CVE is assigned to a Group if it appears in the Data Source listed:
 | poc (Proof Of Concept)              | poc_github or exploitdb   |
 
 <figure markdown>
-![Image title](../assets/images/cvss_exploitation_parcat.png) 
+![](../assets/images/cvss_exploitation_parcat.png) 
 <figcaption>Combination of CVSS Base Score Rating and Exploitation Evidence to Assign a Score (10 is highest risk)</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ This gives more granularity than combining CVSS Ratings and Exploitation factors
 
 
 <figure markdown>
-![Image title](../assets/images/dt_sankey.png) 
+![](../assets/images/dt_sankey.png) 
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
 </figure>
 
@@ -105,6 +105,12 @@ This gives more granularity than combining CVSS Ratings and Exploitation factors
           2. risk by reducing the time adversaries have access to vulnerable systems they are trying to exploit
     2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [Focus on Exploitation](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are good starting points or references for a Risk Based Prioritization scheme.
     3. Apply a Risk Based Prioritization scheme based on your environment, and refine it based on your data.
+
+    |  CVSS Temporal & Threat Metrics |CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Trees           | 
+    |---|---------------------|------------------------|
+    | ![](../assets/images/cvss_bt_parcat.png)  | ![](../assets/images/cvss_exploitation_parcat.png)            | ![](../assets/images/dt_sankey.png)                     |  
+    | The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High | Better prioritization - less red |Better prioritization - less red |
+
 
  
 

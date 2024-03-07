@@ -33,7 +33,7 @@ TODO TODO
         This section "leads with an opinion", and associated rationale.
 
  [User Scenarios and User Stories](../requirements/Requirements.md).
- 
+
   [Requirements for a Risk Based Prioritization Scheme for First Pass Triage](../introduction/Requirements.md).
 
     
@@ -41,7 +41,7 @@ TODO TODO
 ## Risk Based Prioritization Scheme for First Pass Triage
 
 <figure markdown>
-![Image title](../assets/images/stages.png)
+![](../assets/images/stages.png)
 <figcaption>The scope for this guide is up to and including the First Pass Triage</figcaption>
 </figure>
 

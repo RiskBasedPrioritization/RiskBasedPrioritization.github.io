@@ -26,7 +26,7 @@ These articles are worth reading in full - below are some insightful extracts.
     The QDS algorithm **rates weaponized exploits higher than PoC exploits.**
 
     <figure markdown>
-    ![Image title](../assets/images/QualysQDS.png){ width="700" }
+    ![](../assets/images/QualysQDS.png){ width="700" }
     <figcaption>Qualys QDS/QVS Range and factors (this predates inclusion of EPSS)</figcaption>
     </figure>
 
@@ -78,7 +78,7 @@ Several other examples of vulnerabilities with low EPSS scores and high TruRisk 
 
 
 <figure markdown>
-  ![Image title](../assets/images/qualys1.png){ width="700" }
+  ![](../assets/images/qualys1.png){ width="700" }
   <figcaption>Qualys 2023 Qualys TruRisk Research Report Top 163 CVEs QVS vs EPSS</figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Several other examples of vulnerabilities with low EPSS scores and high TruRisk 
 
 
 <figure markdown>
-  ![Image title](../assets/images/qualys3.png){ width="700" }
+  ![](../assets/images/qualys3.png){ width="700" }
   <figcaption>Qualys 2023 Qualys TruRisk Research Report Top 163 CVEs QVS vs CVSS Base Score</figcaption>
 </figure>
 
@@ -134,7 +134,7 @@ and the reason for the unscored CVEs by Qualys. 
 [See Original post](https://www.linkedin.com/posts/buddybergman_epss-qualys-cybersecurity-activity-7123998432674926592-ydQB)
 
 <figure markdown>
-![Image title](../assets/images/qualys2.png){ width="700" }
+![](../assets/images/qualys2.png){ width="700" }
 <figcaption>Qualys QVS vs EPSS  </figcaption> 
 </figure>
 

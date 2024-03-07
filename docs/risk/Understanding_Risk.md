@@ -43,7 +43,7 @@
         purposes.
 
     <figure markdown>
-    ![Image title](../assets/images/nist_risk.png)
+    ![](../assets/images/nist_risk.png)
     <figcaption>NIST Generic Risk Model with Key Risk Factors</figcaption>
     </figure>
 
@@ -98,7 +98,7 @@ EPSS, CISA KEV fit...
 
 
 <figure markdown>
-![Image title](../assets/images/risk_remediation_taxonomy.png)
+![](../assets/images/risk_remediation_taxonomy.png)
 <figcaption> Where CVSS, EPSS, CISA KEV Fit with Risk</figcaption>
 </figure>
 

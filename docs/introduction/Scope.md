@@ -25,12 +25,12 @@ In other words, Relative Risk per vulnerability.
 
 
 <figure markdown>
-![Image title](../assets/images/risk_remediation_taxonomy.png)
+![](../assets/images/risk_remediation_taxonomy.png)
 <figcaption>The scope for this guide is the "Per Vulnerability" branch</figcaption>
 </figure>
 
 <figure markdown>
-![Image title](../assets/images/stages.png)
+![](../assets/images/stages.png)
 <figcaption>The scope for this guide is up to and including the First Pass Triage</figcaption>
 </figure>
 

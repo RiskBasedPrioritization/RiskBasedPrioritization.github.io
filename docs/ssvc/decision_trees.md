@@ -66,7 +66,7 @@ used as part of the Exploitation Decision Node.
 
 
 <figure markdown>
-![Image title](../assets/images/cisadt_flowchart.png)
+![](../assets/images/cisadt_flowchart.png)
 <figcaption>Example Decisions using EPSS Thresholds</figcaption>
 </figure>
 

@@ -84,7 +84,7 @@ prioritize the vulnerabilities.**
 ## Decision Tree Node Inputs
 
 <figure markdown>
-![Image title](../assets/images/dt_decision_inputs.png)
+![](../assets/images/dt_decision_inputs.png)
 <figcaption>Decisions Tree Node Inputs</figcaption>
 </figure>
 
@@ -125,20 +125,20 @@ This reinforces the guidance to **"prioritize vulnerabilities that are
 being exploited in the wild or are likely to be"**
 
 <figure markdown>
-![Image title](../assets/images/dt_nodes_venn.png){ width="500" }
+![](../assets/images/dt_nodes_venn.png){ width="500" }
 <figcaption>Decision Node Output CVE Populations</figcaption> 
 </figure>
   
 ## Decision Tree Output
 
 <figure markdown>
-![Image title](../assets/images/df_node_outputs.png)
+![](../assets/images/df_node_outputs.png)
 <figcaption>Decision Tree Output: All CVEs Priority 1:Act, 2:Attend, 3:Track Closely, 4:Track</figcaption>
 </figure>
 
 
 <figure markdown>
-![Image title](../assets/images/df_node_outputs_epss01.png)
+![](../assets/images/df_node_outputs_epss01.png)
 <figcaption>Decision Tree Output: CVEs with EPSS > 0.1: Priority 1:Act, 2:Attend</figcaption>
 </figure>
 
@@ -171,7 +171,7 @@ sankey diagram to show how CVEs flow through the tree Decision Nodes
 -   running the source code provided gives an interactive version of the plot
 
 <figure markdown>
-![Image title](../assets/images/dt_sankey.png)
+![](../assets/images/dt_sankey.png)
 <figcaption>Sankey diagram showing the split of All CVEs across the decision tree nodes<br>The vertical size of the band represents the count of CVEs
 <br>The color represents the risk e.g. red is high risk.</figcaption>
 </figure>
@@ -193,7 +193,7 @@ The source code includes a selected list of CVEs to show how easy it is
 to apply the Decision Tree to a list of CVEs.
 
 <figure markdown>
-![Image title](../assets/images/dt_triage.png)
+![](../assets/images/dt_triage.png)
 <figcaption>Remediation Decisions/Priority is given for these CVEs</figcaption>
 </figure>
 

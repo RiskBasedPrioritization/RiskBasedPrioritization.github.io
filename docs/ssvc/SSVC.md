@@ -50,12 +50,12 @@ CISA has adopted a customized version of SSVC as a framework for their vulnerabi
 
   
 <figure markdown>
-![Image title](../assets/images/cisa_ssvcdt.png){ width="700" }
+![](../assets/images/cisa_ssvcdt.png){ width="700" }
 <figcaption>CISA's SSVC Decision Tree https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
   
 <figure markdown>
-![Image title](../assets/images/cisadt_decisions.png){ width="700" }
+![](../assets/images/cisadt_decisions.png){ width="700" }
 <figcaption>CISA's SSVC Decision Tree Outcomes https://www.cisa.gov/ssvc-calculator</figcaption> 
 </figure>
 

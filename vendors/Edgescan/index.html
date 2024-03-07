@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/vendors/EdgeScan/">
+        <link rel="canonical" href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/vendors/Edgescan/">
       
       
+        <link rel="prev" href="../Qualys/">
+      
+      
+        <link rel="next" href="../Microsoft_Exploitability_Index/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -945,21 +949,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -973,7 +977,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Vendors
@@ -1017,6 +1021,94 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    EdgeScan
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    EdgeScan
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edgescan_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edgescan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edgescan-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edgescan Scoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1320,9 +1412,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#edgescan-data" class="md-nav__link">
+  <a href="#edgescan_1" class="md-nav__link">
     <span class="md-ellipsis">
-      EdgeScan Data
+      Edgescan
     </span>
   </a>
   
@@ -1331,7 +1423,7 @@
         <li class="md-nav__item">
   <a href="#edgescan-scoring" class="md-nav__link">
     <span class="md-ellipsis">
-      EdgeScan Scoring
+      Edgescan Scoring
     </span>
   </a>
   
@@ -1361,46 +1453,54 @@
                   
 
 
-<h1 id="edgescan">EdgeScan<a class="headerlink" href="#edgescan" title="Permanent link">&para;</a></h1>
+<h1 id="edgescan">Edgescan<a class="headerlink" href="#edgescan" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
 <p>In this section we look at</p>
 <ul>
-<li>how EdgeScan uses <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> as part of their scoring</li>
-<li>what <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> looks like for CVEs detected by EdgeScan scans</li>
+<li>how Edgescan uses <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> as part of their scoring</li>
+<li>what <abbr title="Exploit Prediction Scoring System">EPSS</abbr>, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> looks like for CVEs detected by Edgescan scans</li>
 </ul>
 </div>
-<h2 id="edgescan-data">EdgeScan Data<a class="headerlink" href="#edgescan-data" title="Permanent link">&para;</a></h2>
-<p>TODO To Be Completed by Eoin Keary </p>
-<p>EdgeScan is a PTAAS vendor....</p>
-<p>The data........ the CVEs detected are determined to be exploitable (but
-not exploited as part of a typical engagement).
-The PenTest is carried out remotely.</p>
-<h2 id="edgescan-scoring">EdgeScan Scoring<a class="headerlink" href="#edgescan-scoring" title="Permanent link">&para;</a></h2>
+<h2 id="edgescan_1">Edgescan<a class="headerlink" href="#edgescan_1" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.edgescan.com/">Edgescan</a> is a cloud based cybersecurity platform that combines five cybersecurity solutions:</p>
+<ol>
+<li>Attack Surface Management (ASM)</li>
+<li><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>-based Vulnerability Management (RBVM)</li>
+<li>Application Security Testing (AST)</li>
+<li>API Security Testing</li>
+<li>Penetration Testing as a Service (PTaaS)</li>
+</ol>
+<p>Edgescan provided anonymized sanitized data for the analysis here:</p>
+<ul>
+<li>This data is the result of continuous testing &amp; vulnerability validation across 30 verticals and 300 organisations globally. </li>
+<li>The CVEs detected are determined to be exploitable via validation, but not exploited by Edgescan as part of a typical engagement and to be production-safe.</li>
+</ul>
+<h2 id="edgescan-scoring">Edgescan Scoring<a class="headerlink" href="#edgescan-scoring" title="Permanent link">&para;</a></h2>
 <p><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is visible as a floating point score (0.00) alongside <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, CISAKEV (boolean) and EVSS (Edgescan Validated Security Score). </p>
-<p>Edgescan has also implemented an overall priority score combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> with some weightings to deliver an overall priority score, called the Edgescan eXposure Factor (EXF). <a href="https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/">https://www.edgescan.com/solutions/risk-based-vulnerability-management-rbvm/</a></p>
+<p>Edgescan has also implemented an overall priority score combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> with some weightings to deliver an overall priority score, called the Edgescan eXposure Factor (EXF). <a href="https://www.Edgescan.com/solutions/risk-based-vulnerability-management-rbvm/">https://www.Edgescan.com/solutions/risk-based-vulnerability-management-rbvm/</a></p>
 <h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="Image title" src="../../assets/images/edgescan1.png" width="700" />
   </p>
-<figcaption>EdgeScan 2023 CVE Report CVSS vs EPSS</figcaption>
+<figcaption>Edgescan 2023 CVE Report CVSS vs EPSS</figcaption>
 </figure>
 <figure>
 <p><img alt="Image title" src="../../assets/images/edgescan2.png" width="700" />
   </p>
-<figcaption>EdgeScan 2023 CVE Report CVSS vs EPSS: Lower EPSS Range 0-0.1</figcaption>
+<figcaption>Edgescan 2023 CVE Report CVSS vs EPSS: Lower EPSS Range 0-0.1</figcaption>
 </figure>
 <figure>
 <p><img alt="Image title" src="../../assets/images/edgescan3.png" width="700" />
   </p>
-<figcaption>EdgeScan 2023 CVE Report CVSS vs EPSS: Higher EPSS Range 0.1-1</figcaption>
+<figcaption>Edgescan 2023 CVE Report CVSS vs EPSS: Higher EPSS Range 0.1-1</figcaption>
 </figure>
 <div class="admonition observations">
 <p class="admonition-title">Observations</p>
 <ol>
 <li>The detected CVEs cover the range of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> BaseScores and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores.</li>
 <li>The vast majority of detected CVEs have a low <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score near zero.</li>
-<li>Zooming in on the lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores below 0.1, there's CVEs are in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (Active), Metasploit and Nuclei (Weaponized), ExploitDB (PoC). Though the vast majority are not.</li>
+<li>Zooming in on the lower <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores below 0.1, there's some CVEs in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (Active), Metasploit and Nuclei (Weaponized), ExploitDB (PoC), though the vast majority are not.</li>
 <li>Zooming in on the higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores above 0.1, there's a concentration of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> 0.9 that are in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> (Active), Metasploit and Nuclei (Weaponized), ExploitDB (PoC)</li>
 </ol>
 </div>
@@ -1426,7 +1526,8 @@ The PenTest is carried out remotely.</p>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
-<li>TODO</li>
+<li>Prioritizing by Exploitation (Known evidence or activity in the order below, and high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores) would be a much more effective method than <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> in this case in terms of risk vs effort.
+<img alt="Exploitation Known evidence or activity" src="../../assets/images/napkin1.png" width="600" /></li>
 </ol>
 </div>
 
@@ -1455,6 +1556,44 @@ The PenTest is carried out remotely.</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Qualys/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Qualys">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Qualys
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Microsoft_Exploitability_Index/" class="md-footer__link md-footer__link--next" aria-label="Next: Microsoft Exploitability Index">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Microsoft Exploitability Index
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

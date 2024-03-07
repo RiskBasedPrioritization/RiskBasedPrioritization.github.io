@@ -1487,8 +1487,8 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <h3 id="cvss-temporal-threat-metrics"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal &amp; Threat Metrics<a class="headerlink" href="#cvss-temporal-threat-metrics" title="Permanent link">&para;</a></h3>
 <p>Exploitation data is added per the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> standard as described in <a href="../../cvss/CVSS/#cvss-exploit-maturity"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></a>.</p>
 <figure>
-<p><img alt="Image title" src="../../assets/images/cvss_bt_parcat.png" /></p>
-<figcaption>The effect of CVSS Base &amp; Threat is to move some CVEs down a Rating e.g. some Critical CVEs are move to High</figcaption>
+<p><img alt="" src="../../assets/images/cvss_bt_parcat.png" /></p>
+<figcaption>The effect of CVSS Base &amp; Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</figcaption>
 </figure>
 <h3 id="cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus<a class="headerlink" href="#cvss-base-score-ratings-with-exploitation-focus" title="Permanent link">&para;</a></h3>
 <p>A simple illustrative scheme that combines Base Score Ratings with Exploitation status is defined here.</p>
@@ -1498,76 +1498,65 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <table>
 <thead>
 <tr>
-<th></th>
-<th>base_score_category</th>
-<th>Exploitation</th>
 <th>Score</th>
+<th><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Rating</th>
+<th>Exploitation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td>critical</td>
-<td>kev</td>
 <td>10</td>
+<td>critical</td>
+<td>kev</td>
 </tr>
 <tr>
-<td></td>
+<td>9</td>
 <td>critical</td>
 <td>weaponized</td>
-<td>9</td>
 </tr>
 <tr>
-<td></td>
+<td>8</td>
 <td>high</td>
 <td>kev</td>
-<td>8</td>
 </tr>
 <tr>
-<td></td>
+<td>7</td>
 <td>high</td>
 <td>weaponized</td>
-<td>7</td>
 </tr>
 <tr>
-<td></td>
-<td>critical</td>
-<td>poc and not kev and not weaponized</td>
 <td>6</td>
+<td>critical</td>
+<td>poc</td>
 </tr>
 <tr>
-<td></td>
-<td>high</td>
-<td>poc and not kev and not weaponized</td>
 <td>5</td>
+<td>high</td>
+<td>poc</td>
 </tr>
 <tr>
-<td></td>
+<td>4</td>
 <td>critical</td>
 <td>-</td>
-<td>4</td>
 </tr>
 <tr>
-<td></td>
+<td>3</td>
 <td>high</td>
 <td>-</td>
-<td>3</td>
 </tr>
 <tr>
-<td></td>
+<td>2</td>
 <td>medium</td>
 <td>-</td>
-<td>2</td>
 </tr>
 <tr>
-<td></td>
-<td>-</td>
-<td>-</td>
 <td>1</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
-<p>where a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> is assigned to a Group if it appears in the Data Source listed:</p>
+<p>where a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> is assigned to a group if it appears in the Data Source listed:</p>
 <table>
 <thead>
 <tr>
@@ -1591,7 +1580,7 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 </tbody>
 </table>
 <figure>
-<p><img alt="Image title" src="../../assets/images/cvss_exploitation_parcat.png" /> </p>
+<p><img alt="" src="../../assets/images/cvss_exploitation_parcat.png" /> </p>
 <figcaption>Combination of CVSS Base Score Rating and Exploitation Evidence to Assign a Score (10 is highest risk)</figcaption>
 </figure>
 <h3 id="ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees<a class="headerlink" href="#ssvc-decision-trees" title="Permanent link">&para;</a></h3>
@@ -1599,7 +1588,7 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <p>Per the <a href="../../ssvc/decision_trees_from_scratch/"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Tree example, the Exploitability and Impact <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Factors that make up the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score are split out separately and used instead of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score.</p>
 <p>This gives more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Exploitation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
 <figure>
-<p><img alt="Image title" src="../../assets/images/dt_sankey.png" /> </p>
+<p><img alt="" src="../../assets/images/dt_sankey.png" /> </p>
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
 </figure>
 <div class="admonition observations">
@@ -1631,6 +1620,27 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <li>Either <a href="#cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="../Understanding_Risk/#where-cvss-epss-cisa-kev-fit">Focus on Exploitation</a>, are good starting points or references for a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme.</li>
 <li>Apply a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme based on your environment, and refine it based on your data.</li>
 </ol>
+<table>
+<thead>
+<tr>
+<th><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal &amp; Threat Metrics</th>
+<th><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</th>
+<th><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../../assets/images/cvss_bt_parcat.png" /></td>
+<td><img alt="" src="../../assets/images/cvss_exploitation_parcat.png" /></td>
+<td><img alt="" src="../../assets/images/dt_sankey.png" /></td>
+</tr>
+<tr>
+<td>The effect of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base &amp; Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</td>
+<td>Better prioritization - less red</td>
+<td>Better prioritization - less red</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

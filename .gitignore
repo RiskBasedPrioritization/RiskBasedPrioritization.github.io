@@ -4,6 +4,6 @@ site
 checklinks_report.txt
 .DS_Store
 
-docs/vendors/EdgeScan.md
+
 organizations/acme/Applied.md
 organizations/acme/EDA.md

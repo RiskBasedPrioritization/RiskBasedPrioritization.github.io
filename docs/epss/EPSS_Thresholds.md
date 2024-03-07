@@ -17,7 +17,7 @@
         
         This section "leads with an opinion", and associated rationale.
 
-    :technologist: [Source Code](TODO) 
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/weaponized.ipynb)
 
 ## EPSS Model 
 ### Remediation Prioritization for your Environment
@@ -150,7 +150,7 @@ Weaponized (independent of EPSS score).
 
 ### EdgeScan Data 
 
-Here we use [EdgeScan](../vendors/EdgeScan.md) detected CVEs as the representative data set for our Enterprise.
+Here we use [EdgeScan](../vendors/Edgescan.md) detected CVEs as the representative data set for our Enterprise.
 
 <figure markdown>
   ![](../assets/images/edgescan_epss.png)

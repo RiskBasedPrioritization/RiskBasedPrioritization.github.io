@@ -7,6 +7,7 @@ nav:
   - Home: index.md
   - Introduction: 
     - Introduction: introduction/Introduction.md
+    - Foreword: introduction/foreword.md
     - Contributors: introduction/contributors.md
     - Scope: introduction/Scope.md
     - Requirements: introduction/Requirements.md

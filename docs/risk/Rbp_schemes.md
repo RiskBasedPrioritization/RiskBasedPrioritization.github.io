@@ -6,17 +6,17 @@
 
     Code and analysis is provided for 3 Risk Based Prioritization schemes to allow comparison and refinement: 
 
-    5. CVSS Temporal & Threat Metrics (adding Exploitation info per the CVSS standard)
+    1. CVSS v3 Temporal Metric - Exploit Code Maturity (E) (adding Exploitation info per the CVSS standard)
           1. The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is used here.
-    6. CVSS Base Score Ratings with Exploitation Focus (adding Exploitation info but not per the CVSS standard)
+    2. CVSS Base Score Ratings with Exploitation Focus (adding Exploitation info but not per the CVSS standard)
           1. The data from "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https://github.com/t0sche/cvss-bt)" is used here.
-    7. SSVC Decision Trees (using CVSS Base Parameters as input, not CVSS scores or ratings)
+    3. SSVC Decision Trees (using CVSS Base Parameters as input, not CVSS scores or ratings)
 
     For each scheme:
 
-    8. The population of CVEs used is All published CVEs
-    9.  **Public data is used, but it can be easily augmented with commercial CTI.**
-    10. **These schemes can be applied to your CVEs**
+    4. The population of CVEs used is All published CVEs
+    5.  **Public data is used, but it can be easily augmented with commercial CTI.**
+    6.  **These schemes can be applied to your CVEs**
 
     !!! warning 
 
@@ -25,22 +25,22 @@
         
         This section "leads with an opinion", and associated rationale.
 
-    :material-play-box-edit-outline: [Colab NoteBook CVSS Base vs CVSS Base & Threat](https://colab.research.google.com/drive/1LOps2ViFbAp5eyC5UG_cr-5bZ8i_4U8B#scrollTo=HHyjMx-Ku7eQ) 
+    :material-play-box-edit-outline: [Colab NoteBook CVSS Base vs CVSS Base & Temporal Metric - Exploit Code Maturity/Exploitability (E)](https://colab.research.google.com/drive/1LOps2ViFbAp5eyC5UG_cr-5bZ8i_4U8B#scrollTo=HHyjMx-Ku7eQ) 
 
-    :technologist: [CVSS Base vs CVSS Base & Threat Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
+    :technologist: [CVSS Base vs CVSS v3 Base & Temporal Metric - Exploit Code Maturity/Exploitability (E) Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
 
     :technologist: [SSVC Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/cisa_ssvc_dt/DT_from_scratch.ipynb) 
   
 
 
 
-### CVSS Temporal & Threat Metrics
+### CVSS and Temporal Metric - Exploit Code Maturity (E)
 
-Exploitation data is added per the CVSS standard as described in [CVSS](../cvss/CVSS.md#cvss-exploit-maturity).
+Exploitation data is added per the CVSS v3 standard as described in [CVSS](../cvss/CVSS.md#cvss-exploit-maturity).
 
 <figure markdown>
 ![](../assets/images/cvss_bt_parcat.png)
-<figcaption>The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</figcaption>
+<figcaption>The effect of CVSS v3 Temporal Metric - Exploit Code Maturity (E) is to move some CVEs down a Rating e.g. some Critical CVEs move to High</figcaption>
 </figure>
 
 
@@ -94,7 +94,7 @@ This gives more granularity than combining CVSS Ratings and Exploitation factors
 
 
 !!! observations
-    1. The standard CVSS Temporal & Threat Metrics as described in [CVSS](../cvss/CVSS.md#cvss-exploit-maturity) does not significantly (de)prioritize CVEs.
+    1. The standard CVSS v3 Temporal Metric - Exploit Code Maturity (E) as described in [CVSS](../cvss/CVSS.md#cvss-exploit-maturity) does not significantly (de)prioritize CVEs.
           1. While it uses Exploitation Evidence, it does not **focus on** Exploitation Evidence like the other 2 schemes presented
           2. is based on a standard, but exactly how to use the different types of Exploitation Evidence is not standard or defined
     2. The "CVSS Base Score Ratings with Exploitation Focus" does significantly (de)prioritize CVEs
@@ -109,7 +109,7 @@ This gives more granularity than combining CVSS Ratings and Exploitation factors
     2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [Focus on Exploitation](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are good starting points or references for a Risk Based Prioritization scheme.
     3. Apply a Risk Based Prioritization scheme based on your environment, and refine it based on your data.
 
-    |  CVSS Temporal & Threat Metrics |CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Trees           | 
+    |  CVSS v3 Temporal Metric - Exploit Code Maturity (E) |CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Trees           | 
     |---|---------------------|------------------------|
     | ![](../assets/images/cvss_bt_parcat.png)  | ![](../assets/images/cvss_exploitation_parcat.png)            | ![](../assets/images/dt_sankey.png)                     |  
     | The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High | Better prioritization - less red |Better prioritization - less red |

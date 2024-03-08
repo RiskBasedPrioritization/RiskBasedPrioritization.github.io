@@ -25,7 +25,7 @@
         
         This section "leads with an opinion", and associated rationale.
 
-    :material-play-box-edit-outline: [Colab NoteBook CVSS Base vs CVSS Base & Temporal Metric - Exploit Code Maturity/Exploitability (E)](https://colab.research.google.com/drive/1ysQZK0M-DsB9Jkw4dUB39mgBmaZOJTn) 
+    :material-play-box-edit-outline: [Colab NoteBook CVSS Base vs CVSS Base & Temporal Metric - Exploit Code Maturity/Exploitability (E)](https://colab.research.google.com/drive/1ysQZK0M-DsB9Jkw4dUB39mgBmaZOJTnI?usp=sharing) 
 
     :technologist: [CVSS Base vs CVSS v3 Base & Temporal Metric - Exploit Code Maturity/Exploitability (E) Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
 

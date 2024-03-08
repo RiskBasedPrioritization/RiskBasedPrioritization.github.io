@@ -5524,8 +5524,10 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 <p>The <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base parameters are used instead of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scores or ratings.</p>
 <p>Per the <a href="#ssvc-decision_trees_from_scratch"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Tree example, the Exploitability and Impact <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Factors that make up the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score are split out separately and used instead of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score.</p>
 <p>This gives more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Exploitation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
+<p>Assigned Score is the main output - based on Exploitation, Automatable, TechnicalImpact Decision Node outputs.
+- <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> groups Decision Tree ouputs into Priorities - but for granular <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, the main output is most relevant.</p>
 <figure>
-<p><img alt="" src="../assets/images/dt_sankey.png" /> </p>
+<p><img alt="" src="../assets/images/ssvc_parcat.png" /> </p>
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
 </figure>
 <div class="admonition observations">
@@ -5569,7 +5571,7 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 <tr>
 <td><img alt="" src="../assets/images/cvss_bt_parcat.png" /></td>
 <td><img alt="" src="../assets/images/cvss_exploitation_parcat.png" /></td>
-<td><img alt="" src="../assets/images/dt_sankey.png" /></td>
+<td><img alt="" src="../assets/images/ssvc_parcat.png" /></td>
 </tr>
 <tr>
 <td>The effect of <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base &amp; Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High</td>

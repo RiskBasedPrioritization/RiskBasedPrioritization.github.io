@@ -86,9 +86,12 @@ Per the [SSVC](../ssvc/decision_trees_from_scratch.md) Decision Tree example, th
 
 This gives more granularity than combining CVSS Ratings and Exploitation factors i.e. better Risk Based Prioritization.
 
+Assigned Score is the main output - based on Exploitation, Automatable, TechnicalImpact Decision Node outputs.
+- SSVC groups Decision Tree ouputs into Priorities - but for granular Risk Based Prioritization, the main output is most relevant.
+
 
 <figure markdown>
-![](../assets/images/dt_sankey.png) 
+![](../assets/images/ssvc_parcat.png) 
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
 </figure>
 
@@ -111,7 +114,7 @@ This gives more granularity than combining CVSS Ratings and Exploitation factors
 
     |  CVSS v3 Temporal Metric - Exploit Code Maturity (E) |CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Trees           | 
     |---|---------------------|------------------------|
-    | ![](../assets/images/cvss_bt_parcat.png)  | ![](../assets/images/cvss_exploitation_parcat.png)            | ![](../assets/images/dt_sankey.png)                     |  
+    | ![](../assets/images/cvss_bt_parcat.png)  | ![](../assets/images/cvss_exploitation_parcat.png)            | ![](../assets/images/ssvc_parcat.png)                     |  
     | The effect of CVSS Base & Threat is to move some CVEs down a Rating e.g. some Critical CVEs move to High | Better prioritization - less red |Better prioritization - less red |
 
 

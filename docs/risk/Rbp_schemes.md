@@ -25,10 +25,13 @@
         
         This section "leads with an opinion", and associated rationale.
 
+    :material-play-box-edit-outline: [Colab NoteBook CVSS Base vs CVSS Base & Threat](https://colab.research.google.com/drive/1LOps2ViFbAp5eyC5UG_cr-5bZ8i_4U8B#scrollTo=HHyjMx-Ku7eQ) 
+
     :technologist: [CVSS Base vs CVSS Base & Threat Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/analysis/cvss-bt.ipynb)
 
     :technologist: [SSVC Source Code](https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/cisa_ssvc_dt/DT_from_scratch.ipynb) 
   
+
 
 
 ### CVSS Temporal & Threat Metrics

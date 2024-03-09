@@ -17,17 +17,14 @@
 ## Population Sizes
 
 <figure markdown>
-![Exploitation Venn Diagram](../assets/images/cve_exploit_venn.png){ width="700" }
-<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploit branch</figcaption>
+![Exploitation Venn Diagram](../assets/images/cve_venn.png){ width="700" }
+<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploit branch. <br>Representative sizes and overlaps shown as there isn't authoritative exact data.</figcaption>
 </figure>
-TODO update venn with latest data - and add weaponized exploits
 
-1. ~~50% (~~100K) of all CVEs (~200K) have known exploits available (based on a commercial CTI product used by the author)
+1. ~~50% (~~100K) of all CVEs (~200K) have known exploits Proof Of Concepts available (based on a commercial CTI product used by the author)
 2. ~~5% (~10K) of all CVEs are actively exploited 
     1. **There isn't a single complete authoritative source for these CVEs**
-3. ~~10% of CVEs with Known Exploits Available (KEA) are known exploited
 4. ~~0.5% (~1K) of all CVEs (~200K) are in CISA Known Exploited Vulnerability 
-5. ~~5% (50) of all CISA KEV CVEs (~1K) are not listed in Vendor DBs
 
 !!! note "CVEs represent a subset of all vulnerabilities. Your organization will have a subset of these CVEs"
      1. Not all exploits are public/known.

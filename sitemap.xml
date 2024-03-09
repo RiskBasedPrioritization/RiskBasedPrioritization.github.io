@@ -76,11 +76,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/introduction/Requirements/</loc>
-         <lastmod>2024-03-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/introduction/Scope/</loc>
          <lastmod>2024-03-09</lastmod>
          <changefreq>daily</changefreq>
@@ -97,6 +92,11 @@
     </url>
     <url>
          <loc>https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/introduction/foreword/</loc>
+         <lastmod>2024-03-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/RiskBasedPrioritization/RiskBasedPrioritization.github.io/introduction/preface/</loc>
          <lastmod>2024-03-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

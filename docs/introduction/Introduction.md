@@ -35,7 +35,8 @@ The guide covers:
 2.  How the standards and data sources are being used using real examples
     1.  How some vendors are using them in their tools
     2.  How some users are using them in their environments
-3.  Applying all this for Risk Based Prioritization 
+3.  Applying all this for Risk Based Prioritization
+    1.  Showing 3 different Risk Based Prioritization schemes with data and code.
 
 !!! tip "The guide includes Applied material"
     :material-play-box-edit-outline: on a menu item indicates the content is more hands on - applying the content from the guide.
@@ -61,9 +62,8 @@ A basic knowledge of Jupyter Python is required to run the code (with the data p
 ## How to Use This Guide
 
 1. For the short version, read these sections and understand the Risk Based Prioritization Models:
-      1. Risk (back of the napkin model)
-      2. Vendors - Qualys (Qualys scoring applied with EPSS)
-      3. Organizations - Yahoo (Decision Trees)
+      1. Risk
+      2. [Risk Based Prioritization Schemes](../risk/Rbp_schemes.md)
 2. For a deeper understanding read the full guide.
 3. To get the most out of this guide, also play with the code - and analyze your data.
 
@@ -121,3 +121,4 @@ This guide is not an introductory or verbose treatment of topics with broader or
            1. Mention of a vendor in this guide is not a recommendation or endorsement of that vendor. 
               1. The choice of vendors was determined by different contributors who had an interest in that vendor.
       2.  This guide is a living document i.e. it will change and grow over time - with your input.
+      3.  You are responsible for the prioritization and remediation of vulnerabilities in your environment and the associated business and runtime context which is beyond the [scope](./Scope.md) of this guide. 

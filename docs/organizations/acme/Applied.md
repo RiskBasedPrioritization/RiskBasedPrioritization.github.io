@@ -4,6 +4,15 @@ icon: material/play-box-edit-outline
 
 # Putting it all Together
 
+    Code and analysis is provided for Acme Inc CVEs to help understand their CVEs:
+
+    1. The key risk factors
+    2. What CVEs are in CISA KEV, Weaponized (Metasploit, Nuclei), PoC (ExploitDB)
+    3. The effect of changing the EPSS Threshold
+    4. The effect of changing the CVSS Base Score Threshold
+    5. EPSS Percentiles
+    6. Exploratory Data Analysis of their CVE data
+    7. 
 
 sample of CVEs and counts
 percentile score

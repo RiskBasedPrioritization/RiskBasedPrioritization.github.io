@@ -29,7 +29,7 @@ This is based on CVEs detected by the EPSS Environment (representative of an Ent
   ![](../assets/images/epss_coverage.jpeg)
   <figcaption>Picking Thresholds for EPSS (A log scale for EPSS Probability makes it easier to see the detail in the lower range of EPSS Probability)</figcaption>
 </figure>
-This [plot](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp) will be superseded by a blog post on first.org/epss when published. TODO
+See [original post](https://www.linkedin.com/posts/jayjacobs1_epss-vulnerabilitymanagement-activity-7154173473106395136-Dikp).
 
 <figure markdown>
   ![](../assets/images/EPSS_threshold_emoji.png)

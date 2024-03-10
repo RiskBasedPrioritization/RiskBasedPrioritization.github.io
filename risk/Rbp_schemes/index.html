@@ -553,7 +553,7 @@
         
   
   <span class="md-ellipsis">
-    Likelihood of Exploit Populations
+    Likelihood of Exploitation Populations
   </span>
   
 
@@ -1699,7 +1699,7 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <p>Per the <a href="../../ssvc/decision_trees_from_scratch/"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Tree example, the Exploitability and Impact <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Factors that make up the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score are split out separately and used instead of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score.</p>
 <p>This gives more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Exploitation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
 <p>Assigned Score is the main output - based on Exploitation, Automatable, TechnicalImpact Decision Node outputs.
-- <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> groups Decision Tree ouputs into Priorities - but for granular <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, the main output is most relevant.</p>
+- <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> groups Decision Tree outputs into Priorities - but for granular <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, the main output is most relevant.</p>
 <figure>
 <p><img alt="" src="../../assets/images/ssvc_parcat.png" /> </p>
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
@@ -1775,8 +1775,8 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 </li>
 <li>There isn't a perfect off-the-shelf solution.</li>
 <li>The code, data and analysis for 3 <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization schemes is provided.<ol>
-<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a realitvely small (de)prioritizion of CVEs.</li>
-<li>Either <a href="#cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="../Understanding_Risk/#where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger  (de)prioritizion of CVEs.</li>
+<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a relatively small (de)prioritization of CVEs.</li>
+<li>Either <a href="#cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="../Understanding_Risk/#where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger  (de)prioritization of CVEs.</li>
 </ol>
 </li>
 <li>Apply a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme based on your environment, and refine it based on your data - directly or via your solution provider.</li>

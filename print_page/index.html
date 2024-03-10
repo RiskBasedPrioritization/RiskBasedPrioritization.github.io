@@ -555,7 +555,7 @@
         
   
   <span class="md-ellipsis">
-    Likelihood of Exploit Populations
+    Likelihood of Exploitation Populations
   </span>
   
 
@@ -1474,7 +1474,7 @@
           <li class="md-nav__item">
   <a href="#risk-data_sources" class="md-nav__link">
     <span class="md-ellipsis">
-      10. Likelihood of Exploit Populations
+      10. Likelihood of Exploitation Populations
     </span>
   </a>
   
@@ -1703,13 +1703,20 @@
         <section class="print-page" id="index"><figure>
 <p><img alt="Guide" src="../assets/images/guide_home.jpg" width="500" /></p>
 <figcaption>Your guide to navigating the treacherous journey of software vulnerabilities and standards to effectively prioritize by Risk</figcaption>
-</figure></section>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Why Read this Guide?</p>
+<p>This guide serves as a crucial companion for cybersecurity professionals, offering an in-depth understanding of how to effectively  prioritize vulnerabilities in the digital landscape.</p>
+<p>Crafted by thought leaders in this space, the guide distills years of experience, data analysis, and interactions with standards groups and tool vendors into a practical, pragmatic, user-centric approach to cybersecurity. It illuminates the complexities of managing the ever-growing list of vulnerabilities and provides actionable strategies for mitigating real-world risks.</p>
+<p>Through a blend of theoretical insights and real-world applications, this guide emphasizes the significance of not relying solely on conventional scoring systems like <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> but adopting a multifaceted strategy that includes <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> for a more nuanced and effective prioritization process.</p>
+<p>Whether you're a cybersecurity novice or a seasoned expert, this guide equips you with the knowledge and tools to navigate the treacherous world of cybersecurity threats. It is an indispensable resource for enhancing your organization's security posture and fostering a culture of proactive risk management.</p>
+</div></section>
                         <h1 class='nav-section-title' id='section-introduction'>
                             Introduction <a class='headerlink' href='#section-introduction' title='Permanent link'>↵</a>
                         </h1>
                         <section class="print-page" id="introduction-foreword"><h1 id="introduction-foreword-forewords">Forewords<a class="headerlink" href="#introduction-foreword-forewords" title="Permanent link">&para;</a></h1>
 <h2 id="introduction-foreword-jay-jacobs"><a href="https://www.linkedin.com/in/jayjacobs1/">Jay Jacobs</a><a class="headerlink" href="#introduction-foreword-jay-jacobs" title="Permanent link">&para;</a></h2>
-<p>A witty quote attributed to several notable figures including Niels Bohr, Yoggi Berra and a Dutch Politician states, "It is difficult to make predictions, especially about the future." While an entertaining turn of phrase, this is exactly what every security practitioner is being asked to do everyday. Every security control, every framework we follow, every patch we prioritize is a prediction about the future. It is a statement saying out of all the possible ways we could improve security, we are predicting these actions will yield the best possible future. </p>
+<p>A witty quote attributed to several notable figures including Niels Bohr, Yogi Berra and a Dutch Politician states, "It is difficult to make predictions, especially about the future." While an entertaining turn of phrase, this is exactly what every security practitioner is being asked to do everyday. Every security control, every framework we follow, every patch we prioritize is a prediction about the future. It is a statement saying out of all the possible ways we could improve security, we are predicting these actions will yield the best possible future. </p>
 <p>The word "prediction" may generate a negative connotation for some as it conjures up visions of charlatans with crystal balls. But whether you prefer forecasting, prognostication or following your gut, it doesn't really matter. The fact remains that we must make decisions everyday about the future and typically make those decisions with incomplete information. </p>
 <p>Everyone knows that you probably should not take a card on 17 in blackjack, and betting on a single number in roulette is a long shot. But why? Short answer is that the odds are against a positive outcome with those decisions. Yes, it is possible to get 21 by hitting on 17, and single numbers are paid out in roulette. In the long run though, the more a player can play the odds, the better they do over time. Prediction is difficult, being correct every single time about future events is just not feasible, but by digging into the data, pulling out the important signals can make your decisions better today than they were tomorrow. That's what this framework is attempting to give practitioners – an approach to reduce your uncertainty around vulnerability prioritization and push you closer towards playing the odds.</p>
 <h2 id="introduction-foreword-patrick-garrity"><a href="https://www.linkedin.com/in/patrickmgarrity/">Patrick Garrity</a><a class="headerlink" href="#introduction-foreword-patrick-garrity" title="Permanent link">&para;</a></h2>
@@ -1719,7 +1726,7 @@
 <p>With a meticulous emphasis on data-driven analysis and recommendations, Chris provides depth and clarity that are essential for any modern vulnerability management program. This guide is an indispensable resource for security professionals seeking to enhance their approach to risk prioritization.</p></section><section class="print-page" id="introduction-preface"><h1 id="introduction-preface-preface">Preface<a class="headerlink" href="#introduction-preface-preface" title="Permanent link">&para;</a></h1>
 <p>I embarked on this journey because, as a Product Security engineer, my role is to enable the flow of value to our customers by helping deliver high quality software efficiently and securely.</p>
 <p>A large part of that was to be able to prioritize the ever increasing number of published vulnerabilities (CVEs) by Real <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>.</p>
-<p>Lots of dumb questions and data analysis later, and experience operationalizing <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization at scale in production, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. </p>
+<p>Lots of dumb questions and data analysis later, and experience deploying <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization at scale in production, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. </p>
 <p><strong>The <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization described in this guide significantly reduces the</strong></p>
 <ul>
 <li><strong>cost of vulnerability management</strong></li>
@@ -1730,7 +1737,7 @@
 <li>My family - who give life to living <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </li>
 <li>My employer Yahoo for cultivating such a rich environment for people to thrive.</li>
 <li>My colleague Lisa for the expert input, keeping all this real, and tolerating more dumb questions than any human should endure in one lifetime!</li>
-<li>The friendly vibrant community in this space - <a href="#introduction-contributors">many of whom have contributed to this guide</a>.</li>
+<li>The friendly vibrant community in this space - <a href="#introduction-contributors">many of whom have contributed content to this guide</a>.</li>
 </ol>
 <p><a href="https://www.linkedin.com/in/chrisamadden/">Chris Madden</a></p></section><section class="print-page" id="introduction-introduction"><h1 id="introduction-introduction-introduction">Introduction<a class="headerlink" href="#introduction-introduction-introduction" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
@@ -1890,18 +1897,7 @@ we all benefit and we're truly grateful!</p>
 <li>Sasha Romanosky, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Co-creator, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> author</li>
 <li>Stephen Shaffer, Peleton</li>
 <li>Steve Finegan</li>
-</ul>
-<h2 id="introduction-contributors-chris-madden">Chris Madden<a class="headerlink" href="#introduction-contributors-chris-madden" title="Permanent link">&para;</a></h2>
-<p>I embarked on this <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization journey because, as a Product Security engineer, my role is to enable the flow of software/value to our customers by helping deliver high quality software efficiently and securely.</p>
-<p>A large part of that was to be able to prioritize vulnerabilities by Real <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>. </p>
-<p>Lots of dumb questions and data analysis later, this guide represents the distillation of that knowledge into a user-centric system view - what I wish I knew before I started - and learnt by interacting with other users, standards groups, and tool vendors. </p>
-<p>There's a friendly vibrant community in this space - many of whom have contributed to this guide.</p>
-<p><img alt="🙏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64f.svg" title=":pray:" /> Special thanks to</p>
-<ol>
-<li>My family - who give life to living <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /> </li>
-<li>My employer Yahoo for cultivating such a rich environment for people to thrive.</li>
-<li>My colleague Lisa for the expert input, keeping all this real, and tolerating more dumb questions than any human should endure in one lifetime!</li>
-</ol></section><section class="print-page" id="introduction-scope"><h1 id="introduction-scope-scope">Scope<a class="headerlink" href="#introduction-scope-scope" title="Permanent link">&para;</a></h1>
+</ul></section><section class="print-page" id="introduction-scope"><h1 id="introduction-scope-scope">Scope<a class="headerlink" href="#introduction-scope-scope" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Scope of this Guide</p>
 <p>The scope for this guide is </p>
@@ -2312,7 +2308,7 @@ exploited by a Threat</p>
 <li>An Asset can be impacted by multiple Vulnerabilities and Threats
     (the Vulnerability and Threat red boxes include multiple
     sections to convey there are multiple)</li>
-<li>Likelihood of Exploit can also be viewed from an Asset point of
+<li>Likelihood of Exploitation can also be viewed from an Asset point of
     view also (i.e. for all Threats and Vulnerabilities that affect
     that asset)</li>
 </ol>
@@ -2330,7 +2326,7 @@ exploited by a Threat</p>
 <p><img alt="" src="../assets/images/risk_remediation_taxonomy.png" /></p>
 <figcaption> Where CVSS, EPSS, CISA KEV Fit with Risk</figcaption>
 </figure>
-<h3 id="risk-understanding_risk-threat-likelihood-of-exploit-data-sources">Threat Likelihood of Exploit Data Sources<a class="headerlink" href="#risk-understanding_risk-threat-likelihood-of-exploit-data-sources" title="Permanent link">&para;</a></h3>
+<h3 id="risk-understanding_risk-threat-likelihood-of-exploitation-data-sources">Threat Likelihood of Exploitation Data Sources<a class="headerlink" href="#risk-understanding_risk-threat-likelihood-of-exploitation-data-sources" title="Permanent link">&para;</a></h3>
 <p>The Threat "Likelihood of Exploit" branch items are arranged by most
 likely on top  </p>
 <ol>
@@ -2367,7 +2363,7 @@ likely on top  </p>
 </ol>
 </li>
 <li><strong><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Probability of Exploitation</strong><ol>
-<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score covers the range of Likelihood of Exploit from 0 to 100%.</li>
+<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score covers the range of Likelihood of Exploitation from 0 to 100%.</li>
 </ol>
 </li>
 </ol>
@@ -2390,7 +2386,7 @@ are more likely to be exploited, reduces the</p>
     been publicly exploited"</em> (see <a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities">BOD 22-01: Reducing the Significant <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> of Known Exploited Vulnerabilities</a>).</p>
 <p>Cybersecurity and Infrastructure Security Agency emphasizes
 prioritizing remediation of vulnerabilities that are known exploited
-in the wild.</p>
+in the wild:</p>
 </li>
 <li>
 <p>"As a
@@ -2523,7 +2519,7 @@ vulnerability consistently. In severe cases, it may be delivered as
 the payload of a network-based worm or virus or other automated attack
 tools.</p>
 </div>
-<p>The Threat Likelihood of Exploit Data Sources can be used here.</p>
+<p>The Threat Likelihood of Exploitation Data Sources can be used here.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">If there is an absence of exploitation evidence, then <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used to estimate the probability it will be exploited</p>
@@ -2573,13 +2569,13 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 <li>It is the responsibility of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Consumer/user to populate the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Exploit Maturity values i.e. unlike the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score, these are not provided.</li>
 <li>Criteria for "Exploitation" are different for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>.</li>
 </ol>
-</div></section><section class="print-page" id="risk-data_sources"><h1 id="risk-data_sources-likelihood-of-exploit-populations">Likelihood of Exploit Populations<a class="headerlink" href="#risk-data_sources-likelihood-of-exploit-populations" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="risk-data_sources"><h1 id="risk-data_sources-likelihood-of-exploitation-populations">Likelihood of Exploitation Populations<a class="headerlink" href="#risk-data_sources-likelihood-of-exploitation-populations" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
 <p>Our ability to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> depends on </p>
 <ol>
 <li>the priority (risk) of CVEs - the ones we want to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> based on our security posture<ol>
-<li>In the <a href="#risk-understanding_risk">Understanding <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></a> chapter, we saw the ordered Likelihood of Exploit for different populations of CVEs in the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Remediation Taxonomy.</li>
+<li>In the <a href="#risk-understanding_risk">Understanding <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></a> chapter, we saw the ordered Likelihood of Exploitation for different populations of CVEs in the <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Remediation Taxonomy.</li>
 </ol>
 </li>
 <li>the number of CVEs for that priority (risk) - that we have the capacity/resources to fix</li>
@@ -2593,7 +2589,7 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 <h2 id="risk-data_sources-population-sizes">Population Sizes<a class="headerlink" href="#risk-data_sources-population-sizes" title="Permanent link">&para;</a></h2>
 <figure>
 <p><img alt="Exploitation Venn Diagram" src="../assets/images/cve_venn.png" width="700" /></p>
-<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploit branch. <br>Representative sizes and overlaps shown as there isn't authoritative exact data.</figcaption>
+<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploitation branch. <br>Representative sizes and overlaps shown as there isn't authoritative exact data.</figcaption>
 </figure>
 <ol>
 <li>~~50% (~~100K) of all CVEs (~200K) have known exploits Proof Of Concepts available (based on a commercial <abbr title="CTI Cyber Threat Intelligence.">CTI</abbr> product used by the author)</li>
@@ -2614,7 +2610,7 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 </li>
 </ol>
 </div>
-<h2 id="risk-data_sources-likelihood-of-exploit-data-sources">Likelihood of Exploit Data Sources<a class="headerlink" href="#risk-data_sources-likelihood-of-exploit-data-sources" title="Permanent link">&para;</a></h2>
+<h2 id="risk-data_sources-likelihood-of-exploitation-data-sources">Likelihood of Exploitation Data Sources<a class="headerlink" href="#risk-data_sources-likelihood-of-exploitation-data-sources" title="Permanent link">&para;</a></h2>
 <p>This table shows the number of CVEs (from all published CVEs) that are listed in that data source:</p>
 <table>
 <thead>
@@ -2657,10 +2653,10 @@ As a top priority, focus your efforts on patching the vulnerabilities that are b
 <p><a href="https://vulncheck.com/press/vulncheck-kev">VulnCheck <abbr title="Known Exploited Vulnerability">KEV</abbr></a> was launched just before this guide was released.
 So it has not been included in any analysis for this guide initial release - but will likely be for future releases.</p>
 </div>
-<p><a href="https://www.first.org/epss/api"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores</a> are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. </p>
+<p><a href="https://www.first.org/epss/api"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores</a> are available for all published CVEs - and cover the range of Likelihood of Exploitation  from 0 to 100%. </p>
 <div class="admonition tip">
-<p class="admonition-title">The population sizes for Likelihood of Exploit decrease, as Likelihood of Exploit increases</p>
-<p><strong>The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).</strong></p>
+<p class="admonition-title">The population sizes for Likelihood of Exploitation decrease, as Likelihood of Exploitation increases</p>
+<p><strong>The population sizes for higher Likelihood of Exploitation (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).</strong></p>
 </div>
 <p>This table lists the <strong>main public</strong> data sources.</p>
 <h3 id="risk-data_sources-other-vulnerability-data-sources">Other Vulnerability Data Sources<a class="headerlink" href="#risk-data_sources-other-vulnerability-data-sources" title="Permanent link">&para;</a></h3>
@@ -2688,7 +2684,7 @@ So it has not been included in any analysis for this guide initial release - but
 <p class="admonition-title">Takeaways</p>
 <ol>
 <li>There isn't a single complete authoritative source for all CVEs that are actively exploited - so we need to use multiple incomplete imperfect sources.</li>
-<li>The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).</li>
+<li>The population sizes for higher Likelihood of Exploitation (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).</li>
 <li>Not all vulnerabilities are public/known, and for those that are known, not all of them have CVEs assigned.</li>
 <li>A typical enterprise will have a subset of exploits/CVEs: ~~10K order of magnitude unique <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> IDs.<ol>
 <li>The counts of these unique <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> IDs may follow a Pareto type distribution i.e. for your environment, there will likely be many instances of a small number of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> IDs.</li>
@@ -2703,7 +2699,7 @@ available resources/capacity to <abbr title="The neutralization or elimination o
 <p>To develop an understanding of <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, we'll build a<strong> back of the napkin</strong>
 <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization model that focuses on Likelihood of
 Exploitation.</p>
-<p>We'll look at the tradeoff between Likelihood of Exploit vs how many
+<p>We'll look at the tradeoff between Likelihood of Exploitation vs how many
 CVEs we need to fix.</p>
 <p>When we look at <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization models in products and 
 production later in this guide; you'll be able to recognize many
@@ -2712,7 +2708,7 @@ of the elements in our back of the napkin model</p>
 <h2 id="risk-back_of_napkin-back-of-the-napkin-model">Back of the napkin Model<a class="headerlink" href="#risk-back_of_napkin-back-of-the-napkin-model" title="Permanent link">&para;</a></h2>
 <p>For this back of the napkin model:</p>
 <ol>
-<li>We use Threat Likelihood of Exploit per our <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Taxonomy</li>
+<li>We use Threat Likelihood of Exploitation per our <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Taxonomy</li>
 <li>
 <p>For this back of the napkin model, let's assume that</p>
 <ol>
@@ -2733,7 +2729,7 @@ of the elements in our back of the napkin model</p>
 </ol>
 </li>
 <li>For counts of CVEs<ol>
-<li>the counts of CVEs are per "Likelihood of Exploit Populations" diagram</li>
+<li>the counts of CVEs are per "Likelihood of Exploitation Populations" diagram</li>
 <li>there's a relatively small number of vulnerabilities that
     have been Known Exploited in our organization i.e. 10 or
     less</li>
@@ -3182,7 +3178,7 @@ are more likely to be exploited, reduces the</p>
     been publicly exploited"</em> (see <a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities">BOD 22-01: Reducing the Significant <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> of Known Exploited Vulnerabilities</a>).</p>
 <p>Cybersecurity and Infrastructure Security Agency emphasizes
 prioritizing remediation of vulnerabilities that are known exploited
-in the wild.</p>
+in the wild:</p>
 </li>
 <li>
 <p>"As a
@@ -4267,7 +4263,7 @@ of likely changes."</p>
 </div></section><section class="print-page" id="ssvc-decision_trees_from_scratch"><h1 id="ssvc-decision_trees_from_scratch-decision-tree-from-scratch">Decision Tree From Scratch<a class="headerlink" href="#ssvc-decision_trees_from_scratch-decision-tree-from-scratch" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
-<p>In this section, we walk-through building a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>-Based Prioritization Decision
+<p>In this section, we walk-through building a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Decision
 Tree for use as a first-pass triage of CVEs based on <a href="https://resources.sei.cmu.edu/asset_files/WhitePaper/2021_019_001_653461.pdf">Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)</a> from scratch, in code.</p>
 <p>The recipe:</p>
 <ol>
@@ -4440,7 +4436,7 @@ sankey diagram to show how CVEs flow through the tree Decision Nodes</p>
 </ol>
 </li>
 <li>This fine granularity and clarity is in stark contrast to the coarse granularity of <a href="#cvss-cvss"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> ratings</a>.</li>
-<li>The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> by higest priority first!</li>
+<li>The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to <abbr title="The neutralization or elimination of a vulnerability or the likelihood of its exploitation.">remediate</abbr> by highest priority first!</li>
 </ol>
 </div>
 <h2 id="ssvc-decision_trees_from_scratch-triage-cves-by-priority">Triage CVEs by Priority<a class="headerlink" href="#ssvc-decision_trees_from_scratch-triage-cves-by-priority" title="Permanent link">&para;</a></h2>
@@ -5327,7 +5323,7 @@ style="text-decoration: underline;"><a href="https://www.bsidesdub.ie/">https://
 <p>The counts of a specific <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> in an organization are a relevant part of
 <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
 <p>The data from different tools across the DevOps pipeline shows there are
-paretos i.e. a relatively small number of unique CVEs account for a
+Paretos i.e. a relatively small number of unique CVEs account for a
 large number of overall CVEs per
 <a href="https://youtu.be/oMZN810xfck?t=896"
 rel="nofollow"><a href="https://youtu.be/oMZN810xfck?t=896">https://youtu.be/oMZN810xfck?t=896</a></a>.</p>
@@ -5545,7 +5541,7 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 <p>Per the <a href="#ssvc-decision_trees_from_scratch"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr></a> Decision Tree example, the Exploitability and Impact <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Factors that make up the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score are split out separately and used instead of the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score.</p>
 <p>This gives more granularity than combining <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Ratings and Exploitation factors i.e. better <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization.</p>
 <p>Assigned Score is the main output - based on Exploitation, Automatable, TechnicalImpact Decision Node outputs.
-- <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> groups Decision Tree ouputs into Priorities - but for granular <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, the main output is most relevant.</p>
+- <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> groups Decision Tree outputs into Priorities - but for granular <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization, the main output is most relevant.</p>
 <figure>
 <p><img alt="" src="../assets/images/ssvc_parcat.png" /> </p>
 <figcaption>SSVC Decision Tree (Dark Red is highest risk: Exploitation-Active, Automatable-Yes, Technical-Impact Total)</figcaption>
@@ -5621,8 +5617,8 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 </li>
 <li>There isn't a perfect off-the-shelf solution.</li>
 <li>The code, data and analysis for 3 <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization schemes is provided.<ol>
-<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a realitvely small (de)prioritizion of CVEs.</li>
-<li>Either <a href="#risk-rbp_schemes-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#risk-rbp_schemes-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger  (de)prioritizion of CVEs.</li>
+<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a relatively small (de)prioritization of CVEs.</li>
+<li>Either <a href="#risk-rbp_schemes-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#risk-rbp_schemes-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger  (de)prioritization of CVEs.</li>
 </ol>
 </li>
 <li>Apply a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization scheme based on your environment, and refine it based on your data - directly or via your solution provider.</li>
@@ -5674,10 +5670,10 @@ At the beginning of the guide it was stated that <a href="#introduction-introduc
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <h3 id="risk-takeaway-use-a-risk-based-prioritization-scheme-that-supports-exploitation-evidence-and-likelihood-of-exploitation-epss">Use a <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization Scheme that supports Exploitation Evidence and Likelihood Of Exploitation (<abbr title="Exploit Prediction Scoring System">EPSS</abbr>)<a class="headerlink" href="#risk-takeaway-use-a-risk-based-prioritization-scheme-that-supports-exploitation-evidence-and-likelihood-of-exploitation-epss" title="Permanent link">&para;</a></h3>
-<p><img alt="Exploitation Known evidence or activity" src="../assets/images/threat.png" width="600" /></p>
+<p><img alt="Exploitation Known evidence or activity" src="../assets/images/threat.png" width="400" /></p>
 <ol>
-<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a realitvely small (de)prioritizion of CVEs.</li>
-<li>Either <a href="#risk-takeaway-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#risk-takeaway-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger (de)prioritizion of CVEs.</li>
+<li>For those using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Scores and Ratings, using <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> v3 Temporal Metric - Exploit Code Maturity (E) that <strong>supports Exploitation</strong> evidence is a small step with a relatively small (de)prioritization of CVEs.</li>
+<li>Either <a href="#risk-takeaway-cvss-base-score-ratings-with-exploitation-focus"><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Ratings with Exploitation Focus</a> or  <a href="#risk-takeaway-ssvc-decision-trees"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> Decision Trees</a>, that <a href="#risk-understanding_risk-where-cvss-epss-cisa-kev-fit"><strong>Focus on Exploitation</strong></a>, are bigger steps, with a bigger (de)prioritization of CVEs.</li>
 </ol>
 <p>This can run automatically as a First Pass Triage, before additional business and runtime context is added.</p>
 <p><figure markdown>
@@ -6041,7 +6037,7 @@ rating" (including exploitation probability) for the other ~74%!</em></p>
 <p><em>→</em> Am I "<u><a
 href="https://www.phrases.org.uk/meanings/rearranging-the-deckchairs-on-the-titanic.html?expand_article=1"
 rel="nofollow">Rearranging deckchairs on the Titanic</a></u>" by only
-focusing on <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr>-Based Prioritization of vulnerabilities with CVEs?</p>
+focusing on <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization of vulnerabilities with CVEs?</p>
 <p><strong>Post-Narrative</strong>
 <sub><em>(how we want things to be in the future - aspirational)</em></sub></p>
 <p>As <u>Any</u>, I can assess the risk associated with <u>any

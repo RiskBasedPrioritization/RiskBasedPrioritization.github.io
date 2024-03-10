@@ -83,7 +83,7 @@ exploited by a Threat
     1.  An Asset can be impacted by multiple Vulnerabilities and Threats
         (the Vulnerability and Threat red boxes include multiple
         sections to convey there are multiple)
-    2.  Likelihood of Exploit can also be viewed from an Asset point of
+    2.  Likelihood of Exploitation can also be viewed from an Asset point of
         view also (i.e. for all Threats and Vulnerabilities that affect
         that asset)
 3.  Remediation
@@ -104,7 +104,7 @@ EPSS, CISA KEV fit...
 
 
 
-### Threat Likelihood of Exploit Data Sources
+### Threat Likelihood of Exploitation Data Sources
 
 The Threat "Likelihood of Exploit" branch items are arranged by most
 likely on top  
@@ -132,7 +132,7 @@ likely on top  
     1.  ExploitDB is an example of where Vulnerability Proof Of Concept
         Exploits are available.
 5. **EPSS Probability of Exploitation**
-    1.   The EPSS score covers the range of Likelihood of Exploit from 0 to 100%.
+    1.   The EPSS score covers the range of Likelihood of Exploitation from 0 to 100%.
 
 {!includes/vulns_exploited.md!}
 
@@ -190,7 +190,7 @@ likely on top  
         the payload of a network-based worm or virus or other automated attack
         tools.
 
-    The Threat Likelihood of Exploit Data Sources can be used here.
+    The Threat Likelihood of Exploitation Data Sources can be used here.
 
 
 !!!info "If there is an absence of exploitation evidence, then EPSS can be used to estimate the probability it will be exploited"

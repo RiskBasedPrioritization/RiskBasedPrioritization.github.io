@@ -115,7 +115,7 @@ Per the [SSVC](../ssvc/decision_trees_from_scratch.md) Decision Tree example, th
 This gives more granularity than combining CVSS Ratings and Exploitation factors i.e. better Risk Based Prioritization.
 
 Assigned Score is the main output - based on Exploitation, Automatable, TechnicalImpact Decision Node outputs.
-- SSVC groups Decision Tree ouputs into Priorities - but for granular Risk Based Prioritization, the main output is most relevant.
+- SSVC groups Decision Tree outputs into Priorities - but for granular Risk Based Prioritization, the main output is most relevant.
 
 
 <figure markdown>
@@ -153,8 +153,8 @@ Assigned Score is the main output - based on Exploitation, Automatable, Technica
           2. risk by reducing the time adversaries have access to vulnerable systems they are trying to exploit
     2. There isn't a perfect off-the-shelf solution.
     2. The code, data and analysis for 3 Risk Based Prioritization schemes is provided.
-          1. For those using CVSS Scores and Ratings, using CVSS v3 Temporal Metric - Exploit Code Maturity (E) that **supports Exploitation** evidence is a small step with a realitvely small (de)prioritizion of CVEs.
-          2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [**Focus on Exploitation**](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are bigger steps, with a bigger  (de)prioritizion of CVEs.
+          1. For those using CVSS Scores and Ratings, using CVSS v3 Temporal Metric - Exploit Code Maturity (E) that **supports Exploitation** evidence is a small step with a relatively small (de)prioritization of CVEs.
+          2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [**Focus on Exploitation**](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are bigger steps, with a bigger  (de)prioritization of CVEs.
     3. Apply a Risk Based Prioritization scheme based on your environment, and refine it based on your data - directly or via your solution provider.
 
     |  CVSS v3 Temporal Metric - Exploit Code Maturity (E) |CVSS Base Score Ratings with Exploitation Focus | SSVC Decision Trees           | 

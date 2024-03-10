@@ -15,7 +15,7 @@ nav:
   - Risk: 
     - Vulnerability Landscape: risk/Vulnerability_Landscape.md
     - Understanding Risk: risk/Understanding_Risk.md
-    - Likelihood of Exploit Populations: risk/Data_Sources.md
+    - Likelihood of Exploitation Populations: risk/Data_Sources.md
     - Applied Back of Napkin Risk Prioritization: risk/Back_of_napkin.md
   - Standards:
     - Common Vulnerability Scoring System (CVSS): cvss/CVSS.md

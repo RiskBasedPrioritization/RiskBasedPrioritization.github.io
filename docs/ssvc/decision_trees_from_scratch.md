@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
 
-    In this section, we walk-through building a Risk-Based Prioritization Decision
+    In this section, we walk-through building a Risk Based Prioritization Decision
     Tree for use as a first-pass triage of CVEs based on [Prioritizing Vulnerability Response: A Stakeholder-Specific Vulnerability Categorization (Version 2.0)](https://resources.sei.cmu.edu/asset_files/WhitePaper/2021_019_001_653461.pdf) from scratch, in code.
 
     The recipe:
@@ -185,7 +185,7 @@ sankey diagram to show how CVEs flow through the tree Decision Nodes
           2. Automatable - Yes
           3. Technical Impact - Total
     2. This fine granularity and clarity is in stark contrast to the coarse granularity of [CVSS ratings](../cvss/CVSS.md).
-    3. The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to remediate by higest priority first!
+    3. The count of CVEs for the highest Decision/Priority is relatively low, and the counts increase as the Decision/Priority decreases i.e. this is very desirable when we want to remediate by highest priority first!
 
 ## Triage CVEs by Priority
 

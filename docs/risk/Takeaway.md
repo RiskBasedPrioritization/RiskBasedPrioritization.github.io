@@ -26,10 +26,10 @@
 
     ### Use a Risk Based Prioritization Scheme that supports Exploitation Evidence and Likelihood Of Exploitation (EPSS)
     
-    ![Exploitation Known evidence or activity](../assets/images/threat.png){ width="600" }
+    ![Exploitation Known evidence or activity](../assets/images/threat.png){ width="400" }
 
-    1. For those using CVSS Scores and Ratings, using CVSS v3 Temporal Metric - Exploit Code Maturity (E) that **supports Exploitation** evidence is a small step with a realitvely small (de)prioritizion of CVEs.
-    2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [**Focus on Exploitation**](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are bigger steps, with a bigger (de)prioritizion of CVEs.
+    1. For those using CVSS Scores and Ratings, using CVSS v3 Temporal Metric - Exploit Code Maturity (E) that **supports Exploitation** evidence is a small step with a relatively small (de)prioritization of CVEs.
+    2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [**Focus on Exploitation**](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are bigger steps, with a bigger (de)prioritization of CVEs.
 
     This can run automatically as a First Pass Triage, before additional business and runtime context is added.
 
@@ -38,8 +38,8 @@
     </figure>
 
     ### Refine the Risk Based Prioritization scheme based on your environment and your data.
-    1. Use CVEs detected in your Incident Response, Bug Bounty, PenTesting findings) to inform your Risk.
-    2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors) per [Remediation Policy for an Enterprise](../epss/EPSS_Thresholds.md#remediation-policy-for-an-enterprise
+    3. Use CVEs detected in your Incident Response, Bug Bounty, PenTesting findings) to inform your Risk.
+    4. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors) per [Remediation Policy for an Enterprise](../epss/EPSS_Thresholds.md#remediation-policy-for-an-enterprise
 
 
     ### Be Careful with Proprietary Risk Based Prioritization Schemes
@@ -57,7 +57,7 @@
     !!! warning
 
         Beware of claims of "secret sauce", "special Intellectual Property", "unique proprietary intel" as reasons to prevent you understanding the Risk Based Prioritization scheme.
-        
+
     ### A Commercial CTI solution is Recommended
     While gathering vulnerability exploitation evidence can be done using public data (as shown in the code for this guide which used **some** data sources), there's a lot of effort in getting current, comprehensive CTI.
 

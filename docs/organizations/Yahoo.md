@@ -96,7 +96,7 @@ The counts of a specific CVE in an organization are a relevant part of
 Risk Based Prioritization.
 
 The data from different tools across the DevOps pipeline shows there are
-paretos i.e. a relatively small number of unique CVEs account for a
+Paretos i.e. a relatively small number of unique CVEs account for a
 large number of overall CVEs per
 <a href="https://youtu.be/oMZN810xfck?t=896"
 rel="nofollow">https://youtu.be/oMZN810xfck?t=896</a>.

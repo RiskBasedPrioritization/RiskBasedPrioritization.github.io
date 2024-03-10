@@ -11,7 +11,7 @@ icon: material/play-box-edit-outline
     Risk Based Prioritization model that focuses on Likelihood of
     Exploitation.
 
-    We'll look at the tradeoff between Likelihood of Exploit vs how many
+    We'll look at the tradeoff between Likelihood of Exploitation vs how many
     CVEs we need to fix.
 
     When we look at Risk Based Prioritization models in products and 
@@ -23,7 +23,7 @@ icon: material/play-box-edit-outline
 
 For this back of the napkin model:
 
-1.  We use Threat Likelihood of Exploit per our Risk Taxonomy
+1.  We use Threat Likelihood of Exploitation per our Risk Taxonomy
 2.  For this back of the napkin model, let's assume that
     1.  The odds of a vulnerability being exploited are in the order in
         the diagram (highest risk on top):
@@ -35,7 +35,7 @@ For this back of the napkin model:
         1.  37.1% it the vulnerability is weaponized
         2.  3.7% if a Proof Of Concept exists
     3.  For counts of CVEs
-        1.  the counts of CVEs are per "Likelihood of Exploit Populations" diagram
+        1.  the counts of CVEs are per "Likelihood of Exploitation Populations" diagram
         2.  there's a relatively small number of vulnerabilities that
             have been Known Exploited in our organization i.e. 10 or
             less

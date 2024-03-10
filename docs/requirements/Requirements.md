@@ -419,7 +419,7 @@ now, and how the user would like things to look in the future
     *→* Am I "<u><a
     href="https://www.phrases.org.uk/meanings/rearranging-the-deckchairs-on-the-titanic.html?expand_article=1"
     rel="nofollow">Rearranging deckchairs on the Titanic</a></u>" by only
-    focusing on Risk-Based Prioritization of vulnerabilities with CVEs?
+    focusing on Risk Based Prioritization of vulnerabilities with CVEs?
 
     
 

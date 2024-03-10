@@ -1,7 +1,7 @@
 # Forewords
 
 ## [Jay Jacobs](https://www.linkedin.com/in/jayjacobs1/)
-A witty quote attributed to several notable figures including Niels Bohr, Yoggi Berra and a Dutch Politician states, "It is difficult to make predictions, especially about the future." While an entertaining turn of phrase, this is exactly what every security practitioner is being asked to do everyday. Every security control, every framework we follow, every patch we prioritize is a prediction about the future. It is a statement saying out of all the possible ways we could improve security, we are predicting these actions will yield the best possible future. 
+A witty quote attributed to several notable figures including Niels Bohr, Yogi Berra and a Dutch Politician states, "It is difficult to make predictions, especially about the future." While an entertaining turn of phrase, this is exactly what every security practitioner is being asked to do everyday. Every security control, every framework we follow, every patch we prioritize is a prediction about the future. It is a statement saying out of all the possible ways we could improve security, we are predicting these actions will yield the best possible future. 
 
 The word "prediction" may generate a negative connotation for some as it conjures up visions of charlatans with crystal balls. But whether you prefer forecasting, prognostication or following your gut, it doesn't really matter. The fact remains that we must make decisions everyday about the future and typically make those decisions with incomplete information. 
 

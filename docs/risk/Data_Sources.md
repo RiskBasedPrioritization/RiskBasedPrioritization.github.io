@@ -1,11 +1,11 @@
-# Likelihood of Exploit Populations
+# Likelihood of Exploitation Populations
 
 !!! abstract "Overview"
     
     Our ability to remediate depends on 
 
     1. the priority (risk) of CVEs - the ones we want to remediate based on our security posture
-          1.  In the [Understanding Risk](./Understanding_Risk.md) chapter, we saw the ordered Likelihood of Exploit for different populations of CVEs in the Risk Remediation Taxonomy.
+          1.  In the [Understanding Risk](./Understanding_Risk.md) chapter, we saw the ordered Likelihood of Exploitation for different populations of CVEs in the Risk Remediation Taxonomy.
     2. the number of CVEs for that priority (risk) - that we have the capacity/resources to fix
 
    
@@ -18,7 +18,7 @@
 
 <figure markdown>
 ![Exploitation Venn Diagram](../assets/images/cve_venn.png){ width="700" }
-<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploit branch. <br>Representative sizes and overlaps shown as there isn't authoritative exact data.</figcaption>
+<figcaption>Population Sizes associated with the Risk Remediation Taxonomy - Likelihood of Exploitation branch. <br>Representative sizes and overlaps shown as there isn't authoritative exact data.</figcaption>
 </figure>
 
 1. ~~50% (~~100K) of all CVEs (~200K) have known exploits Proof Of Concepts available (based on a commercial CTI product used by the author)
@@ -32,7 +32,7 @@
      3. A typical enterprise will have a subset of exploits/CVEs: ~~10K order of magnitude unique CVE IDs.
          1. The counts of these unique CVE IDs may follow a Pareto type distribution i.e. there will be many instances of a small number of CVE IDs.
 
-## Likelihood of Exploit Data Sources
+## Likelihood of Exploitation Data Sources
 
 This table shows the number of CVEs (from all published CVEs) that are listed in that data source:
 
@@ -48,11 +48,11 @@ This table shows the number of CVEs (from all published CVEs) that are listed in
     [VulnCheck KEV](https://vulncheck.com/press/vulncheck-kev) was launched just before this guide was released.
     So it has not been included in any analysis for this guide initial release - but will likely be for future releases.
 
-[EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploit  from 0 to 100%. 
+[EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploitation  from 0 to 100%. 
 
 
-!!! tip "The population sizes for Likelihood of Exploit decrease, as Likelihood of Exploit increases"
-    **The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).**
+!!! tip "The population sizes for Likelihood of Exploitation decrease, as Likelihood of Exploitation increases"
+    **The population sizes for higher Likelihood of Exploitation (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).**
 
 This table lists the **main public** data sources.
 
@@ -79,7 +79,7 @@ Cyber Threat Intelligence vendors may provide an aggregation of this data.
 
 !!! success "Takeaways"
     1. There isn't a single complete authoritative source for all CVEs that are actively exploited - so we need to use multiple incomplete imperfect sources.
-    2. The population sizes for higher Likelihood of Exploit (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).
+    2. The population sizes for higher Likelihood of Exploitation (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).
     3. Not all vulnerabilities are public/known, and for those that are known, not all of them have CVEs assigned.
     4. A typical enterprise will have a subset of exploits/CVEs: ~~10K order of magnitude unique CVE IDs.
           1. The counts of these unique CVE IDs may follow a Pareto type distribution i.e. for your environment, there will likely be many instances of a small number of CVE IDs.

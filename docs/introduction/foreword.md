@@ -18,5 +18,13 @@ Chris skillfully combines human-based logic, represented by decision trees align
 With a meticulous emphasis on data-driven analysis and recommendations, Chris provides depth and clarity that are essential for any modern vulnerability management program. This guide is an indispensable resource for security professionals seeking to enhance their approach to risk prioritization.
 
 
+## [Francesco Cipollone CEO & Founder Phoenix Security ](https://www.linkedin.com/in/fracipo)
+Security practitioners are currently inundated by vulnerabilities and the state of prioritization does not have any guideline on how to fix vulnerabilities and where to focus. 
+
+This guide is a brilliant starting point for any practitioner that wants to apply prioritization techniques and start making data driven and risk driven decisions. 
+
+As a practitioner myself, I wish I had such a guiding group and guidance when leading vulnerability management efforts. 
+
+Special Kudos to the EPSS group and Chris Madden driving the initiative with an unbiased view and a clean, clear data driven approach. 
 
 

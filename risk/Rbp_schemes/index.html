@@ -1605,6 +1605,11 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <p>A simple illustrative scheme that combines Base Score Ratings with Exploitation status is defined here.</p>
 <ul>
 <li><a href="../../vendors/Qualys/#in-depth-look-into-data-driven-science-behind-qualys-trurisk">Qualys TruRisk</a> is an example of this type of scheme.</li>
+<li>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+"The focus should be given to CVEs known to be exploited in the wild (<abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr>), those with a high likelihood of exploitation (indicated by a high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score), and those with weaponized exploit code available"</div>
+</li>
 </ul>
 <table>
 <thead>
@@ -1618,22 +1623,22 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <tr>
 <td>10</td>
 <td>critical</td>
-<td>kev</td>
+<td>kev or <abbr title="Exploit Prediction Scoring System">EPSS</abbr> High</td>
 </tr>
 <tr>
 <td>9</td>
 <td>critical</td>
-<td>weaponized</td>
+<td>weaponized or <abbr title="Exploit Prediction Scoring System">EPSS</abbr> High</td>
 </tr>
 <tr>
 <td>8</td>
 <td>high</td>
-<td>kev</td>
+<td>kev or <abbr title="Exploit Prediction Scoring System">EPSS</abbr> High</td>
 </tr>
 <tr>
 <td>7</td>
 <td>high</td>
-<td>weaponized</td>
+<td>weaponized or <abbr title="Exploit Prediction Scoring System">EPSS</abbr> High</td>
 </tr>
 <tr>
 <td>6</td>
@@ -1687,6 +1692,10 @@ At the beginning of the guide it was stated that <a href="../../introduction/Int
 <tr>
 <td>poc (Proof Of Concept)</td>
 <td>poc_github or exploitdb</td>
+</tr>
+<tr>
+<td><abbr title="Exploit Prediction Scoring System">EPSS</abbr> High</td>
+<td><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score &gt;= 10%</td>
 </tr>
 </tbody>
 </table>

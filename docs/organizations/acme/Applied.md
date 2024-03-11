@@ -34,7 +34,7 @@ A CVEs "scored 4.0 or higher by the CVSS" is pretty much all CVEs
 
 
 
-The organization uses CVSS score and "Likelihood of Exploit" to
+The organization uses CVSS score and "Likelihood of Exploitation" to
 prioritize CVEs for the CVSS threshold required by regulation.
 Specifically it uses:
 

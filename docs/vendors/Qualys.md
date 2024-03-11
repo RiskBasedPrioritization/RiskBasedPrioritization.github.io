@@ -143,7 +143,7 @@ and the reason for the unscored CVEs by Qualys. 
 
 !!! success "Takeaways"
     1. "The focus should be given to CVEs known to be exploited in the wild (CISA KEV), those with a high likelihood of exploitation (indicated by a high EPSS score), and those with weaponized exploit code available"
-    2. The Qualys scoring / priority for "Likelihood of Exploit" factors is in this order
+    2. The Qualys scoring / priority for "Likelihood of Exploitation" factors is in this order
           1. known to be exploited in the wild 
           2. weaponized exploits 
           3. PoC exploits.

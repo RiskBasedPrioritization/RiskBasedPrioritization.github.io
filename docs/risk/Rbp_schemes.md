@@ -74,16 +74,22 @@ See "[Enriching the NVD CVSS scores to include Temporal & Threat Metrics](https:
 
 ### CVSS Base Score Ratings with Exploitation Focus
 
+
+
+
 A simple illustrative scheme that combines Base Score Ratings with Exploitation status is defined here.
 
+
 * [Qualys TruRisk](../vendors/Qualys.md#in-depth-look-into-data-driven-science-behind-qualys-trurisk) is an example of this type of scheme.
+* !!! quote
+    "The focus should be given to CVEs known to be exploited in the wild (CISA KEV), those with a high likelihood of exploitation (indicated by a high EPSS score), and those with weaponized exploit code available"
 
 |  Score | CVSS Base Score Rating | Exploitation           | 
 |---|---------------------|------------------------|
-| 10  | critical            | kev                    |    
-|  9 | critical            | weaponized             |
-|  8 | high                | kev | 8     |
-|  7 | high                | weaponized  |
+| 10  | critical            | kev or EPSS High                   |    
+|  9 | critical            | weaponized or EPSS High            |
+|  8 | high                | kev or EPSS High| 8     |
+|  7 | high                | weaponized or EPSS High |
 |  6 | critical            | poc | 6     |
 |  5 | high                | poc                 |
 |  4 | critical                | -                  | 
@@ -98,6 +104,8 @@ where a CVE is assigned to a group if it appears in the Data Source listed:
 | weaponized                          | metasploit or nuclei      |
 | kev (Known Exploited Vulnerability) | cisa_kev or vulncheck_kev |
 | poc (Proof Of Concept)              | poc_github or exploitdb   |
+| EPSS High             | EPSS Score >= 10%   |
+
 
 <figure markdown>
 ![](../assets/images/cvss_exploitation_parcat.png) 

@@ -18,7 +18,7 @@
     
     
       
-        <title>Putting it all Together - Risk Based Prioritization</title>
+        <title>Applied - Risk Based Prioritization</title>
       
     
     
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Putting it all Together
+              Applied
             
           </span>
         </div>
@@ -1352,8 +1352,140 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting it all Together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regulated-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulated Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cves-epss-vs-cvss" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVEs EPSS vs CVSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counts-of-cves-above-epss-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counts of CVEs above EPSS score
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cves-temporal-values-epss-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVEs Temporal values (EPSS Variable)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-dataframe-replace-this-with-your-actual-dataframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample DataFrame (Replace this with your actual DataFrame)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-3d-scatter-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the 3D Scatter plot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-plot-with-all-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial plot with all data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-sliders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add sliders
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slider-for-epss-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slider for EPSS score
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slider-for-cvss-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slider for CVSS score
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-axes-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set axes labels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-layout-options-for-interactive-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set layout options for interactive plot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-the-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show the plot
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1368,7 +1500,7 @@
                   
 
 
-<h1 id="putting-it-all-together">Putting it all Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h1>
+<h2 id="putting-it-all-together">Putting it all Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>Code and analysis is provided for Acme Inc CVEs to help understand their CVEs:
 
 1. The key risk factors
@@ -1376,9 +1508,42 @@
 3. The effect of changing the EPSS Threshold
 4. The effect of changing the CVSS Base Score Threshold
 5. EPSS Percentiles
-6. Exploratory Data Analysis of their CVE data
-7.
 </code></pre></div>
+<p>use the cvss-bt data</p>
+<h2 id="regulated-environment">Regulated Environment<a class="headerlink" href="#regulated-environment" title="Permanent link">&para;</a></h2>
+<p>ACME operates in a regulated environment that <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr></p>
+<p>For all CVEs ACME uses RBP in that context</p>
+<ul>
+<li>e.g. <a
+    href="https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0.pdf"
+    rel="nofollow">PCI DSS 4.0</a> 11.3.2.1 “External vulnerability
+    scans are performed after any significant change as follows:
+    Vulnerabilities that are scored 4.0 or higher by the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> are
+    resolved.”</li>
+</ul>
+<p>A CVEs "scored 4.0 or higher by the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr>" is pretty much all CVEs
+(&gt;96%) per "<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Severity Rating Scale"</p>
+<p>The organization uses <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> score and "Likelihood of Exploit" to
+prioritize CVEs for the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> threshold required by regulation.
+Specifically it uses:</p>
+<ol>
+<li><abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Score</li>
+<li>Active Exploitation<ol>
+<li><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></li>
+<li>Vendor Cyber Threat Intelligence for CVEs that are actively
+    exploited that are not in <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></li>
+</ol>
+</li>
+<li>Weaponized Exploitation<ol>
+<li>Vendor Cyber Threat Intelligence for CVEs that are weaponized
+    that includes public information from Metasploit, Nuclei.</li>
+</ol>
+</li>
+<li><abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores above a Threshold</li>
+</ol>
+<h2 id="cves-epss-vs-cvss">CVEs <abbr title="Exploit Prediction Scoring System">EPSS</abbr> vs <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr><a class="headerlink" href="#cves-epss-vs-cvss" title="Permanent link">&para;</a></h2>
+<h2 id="counts-of-cves-above-epss-score">Counts of CVEs above <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score<a class="headerlink" href="#counts-of-cves-above-epss-score" title="Permanent link">&para;</a></h2>
+<h2 id="cves-temporal-values-epss-variable">CVEs Temporal values (<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Variable)<a class="headerlink" href="#cves-temporal-values-epss-variable" title="Permanent link">&para;</a></h2>
 <p>sample of CVEs and counts
 percentile score
 3d plot of sources, counts cvss, epss (sliders)</p>

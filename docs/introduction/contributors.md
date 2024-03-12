@@ -23,5 +23,5 @@ In alphabetical order by first name:
 -   Maor Kuriel
 -   Patrick Garrity, VulnCheck
 -   Sasha Romanosky, EPSS Co-creator, CVSS author
--   Stephen Shaffer, Peleton
+-   Stephen Shaffer, Peloton
 -   Steve Finegan

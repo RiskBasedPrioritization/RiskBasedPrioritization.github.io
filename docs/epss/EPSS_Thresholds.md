@@ -234,9 +234,6 @@ threshold
 
     1.  Take random % sample of CVEs 
         1.  where, e.g. 20%, corresponds to ~44K CVEs of ~220K CVEs
-            1.  where this number is chosen to be close to (but greater than
-                to give a worst case scenario) the ~40K CVEs observed in
-                the Cisco data set across 1000 enterprises
     2.  Plot the result
     3.  Repeat steps 1,2, e.g. 10,000, times
         1.  It turns out that the result (shape) is pretty much the same if we repeat

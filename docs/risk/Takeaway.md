@@ -52,7 +52,7 @@
     ### Refine the Risk Based Prioritization scheme based on your environment and your data.
     3. Use CVEs detected in your Incident Response, Bug Bounty, PenTesting findings) to inform your Risk.
     4. For EPSS:
-          1. Assess [EPSS for YOUR Environment](../epss/Applying_EPSS_to_your_environment/#epss-for-your-environment)
+          1. Assess [EPSS for YOUR Environment](../epss/Applying_EPSS_to_your_environment.md#epss-for-your-environment)
           2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors) per [Remediation Policy for an Enterprise](../epss/EPSS_Thresholds.md#remediation-policy-for-an-enterprise)
 
 

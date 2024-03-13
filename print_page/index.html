@@ -1900,7 +1900,7 @@ we all benefit and we're truly grateful!</p>
 <li>Maor Kuriel</li>
 <li>Patrick Garrity, VulnCheck</li>
 <li>Sasha Romanosky, <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Co-creator, <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> author</li>
-<li>Stephen Shaffer, Peleton</li>
+<li>Stephen Shaffer, Peloton</li>
 <li>Steve Finegan</li>
 </ul></section><section class="print-page" id="introduction-scope"><h1 id="introduction-scope-scope">Scope<a class="headerlink" href="#introduction-scope-scope" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
@@ -4047,12 +4047,7 @@ threshold</p>
 <p class="admonition-title">Recipe</p>
 <ol>
 <li>Take random % sample of CVEs <ol>
-<li>where, e.g. 20%, corresponds to ~44K CVEs of ~220K CVEs<ol>
-<li>where this number is chosen to be close to (but greater than
-    to give a worst case scenario) the ~40K CVEs observed in
-    the Cisco data set across 1000 enterprises</li>
-</ol>
-</li>
+<li>where, e.g. 20%, corresponds to ~44K CVEs of ~220K CVEs</li>
 </ol>
 </li>
 <li>Plot the result</li>
@@ -4170,9 +4165,11 @@ and how <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be used 
 <p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/RiskBasedPrioritization/RiskBasedPrioritizationAnalysis/blob/main/cisa_ssvc_dt/DT_from_scratch.ipynb">Source Code</a> </p>
 </div>
 <h2 id="ssvc-ssvc-ssvc"><abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr><a class="headerlink" href="#ssvc-ssvc-ssvc" title="Permanent link">&para;</a></h2>
-<p><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization</a> is proposed as an alternative to 
-<abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Scores. <abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr> provides a method for developing vulnerability management decision models that are tailored to the
-specific needs of different stakeholders. </p>
+<p><a href="https://certcc.github.io/SSVC/">Stakeholder-Specific Vulnerability Categorization (<abbr title="SSVC Stakeholder-Specific Vulnerability Categorization">SSVC</abbr>)</a> is an alternative methodology for prioritizing vulnerabilities. </p>
+<ul>
+<li>It is designed to address some of the issues with <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> - including <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> scoring. </li>
+<li>It provides a method for developing vulnerability management decision models that are tailored to the specific needs of different stakeholders. </li>
+</ul>
 <p>It is based on research performed by the <a href="https://www.sei.cmu.edu/about/divisions/cert/">CERT Division</a>
 of the <a href="https://www.sei.cmu.edu">Software Engineering Institute</a> (SEI) at <a href="https://www.cmu.edu">Carnegie Mellon University</a> (CMU):</p>
 <ul>

@@ -20,5 +20,5 @@ icon: material/play-box-edit-outline
 
 👉 :material-play-box-edit-outline: [Colab Notebook Analyze ACME Inc CVEs - or your CVEs](https://colab.research.google.com/drive/15OLCOVD9qFBGqsZPJhpt7Z0JKW6b-KGQ?usp=sharing) 
 
-- See more info on [Running the Code](../introduction/code_and_data.md#running-the-code)
+- See more info on [Running the Code](../../introduction/code_and_data.md#running-the-code)
 - This Jupyter notebook can be downloaded and run offline or in your Google environment (with any list of CVEs).

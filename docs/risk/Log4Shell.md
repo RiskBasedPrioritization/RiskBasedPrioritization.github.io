@@ -45,6 +45,47 @@ icon: material/play-box-edit-outline
   <figcaption>There are 4 CWEs associated with CVE-2021-44228</figcaption>
 </figure>
 
+#### Using the NVD API
+https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228
+````
+curl https://services.nvd.nist.gov/rest/json/cves/2.0\?cveId\=CVE-2021-44228  | jq '.vulnerabilities[].cve.weaknesses'
+````
+returns the following data
+````
+[
+  {
+    "source": "security@apache.org",
+    "type": "Primary",
+    "description": [
+      {
+        "lang": "en",
+        "value": "CWE-20"
+      },
+      {
+        "lang": "en",
+        "value": "CWE-400"
+      },
+      {
+        "lang": "en",
+        "value": "CWE-502"
+      }
+    ]
+  },
+  {
+    "source": "nvd@nist.gov",
+    "type": "Secondary",
+    "description": [
+      {
+        "lang": "en",
+        "value": "CWE-917"
+      }
+    ]
+  }
+]
+````
+
+
+
 ## CISA KEV
 [https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=**cve-2021-44228**&field_date_added_wrapper=all&sort_by=field_date_added&items_per_page=20](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=cve-2021-44228&field_date_added_wrapper=all&sort_by=field_date_added&items_per_page=20)
 

@@ -38,9 +38,7 @@ nav:
     - Microsoft Exploitability Index: vendors/Microsoft_Exploitability_Index.md
   - Organizations: 
     - Yahoo: organizations/Yahoo.md
-#    - ACME Corporation: 
-#      - Risk Based Prioritization: organizations/acme/Applied.md
-#      - Exploratory Data Analysis: organizations/acme/EDA.md
+    - ACME Inc: organizations/acme/Applied.md
   - Takeaway:
     - Risk Based Prioritization Schemes: risk/Rbp_schemes.md
     - Takeaway: risk/Takeaway.md

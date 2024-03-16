@@ -142,7 +142,6 @@ being exploited in the wild or are likely to be"**
 <figcaption>Decision Tree Output: CVEs with EPSS > 0.1: Priority 1:Act, 2:Attend</figcaption>
 </figure>
 
-TODO - add priority as text label instead of numeric
 
 
 

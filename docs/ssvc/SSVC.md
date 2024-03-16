@@ -15,9 +15,10 @@ Until then, it just redirects to an SSVC calculator https://certcc.github.io/SSV
 
 ## SSVC
 
-[Stakeholder-Specific Vulnerability Categorization](https://certcc.github.io/SSVC/) is proposed as an alternative to 
-CVSS Base Scores. SSVC provides a method for developing vulnerability management decision models that are tailored to the
-specific needs of different stakeholders. 
+[Stakeholder-Specific Vulnerability Categorization (SSVC)](https://certcc.github.io/SSVC/) is an alternative methodology for prioritizing vulnerabilities. 
+
+- It is designed to address some of the issues with CVSS - including CVSS scoring. 
+- It provides a method for developing vulnerability management decision models that are tailored to the specific needs of different stakeholders. 
 
 It is based on research performed by the [CERT Division](https://www.sei.cmu.edu/about/divisions/cert/)
 of the [Software Engineering Institute](https://www.sei.cmu.edu) (SEI) at [Carnegie Mellon University](https://www.cmu.edu) (CMU):

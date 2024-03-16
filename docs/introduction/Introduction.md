@@ -66,7 +66,7 @@ A basic knowledge of Jupyter Python is required to run the code (with the data p
       2. [Risk Based Prioritization Schemes](../risk/Rbp_schemes.md) is a Colab notebook comparing 3 different Risk Based Prioritization Schemes by applying them to all CVEs
 2. For a deeper understanding read the full guide.
 3. To get the most out of this guide, also play with the [code](../introduction/code_and_data.md)
-     1. [ACME](organizations/acme/Applied.md) is a Colab notebook that can be used to analyze any list of CVEs.
+     1. [ACME](../organizations/acme/Applied.md) is a Colab notebook that can be used to analyze any list of CVEs.
 
 
 Each of the Risk Based Prioritization Models above use similar risk factors (known exploitation and likelihood of exploitation, with variants of CVSS base metrics parameters or scores) but in very different ways to rank/score the risk/priority. The outcome is the same - a more granular prioritization at the high end of risk than offered by CVSS Base Score.

@@ -40,7 +40,7 @@
 
     ![Exploitation Known evidence or activity](../assets/images/threat.png){ width="400" }
 
-    1. For those using CVSS Scores and Ratings, using CVSS v3 Temporal Metric - Exploit Code Maturity (E) that **supports Exploitation** evidence is a small step with a relatively small (de)prioritization of CVEs.
+    1. For those using CVSS Scores and Ratings, using [CVSS v3 Temporal Metric - Exploit Code Maturity (E)](../risk/Rbp_schemes.md#cvss-and-temporal-metric-exploit-code-maturity-e) that **supports Exploitation** evidence is a small step with a relatively small (de)prioritization of CVEs.
     2. Either [CVSS Base Score Ratings with Exploitation Focus](#cvss-base-score-ratings-with-exploitation-focus) or  [SSVC Decision Trees](#ssvc-decision-trees), that [**Focus on Exploitation**](../risk/Understanding_Risk.md#where-cvss-epss-cisa-kev-fit), are bigger steps, with a bigger (de)prioritization of CVEs.
 
     This can run automatically as a First Pass Triage, before additional business and runtime context is added.
@@ -50,7 +50,7 @@
     </figure>
 
     ### Refine the Risk Based Prioritization scheme based on your environment and your data.
-    3. Use CVEs detected in your Incident Response, Bug Bounty, PenTesting findings) to inform your Risk.
+    3. Use CVEs detected in your Incident Response, Bug Bounty, PenTesting findings to inform your Risk.
     4. For EPSS:
           1. Assess [EPSS for YOUR Environment](../epss/Applying_EPSS_to_your_environment.md#epss-for-your-environment)
           2. Start by picking an EPSS Threshold around 10%, and adjust based on your CVE data and your capacity to remediate the CVEs above that Threshold (in conjunction with CVSS Severity or other Risk factors) per [Remediation Policy for an Enterprise](../epss/EPSS_Thresholds.md#remediation-policy-for-an-enterprise)

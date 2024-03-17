@@ -80,7 +80,7 @@ style="letter-spacing: 0.0px;">https://www.first.org/cvss/</a>.
 
 <figure markdown>
   ![](../assets/images/worry_quadrant.png){width="600"}
-  <figcaption> Using EPSS with Known Exploitation</figcaption>
+  <figcaption> Using EPSS with Known Exploitation. <br>Prioritize First (Pink) accounts for ~~5-10% of CVEs, Prioritize Next (Orange) ~90-95%</figcaption>
 </figure>
 
 

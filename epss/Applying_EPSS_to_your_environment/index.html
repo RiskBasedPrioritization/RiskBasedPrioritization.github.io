@@ -1556,6 +1556,21 @@
 <li>Types of CVEs that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> works best for</li>
 </ul>
 </div>
+<div class="admonition tip">
+<p class="admonition-title"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> is only available for published CVEs</p>
+<p><a href="https://riskbasedprioritization.github.io/epss/Introduction_to_EPSS/#what-is-epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> produces probability scores for all known published CVEs</a> based on current exploitation ability, and updates these scores daily.</p>
+<p>This has the following repercussions:</p>
+<ol>
+<li><strong>Timeliness</strong>: It will not be available for vulnerabilities exploited before they have an associated <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> (a process that can sometimes take weeks). <ol>
+<li><a href="https://riskbasedprioritization.github.io/risk/Understanding_Risk/?h=zero#zero-days">Zero days don't have a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> ID</a>   </li>
+</ol>
+</li>
+<li><strong>Coverage</strong>:<ol>
+<li>Vulnerabilities without a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> ID or which are listed on other <a href="../../risk/Data_Sources/">Other Vulnerability Data Sources</a> will not receive an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score.</li>
+</ol>
+</li>
+</ol>
+</div>
 <h2 id="epss-for-your-environment"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> for YOUR Environment<a class="headerlink" href="#epss-for-your-environment" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://www.first.org/epss/model"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Model</a> ground truth and validation is based on exploitation observations from
 network- or host-layer intrusion detection/prevention systems (IDS/IPS),

@@ -7,6 +7,17 @@
     - Type of Environment where EPSS works best
     - Types of CVEs that EPSS works best for
 
+
+!!! tip "EPSS is only available for published CVEs"
+
+    [EPSS produces probability scores for all known published CVEs](https://riskbasedprioritization.github.io/epss/Introduction_to_EPSS/#what-is-epss) based on current exploitation ability, and updates these scores daily.
+    
+    This has the following repercussions:
+
+    1. **Timeliness**: It will not be available for vulnerabilities exploited before they have an associated CVE (a process that can sometimes take weeks). 
+        2. [Zero days don't have a CVE ID](https://riskbasedprioritization.github.io/risk/Understanding_Risk/?h=zero#zero-days)   
+    2. **Coverage**:
+          1. Vulnerabilities without a CVE ID or which are listed on other [Other Vulnerability Data Sources](../risk/Data_Sources.md) will not receive an EPSS score.
 ## EPSS for YOUR Environment
 
 The [EPSS Model](https://www.first.org/epss/model) ground truth and validation is based on exploitation observations from

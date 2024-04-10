@@ -5293,15 +5293,36 @@ and the reason for the unscored CVEs by Qualys.   </p>
 <p class="admonition-title">Vendor data is subject to change</p>
 <p>This data is subject to change as vendors update their solutions. Check vendor documentation.</p>
 </div>
+<h2 id="vendors-microsoft_exploitability_index-adopting-the-cwe-standard-for-microsoft-cves">Adopting the <abbr title="CWE Common Weakness Enumeration">CWE</abbr> standard for Microsoft CVEs<a class="headerlink" href="#vendors-microsoft_exploitability_index-adopting-the-cwe-standard-for-microsoft-cves" title="Permanent link">&para;</a></h2>
+<p>Per <a href="https://msrc.microsoft.com/blog/2024/04/toward-greater-transparency-adopting-the-cwe-standard-for-microsoft-cves/">Toward greater transparency: Adopting the <abbr title="CWE Common Weakness Enumeration">CWE</abbr> standard for Microsoft CVEs April 8, 2024</a>, Microsoft is adopting the <abbr title="CWE Common Weakness Enumeration">CWE</abbr> standard for Microsoft CVEs.</p>
+<p>Taking <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-29990">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-29990</a> as an example:</p>
+<ol>
+<li><abbr title="CWE Common Weakness Enumeration">CWE</abbr> is now being used per article above. <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /></li>
+<li>Microsoft Exploitability Index "MSEI" already included Exploitability data - but now they're putting it (and other info) in the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal score metrics also. <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /><ol>
+<li>"Exploit Code Maturity: Proof Of Concept"</li>
+</ol>
+</li>
+<li>The MSEI Impact is more fine grained than <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Base Score Confidentiality, Integrity, Availability Impact and co-exists with it. <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /><ol>
+<li>"Elevation of Privilege" with an associated "Max Severity: Important"</li>
+</ol>
+</li>
+</ol>
+<p>Unfortunately, the data for 2. and 3. above is not in the NIST <abbr title="National Vulnerability Database">NVD</abbr>: <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-2990">https://nvd.nist.gov/vuln/detail/CVE-2024-2990</a> 😔</p>
+<figure>
+<p><img alt="" src="../assets/images/ms_impact_cwes.png" width="700" />
+  </p>
+<figcaption></figcaption>
+</figure>
 <div class="admonition success">
 <p class="admonition-title">Takeaways</p>
 <ol>
-<li>Evidence of exploitation (MSIE Exploitation Detected, <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> in this case) trumps <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores</li>
+<li>Evidence of exploitation (MSEI Exploitation Detected, <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> in this case) trumps <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores</li>
 <li>Depending on your security posture, you may decide to extend this to "Exploitation more likely" <ol>
-<li>e.g. MSIE "Exploitation more likely" trumps <abbr title="Exploit Prediction Scoring System">EPSS</abbr>. </li>
+<li>e.g. MSEI "Exploitation more likely" trumps <abbr title="Exploit Prediction Scoring System">EPSS</abbr>. </li>
 <li>In this case, the population of "Exploitation more likely" is relatively small compared to "Exploitation less likely" plus "Exploitation unlikely".</li>
 </ol>
 </li>
+<li>Microsoft is setting a great example by using CWEs, but also publishing the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Temporal data (including Exploit Code Maturity), and more meaningful Impact data than <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> supports. <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /></li>
 </ol>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>

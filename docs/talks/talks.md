@@ -13,3 +13,10 @@
 | [Understanding and Using Impact so you know what Vulnerabilities to fix first](./docs/BSides2024_CVEClassifier_v100.pdf)                     | BSidesDub           | Chris Madden  | 2024/5            |
 
 
+
+!!! tip
+
+    See also these lists:
+
+    * https://www.first.org/epss/papers
+    * https://github.com/lhmtriet/awesome-vulnerability-assessment

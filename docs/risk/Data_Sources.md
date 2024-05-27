@@ -50,7 +50,10 @@ This table shows the number of CVEs (from all published CVEs) that are listed in
 
 [EPSS Scores](https://www.first.org/epss/api) are available for all published CVEs - and cover the range of Likelihood of Exploitation  from 0 to 100%. 
 
-
+!!! quote "a proof of concept code for the exploit, is not a good indication that an exploit will actually show in the wild"
+    The presence of a vulnerability in the EDB, i.e. if there exists a proof of concept code for the exploit, is not a good indication that an exploit will actually show in the wild.
+    [A Preliminary Analysis of Vulnerability Scores for Attacks in Wild ](https://lallodi.github.io/publications/allodi-12-badgers.pdf), 2012, Allodi, Massacci
+ 
 !!! tip "The population sizes for Likelihood of Exploitation decrease, as Likelihood of Exploitation increases"
     **The population sizes for higher Likelihood of Exploitation (Active ~~5%, Weaponized ~~3%) are relatively small compared to Proof Of Concept (~~50%), and All CVEs (100%).**
 

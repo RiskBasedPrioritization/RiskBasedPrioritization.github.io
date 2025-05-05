@@ -14,7 +14,7 @@
         <link rel="prev" href="../../risk/Log4Shell/">
       
       
-        <link rel="next" href="../../vendors/vendors/">
+        <link rel="next" href="../sunburst/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -65,6 +65,8 @@
       <link rel="stylesheet" href="../../css/print-site-material.css">
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/cwe_sunburst.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -1195,12 +1197,66 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Research View (View-1000)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pillars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dags-and-cwe-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAGs and CWE Research
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sunburst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CWE 1000 Sunburst
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1773,6 +1829,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Research View (View-1000)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pillars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pillars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dags-and-cwe-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAGs and CWE Research
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1793,10 +1882,16 @@
 <h1 id="cwe-views"><abbr title="CWE Common Weakness Enumeration">CWE</abbr> Views<a class="headerlink" href="#cwe-views" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Overview</p>
-<p>This section covers <a href="https://cwe.mitre.org/documents/cwe_usage/guidance.html">"The MITRE <abbr title="CWE Common Weakness Enumeration">CWE</abbr> “View” Methods"</a></p>
+<p>This section covers "The MITRE <abbr title="CWE Common Weakness Enumeration">CWE</abbr> “View” Methods" listed on the <a href="https://cwe.mitre.org/documents/cwe_usage/guidance.html">MITRE <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> → <abbr title="CWE Common Weakness Enumeration">CWE</abbr> "Root Cause Mapping" Guidance</a> page.</p>
 <p>A "View allows easier navigation of the <abbr title="CWE Common Weakness Enumeration">CWE</abbr> list according to a specific point of view."</p>
+<p>There are many <a href="https://cwe.mitre.org/data/index.html">other additional views</a> e.g.</p>
+<ol>
+<li><a href="https://cwe.mitre.org/data/definitions/1430.html">Weaknesses in the 2024 <abbr title="CWE Common Weakness Enumeration">CWE</abbr> Top 25 Most Dangerous Software Weaknesses</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/700.html">Seven Pernicious Kingdoms</a> per Katrina Tsipenyuk, Brian Chess and Gary McGraw. "<a href="https://samate.nist.gov/SSATTM_Content/papers/Seven%20Pernicious%20Kingdoms%20-%20Taxonomy%20of%20Sw%20Security%20Errors%20-%20Tsipenyuk%20-%20Chess%20-%20McGraw.pdf">Seven Pernicious Kingdoms: A Taxonomy of Software Security Errors</a>". NIST Workshop on Software Security Assurance Tools Techniques and Metrics. NIST. 2005-11-07</li>
+<li><a href="https://cwe.mitre.org/data/definitions/1040.html">Quality Weaknesses with Indirect Security Impacts</a></li>
+</ol>
 </div>
-<h2 id="cwe-views_1"><abbr title="CWE Common Weakness Enumeration">CWE</abbr> Views<a class="headerlink" href="#cwe-views_1" title="Permanent link">&para;</a></h2>
+<h2 id="cwe-views_1"><a href="https://cwe.mitre.org/data/index.html"><abbr title="CWE Common Weakness Enumeration">CWE</abbr> Views</a><a class="headerlink" href="#cwe-views_1" title="Permanent link">&para;</a></h2>
 <h3 id="developer-view-view-699">Developer View (<a href="https://cwe.mitre.org/data/definitions/699.html">View-699</a>)<a class="headerlink" href="#developer-view-view-699" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>This View organizes a <strong>subset of ~400 CWEs</strong> around concepts that are frequently used or encountered in software development. By design, this view is only <strong>2 levels deep</strong>. The top level has categories of developer-friendly concepts to facilitate easier navigation (remember: never map a vulnerability to a <abbr title="CWE Common Weakness Enumeration">CWE</abbr> Category). The second level contains Base level weaknesses.</p>
@@ -1833,16 +1928,30 @@
 <h3 id="nvd-view-view-1003_1"><abbr title="National Vulnerability Database">NVD</abbr> View (<a href="https://cwe.mitre.org/data/definitions/1003.html">View-1003</a>)<a class="headerlink" href="#nvd-view-view-1003_1" title="Permanent link">&para;</a></h3>
 <p><a href="https://cwe.mitre.org/data/definitions/121.html"><abbr title="CWE Common Weakness Enumeration">CWE</abbr>-121 Stack-based Buffer Overflow </a> is not part of <abbr title="National Vulnerability Database">NVD</abbr> View (<a href="https://cwe.mitre.org/data/definitions/1003.html">View-1003</a>).</p>
 <h2 id="research-view-view-1000_2">Research View (<a href="https://cwe.mitre.org/data/definitions/1000.html">View-1000</a>)<a class="headerlink" href="#research-view-view-1000_2" title="Permanent link">&para;</a></h2>
+<p>The Research Concepts view (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-1000) organizes all weakness CWEs by the method through which an exploitation can occur.</p>
 <p>Research View (<a href="https://cwe.mitre.org/data/definitions/1000.html">View-1000</a>) contains all CWEs and uses a deep hierarchical organization, with more levels of abstraction than other classification schemes.</p>
 <ul>
 <li>While Software Assurance Trends View (<a href="https://cwe.mitre.org/data/definitions/1400.html">View-1400</a>) contains all CWEs, it is only 2 levels deep.</li>
 </ul>
+<h3 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h3>
+<p>MITRE <abbr title="CWE Common Weakness Enumeration">CWE</abbr> provides visualizations on <a href="https://cwe.mitre.org/data/pdfs.html">https://cwe.mitre.org/data/pdfs.html</a>.</p>
+<ul>
+<li>
+<p><a href="https://cwe.mitre.org/data/pdf/1000_abstraction_colors.pdf">The Research View with varying levels of weakness abstractions and entry types colored as specified below</a></p>
+</li>
+<li>
+<p>However, these are not interactive.</p>
+</li>
+</ul>
 <p>The Research View (<a href="https://cwe.mitre.org/data/definitions/1000.html">View-1000</a>) is very detailed.
 To get a visual overview of it, a sunburst diagram is created.</p>
+<div class="admonition tip interactive hover-over diagram">
+<p class="admonition-title">Tip</p>
 <ul>
-<li>You can zoom in as required</li>
-<li>This will also be available as an interactive hover-over diagram once I share it.</li>
+<li>See <a href="../sunburst/">interactive hover-over diagram</a></li>
 </ul>
+<p><a href="../sunburst/"><img alt="View-1000" src="../../assets/images/cwe1000_121.png" /></a></p>
+</div>
 <p>Some things that become visible:</p>
 <ul>
 <li>The max depth of CWEs is 6 i.e. 6 concentric circles, the min depth is 4 (for <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-682)</li>
@@ -1853,7 +1962,60 @@ To get a visual overview of it, a sunburst diagram is created.</p>
 </ul>
 </li>
 </ul>
-<p><img alt="View-1000" src="../../assets/images/cwe1000_121.png" /></p>
+<h3 id="pillars">Pillars<a class="headerlink" href="#pillars" title="Permanent link">&para;</a></h3>
+<p>The children of <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-1000 are 10 pillars that organize the weakness CWEs:</p>
+<ol>
+<li>Improper Access Control (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-284) </li>
+<li>Improper Adherence to Coding Standards (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-710) </li>
+<li>Improper Check or Handling of Exceptional Conditions (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-703) </li>
+<li>Improper Control of a Resource Through its Lifetime (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-664) </li>
+<li>Improper Interaction Between Multiple Correctly-Behaving Entities (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-435)</li>
+<li>Improper Neutralization (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-707)</li>
+<li>Incorrect Calculation (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-682)</li>
+<li>Incorrect Comparison (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-697)</li>
+<li>Insufficient Control Flow Management (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-691)</li>
+<li>Protection Mechanism Failure (<abbr title="CWE Common Weakness Enumeration">CWE</abbr>-693) </li>
+</ol>
+<h3 id="dags-and-cwe-research">DAGs and <abbr title="CWE Common Weakness Enumeration">CWE</abbr> Research<a class="headerlink" href="#dags-and-cwe-research" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The Research View (<a href="https://cwe.mitre.org/data/definitions/1000.html">View-1000</a>) forms a DAG (Directed Acyclic Graph). </p>
+<ul>
+<li>It's not a tree as some nodes, e.g. <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-121, have multiple parents.</li>
+</ul>
+<p>A tree is actually a special type of DAG with additional constraints. </p>
+<ul>
+<li>Both structures share the property of being acyclic, meaning they don't contain any cycles or loops.</li>
+</ul>
+<p>Key differences between DAG (Directed Acyclic Graph) and a tree:</p>
+<ol>
+<li>
+<p><strong>Structure</strong>: A tree is a hierarchical structure where each node has exactly one parent (except the root node, which has no parent). A DAG is more flexible, allowing nodes to have multiple parents.</p>
+</li>
+<li>
+<p><strong>Paths</strong>: In a tree, there is exactly one path from the root to any node. In a DAG, there can be multiple paths to reach a node from another node.</p>
+</li>
+<li>
+<p><strong>Connectivity</strong>: All nodes in a tree are connected. A DAG may consist of multiple disconnected components.</p>
+</li>
+<li>
+<p><strong>Root</strong>: A tree has a single root node. A DAG may have multiple source nodes (nodes with no incoming edges).</p>
+</li>
+<li>
+<p>Branching: In a tree, a parent can have multiple children, but a child can only have one parent. In a DAG, a node can have multiple parents and multiple children.</p>
+</li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Some research on <abbr title="CWE Common Weakness Enumeration">CWE</abbr> and DAGs and diagrams:</p>
+<ol>
+<li><a href="https://doi.org/10.6028/NIST.IR.8517">NIST Internal Report NIST IR 8517 Hardware Security Failure Scenarios Potential Hardware Weaknesses</a>, November 2024, Peter Mell and Irena Bojanova</li>
+<li><a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=929586">A Suite of Metrics for Calculating the Most Signifcant Security Relevant Software Flaw Types</a>, Peter Mell and Assane Gueye</li>
+<li><a href="https://www.usenix.org/system/files/cset20-paper-afanador_0.pdf#:~:text=number%20of%20views%20to%20support,a%20Resource%20Through%20its%20Life%02time">Representativeness in the Benchmark for Vulnerability Analysis Tools (B-VAT)</a></li>
+<li>note that per above, this statement is technically incorrect "The weakness hierarchy presented by view <abbr title="CWE Common Weakness Enumeration">CWE</abbr>-1000 can be organized into ten rooted <strong>trees</strong>"</li>
+</ol>
+</div>
 
 
 
@@ -1902,13 +2064,13 @@ To get a visual overview of it, a sunburst diagram is created.</p>
         
         
           
-          <a href="../../vendors/vendors/" class="md-footer__link md-footer__link--next" aria-label="Next: Vendors">
+          <a href="../sunburst/" class="md-footer__link md-footer__link--next" aria-label="Next: CWE 1000 Sunburst">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Vendors
+                CWE 1000 Sunburst
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1992,6 +2154,10 @@ To get a visual overview of it, a sunburst diagram is created.</p>
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
         <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+      
+        <script src="../../assets/js/cwe_sunburst.js"></script>
       
     
   </body>

@@ -72,21 +72,21 @@ https://cwe.mitre.org/data/definitions/1000.html
 
 The Research Concepts view (CWE-1000) organizes all weakness CWEs by the method through which an exploitation can occur.
 
-
-### Visualization 
-
-!!! Tip Existing MITRE CWE Visualizations
-
-    https://cwe.mitre.org/data/pdfs.html
-
-    [The Research View with varying levels of weakness abstractions and entry types colored as specified below](https://cwe.mitre.org/data/pdf/1000_abstraction_colors.pdf)
-
-
-
 Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) contains all CWEs and uses a deep hierarchical organization, with more levels of abstraction than other classification schemes.
 
 - While Software Assurance Trends View ([View-1400](https://cwe.mitre.org/data/definitions/1400.html)) contains all CWEs, it is only 2 levels deep.
-    
+
+### Visualization 
+
+MITRE CWE provides visualizations on https://cwe.mitre.org/data/pdfs.html.
+
+- [The Research View with varying levels of weakness abstractions and entry types colored as specified below](https://cwe.mitre.org/data/pdf/1000_abstraction_colors.pdf)
+
+- However, these are not interactive.
+
+
+
+
 
 The Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) is very detailed.
 To get a visual overview of it, a sunburst diagram is created.
@@ -151,8 +151,11 @@ The children of CWE-1000 are 10 pillars that organize the weakness CWEs:
 
 !!! Info
 
-    Some NIST research on CWE and DAGs:
+    Some research on CWE and DAGs and diagrams:
 
     1. [NIST Internal Report NIST IR 8517 Hardware Security Failure Scenarios Potential Hardware Weaknesses](https://doi.org/10.6028/NIST.IR.8517), November 2024, Peter Mell and Irena Bojanova
     2. [A Suite of Metrics for Calculating the Most Signifcant Security Relevant Software Flaw Types](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=929586), Peter Mell and Assane Gueye
+    3. [Representativeness in the Benchmark for Vulnerability Analysis Tools (B-VAT)](https://www.usenix.org/system/files/cset20-paper-afanador_0.pdf#:~:text=number%20of%20views%20to%20support,a%20Resource%20Through%20its%20Life%02time)
+       1. note that per above, this statement is technically incorrect "The weakness hierarchy presented by view CWE-1000 can be organized into ten rooted **trees**"
+   
 

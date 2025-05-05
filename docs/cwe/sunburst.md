@@ -14,6 +14,7 @@ page_layout: fullwidth
       <li>Use your mouse wheel (or pinch) to zoom, and drag to pan.</li>
       <li>Hover on any segment to see CWE details.</li>
       <li>Click on any segment to open a new page for that MITRE CWE.</li>
+      <li>Use your browser search (e.g. CTRL+F) to find and highlight a CWE </li>
     </ul>
 
     <div class="legend" id="legend"></div>
@@ -26,6 +27,7 @@ page_layout: fullwidth
         <li>Use your mouse wheel (or pinch) to zoom, and drag to pan.</li>
         <li>Hover on any segment to see CWE details.</li>
         <li>Click on any segment to open a new page for that MITRE CWE.</li>
+        <li>Use your browser search (e.g. CTRL+F) to find and highlight a CWE </li>
       </ul>
     </div>
   </div>

@@ -7,10 +7,10 @@ async function loadData() {
   
   function createSunburst(data) {
     d3.select("#chart").selectAll("*").remove();
-    const width=900, height=900;
-    //const container = document.getElementById("chart");
-    //const width     = container.clientWidth;
-    //const height    = container.clientHeight || width;
+    //const width=900, height=900;
+    const container = document.getElementById("chart");
+    const width     = container.clientWidth;
+    const height    = container.clientHeight || width;
     const radius=Math.min(width,height)/2-10, innerRadius=radius*0.15;
     const colorScheme={Pillar:'#e41a1c',Class:'#377eb8',Base:'#4daf4a',Variant:'#984ea3',Compound:'#ff7f00'};
     const color = d => d.depth===0? '#ddd' : d.data.abstraction ? colorScheme[d.data.abstraction] : '#999';
@@ -46,13 +46,23 @@ async function loadData() {
       .outerRadius(d=>Math.max(d.y0*radius,d.y1*radius-1));
   
     // draw slices
-    g.append("g")
-      .selectAll("path")
-      .data(root.descendants().slice(1))
-      .join("path")
-        .attr("fill", color)
-        .attr("d", arc)
-        .on("mouseover click", showInfo);
+    g.selectAll("path")
+    .data(root.descendants().slice(1))
+    .join("path")
+      .attr("fill", color)
+      .attr("d", arc)
+      .style("cursor", "pointer")
+      .on("mouseover", showInfo)
+      .on("click", (event, d) => {
+        // build the URL you want—here we’ll link to the MITRE CWE page:
+        const idNum = d.data.id?.split("CWE-")[1];
+        if (idNum) {
+          window.open(
+            `https://cwe.mitre.org/data/definitions/${idNum}.html`,
+            "_blank"
+          );
+        }
+      });
   
     // draw labels
     g.append("g")
@@ -79,7 +89,12 @@ async function loadData() {
       const bc = d.ancestors().reverse()
         .map(a=>a.data.id||a.data.name||"Root").join(" > ");
       let html = `<div class="breadcrumb">${bc}</div>`;
-      if(d.data.id)       html += `<div class="cwe-id">${d.data.id}</div>`;
+      if(d.data.id) html += `
+      <div class="cwe-id">
+        <a href="https://cwe.mitre.org/data/definitions/${d.data.id.split('-')[1]}.html" target="_blank">
+          ${d.data.id}
+        </a>
+      </div>`;
       if(d.data.name)     html += `<div class="cwe-name">${d.data.name}</div>`;
       if(d.data.abstraction)
                           html += `<div class="cwe-abstraction">Abstraction: ${d.data.abstraction}</div>`;

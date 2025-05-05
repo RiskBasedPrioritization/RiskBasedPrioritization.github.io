@@ -91,9 +91,12 @@ Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) co
 The Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) is very detailed.
 To get a visual overview of it, a sunburst diagram is created.
 
-- You can zoom in as required
-- This will also be available as an interactive hover-over diagram once I share it.
+!!! Tip interactive hover-over diagram
 
+     - See [interactive hover-over diagram](./sunburst.md)
+
+
+    [![View-1000](../assets/images/cwe1000_121.png)](./sunburst.md)
 Some things that become visible:
 
 - The max depth of CWEs is 6 i.e. 6 concentric circles, the min depth is 4 (for CWE-682)
@@ -102,7 +105,6 @@ Some things that become visible:
 - Some Pillars are deeper and broader than others i.e. have more CWEs
     - Pillar CWE-682 has the least descendants and least depth
 
-![View-1000](../assets/images/cwe1000_121.png)
 
 
 ### Pillars

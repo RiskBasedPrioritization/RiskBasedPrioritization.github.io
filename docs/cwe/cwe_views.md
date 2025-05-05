@@ -156,6 +156,7 @@ The children of CWE-1000 are 10 pillars that organize the weakness CWEs:
     1. [NIST Internal Report NIST IR 8517 Hardware Security Failure Scenarios Potential Hardware Weaknesses](https://doi.org/10.6028/NIST.IR.8517), November 2024, Peter Mell and Irena Bojanova
     2. [A Suite of Metrics for Calculating the Most Signifcant Security Relevant Software Flaw Types](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=929586), Peter Mell and Assane Gueye
     3. [Representativeness in the Benchmark for Vulnerability Analysis Tools (B-VAT)](https://www.usenix.org/system/files/cset20-paper-afanador_0.pdf#:~:text=number%20of%20views%20to%20support,a%20Resource%20Through%20its%20Life%02time)
-       1. note that per above, this statement is technically incorrect "The weakness hierarchy presented by view CWE-1000 can be organized into ten rooted **trees**"
+       
+        1. note that per above, this statement is technically incorrect "The weakness hierarchy presented by view CWE-1000 can be organized into ten rooted **trees**"
    
 

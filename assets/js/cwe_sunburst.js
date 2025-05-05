@@ -1,6 +1,6 @@
 // docs/assets/js/cwe-sunburst.js
 async function loadData() {
-    const res = await fetch('../../assets/data/cwe_complete_hierarchy.json');
+    const res = await fetch('../../assets/data/cwe_complete_hierarchy_dag.json');
     if (!res.ok) throw new Error(res.status);
     createSunburst(await res.json());
   }
@@ -77,7 +77,7 @@ async function loadData() {
           const y = (d.y0 + d.y1)/2 * radius * radiusFactor;
           return `rotate(${angle-90}) translate(${y},0) rotate(${angle<180?0:180})`;
         })
-        .attr("font-size", "4px")
+        .attr("font-size", "3px")
         .text(d => d.data.id 
           ? d.data.id.split(':')[0] 
           : (d.data.name||"").substring(0,30)

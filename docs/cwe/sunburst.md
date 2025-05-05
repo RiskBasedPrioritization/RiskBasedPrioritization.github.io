@@ -1,3 +1,8 @@
+---
+title: CWE Hierarchy Sunburst
+page_layout: fullwidth
+---
+
 # CWE Hierarchy Sunburst
 
 <div class="container">

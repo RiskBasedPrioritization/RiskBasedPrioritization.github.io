@@ -8,6 +8,9 @@ async function loadData() {
   function createSunburst(data) {
     d3.select("#chart").selectAll("*").remove();
     const width=900, height=900;
+    //const container = document.getElementById("chart");
+    //const width     = container.clientWidth;
+    //const height    = container.clientHeight || width;
     const radius=Math.min(width,height)/2-10, innerRadius=radius*0.15;
     const colorScheme={Pillar:'#e41a1c',Class:'#377eb8',Base:'#4daf4a',Variant:'#984ea3',Compound:'#ff7f00'};
     const color = d => d.depth===0? '#ddd' : d.data.abstraction ? colorScheme[d.data.abstraction] : '#999';

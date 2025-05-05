@@ -34,6 +34,7 @@ nav:
   - Related Standards:
     - Common Weakness and Enumeration (CWE):
       - CWE Views: cwe/cwe_views.md
+      - CWE 1000 Sunburst: cwe/sunburst.md
   - Vendors: 
     - Vendors: vendors/vendors.md
     - Qualys: vendors/Qualys.md
@@ -54,6 +55,8 @@ nav:
 
 theme:
   name: material
+
+
   custom_dir: docs/overrides
   icon:
     logo: material/fire-off
@@ -120,10 +123,13 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
+  - stylesheets/cwe_sunburst.css
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js # for sortable tables
   - javascripts/tablesort.js 
+  # include D3 from CDN, then your custom JS & CSS
+  - https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js
+  - assets/js/cwe_sunburst.js
 
 
 watch:

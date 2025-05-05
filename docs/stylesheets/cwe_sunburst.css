@@ -1,0 +1,28 @@
+/* docs/assets/css/cwe-sunburst.css */
+
+body { font-family: Arial; margin:0; padding:20px; background:#f5f5f5; }
+.container { display:flex; gap:20px; max-width:1600px; margin:0 auto; }
+.diagram-container, .info-panel {
+  background:white; border-radius:8px; padding:20px;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+.diagram-container { flex:1; }
+.info-panel {
+  width:400px; height:800px; overflow-y:auto;
+  position:sticky; top:20px;
+}
+h1,h2 { margin-top:0; color:#333; }
+.node-info { margin-top:20px; }
+.breadcrumb { font-size:14px; color:#666; margin-bottom:10px; word-break:break-word; }
+.cwe-id { font-weight:bold; color:#0066cc; }
+.cwe-name { font-size:18px; margin:10px 0; word-break:break-word; }
+.cwe-abstraction, .children-count { font-size:14px; color:#666; }
+path { cursor:pointer; stroke:#fff; stroke-width:1px; }
+path:hover { opacity:0.8; }
+.legend { display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;
+           padding:10px; background:#f8f9fa; border-radius:4px;
+           justify-content:center;
+}
+.legend-item { display:flex; align-items:center; gap:5px; font-size:13px; }
+.legend-color { width:16px; height:16px; border-radius:3px; }
+#chart { width:100%; min-height:800px; }

@@ -92,21 +92,42 @@ async function loadData() {
         }
       });
   
-    // draw labels - show labels on all segments
+    // draw labels with more intelligent spacing
     g.append("g")
       .attr("pointer-events","none")
       .attr("text-anchor","middle")
       .selectAll("text")
       .data(root.descendants().slice(1))
       .join("text")
-        .attr("transform", d => {
+        .attr("transform", (d, i) => {
+          // Calculate arc width to determine space available
+          const arcWidth = (d.x1 - d.x0);
+          const arcLength = arcWidth * ((d.y0 + d.y1)/2 * radius);
+          
+          // For very small segments, position text at different radius points
+          // For segments with siblings, stagger the radius
+          let radiusFactor = 1.0;
+          
+          // If segment is larger, position text in the middle
+          if (arcLength > 30) {
+            // Plenty of room, use middle position
+            radiusFactor = 1.0;
+          } else if (d.parent && d.parent.children.length > 4) {
+            // For crowded areas with many siblings, stagger by position within parent
+            const siblingIndex = d.parent.children.indexOf(d);
+            // Use modulo 3 to create three different radius positions
+            if (siblingIndex % 3 === 0) radiusFactor = 0.85;      // Inner position
+            else if (siblingIndex % 3 === 1) radiusFactor = 1.0;  // Middle position
+            else radiusFactor = 1.15;                            // Outer position
+          }
+          
           const angle = (d.x0 + d.x1)/2 * 180/Math.PI;
-          const radiusFactor = 1.1; // Consistent positioning
           const y = (d.y0 + d.y1)/2 * radius * radiusFactor;
+          
           return `rotate(${angle-90}) translate(${y},0) rotate(${angle<180?0:180})`;
         })
         // Fixed modest font size
-        .attr("font-size", "4px")
+        .attr("font-size", "5px")
         // Improve text readability with stronger outline
         .attr("stroke", "#fff")
         .attr("stroke-width", "0.3px")

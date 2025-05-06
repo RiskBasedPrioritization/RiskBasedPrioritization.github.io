@@ -92,6 +92,20 @@ async function loadData() {
         }
       });
   
+    // Add clickable center label for CWE-1000
+    g.append("a")
+      .attr("href", "https://cwe.mitre.org/data/definitions/1000.html")
+      .attr("target", "_blank") // Open in new tab
+      .append("text")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "12px")
+        .attr("font-weight", "bold")
+        .attr("fill", "#0066cc") // Use link color
+        .attr("cursor", "pointer") // Show pointer cursor on hover
+        .text("CWE-1000")
+        .append("title")
+          .text("Click to open CWE-1000: Research Concepts");
+      
     // draw labels with more intelligent spacing
     g.append("g")
       .attr("pointer-events","none")

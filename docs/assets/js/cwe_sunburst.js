@@ -32,7 +32,6 @@ async function loadData() {
       })
     );
   
-    // Adjust the partitioning to ensure minimum segment sizes
     const root = d3.partition()
       .size([2*Math.PI,1])(
         d3.hierarchy(data)
@@ -74,7 +73,7 @@ async function loadData() {
         d3.select(event.currentTarget)
           .style("opacity", 0.8)
           .style("stroke-width", "1px");
-        showInfo(null, d);
+        showInfo(event, d);
       })
       .on("mouseout", (event) => {
         // Restore normal appearance
@@ -93,7 +92,7 @@ async function loadData() {
         }
       });
   
-    // draw labels - ensure all segments have labels
+    // draw labels - show labels on all segments
     g.append("g")
       .attr("pointer-events","none")
       .attr("text-anchor","middle")
@@ -122,25 +121,56 @@ async function loadData() {
         .append("title") // Add tooltip with full name on hover
         .text(d => d.data.id && d.data.name ? `${d.data.id}: ${d.data.name}` : (d.data.name || ""));
   
-    // info‐panel
-    function showInfo(_,d) {
+    // info‐panel with children list
+    function showInfo(event, d) {
       const bc = d.ancestors().reverse()
-        .map(a=>a.data.id||a.data.name||"Root").join(" > ");
+        .map(a => a.data.id || a.data.name || "Root").join(" > ");
+        
       let html = `<div class="breadcrumb">${bc}</div>`;
-      if(d.data.id) html += `
+      if (d.data.id) html += `
       <div class="cwe-id">
         <a href="https://cwe.mitre.org/data/definitions/${d.data.id.split('-')[1]}.html" target="_blank">
           ${d.data.id}
         </a>
       </div>`;
-      if(d.data.name)     html += `<div class="cwe-name">${d.data.name}</div>`;
-      if(d.data.abstraction)
+      if (d.data.name) html += `<div class="cwe-name">${d.data.name}</div>`;
+      if (d.data.abstraction)
                           html += `<div class="cwe-abstraction">Abstraction: ${d.data.abstraction}</div>`;
+      
+      // Add children count
       html += `<div class="children-count">${
                 d.children 
                   ? `Children: ${d.children.length}`
                   : 'Leaf node'
               }</div>`;
+              
+      // Always add the complete children list if there are any children
+      if (d.children && d.children.length > 0) {
+        html += `<div class="children-list"><h4>Child nodes:</h4><ul>`;
+        
+        // Sort children alphabetically by ID
+        const sortedChildren = [...d.children].sort((a, b) => {
+          const aId = a.data.id || "";
+          const bId = b.data.id || "";
+          return aId.localeCompare(bId);
+        });
+        
+        // Add each child to the list with its ID and name
+        sortedChildren.forEach(child => {
+          if (child.data.id) {
+            const idNum = child.data.id.split('-')[1];
+            html += `<li>
+              <a href="https://cwe.mitre.org/data/definitions/${idNum}.html" target="_blank">${child.data.id}</a>: 
+              ${child.data.name || ""}
+            </li>`;
+          } else {
+            html += `<li>${child.data.name || ""}</li>`;
+          }
+        });
+        
+        html += `</ul></div>`;
+      }
+      
       d3.select(".node-info").html(html);
     }
   
@@ -154,6 +184,40 @@ async function loadData() {
   
     // initial
     showInfo(null, root);
+    
+    // Add CSS without scrollbars
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+      .children-list {
+        margin-top: 15px;
+        border: 1px solid #eee;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 4px;
+      }
+      .children-list h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .children-list ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+      .children-list li {
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .children-list a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      .children-list a:hover {
+        text-decoration: underline;
+      }
+    `;
+    document.head.appendChild(styleElement);
   }
   
   loadData();

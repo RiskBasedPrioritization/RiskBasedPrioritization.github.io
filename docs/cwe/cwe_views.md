@@ -81,9 +81,33 @@ CWE-798 is a child of three different nodes:
 
 The Research Concepts view (CWE-1000) organizes all weakness CWEs by the method through which an exploitation can occur.
 
-Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) contains all CWEs and uses a deep hierarchical organization, with more levels of abstraction than other classification schemes.
+Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) contains all CWEs and uses a deep hierarchical organization, with **more levels of abstraction than other classification schemes.**
 
 - While Software Assurance Trends View ([View-1400](https://cwe.mitre.org/data/definitions/1400.html)) contains all CWEs, it is only 2 levels deep.
+
+The Research view was built to maximize mutual exclusivity, repeatability and clarity — it’s the canonical, theory-driven taxonomy.
+
+!!! quote
+
+    The Research view is mainly organized according to abstractions of software behaviors and the resources that are manipulated by those behaviors, which aligns with MITRE's research into vulnerability theory. In addition to classification, the Research view explicitly models the inter-dependencies between weaknesses, which have not been a formal part of past classification efforts. The main examples are chains and composites.
+
+    The view uses multiple deep hierarchies as its organization structure, with more levels of abstraction than other classification schemes. 
+
+    https://cwe.mitre.org/documents/views/view-evolution.html
+
+### Repeatability
+
+!!! quote
+
+    the Research view seeks to achieve repeatability, although strong technical knowledge and an understanding of chains is required. Repeatability has been informally verified in many situations in which two separate CWE team members classified issues the same way. However, there are limits - ambiguous classification can still happen because of perspective issues or incomplete parts of the hierarchy.
+
+    In the case of the Development view, it is hoped that the large number of navigation categories will make it easier for people to reach the desired weakness ID. However, with so many categories, there is a risk of incomplete or incorrect mappings if one user follows one path of the tree, and another mapper follows a different path.
+
+    https://cwe.mitre.org/documents/views/view-comparison.html#Repeatable
+
+
+
+
 
 ### Visualization 
 

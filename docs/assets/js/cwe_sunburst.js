@@ -141,7 +141,7 @@ async function loadData() {
           return `rotate(${angle-90}) translate(${y},0) rotate(${angle<180?0:180})`;
         })
         // Fixed modest font size
-        .attr("font-size", "5px")
+        .attr("font-size", "4px")
         // Improve text readability with stronger outline
         .attr("stroke", "#fff")
         .attr("stroke-width", "0.3px")

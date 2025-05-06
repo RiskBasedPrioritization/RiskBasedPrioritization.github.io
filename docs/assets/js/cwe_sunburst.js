@@ -32,29 +32,58 @@ async function loadData() {
       })
     );
   
+    // Adjust the partitioning to ensure minimum segment sizes
     const root = d3.partition()
       .size([2*Math.PI,1])(
         d3.hierarchy(data)
           .sum(d=>(!d.children||!d.children.length)?1:0)
           .sort((a,b)=>b.value-a.value)
       );
+    
+    // Ensure minimum segment size for visibility
+    root.descendants().forEach(d => {
+      // Ensure each segment has a minimum angular width
+      if (d.x1 - d.x0 < 0.01 && d !== root) {
+        // If segment is too small, set a minimum size of 0.01 radians
+        // This may slightly distort the proportions but improves visibility
+        const midpoint = (d.x0 + d.x1) / 2;
+        d.x0 = midpoint - 0.005;
+        d.x1 = midpoint + 0.005;
+      }
+    });
   
+    // Increase minimum padding between segments
     const arc = d3.arc()
       .startAngle(d=>d.x0).endAngle(d=>d.x1)
-      .padAngle(d=>Math.min((d.x1-d.x0)/2,0.005)).padRadius(radius/2)
+      .padAngle(d=>Math.min((d.x1-d.x0)/2,0.003)).padRadius(radius/2)
       .innerRadius(d=>Math.max(innerRadius,d.y0*radius))
       .outerRadius(d=>Math.max(d.y0*radius,d.y1*radius-1));
   
-    // draw slices
+    // draw slices with improved visibility
     g.selectAll("path")
     .data(root.descendants().slice(1))
     .join("path")
       .attr("fill", color)
       .attr("d", arc)
       .style("cursor", "pointer")
-      .on("mouseover", showInfo)
+      .style("opacity", 1) // Full opacity for better visibility
+      .style("stroke", "#fff")
+      .style("stroke-width", "0.5px") // Slightly thicker borders
+      .on("mouseover", (event, d) => {
+        // Highlight on hover
+        d3.select(event.currentTarget)
+          .style("opacity", 0.8)
+          .style("stroke-width", "1px");
+        showInfo(null, d);
+      })
+      .on("mouseout", (event) => {
+        // Restore normal appearance
+        d3.select(event.currentTarget)
+          .style("opacity", 1)
+          .style("stroke-width", "0.5px");
+      })
       .on("click", (event, d) => {
-        // build the URL you want—here we’ll link to the MITRE CWE page:
+        // build the URL you want—here we'll link to the MITRE CWE page:
         const idNum = d.data.id?.split("CWE-")[1];
         if (idNum) {
           window.open(
@@ -64,7 +93,7 @@ async function loadData() {
         }
       });
   
-    // draw labels
+    // draw labels - ensure all segments have labels
     g.append("g")
       .attr("pointer-events","none")
       .attr("text-anchor","middle")
@@ -73,16 +102,25 @@ async function loadData() {
       .join("text")
         .attr("transform", d => {
           const angle = (d.x0 + d.x1)/2 * 180/Math.PI;
-          const radiusFactor = 1.12;
+          const radiusFactor = 1.1; // Consistent positioning
           const y = (d.y0 + d.y1)/2 * radius * radiusFactor;
           return `rotate(${angle-90}) translate(${y},0) rotate(${angle<180?0:180})`;
         })
-        .attr("font-size", "3px")
+        // Fixed modest font size
+        .attr("font-size", "4px")
+        // Improve text readability with stronger outline
+        .attr("stroke", "#fff")
+        .attr("stroke-width", "0.3px")
+        .attr("font-weight", "bold")
+        // Only show CWE IDs, not names
         .text(d => d.data.id 
           ? d.data.id.split(':')[0] 
-          : (d.data.name||"").substring(0,30)
+          : ""
         )
-        .on("mouseover click", showInfo);
+        // Always display text, regardless of segment size
+        .style("display", "inline")
+        .append("title") // Add tooltip with full name on hover
+        .text(d => d.data.id && d.data.name ? `${d.data.id}: ${d.data.name}` : (d.data.name || ""));
   
     // info‐panel
     function showInfo(_,d) {
@@ -119,4 +157,3 @@ async function loadData() {
   }
   
   loadData();
-  

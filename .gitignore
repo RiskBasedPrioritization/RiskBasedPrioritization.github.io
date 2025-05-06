@@ -3,7 +3,9 @@ site
 .vscode
 checklinks_report.txt
 .DS_Store
-
+cwe_sunburst_copy2.js
+cwe_sunburst_copy3.js
+cwe_sunburst_copy.js
 
 organizations/acme/Applied.md
 organizations/acme/EDA.md

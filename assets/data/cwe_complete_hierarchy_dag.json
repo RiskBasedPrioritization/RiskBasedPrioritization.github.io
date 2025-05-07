@@ -920,12 +920,6 @@
           "children": []
         },
         {
-          "id": "CWE-1242",
-          "name": "CWE-1242: Inclusion of Undocumented Features or Chicken Bits",
-          "abstraction": "Base",
-          "children": []
-        },
-        {
           "id": "CWE-1252",
           "name": "CWE-1252: CPU Hardware Not Configured to Support Exclusivity",
           "abstraction": "Base",
@@ -1220,19 +1214,6 @@
               "abstraction": "Class",
               "children": [
                 {
-                  "id": "CWE-120",
-                  "name": "CWE-120: Buffer Copy without Checking Size of Input ('Class",
-                  "abstraction": "Base",
-                  "children": [
-                    {
-                      "id": "CWE-785",
-                      "name": "CWE-785: Use of Path Manipulation Function without Maximum-",
-                      "abstraction": "Variant",
-                      "children": []
-                    }
-                  ]
-                },
-                {
                   "id": "CWE-125",
                   "name": "CWE-125: Out-of-bounds Read",
                   "abstraction": "Base",
@@ -1281,6 +1262,19 @@
                   "name": "CWE-787: Out-of-bounds Write",
                   "abstraction": "Base",
                   "children": [
+                    {
+                      "id": "CWE-120",
+                      "name": "CWE-120: Buffer Copy without Checking Size of Input ('Class",
+                      "abstraction": "Base",
+                      "children": [
+                        {
+                          "id": "CWE-785",
+                          "name": "CWE-785: Use of Path Manipulation Function without Maximum-",
+                          "abstraction": "Variant",
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "id": "CWE-121",
                       "name": "CWE-121: Stack-based Buffer Overflow",
@@ -1405,6 +1399,12 @@
                 {
                   "id": "CWE-778",
                   "name": "CWE-778: Insufficient Logging",
+                  "abstraction": "Base",
+                  "children": []
+                },
+                {
+                  "id": "CWE-1429",
+                  "name": "CWE-1429: Missing Security-Relevant Feedback for Unexecuted ",
                   "abstraction": "Base",
                   "children": []
                 }
@@ -1790,7 +1790,7 @@
         {
           "id": "CWE-410",
           "name": "CWE-410: Insufficient Resource Pool",
-          "abstraction": "Base",
+          "abstraction": "Class",
           "children": []
         },
         {
@@ -1798,12 +1798,6 @@
           "name": "CWE-471: Modification of Assumed-Immutable Data (MAID)",
           "abstraction": "Base",
           "children": [
-            {
-              "id": "CWE-291",
-              "name": "CWE-291: Reliance on IP Address for Authentication",
-              "abstraction": "Variant",
-              "children": []
-            },
             {
               "id": "CWE-472",
               "name": "CWE-472: External Control of Assumed-Immutable Web Paramete",
@@ -2304,123 +2298,6 @@
               "children": []
             },
             {
-              "id": "CWE-22",
-              "name": "CWE-22: Improper Limitation of a Pathname to a Restricted ",
-              "abstraction": "Base",
-              "children": [
-                {
-                  "id": "CWE-23",
-                  "name": "CWE-23: Relative Path Traversal",
-                  "abstraction": "Base",
-                  "children": [
-                    {
-                      "id": "CWE-24",
-                      "name": "CWE-24: Path Traversal: '../filedir'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-25",
-                      "name": "CWE-25: Path Traversal: '/../filedir'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-26",
-                      "name": "CWE-26: Path Traversal: '/dir/../filename'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-27",
-                      "name": "CWE-27: Path Traversal: 'dir/../../filename'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-28",
-                      "name": "CWE-28: Path Traversal: '..\\filedir'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-29",
-                      "name": "CWE-29: Path Traversal: '\\..\\filename'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-30",
-                      "name": "CWE-30: Path Traversal: '\\dir\\..\\filename'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-31",
-                      "name": "CWE-31: Path Traversal: 'dir\\..\\..\\filename'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-32",
-                      "name": "CWE-32: Path Traversal: '...' (Triple Dot)",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-33",
-                      "name": "CWE-33: Path Traversal: '....' (Multiple Dot)",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-34",
-                      "name": "CWE-34: Path Traversal: '....//'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-35",
-                      "name": "CWE-35: Path Traversal: '.../...//'",
-                      "abstraction": "Variant",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "id": "CWE-36",
-                  "name": "CWE-36: Absolute Path Traversal",
-                  "abstraction": "Base",
-                  "children": [
-                    {
-                      "id": "CWE-37",
-                      "name": "CWE-37: Path Traversal: '/absolute/pathname/here'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-38",
-                      "name": "CWE-38: Path Traversal: '\\absolute\\pathname\\here'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-39",
-                      "name": "CWE-39: Path Traversal: 'C:dirname'",
-                      "abstraction": "Variant",
-                      "children": []
-                    },
-                    {
-                      "id": "CWE-40",
-                      "name": "CWE-40: Path Traversal: '\\\\UNC\\share\\name\\' (Windows UNC S",
-                      "abstraction": "Variant",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "id": "CWE-134",
               "name": "CWE-134: Use of Externally-Controlled Format String",
               "abstraction": "Base",
@@ -2648,6 +2525,12 @@
                 {
                   "id": "CWE-1295",
                   "name": "CWE-1295: Debug Messages Revealing Unnecessary Information",
+                  "abstraction": "Base",
+                  "children": []
+                },
+                {
+                  "id": "CWE-1431",
+                  "name": "CWE-1431: Driving Intermediate Cryptographic State/Results t",
                   "abstraction": "Base",
                   "children": []
                 }
@@ -4274,6 +4157,12 @@
               "children": []
             },
             {
+              "id": "CWE-1279",
+              "name": "CWE-1279: Cryptographic Operations are run Before Supporting",
+              "abstraction": "Base",
+              "children": []
+            },
+            {
               "id": "CWE-1280",
               "name": "CWE-1280: Access Control Check Implemented After Asset is Ac",
               "abstraction": "Base",
@@ -4413,12 +4302,6 @@
           "children": []
         },
         {
-          "id": "CWE-1279",
-          "name": "CWE-1279: Cryptographic Operations are run Before Supporting",
-          "abstraction": "Base",
-          "children": []
-        },
-        {
           "id": "CWE-1281",
           "name": "CWE-1281: Sequence of Processor Instructions Leads to Unexpe",
           "abstraction": "Base",
@@ -4431,12 +4314,6 @@
       "name": "CWE-693: Protection Mechanism Failure",
       "abstraction": "Pillar",
       "children": [
-        {
-          "id": "CWE-182",
-          "name": "CWE-182: Collapse of Data into Unsafe Value",
-          "abstraction": "Base",
-          "children": []
-        },
         {
           "id": "CWE-184",
           "name": "CWE-184: Incomplete List of Disallowed Inputs",
@@ -4519,6 +4396,12 @@
                   "id": "CWE-614",
                   "name": "CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure'",
                   "abstraction": "Variant",
+                  "children": []
+                },
+                {
+                  "id": "CWE-1428",
+                  "name": "CWE-1428: Reliance on HTTP instead of HTTPS",
+                  "abstraction": "Base",
                   "children": []
                 }
               ]
@@ -5001,12 +4884,6 @@
           "children": []
         },
         {
-          "id": "CWE-778",
-          "name": "CWE-778: Insufficient Logging",
-          "abstraction": "Base",
-          "children": []
-        },
-        {
           "id": "CWE-807",
           "name": "CWE-807: Reliance on Untrusted Inputs in a Security Decisio",
           "abstraction": "Base",
@@ -5033,7 +4910,7 @@
         },
         {
           "id": "CWE-1039",
-          "name": "CWE-1039: Automated Recognition Mechanism with Inadequate De",
+          "name": "CWE-1039: Inadequate Detection or Handling of Adversarial In",
           "abstraction": "Class",
           "children": []
         },
@@ -5215,7 +5092,7 @@
         },
         {
           "id": "CWE-1039",
-          "name": "CWE-1039: Automated Recognition Mechanism with Inadequate De",
+          "name": "CWE-1039: Inadequate Detection or Handling of Adversarial In",
           "abstraction": "Class",
           "children": []
         },
@@ -6420,6 +6297,12 @@
           ]
         },
         {
+          "id": "CWE-182",
+          "name": "CWE-182: Collapse of Data into Unsafe Value",
+          "abstraction": "Base",
+          "children": []
+        },
+        {
           "id": "CWE-228",
           "name": "CWE-228: Improper Handling of Syntactically Invalid Structu",
           "abstraction": "Class",
@@ -7134,6 +7017,12 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "id": "CWE-1242",
+                  "name": "CWE-1242: Inclusion of Undocumented Features or Chicken Bits",
+                  "abstraction": "Base",
+                  "children": []
                 }
               ]
             },

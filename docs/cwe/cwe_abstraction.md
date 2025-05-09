@@ -1,13 +1,13 @@
-# CWE Abstraction
+# CWE Relationships
 
 !!! abstract "Overview"
 
-    MITRE's CWE framework categorizes weaknesses into four abstraction levels:  [Pillar](https://cwe.mitre.org/documents/glossary/index.html#Pillar%20Weakness), [Class](https://cwe.mitre.org/documents/glossary/index.html#Class%20Weakness), [Base](https://cwe.mitre.org/documents/glossary/index.html#Base%20Weakness), and [Variant](https://cwe.mitre.org/documents/glossary/index.html#Variant%20Weakness):
+    MITRE's CWE framework categorizes weaknesses into four abstraction levels:  
 
-    - Pillar: Highest abstraction (broad vulnerability concepts).
-    - Class: Group related vulnerabilities around common behaviors.
-    - Base: Specific weaknesses directly used in practical mappings.
-    - Variant: More specific instances of Base weaknesses (context-specific or subtle distinctions).
+    - [Pillar](https://cwe.mitre.org/documents/glossary/index.html#Pillar%20Weakness): Highest abstraction (broad vulnerability concepts).
+    - [Class](https://cwe.mitre.org/documents/glossary/index.html#Class%20Weakness): Group related vulnerabilities around common behaviors.
+    - [Base](https://cwe.mitre.org/documents/glossary/index.html#Base%20Weakness): Specific weaknesses directly used in practical mappings.
+    - [Variant](https://cwe.mitre.org/documents/glossary/index.html#Variant%20Weakness): More specific instances of Base weaknesses (context-specific or subtle distinctions).
     
     Each level provides a different degree of specificity, aiding different practical purposes from research to vulnerability remediation.
 
@@ -27,8 +27,8 @@
 * **Highest abstraction**; very broad themes.
 * Examples:
 
-    * **CWE-284:** Improper Access Control
-    * **CWE-682:** Incorrect Calculation
+    * **[CWE-284](https://cwe.mitre.org/data/definitions/284.html):** Improper Access Control
+    * **[CWE-682](https://cwe.mitre.org/data/definitions/682.html):** Incorrect Calculation
 
 !!! warning
 
@@ -39,8 +39,8 @@
 * **General categories** describing broad vulnerability concepts.
 * Examples:
 
-    * **CWE-20:** Improper Input Validation
-    * **CWE-200:** Exposure of Sensitive Information
+    * **[CWE-20](https://cwe.mitre.org/data/definitions/20.html):** Improper Input Validation
+    * **[CWE-200](https://cwe.mitre.org/data/definitions/200.html):** Exposure of Sensitive Information
 
 !!! caution
 
@@ -52,9 +52,9 @@
 * Balances specificity with generality; actionable by developers and security tools.
 * Examples:
 
-    * **CWE-79:** Cross-Site Scripting (XSS)
-    * **CWE-89:** SQL Injection
-    * **CWE-787:** Out-of-Bounds Write
+    * **[CWE-79](https://cwe.mitre.org/data/definitions/79.html):** Cross-Site Scripting (XSS)
+    * **[CWE-89](https://cwe.mitre.org/data/definitions/89.html):** SQL Injection
+    * **[CWE-787](https://cwe.mitre.org/data/definitions/787.html):** Out-of-Bounds Write
 
 !!! tip
 
@@ -65,8 +65,8 @@
 * **Most specific weaknesses**, usually tied to particular technologies, languages, or functions.
 * Examples:
 
-    * **CWE-599:** Missing Validation of OpenSSL Certificate
-    * **CWE-467:** Use of `sizeof()` on a Pointer Type (C/C++)
+    * **[CWE-599](https://cwe.mitre.org/data/definitions/599.html):** Missing Validation of OpenSSL Certificate
+    * **[CWE-467](https://cwe.mitre.org/data/definitions/467.html):** Use of `sizeof()` on a Pointer Type (C/C++)
 
 !!! tip
 
@@ -83,6 +83,31 @@
     **Compound CWEs** help analyze complex vulnerability scenarios, providing insights into how weaknesses interrelate.
 
 ---
+
+## [Vulnerability Mapping Label and Notes](https://cwe.mitre.org/documents/schema/#MappingNotesType)
+
+Vulnerability Mapping Label:
+
+- ALLOWED (this CWE ID could be used to map to real-world vulnerabilities)
+- ALLOWED (with careful review of mapping notes)
+- DISCOURAGED (this CWE ID should not be used to map to real-world vulnerabilities)
+- PROHIBITED (this CWE ID must not be used to map to real-world vulnerabilities)
+
+
+See https://cwe.mitre.org/documents/cwe_usage/guidance.html#relationships.
+
+<figure markdown>
+  ![](../assets/images/vulnerability_mapping_notes.png){width="600"}
+  <figcaption> <figcaption>
+</figure>
+
+!!! Info
+
+    CWEs assigned to CVEs may change their Mapping Label over time. 
+
+    Alternative CWEs may be suggested for the CWE per example above.
+
+
 
 
 !!! success "Takeaways"   

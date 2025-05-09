@@ -2,16 +2,16 @@
 
 !!! abstract "Overview"
 
-    This section covers "The MITRE CWE “Abstractions” 
+    MITRE's CWE framework categorizes weaknesses into four abstraction levels:  [Pillar](https://cwe.mitre.org/documents/glossary/index.html#Pillar%20Weakness), [Class](https://cwe.mitre.org/documents/glossary/index.html#Class%20Weakness), [Base](https://cwe.mitre.org/documents/glossary/index.html#Base%20Weakness), and [Variant](https://cwe.mitre.org/documents/glossary/index.html#Variant%20Weakness):
 
-    There are four types of weakness abstractions: [Pillar](https://cwe.mitre.org/documents/glossary/index.html#Pillar%20Weakness), [Class](https://cwe.mitre.org/documents/glossary/index.html#Class%20Weakness), [Base](https://cwe.mitre.org/documents/glossary/index.html#Base%20Weakness), and [Variant](https://cwe.mitre.org/documents/glossary/index.html#Variant%20Weakness).
+    - Pillar: Highest abstraction (broad vulnerability concepts).
+    - Class: Group related vulnerabilities around common behaviors.
+    - Base: Specific weaknesses directly used in practical mappings.
+    - Variant: More specific instances of Base weaknesses (context-specific or subtle distinctions).
+    
+    Each level provides a different degree of specificity, aiding different practical purposes from research to vulnerability remediation.
 
-
-
-
-
-
-# CWE Abstraction Types
+    Refer to the official schema: [AbstractionEnumeration](https://cwe.mitre.org/documents/schema/#AbstractionEnumeration).
 
 ## Overview
 
@@ -20,18 +20,6 @@
   <figcaption> <figcaption>
 </figure>
 
-
-MITRE's CWE framework categorizes weaknesses into four abstraction levels: **Pillar**, **Class**, **Base**, and **Variant**. Each level provides a different degree of specificity, aiding different practical purposes from research to vulnerability remediation.
-
-Pillar: Highest abstraction (broad vulnerability concepts).
-
-Class: Group related vulnerabilities around common behaviors.
-
-Base: Specific weaknesses directly used in practical mappings.
-
-Variant: More specific instances of Base weaknesses (context-specific or subtle distinctions).
-
-Compound
 
 
 ## Pillar ⚠️
@@ -77,35 +65,34 @@ Compound
 * **Most specific weaknesses**, usually tied to particular technologies, languages, or functions.
 * Examples:
 
-  * **CWE-599:** Missing Validation of OpenSSL Certificate
-  * **CWE-467:** Use of `sizeof()` on a Pointer Type (C/C++)
+    * **CWE-599:** Missing Validation of OpenSSL Certificate
+    * **CWE-467:** Use of `sizeof()` on a Pointer Type (C/C++)
 
 !!! tip
 
     **Use Variant CWEs for maximum precision.** Particularly useful for tool developers or when precise root-cause identification is essential.
 
+
+## Compound 🔗
+
+* **Aggregation of multiple weaknesses** forming either a Chain (sequence of weaknesses) or a Composite (multiple weaknesses occurring simultaneously).
+* Compound weaknesses highlight scenarios where individual weaknesses combine to create a more complex vulnerability.
+
+!!! note
+
+    **Compound CWEs** help analyze complex vulnerability scenarios, providing insights into how weaknesses interrelate.
+
 ---
 
-## Practical Insights ✅
 
-* **Vulnerability Management:**
+!!! success "Takeaways"   
 
-  * Always **map to Base or Variant CWEs** to enable precise, actionable remediation.
-* **Tool Development (SAST/DAST):**
+    * Always **map to Base or Variant CWEs** to enable precise, actionable remediation.
+    * **Tool Development (SAST/DAST):** Tools typically report at the **Base or Variant level** to clearly pinpoint issues and facilitate effective developer response.
+    * **Security Research:** Standardizing on Base CWEs ensures consistent, reproducible research outcomes and clearer trend analysis.
+    * Prioritize mapping to **Base and Variant CWEs** for effective vulnerability management, clearer reporting, and robust security research.
+    * Overall, the abstraction levels add a layer of **semantic rigor** that makes large-scale security data analysis more systematic and reproducible.
+    * In summary, CWE’s abstraction types (Pillar, Class, Base, Variant) are fundamental to how CWE is used in practice. 
+        * Pillars and Classes provide the conceptual scaffolding and help with organizing knowledge (and are useful if broad groupings are needed), while Bases and Variants provide the actionable detail needed for day-to-day vulnerability management and tool integration. 
+        * The CWE model’s layered abstraction reflects the trade-off between *“adequate specificity root cause information”* versus broad coverage. By judiciously using the appropriate CWE abstraction, security professionals can effectively classify weaknesses in a way that is both insightful and practical, enabling better communication, tooling, and defensive strategies.
 
-  * Tools typically report at the **Base or Variant level** to clearly pinpoint issues and facilitate effective developer response.
-* **Security Research:**
-
-  * Standardizing on Base CWEs ensures consistent, reproducible research outcomes and clearer trend analysis.
-
-!!! success
-**Key takeaway:** Prioritize mapping to **Base and Variant CWEs** for effective vulnerability management, clearer reporting, and robust security research.
-
-
- Overall, the abstraction levels add a layer of **semantic rigor** that makes large-scale security data analysis more systematic and reproducible.
-
-
-
-!!! success "Takeaways"        
-    
-In summary, CWE’s abstraction types (Pillar, Class, Base, Variant) are fundamental to how CWE is used in practice. Pillars and Classes provide the conceptual scaffolding and help with organizing knowledge (and are useful if broad groupings are needed), while Bases and Variants provide the actionable detail needed for day-to-day vulnerability management and tool integration. As one NIST report put it, the CWE model’s layered abstraction reflects the trade-off between *“adequate specificity \[and] root cause information”* versus broad coverage. By judiciously using the appropriate CWE abstraction, security professionals can effectively classify weaknesses in a way that is both insightful and practical, enabling better communication, tooling, and defensive strategies.

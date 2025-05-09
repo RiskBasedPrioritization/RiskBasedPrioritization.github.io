@@ -1,5 +1,6 @@
 ---
 page_layout: fullwidth
+icon: material/play-box-edit-outline 
 ---
 
 # CWE Research View ([View-1000](https://cwe.mitre.org/data/definitions/1000.html)) Sunburst

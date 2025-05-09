@@ -33,6 +33,7 @@ nav:
     - Applied Log4Shell Example: risk/Log4Shell.md
   - Related Standards:
     - Common Weakness and Enumeration (CWE):
+      - CWE: cwe/cwe.md
       - CWE Abstraction: cwe/cwe_abstraction.md
       - CWE Views: cwe/cwe_views.md
       - CWE 1000:

@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
 
-    The Common Weakness Enumeration (CWE) is a community-driven catalog of software and hardware weaknesses, maintained by MITRE. It serves as a standardized language and baseline for identifying, describing, and understanding common security flaws in software and hardware architecture, design, code, and implementation. 
+    The [Common Weakness Enumeration (CWE)](https://cwe.mitre.org) is a community-driven catalog of software and hardware weaknesses, maintained by MITRE. It serves as a standardized language and baseline for identifying, describing, and understanding common security flaws in software and hardware architecture, design, code, and implementation. 
     
     By providing a common taxonomy, CWE facilitates consistent security vulnerability reporting, enables better tool integration, and supports data-driven analysis of security trends. 
     

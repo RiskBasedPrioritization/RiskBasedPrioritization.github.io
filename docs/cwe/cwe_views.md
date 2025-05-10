@@ -66,13 +66,6 @@ https://cwe.mitre.org/data/definitions/1000.html
 [CWE-121 Stack-based Buffer Overflow ](https://cwe.mitre.org/data/definitions/121.html) is not part of NVD View ([View-1003](https://cwe.mitre.org/data/definitions/1003.html)).
 
 
-## Example using [CWE-798 Use of Hard-coded Credential ](https://cwe.mitre.org/data/definitions/798.html)
-
-CWE-798 is a child of three different nodes:
-
-1. CWE-1391 (Use of Weak Credentials) under Pillar CWE-284: Improper Access Control
-2. CWE-671 (Lack of Administrator Control over Security) under Pillar CWE-710: Improper Adherence to Coding Standards
-3. CWE-344 (Use of Invariant Value in Changing Context) under Pillar CWE-693: Protection Mechanism Failure
 
 
 

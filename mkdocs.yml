@@ -36,6 +36,7 @@ nav:
       - CWE: cwe/cwe.md
       - CWE Relationships: cwe/cwe_abstraction.md
       - CWE Views: cwe/cwe_views.md
+      - CWE Counts: cwe/cwe_counts.md      
       - CWE 1000:
         - CWE 1000: cwe/cwe_1000.md
         - CWE 1000 Sunburst: cwe/sunburst.md

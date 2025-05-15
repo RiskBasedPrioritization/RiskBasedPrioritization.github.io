@@ -15,9 +15,6 @@
 
 ## [CWE Views](https://cwe.mitre.org/data/index.html)
 
-
-
-
 ### Developer View ([View-699](https://cwe.mitre.org/data/definitions/699.html))
 
 >This View organizes a **subset of ~400 CWEs** around concepts that are frequently used or encountered in software development. By design, this view is only **2 levels deep**. The top level has categories of developer-friendly concepts to facilitate easier navigation (remember: never map a vulnerability to a CWE Category). The second level contains Base level weaknesses.

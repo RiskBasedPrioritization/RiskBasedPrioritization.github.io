@@ -50,8 +50,12 @@
 
 ## Risk Remediation Taxonomy
 
+<figure markdown>
+![Risk Remediation Image](../assets/images/RiskRemediation_top.png)
+<figcaption> </figcaption>
+</figure>
 
-![Risk Remediation Image](https://raw.githubusercontent.com/theparanoids/PrioritizedRiskRemediation/main/images/RiskRemediation_top.png)
+
 <sub>"Risk Remediation Taxonomy [based on a BSides Conference presentation](https://github.com/theparanoids/PrioritizedRiskRemediation)"</sub>
 
 Risk is per Asset and depends on the Impact of a Vulnerability being
@@ -90,6 +94,12 @@ exploited by a Threat
     1.  Remediation is part of the overall Risk Remediation picture -
         but will not be covered here.
 
+### Risk Remediation Taxonomy Detailed
+
+<figure markdown>
+![](../assets/images/RiskRemediation.png)
+<figcaption> </figcaption>
+</figure>
 
 ### Where CVSS, EPSS, CISA KEV Fit
 

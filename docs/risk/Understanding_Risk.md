@@ -101,6 +101,7 @@ exploited by a Threat
 <figcaption> </figcaption>
 </figure>
 
+
 ### Where CVSS, EPSS, CISA KEV Fit
 
 Adding more detail to the Vulnerability branch, to show where CVSS,

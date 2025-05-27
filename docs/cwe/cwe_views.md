@@ -15,9 +15,6 @@
 
 ## [CWE Views](https://cwe.mitre.org/data/index.html)
 
-
-
-
 ### Developer View ([View-699](https://cwe.mitre.org/data/definitions/699.html))
 
 >This View organizes a **subset of ~400 CWEs** around concepts that are frequently used or encountered in software development. By design, this view is only **2 levels deep**. The top level has categories of developer-friendly concepts to facilitate easier navigation (remember: never map a vulnerability to a CWE Category). The second level contains Base level weaknesses.
@@ -66,13 +63,6 @@ https://cwe.mitre.org/data/definitions/1000.html
 [CWE-121 Stack-based Buffer Overflow ](https://cwe.mitre.org/data/definitions/121.html) is not part of NVD View ([View-1003](https://cwe.mitre.org/data/definitions/1003.html)).
 
 
-## Example using [CWE-798 Use of Hard-coded Credential ](https://cwe.mitre.org/data/definitions/798.html)
-
-CWE-798 is a child of three different nodes:
-
-1. CWE-1391 (Use of Weak Credentials) under Pillar CWE-284: Improper Access Control
-2. CWE-671 (Lack of Administrator Control over Security) under Pillar CWE-710: Improper Adherence to Coding Standards
-3. CWE-344 (Use of Invariant Value in Changing Context) under Pillar CWE-693: Protection Mechanism Failure
 
 
 

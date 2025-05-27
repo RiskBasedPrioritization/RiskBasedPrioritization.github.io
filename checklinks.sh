@@ -3,7 +3,7 @@
 # recursive -r option blows up so recurse in bash instead
 
 # example non-CI usage
-# ./checklinks.sh > ./checlinks_report.txt  
+# ./checklinks.sh > ./checklinks_report.txt  
 # grep '[✖]' checklinks_report.txt   
 
 # Change directory to the docs directory

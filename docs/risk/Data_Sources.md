@@ -32,6 +32,12 @@
      3. A typical enterprise will have a subset of exploits/CVEs: ~~10K order of magnitude unique CVE IDs.
          1. The counts of these unique CVE IDs may follow a Pareto type distribution i.e. there will be many instances of a small number of CVE IDs.
 
+!!! quote
+
+    We know from executing tens of thousands of pen tests that most exploits don't require a CVE. When we're successful using a CVE, it usually isn't on the KEV list.
+    
+    https://www.darkreading.com/vulnerabilities-threats/nist-lev-equation-determine-likelihood-bug-exploited
+
 ## Likelihood of Exploitation Data Sources
 
 This table shows the number of CVEs (from all published CVEs) that are listed in that data source:

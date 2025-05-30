@@ -8,6 +8,9 @@
     -   why it matters for day-to-day prioritization  
     -   how to apply it alongside EPSS and KEV  
 
+    :technologist: [Source Code] will be provided for LEV. Instead of making invalid assumptions to optimize the computation for LEV2 (handling "EPSS scores as covering only a single day by dividing them by 30": $P_1 \approx P_{30}/30$), it will use the correct algorithm but optimize with concurrent processing.
+
+
 ## What is LEV?
 
 **Likely Exploited Vulnerabilities (LEV) is a probabilistic score proposed by NIST to estimate the chance that a published vulnerability (CVE) has already been exploited in the wild**. 
@@ -25,6 +28,12 @@ The longer and more consistently a CVE has high non-zero EPSS scores, the higher
 !!! tip
     
     LEV is best used when you need evidence-based focus on vulnerabilities likely already weaponized, not just theoretically severe or imminently at risk.
+
+
+!!! tip
+
+    Because LEV is based on EPSS only, the same points about [Applying EPSS to your environment](Applying_EPSS_to_your_environment.md#applying-epss-to-your-environment) apply to LEV also.
+
 
 ## Why LEV Matters
 
@@ -83,6 +92,54 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
 !!! quote "Translating Probability into Action"
 
     LEV provides historical context EPSS omits and KEV lists can’t fully capture. Use it to turn probabilistic insight into targeted mitigation.
+
+
+
+
+
+
+## Likely Exploited Vulnerabilities (LEV) Algorithm
+---
+
+### LEV2 Approximation
+
+!!! quote
+
+    The LEV2 equation requires significantly more computational resources. It handles EPSS scores
+    as covering only a single day by dividing them by 30 (instead of each score covering a 30-day
+    window). This enables the equation to incorporate far more EPSS scores within the
+    computation and increases the equation’s responsiveness to changing scores (especially for
+    newly released vulnerabilities).
+
+
+ "It handles EPSS scores as covering only a single day by dividing them by 30": $P_1 \approx P_{30}/30$
+
+Dividing a 30-day probability by 30 to get a 1-day probability generally **does not make sense** in a rigorous probabilistic context.
+
+**Probabilities are not linear over time in this way.** If you have a probability $P_{30}$ of an event occurring over 30 days, it doesn't mean the probability on any single day is $P_{30}/30$.
+
+**The "Small Probability" approximation:** The approach (dividing by 30) only makes sense as a rough approximation when the EPSS scores (which represent 30-day likelihoods) are very small (which is true for most but not all scores, where the ones we care about are high scores):
+
+* If $P_1$ is very small, then $(1 - P_1)^{30} \approx 1 - 30P_1$ (using the binomial approximation or first-order Taylor expansion for $(1-x)^n \approx 1-nx$ when $x$ is small).
+* In this case, $P_{30} = 1 - (1 - P_1)^{30} \approx 1 - (1 - 30P_1) = 30P_1$.
+* So, if $P_{30} \approx 30P_1$, then $P_1 \approx P_{30}/30$.
+
+This appears to be the underlying assumption for the deliberate simplification made in the NIST formula - likely for computational efficiency
+
+
+**Independent Events Assumption:** If we assume the events (vulnerabilities being exploited) are independent day-to-day, then the probability of *not* being exploited over 30 days would be the product of the probabilities of *not* being exploited on each individual day.
+
+* Let $P_1$ be the daily probability of exploitation.
+* The probability of *not* being exploited on a given day is $(1 - P_1)$.
+* The probability of *not* being exploited over 30 days is $(1 - P_1)^{30}$.
+* Therefore, the probability of *being* exploited over 30 days is $1 - (1 - P_1)^{30}$.
+* If you're given $P_{30}$ (the 30-day likelihood), you'd solve $P_{30} = 1 - (1 - P_1)^{30}$ for $P_1$. This is a much more complex calculation than simple division.
+  
+The **Independent Events Assumption:** is not valid. 
+
+- The EPSS data shows that signature detections tend to be grouped in time - not randomly distributed
+
+
 
 !!! success "Key Takeaways"
 

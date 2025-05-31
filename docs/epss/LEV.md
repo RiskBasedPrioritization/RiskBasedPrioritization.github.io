@@ -32,6 +32,7 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 [CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been **exploited** in the wild (**past**).
 
 - It contains a subset of known exploited CVEs.
+- Typically, once a vulnerability is added to a KEV list, it stays on the list permanently
  
 [EPSS](./Introduction_to_EPSS.md) is the **probability of exploitation** in the next 30 days (**future**). 
 
@@ -121,23 +122,61 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
 
 
 
-## Likely Exploited Vulnerabilities (LEV) Algorithm
+## Concerns
 ---
+
+
+### Misunderstanding of EPSS?
+
+!!! warning
+
+    [NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf) suggests that EPSS provides inaccurate scores for previously exploited vulnerabilities, and to change the EPSS scores to be 1.0 for all vulnerabilities on a KEV list.
+
+    Given [EPSS](./Introduction_to_EPSS.md) is the **probability of exploitation** in the next 30 days, and the EPSS analysis data shows that past exploitation does not guarantee exploitation in the next 30 days, then this logic seems fundamentally flawed.
+
+
+[EPSS](./Introduction_to_EPSS.md) is the **probability of exploitation** in the next 30 days (**future**).
+
+[CISA KEV](../cisa_kev/cisa_kev.md) is a subset of vulnerabilities that have been **exploited** in the wild (**past**) and the vulnerability typically stays on the list regardless of exploitation thereafter.
+
+**Just because a vulnerability was known exploited, does not mean it will be exploited in the next 30 days.**
+
+Jay Jacobs (EPSS) has shown [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/) to validate this. See sections
+
+- "What’s The Typical Pattern Of Exploitation Activity?".
+    - Don’t treat “Exploited” as a binary variable; intensity and duration matter for prioritization
+- What’s The Ratio Of New Vs. Old Exploitation?
+    - Newly exploited vulns get the most attention, but the older ones get the most action. 
+- How Long Since Exploitation Was Last Observed
+    - Just because a vulnerability is known to have exploitation activity, doesn’t mean it always will.
+
+
+This Risk Based Prioritiztion guide has already covered the misunderstanding where users requested to "set the EPSS score to 1 if there are already published exploits" per [EPSS as the Single Score for Exploitation](../epss/What_users_ask_for.md#epss-as-the-single-score-for-exploitation)
+
+!!! quote "NIST CSWP 41 May 19, 2025"
+
+    However, as discussed in Sec. 2.2 and more thoroughly in Sec. 5.1, **EPSS provides inaccurate scores for previously exploited vulnerabilities. It is also not currently possible to fix inaccurate scores in EPSS.** For this reason, EPSS should not be used alone when prioritizing enterprise vulnerability remediation.
+
+    A mathematically defensible solution is obtainable if the goal is changed to include remediation of previously exploited vulnerabilities and a comprehensive KEV list is available. To do this, **change the EPSS scores to be 1.0 for all vulnerabilities on a KEV list. **
+
+    The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate EPSS scores. It DOES NOT guarantee to remove all EPSS errors (only a comprehensive KEV list does that, which is a property that can be measured using LEV). 
 
 ### LEV2 Approximation
 
-!!! quote
+!!! warning
+    
+    The "Small Probability" approximation is not valid for higher EPSS scores (the scores of interest).
+    
+LEV handles EPSS scores as covering only a single day by dividing them by 30": $P_1 \approx P_{30}/30$
 
-    The LEV2 equation requires significantly more computational resources. It handles EPSS scores
-    as covering only a single day by dividing them by 30 (instead of each score covering a 30-day
-    window). This enables the equation to incorporate far more EPSS scores within the
-    computation and increases the equation’s responsiveness to changing scores (especially for
-    newly released vulnerabilities).
+- Dividing a 30-day probability by 30 to get a 1-day probability generally **does not make sense** in a rigorous probabilistic context.
 
+<figure markdown>
+  ![](../assets/images/p30_error.png)
+  <figcaption> </figcaption>
+</figure>
+**P30** is the EPSS Score (**Probability** of exploitation for the next **30** days)
 
- "It handles EPSS scores as covering only a single day by dividing them by 30": $P_1 \approx P_{30}/30$
-
-Dividing a 30-day probability by 30 to get a 1-day probability generally **does not make sense** in a rigorous probabilistic context.
 
 **Probabilities are not linear over time in this way.** If you have a probability $P_{30}$ of an event occurring over 30 days, it doesn't mean the probability on any single day is $P_{30}/30$.
 
@@ -150,6 +189,22 @@ Dividing a 30-day probability by 30 to get a 1-day probability generally **does 
 This appears to be the underlying assumption for the deliberate simplification made in the NIST formula - likely for computational efficiency
 
 
+!!! quote
+
+    The LEV2 equation requires significantly more computational resources. It handles EPSS scores
+    as covering only a single day by dividing them by 30 (instead of each score covering a 30-day
+    window). This enables the equation to incorporate far more EPSS scores within the
+    computation and increases the equation’s responsiveness to changing scores (especially for
+    newly released vulnerabilities).
+
+
+
+### Independent Events Assumption
+
+!!! warning
+    
+    The Independent Events Assumption is not valid.
+
 **Independent Events Assumption:** If we assume the events (vulnerabilities being exploited) are independent day-to-day, then the probability of *not* being exploited over 30 days would be the product of the probabilities of *not* being exploited on each individual day.
 
 * Let $P_1$ be the daily probability of exploitation.
@@ -160,7 +215,9 @@ This appears to be the underlying assumption for the deliberate simplification m
   
 The **Independent Events Assumption:** is not valid. 
 
-- The EPSS data shows that signature detections tend to be grouped in time - not randomly distributed
+- The EPSS data shows that signature detections do have patterns and are not entirely independent events. See [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/)
+- Attacks driven by people have patterns e.g. a persistent threat, periodic probing of targets
+
 
 
 

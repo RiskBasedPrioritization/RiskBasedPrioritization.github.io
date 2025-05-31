@@ -139,11 +139,11 @@ This Risk Based Prioritization guide has already covered the misunderstanding wh
 
 !!! quote "NIST CSWP 41 May 19, 2025"
 
-    However, as discussed in Sec. 2.2 and more thoroughly in Sec. 5.1, **EPSS provides inaccurate scores for previously exploited vulnerabilities. It is also not currently possible to fix inaccurate scores in EPSS.** For this reason, EPSS should not be used alone when prioritizing enterprise vulnerability remediation.
+    However, as discussed in Sec. 2.2 and more thoroughly in Sec. 5.1, **EPSS provides inaccurate scores for previously exploited vulnerabilities. It is also not currently possible to fix inaccurate scores in EPSS.** 
 
     A mathematically defensible solution is obtainable if the goal is changed to include remediation of previously exploited vulnerabilities and a comprehensive KEV list is available. To do this, **change the EPSS scores to be 1.0 for all vulnerabilities on a KEV list.**
 
-    The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate EPSS scores. It DOES NOT guarantee to remove all EPSS errors (only a comprehensive KEV list does that, which is a property that can be measured using LEV). 
+    **The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate EPSS scores.** It DOES NOT guarantee to remove all EPSS errors (only a comprehensive KEV list does that, which is a property that can be measured using LEV). 
 
 ### LEV2 Approximation
 
@@ -199,6 +199,19 @@ The **Independent Events Assumption** is not valid because:
 - The EPSS data shows that signature detections do have patterns and are not entirely independent events. See [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/)
 - Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets
 
+###  EPSS Scores as Lower Bounds Rationale 
+
+!!! warning "**Rationale is lacking for EPSS Scores as Lower Bounds**"
+
+    "While EPSS scores assume that a vulnerability has not been observed to be exploited in the past".
+
+    The EPSS model or score is not making this assumption.
+
+    This is not the same as the EPSS model not using past exploitation data directly to feed the model.
+
+    
+## Takeaways
+
 !!! success "**KEY TAKEAWAYS**"
 
     **What LEV Gets Right:**
@@ -209,7 +222,7 @@ The **Independent Events Assumption** is not valid because:
     4. Combined with continuous validation (e.g., breach-and-attack simulations), LEV helps close the gap between theoretical risk and real-world exploitation
 
     **What to Watch Out For:**
-    
+
     1. **Mathematical approximations** may not hold for high EPSS scores (the ones you care about most)
     2. **Independent events assumption** doesn't reflect real attack patterns
     3. **Past vs. future confusion** - don't assume past exploitation guarantees future exploitation

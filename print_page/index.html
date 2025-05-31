@@ -845,7 +845,7 @@
             
   
   <span class="md-ellipsis">
-    Stakeholder-Specific Vulnerability Categorization (SSVC)
+    NIST LEV
   </span>
   
 
@@ -854,6 +854,74 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            NIST LEV
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epss/LEV/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NIST LEV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stakeholder-Specific Vulnerability Categorization (SSVC)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Stakeholder-Specific Vulnerability Categorization (SSVC)
           </label>
@@ -4518,6 +4586,264 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 </li>
 </ol>
 </div></section><h1 class='nav-section-title-end'>Ended: Exploit Prediction Scoring System (EPSS)</h1>
+                        <h2 class='nav-section-title' id='section-nist-lev'>
+                            NIST LEV <a class='headerlink' href='#section-nist-lev' title='Permanent link'>↵</a>
+                        </h2>
+                        <section class="print-page" id="epss-lev"><h1 id="epss-lev-introduction-to-lev">Introduction to LEV<a class="headerlink" href="#epss-lev-introduction-to-lev" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Overview</p>
+<p>In this section we introduce NIST Likely Exploited Vulnerabilities (LEV) </p>
+<ul>
+<li>what it is and what it adds to vulnerability management  </li>
+<li>why it matters for day-to-day prioritization  </li>
+<li>how to apply it alongside <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Known Exploited Vulnerability">KEV</abbr>  </li>
+</ul>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> [Source Code] will be provided for LEV. Instead of making invalid assumptions to optimize the computation for LEV2 (handling "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores as covering only a single day by dividing them by 30": <span class="arithmatex">\(P_1 \approx P_{30}/30\)</span>), it will use the correct algorithm but optimize with concurrent processing.</p>
+</div>
+<h2 id="epss-lev-what-is-lev">What is LEV?<a class="headerlink" href="#epss-lev-what-is-lev" title="Permanent link">&para;</a></h2>
+<p><strong>Likely Exploited Vulnerabilities (LEV) is a probabilistic score proposed by NIST to estimate the chance that a published vulnerability (<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>) has already been exploited in the wild</strong>. </p>
+<p>A high-performance Python implementation of: 
+Mell P, Spring J (2025) <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"</a>.
+(National Institute of Standards and Technology, Gaithersburg, MD), NIST Cybersecurity White Paper (CSWP) NIST
+CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/NIST.CSWP.41</a> </p>
+<h2 id="epss-lev-why-lev-matters">Why LEV Matters<a class="headerlink" href="#epss-lev-why-lev-matters" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title"><strong>KEY INSIGHT: The Three-Dimensional View of Vulnerability <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></strong></p>
+<p>LEV fills a critical gap by looking backward in time, complementing forward-looking and current exploitation data:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Past</strong></th>
+<th><strong>Future</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exploited</strong></td>
+<td><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Probability of Exploitation</strong></td>
+<td><strong>LEV (past probability)</strong></td>
+<td><a href="#epss-introduction_to_epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> (next 30 days)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> is a list of vulnerabilities that have been <strong>exploited</strong> in the wild (<strong>past</strong>).</p>
+<ul>
+<li>It contains a subset of known exploited CVEs</li>
+<li>Typically, once a vulnerability is added to a <abbr title="Known Exploited Vulnerability">KEV</abbr> list, it stays on the list permanently</li>
+</ul>
+<p><a href="#epss-introduction_to_epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> is the <strong>probability of exploitation</strong> in the next 30 days (<strong>future</strong>). </p>
+<ul>
+<li>It is suited to network environments and may have <a href="#epss-applying_epss_to_your_environment-false-positives-and-negatives">False Negatives</a></li>
+</ul>
+<p>LEV gives a <strong>probability of exploitation</strong> in the <strong>past</strong> </p>
+<ul>
+<li>LEV can be used to augment <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> i.e., shortlist candidates for addition to <abbr title="Known Exploited Vulnerability">KEV</abbr> (with other qualifying factors e.g., industry evidence)</li>
+<li>LEV works backwards—compounding historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores—to quantify past exploitation probability<ul>
+<li>The longer and more consistently a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> has high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores, the higher its LEV, reflecting real-world attacker behavior</li>
+</ul>
+</li>
+<li>In <strong>practice</strong>:<ul>
+<li>It needs to be validated against real evidence of exploitation data to understand it, validate it, and calibrate it</li>
+<li>The LEV list should be made available directly - or used to augment the <abbr title="Known Exploited Vulnerability">KEV</abbr> list</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">As a general user, how do I use LEV?</p>
+<p>You don't:</p>
+<ul>
+<li>The LEV list is not officially published as of June 1, 2025. And even if it were, the LEV list by itself is not that useful for a general user i.e., there isn't a user guide, there isn't validation of the data</li>
+<li>General users who use <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> may benefit from LEV by additional validated entries being added to <abbr title="Known Exploited Vulnerability">KEV</abbr> per use case "augment <abbr title="Known Exploited Vulnerability">KEV</abbr> based vulnerability remediation prioritization by identifying higher-probability vulnerabilities that may be missing" </li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">LEV inherits some characteristics of <abbr title="Exploit Prediction Scoring System">EPSS</abbr></p>
+<p>Because LEV is based on <abbr title="Exploit Prediction Scoring System">EPSS</abbr> only, the same points about <a href="#epss-applying_epss_to_your_environment-applying-epss-to-your-environment">Applying <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to your environment</a> apply to LEV also.</p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">LEV use cases</p>
+<p>The LEV probabilities have at least four use cases:</p>
+<ol>
+<li>measure the expected number and proportion of vulnerabilities, as identified by Common Vulnerability and Exposures (<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>) identifiers, that actors have exploited,</li>
+<li>estimate the comprehensiveness of <abbr title="Known Exploited Vulnerability">KEV</abbr> lists,</li>
+<li>augment <abbr title="Known Exploited Vulnerability">KEV</abbr> based vulnerability remediation prioritization by identifying higher-probability vulnerabilities that may be missing, and</li>
+<li>augment <abbr title="Exploit Prediction Scoring System">EPSS</abbr> based vulnerability remediation prioritization by identifying vulnerabilities that may be underscored. </li>
+</ol>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"</a></p>
+</div>
+<h2 id="epss-lev-how-lev-works">How LEV Works<a class="headerlink" href="#epss-lev-how-lev-works" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title"><strong>KEY TAKEAWAY: LEV's Backward-Looking Algorithm</strong></p>
+<p>LEV essentially asks: "Given all the historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores, what's the probability this vulnerability was exploited at some point in the past?"</p>
+</div>
+<ol>
+<li>
+<p><strong>Windowing <abbr title="Exploit Prediction Scoring System">EPSS</abbr></strong></p>
+<ul>
+<li><abbr title="Exploit Prediction Scoring System">EPSS</abbr>(v, dᵢ) gives the probability of exploitation in the 30-day window starting at date dᵢ</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-Exploitation Probability</strong></p>
+<ul>
+<li>For each window, compute (1 − <abbr title="Exploit Prediction Scoring System">EPSS</abbr> × window-fraction)</li>
+</ul>
+</li>
+<li>
+<p><strong>Compound Across Time</strong></p>
+<ul>
+<li>Multiply all "no-exploit" probabilities from first <abbr title="Exploit Prediction Scoring System">EPSS</abbr> release (d₀) to today (dₙ)</li>
+</ul>
+</li>
+<li>
+<p><strong>Flip to Get LEV</strong></p>
+<ul>
+<li>LEV = 1 − ∏₍windows₎(no-exploitProbability)</li>
+</ul>
+</li>
+</ol>
+<p>This approach treats each <abbr title="Exploit Prediction Scoring System">EPSS</abbr> window as evidence that exploitation may already have occurred, with longer exposure driving LEV toward 1.0.</p>
+<h2 id="epss-lev-applying-lev-in-vulnerability-management">Applying LEV in Vulnerability Management<a class="headerlink" href="#epss-lev-applying-lev-in-vulnerability-management" title="Permanent link">&para;</a></h2>
+<p>LEV outputs a daily, per-<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> probability of past exploitation along with supporting history, enabling:</p>
+<ol>
+<li>
+<p><strong>Measuring Exploited Proportion</strong></p>
+<ul>
+<li>Estimate how many CVEs have likely been weaponized to date</li>
+</ul>
+</li>
+<li>
+<p><strong>Assessing <abbr title="Known Exploited Vulnerability">KEV</abbr> Coverage</strong></p>
+<ul>
+<li>Compute a lower bound on how many CVEs a <abbr title="Known Exploited Vulnerability">KEV</abbr> list should include, revealing gaps</li>
+</ul>
+</li>
+<li>
+<p><strong>Augmenting <abbr title="Known Exploited Vulnerability">KEV</abbr>-Driven Remediation</strong></p>
+<ul>
+<li>Flag high-LEV CVEs missing from <abbr title="Known Exploited Vulnerability">KEV</abbr> for review or urgent patching</li>
+</ul>
+</li>
+<li>
+<p><strong>Strengthening <abbr title="Exploit Prediction Scoring System">EPSS</abbr>-Driven Prioritization</strong></p>
+<ul>
+<li>Combine LEV with <abbr title="Exploit Prediction Scoring System">EPSS</abbr> (and <abbr title="Known Exploited Vulnerability">KEV</abbr> overrides) in a Composite Probability:
+    <code>max(EPSS, KEV_flag, LEV)</code></li>
+<li>Ensures previously exploited CVEs receive top attention</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="epss-lev-concerns">Concerns<a class="headerlink" href="#epss-lev-concerns" title="Permanent link">&para;</a></h2>
+<h3 id="epss-lev-misunderstanding-of-epss">Misunderstanding of <abbr title="Exploit Prediction Scoring System">EPSS</abbr>?<a class="headerlink" href="#epss-lev-misunderstanding-of-epss" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title"><strong>CRITICAL INSIGHT: Past vs. Future Exploitation</strong></p>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41</a> suggests that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> provides inaccurate scores for previously exploited vulnerabilities, and recommends changing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores to be 1.0 for all vulnerabilities on a <abbr title="Known Exploited Vulnerability">KEV</abbr> list.</p>
+<p><strong>This logic is fundamentally flawed</strong> because <a href="#epss-introduction_to_epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> is the <strong>probability of exploitation</strong> in the next 30 days, and <abbr title="Exploit Prediction Scoring System">EPSS</abbr> analysis data shows that past exploitation does not guarantee exploitation in the next 30 days.</p>
+</div>
+<p><a href="#epss-introduction_to_epss"><abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> is the <strong>probability of exploitation</strong> in the next 30 days (<strong>future</strong>).</p>
+<p><a href="#cisa_kev-cisa_kev"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> is a subset of vulnerabilities that have been <strong>exploited</strong> in the wild (<strong>past</strong>) and the vulnerability typically stays on the list regardless of exploitation thereafter.</p>
+<p><strong>Just because a vulnerability was known exploited, does not mean it will be exploited in the next 30 days.</strong></p>
+<p>Jay Jacobs (<abbr title="Exploit Prediction Scoring System">EPSS</abbr>) has shown <a href="https://www.cyentia.com/epss-study/">detailed analysis of exploitation patterns over time</a> to validate this. See sections:</p>
+<ul>
+<li>"What's The Typical Pattern Of Exploitation Activity?"<ul>
+<li>Don't treat "Exploited" as a binary variable; intensity and duration matter for prioritization</li>
+</ul>
+</li>
+<li>"What's The Ratio Of New Vs. Old Exploitation?"<ul>
+<li>Newly exploited vulns get the most attention, but the older ones get the most action</li>
+</ul>
+</li>
+<li>"How Long Since Exploitation Was Last Observed?"<ul>
+<li>Just because a vulnerability is known to have exploitation activity, doesn't mean it always will</li>
+</ul>
+</li>
+</ul>
+<p>This <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Based Prioritization guide has already covered the misunderstanding where users requested to "set the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to 1 if there are already published exploits" per <a href="#epss-what_users_ask_for-epss-as-the-single-score-for-exploitation"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> as the Single Score for Exploitation</a>.</p>
+<div class="admonition quote">
+<p class="admonition-title">NIST CSWP 41 May 19, 2025</p>
+<p>However, as discussed in Sec. 2.2 and more thoroughly in Sec. 5.1, <strong><abbr title="Exploit Prediction Scoring System">EPSS</abbr> provides inaccurate scores for previously exploited vulnerabilities. It is also not currently possible to fix inaccurate scores in <abbr title="Exploit Prediction Scoring System">EPSS</abbr>.</strong> </p>
+<p>A mathematically defensible solution is obtainable if the goal is changed to include remediation of previously exploited vulnerabilities and a comprehensive <abbr title="Known Exploited Vulnerability">KEV</abbr> list is available. To do this, <strong>change the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores to be 1.0 for all vulnerabilities on a <abbr title="Known Exploited Vulnerability">KEV</abbr> list.</strong></p>
+<p><strong>The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores.</strong> It DOES NOT guarantee to remove all <abbr title="Exploit Prediction Scoring System">EPSS</abbr> errors (only a comprehensive <abbr title="Known Exploited Vulnerability">KEV</abbr> list does that, which is a property that can be measured using LEV). </p>
+</div>
+<h3 id="epss-lev-lev2-approximation">LEV2 Approximation<a class="headerlink" href="#epss-lev-lev2-approximation" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Invalid Probability Division</strong></p>
+<p>The "Small Probability" approximation is not valid for higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the scores of interest).</p>
+</div>
+<p>LEV handles <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores as covering only a single day by dividing them by 30: <span class="arithmatex">\(P_1 \approx P_{30}/30\)</span></p>
+<p>Dividing a 30-day probability by 30 to get a 1-day probability generally <strong>does not make sense</strong> in a rigorous probabilistic context.</p>
+<figure>
+<p><img alt="" src="../assets/images/p30_error.png" />
+  </p>
+<figcaption></figcaption>
+</figure>
+<p><strong>P30</strong> is the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Score (<strong>Probability</strong> of exploitation for the next <strong>30</strong> days)</p>
+<p><strong>Probabilities are not linear over time in this way.</strong> If you have a probability <span class="arithmatex">\(P_{30}\)</span> of an event occurring over 30 days, it doesn't mean the probability on any single day is <span class="arithmatex">\(P_{30}/30\)</span>.</p>
+<p><strong>The "Small Probability" approximation:</strong> The approach (dividing by 30) only makes sense as a rough approximation when the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (which represent 30-day likelihoods) are very small (which is true for most but not all scores, where the ones we care about are high scores):</p>
+<ul>
+<li>If <span class="arithmatex">\(P_1\)</span> is very small, then <span class="arithmatex">\((1 - P_1)^{30} \approx 1 - 30P_1\)</span> (using the binomial approximation or first-order Taylor expansion for <span class="arithmatex">\((1-x)^n \approx 1-nx\)</span> when <span class="arithmatex">\(x\)</span> is small)</li>
+<li>In this case, <span class="arithmatex">\(P_{30} = 1 - (1 - P_1)^{30} \approx 1 - (1 - 30P_1) = 30P_1\)</span></li>
+<li>So, if <span class="arithmatex">\(P_{30} \approx 30P_1\)</span>, then <span class="arithmatex">\(P_1 \approx P_{30}/30\)</span></li>
+</ul>
+<p>This appears to be the underlying assumption for the deliberate simplification made in the NIST formula - likely for computational efficiency.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The LEV2 equation requires significantly more computational resources. It handles <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores
+as covering only a single day by dividing them by 30 (instead of each score covering a 30-day
+window). This enables the equation to incorporate far more <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores within the
+computation and increases the equation's responsiveness to changing scores (especially for
+newly released vulnerabilities).</p>
+</div>
+<h3 id="epss-lev-independent-events-assumption">Independent Events Assumption<a class="headerlink" href="#epss-lev-independent-events-assumption" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Attacks Aren't Random</strong></p>
+<p>The Independent Events Assumption is not valid.</p>
+</div>
+<p><strong>Independent Events Assumption:</strong> If we assume the events (vulnerabilities being exploited) are independent day-to-day, then the probability of <em>not</em> being exploited over 30 days would be the product of the probabilities of <em>not</em> being exploited on each individual day.</p>
+<ul>
+<li>Let <span class="arithmatex">\(P_1\)</span> be the daily probability of exploitation</li>
+<li>The probability of <em>not</em> being exploited on a given day is <span class="arithmatex">\((1 - P_1)\)</span></li>
+<li>The probability of <em>not</em> being exploited over 30 days is <span class="arithmatex">\((1 - P_1)^{30}\)</span></li>
+<li>Therefore, the probability of <em>being</em> exploited over 30 days is <span class="arithmatex">\(1 - (1 - P_1)^{30}\)</span></li>
+<li>If you're given <span class="arithmatex">\(P_{30}\)</span> (the 30-day likelihood), you'd solve <span class="arithmatex">\(P_{30} = 1 - (1 - P_1)^{30}\)</span> for <span class="arithmatex">\(P_1\)</span>. This is a much more complex calculation than simple division</li>
+</ul>
+<p>The <strong>Independent Events Assumption</strong> is not valid because:</p>
+<ul>
+<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data shows that signature detections do have patterns and are not entirely independent events. See <a href="https://www.cyentia.com/epss-study/">detailed analysis of exploitation patterns over time</a></li>
+<li>Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets</li>
+</ul>
+<h3 id="epss-lev-epss-scores-as-lower-bounds-rationale"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds Rationale<a class="headerlink" href="#epss-lev-epss-scores-as-lower-bounds-rationale" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Rationale is lacking for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
+<p>"While <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores assume that a vulnerability has not been observed to be exploited in the past".</p>
+<p>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model or score is not making this assumption.</p>
+<p>This is not the same as the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model not using past exploitation data directly to feed the model.</p>
+</div>
+<h2 id="epss-lev-takeaways">Takeaways<a class="headerlink" href="#epss-lev-takeaways" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title"><strong>KEY TAKEAWAYS</strong></p>
+<p><strong>What LEV Gets Right:</strong></p>
+<ol>
+<li>LEV estimates the likelihood a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> has already been exploited in the wild</li>
+<li>It leverages and compounds historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data for evidence-based prioritization</li>
+<li>Use LEV to measure exploited <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> proportions, evaluate <abbr title="Known Exploited Vulnerability">KEV</abbr> comprehensiveness, and enhance both <abbr title="Known Exploited Vulnerability">KEV</abbr>- and <abbr title="Exploit Prediction Scoring System">EPSS</abbr>-driven workflows</li>
+<li>Combined with continuous validation (e.g., breach-and-attack simulations), LEV helps close the gap between theoretical risk and real-world exploitation</li>
+</ol>
+<p><strong>What to Watch Out For:</strong></p>
+<ol>
+<li><strong>Mathematical approximations</strong> may not hold for high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the ones you care about most)</li>
+<li><strong>Independent events assumption</strong> doesn't reflect real attack patterns</li>
+<li><strong>Past vs. future confusion</strong> - don't assume past exploitation guarantees future exploitation</li>
+<li><strong>Limited validation</strong> - LEV needs real-world calibration before widespread adoption</li>
+</ol>
+</div></section><h1 class='nav-section-title-end'>Ended: NIST LEV</h1>
                         <h2 class='nav-section-title' id='section-stakeholder-specific-vulnerability-categorization-ssvc-'>
                             Stakeholder-Specific Vulnerability Categorization (SSVC) <a class='headerlink' href='#section-stakeholder-specific-vulnerability-categorization-ssvc-' title='Permanent link'>↵</a>
                         </h2>
@@ -7499,6 +7825,10 @@ heavily relied upon.</p>
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
         <script src="../javascripts/tablesort.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
       

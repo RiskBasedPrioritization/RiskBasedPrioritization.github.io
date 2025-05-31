@@ -26,7 +26,8 @@ nav:
       - EPSS and CISA Known Exploited Vulnerabilities (CISA KEV): epss/EPSS_and_CISA_KEV.md
       - What Users Ask For: epss/What_users_ask_for.md
       - EPSS Thresholds: epss/EPSS_Thresholds.md
-      - NIST LEV: epss/LEV.md
+    - NIST LEV: 
+      - NIST LEV: epss/LEV.md      
     - Stakeholder-Specific Vulnerability Categorization (SSVC): 
       - Stakeholder-Specific Vulnerability Categorization (SSVC): ssvc/SSVC.md
       - Decision Trees From Scratch: ssvc/decision_trees_from_scratch.md

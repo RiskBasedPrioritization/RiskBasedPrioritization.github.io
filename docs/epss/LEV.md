@@ -21,31 +21,52 @@ Mell P, Spring J (2025) [NIST CSWP 41: "Likely Exploited Vulnerabilities: A Prop
 CSWP 41. https://doi.org/10.6028/NIST.CSWP.41 
 
 
-Whereas EPSS predicts future exploitation over the next 30 days, LEV works backwards—compounding historical EPSS scores—to quantify past exploitation probability. 
-
-The longer and more consistently a CVE has high non-zero EPSS scores, the higher its LEV, reflecting real-world attacker behavior.
-
-!!! tip
-    
-    LEV is best used when you need evidence-based focus on vulnerabilities likely already weaponized, not just theoretically severe or imminently at risk.
-
-
-!!! tip
-
-    Because LEV is based on EPSS only, the same points about [Applying EPSS to your environment](Applying_EPSS_to_your_environment.md#applying-epss-to-your-environment) apply to LEV also.
-
-
 ## Why LEV Matters
 
-[EPSS](./Introduction_to_EPSS.md) is the probability of exploitation in the next 30 days. 
+[CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been **exploited** in the wild (**past**).
+
+- It contains a subset of known exploited CVEs.
+ 
+[EPSS](./Introduction_to_EPSS.md) is the **probability of exploitation** in the next 30 days (**future**). 
 
  - It is suited to Network environments and may have [False Negatives](./Applying_EPSS_to_your_environment.md#false-positives-and-negatives).
 
-[CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been exploited in the wild.
+LEV gives a **probability of exploitation** in the **past** 
 
-- It contains a subset of known exploited CVEs.
+- LEV works backwards—compounding historical EPSS scores — to quantify past exploitation probability. 
+    - The longer and more consistently a CVE has high EPSS scores, the higher its LEV, reflecting real-world attacker behavior.
+- LEV can be used to augment KEV i.e. shortlist candidates for addition to KEV (with other qualifying factors e.g. industry evidence)
+- In **practice**,
+    - It needs to be validated against real evidence of exploitation data to understand it, validate it, and calibrate it.
+    - The LEV list should be made available directly - or used to augment the KEV list
 
-LEV bridges the gap by highlighting vulnerabilities with the strongest historical signal of exploitation (based on EPSS historical data).
+
+
+
+!!! tip "As a general user, how do I use LEV"
+
+    You don't:
+    
+    - The LEV list is not officially published as of June 1 2025. And even if it was, the LEV list by itself is not that useful for a general user i.e. there isn't a user guide, there isn't validation of the data.
+    - General users who use CISA KEV may benefit from LEV by additional validated entries being added to KEV ala use case "augment KEV based vulnerability remediation prioritization by identifying higherprobability vulnerabilities that may be missing" 
+
+
+
+!!! tip "LEV inherits some characteristics of EPSS"
+
+    Because LEV is based on EPSS only, the same points about [Applying EPSS to your environment](Applying_EPSS_to_your_environment.md#applying-epss-to-your-environment) apply to LEV also.
+
+!!! quote "LEV use cases"
+
+    The LEV probabilities have at least four use cases:
+    
+    1. measure the expected number and proportion of vulnerabilities, as identified by Common Vulnerability and Exposures (CVE) identifiers, that actors have exploited,
+    2. estimate the comprehensiveness of KEV lists,
+    3. augment KEV based vulnerability remediation prioritization by identifying higherprobability vulnerabilities that may be missing, and
+    4. augment EPSS based vulnerability remediation prioritization by identifying vulnerabilities that may be underscored. 
+    
+    [NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf)
+
 
 ## How LEV Works
 
@@ -88,10 +109,6 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
     * Combine LEV with EPSS (and KEV overrides) in a Composite Probability:
         `max(EPSS, KEV_flag, LEV)`
     * Ensures previously exploited CVEs receive top attention.
-
-!!! quote "Translating Probability into Action"
-
-    LEV provides historical context EPSS omits and KEV lists can’t fully capture. Use it to turn probabilistic insight into targeted mitigation.
 
 
 

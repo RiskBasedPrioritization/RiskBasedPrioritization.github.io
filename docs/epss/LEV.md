@@ -8,7 +8,7 @@
     -   why it matters for day-to-day prioritization  
     -   how to apply it alongside EPSS and KEV  
 
-    :technologist: [Source Code] will be provided for LEV. Instead of making invalid assumptions to optimize the computation for LEV2 (handling "EPSS scores as covering only a single day by dividing them by 30": $P_1 \approx P_{30}/30$), it will use the correct algorithm but optimize with concurrent processing.
+    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/LEV/) is a clean-room implementation of the LEV source code i.e. from the whitepaper only. It is not associated with the LEV paper authors.
 
 ## What is LEV?
 
@@ -155,8 +155,11 @@ LEV handles EPSS scores as covering only a single day by dividing them by 30: $P
 
 Dividing a 30-day probability by 30 to get a 1-day probability generally **does not make sense** in a rigorous probabilistic context.
 
+An example run of the code from EPSS to 2023-3-7 to 2025-5-31 showed that this approximation resulted in +674 vulnerabilities (+1.57%) less than the rigorous approach.
+
+
 <figure markdown>
-  ![](../assets/images/p30_error.png)
+  ![](../assets/images/p30_error.png){ width="800px" }
   <figcaption></figcaption>
 </figure>
 
@@ -179,6 +182,13 @@ This appears to be the underlying assumption for the deliberate simplification m
     window). This enables the equation to incorporate far more EPSS scores within the
     computation and increases the equation's responsiveness to changing scores (especially for
     newly released vulnerabilities).
+
+!!! tip
+
+    Using standard concurrent processing per the source code, the approximation is not required on a standard computer.
+
+    - the code completes in minutes 
+
 
 ### Independent Events Assumption
 

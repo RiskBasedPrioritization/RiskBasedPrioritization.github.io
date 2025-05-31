@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
 
-    In this section we introduce LEV
+    In this section we introduce NIST Likely Exploited Vulnerabilities (LEV) 
 
     -   what it is and what it adds to vulnerability management  
     -   why it matters for day-to-day prioritization  
@@ -23,6 +23,12 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
 ## Why LEV Matters
 
+|                             | **Past**                                    | **Future**                                     |
+|-----------------------------|---------------------------------------------|------------------------------------------------|
+| **Exploited**               | [CISA KEV](../cisa_kev/cisa_kev.md)         |                                        |
+| **Probability of Exploitation** | LEV (past probability)                    | [EPSS](./Introduction_to_EPSS.md) (next 30 days) |
+
+
 [CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been **exploited** in the wild (**past**).
 
 - It contains a subset of known exploited CVEs.
@@ -33,9 +39,9 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
 LEV gives a **probability of exploitation** in the **past** 
 
+- LEV can be used to augment CISA KEV i.e. shortlist candidates for addition to KEV (with other qualifying factors e.g. industry evidence)
 - LEV works backwards—compounding historical EPSS scores — to quantify past exploitation probability. 
     - The longer and more consistently a CVE has high EPSS scores, the higher its LEV, reflecting real-world attacker behavior.
-- LEV can be used to augment KEV i.e. shortlist candidates for addition to KEV (with other qualifying factors e.g. industry evidence)
 - In **practice**,
     - It needs to be validated against real evidence of exploitation data to understand it, validate it, and calibrate it.
     - The LEV list should be made available directly - or used to augment the KEV list

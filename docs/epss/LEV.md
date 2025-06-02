@@ -21,9 +21,9 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
 ## Why LEV Matters
 
-!!! tip "**KEY INSIGHT: The Three-Dimensional View of Vulnerability Risk**"
+!!! tip "**KEY INSIGHT: LEV gives an additional View of Vulnerability Risk**"
 
-    LEV fills a critical gap by looking backward in time, complementing forward-looking and current exploitation data:
+    LEV fills a gap by looking backward in time, complementing forward-looking and current exploitation data:
 
     |                             | **Past**                                    | **Future**                                     |
     |-----------------------------|---------------------------------------------|------------------------------------------------|
@@ -149,7 +149,9 @@ This Risk Based Prioritization guide has already covered the misunderstanding wh
 
 !!! warning "**Invalid Probability Division**"
     
-    The "Small Probability" approximation is not valid for higher EPSS scores (the scores of interest).
+    The "Small Probability" approximation is not valid for higher EPSS scores (the scores of interest), and is not necessary if the computation is optimized per the [Source Code](https://github.com/RiskBasedPrioritization/LEV/) provided here.
+
+    - Rigorous vs NIST approximation time ratio: 2.23x
     
 LEV handles EPSS scores as covering only a single day by dividing them by 30: $P_1 \approx P_{30}/30$
 
@@ -187,7 +189,12 @@ This appears to be the underlying assumption for the deliberate simplification m
 
     Using standard concurrent processing per the source code, the approximation is not required on a standard computer.
 
-    - the code completes in minutes 
+    The code to calculate LEV (both approximation and rigorous), and the composite probability (both approximation and rigorous) completes in less than 30 minutes on a standard computer. 
+    
+    - The approximation calculations are not required but in the code for comparison.
+    - See example log file: https://github.com/RiskBasedPrioritization/LEV/blob/main/logs/20250531_180156.log
+
+    Calculations for new days (new runs) can be very fast if the code is optimized to use existing calculations from previous runs (it isn't currently).
 
 
 ### Independent Events Assumption
@@ -206,7 +213,7 @@ This appears to be the underlying assumption for the deliberate simplification m
   
 The **Independent Events Assumption** is not valid because:
 
-- The EPSS data shows that signature detections do have patterns and are not entirely independent events. See [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/)
+- The EPSS data shows that signature detections do have patterns and are not entirely independent events. See [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/).
 - Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets
 
 ###  EPSS Scores as Lower Bounds Rationale 
@@ -215,11 +222,12 @@ The **Independent Events Assumption** is not valid because:
 
     "While EPSS scores assume that a vulnerability has not been observed to be exploited in the past".
 
-    The EPSS model or score is not making this assumption.
+    - The EPSS model or score is not making this assumption.
+    - This is not the same as the EPSS model not using past exploitation data directly to feed the model.
 
-    This is not the same as the EPSS model not using past exploitation data directly to feed the model.
+    The "EPSS Scores as Lower Bounds" rationale from the NIST CSWP 41 paper basically says:
+    "If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."
 
-    
 ## Takeaways
 
 !!! success "**KEY TAKEAWAYS**"

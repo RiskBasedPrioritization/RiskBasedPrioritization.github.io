@@ -4608,8 +4608,8 @@ Mell P, Spring J (2025) <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSW
 CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/NIST.CSWP.41</a> </p>
 <h2 id="epss-lev-why-lev-matters">Why LEV Matters<a class="headerlink" href="#epss-lev-why-lev-matters" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
-<p class="admonition-title"><strong>KEY INSIGHT: The Three-Dimensional View of Vulnerability <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></strong></p>
-<p>LEV fills a critical gap by looking backward in time, complementing forward-looking and current exploitation data:</p>
+<p class="admonition-title"><strong>KEY INSIGHT: LEV gives an additional View of Vulnerability <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr></strong></p>
+<p>LEV fills a gap by looking backward in time, complementing forward-looking and current exploitation data:</p>
 <table>
 <thead>
 <tr>
@@ -4775,7 +4775,10 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <h3 id="epss-lev-lev2-approximation">LEV2 Approximation<a class="headerlink" href="#epss-lev-lev2-approximation" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title"><strong>Invalid Probability Division</strong></p>
-<p>The "Small Probability" approximation is not valid for higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the scores of interest).</p>
+<p>The "Small Probability" approximation is not valid for higher <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the scores of interest), and is not necessary if the computation is optimized per the <a href="https://github.com/RiskBasedPrioritization/LEV/">Source Code</a> provided here.</p>
+<ul>
+<li>Rigorous vs NIST approximation time ratio: 2.23x</li>
+</ul>
 </div>
 <p>LEV handles <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores as covering only a single day by dividing them by 30: <span class="arithmatex">\(P_1 \approx P_{30}/30\)</span></p>
 <p>Dividing a 30-day probability by 30 to get a 1-day probability generally <strong>does not make sense</strong> in a rigorous probabilistic context.</p>
@@ -4805,9 +4808,12 @@ newly released vulnerabilities).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Using standard concurrent processing per the source code, the approximation is not required on a standard computer.</p>
+<p>The code to calculate LEV (both approximation and rigorous), and the composite probability (both approximation and rigorous) completes in less than 30 minutes on a standard computer. </p>
 <ul>
-<li>the code completes in minutes </li>
+<li>The approximation calculations are not required but in the code for comparison.</li>
+<li>See example log file: <a href="https://github.com/RiskBasedPrioritization/LEV/blob/main/logs/20250531_180156.log">https://github.com/RiskBasedPrioritization/LEV/blob/main/logs/20250531_180156.log</a></li>
 </ul>
+<p>Calculations for new days (new runs) can be very fast if the code is optimized to use existing calculations from previous runs (it isn't currently).</p>
 </div>
 <h3 id="epss-lev-independent-events-assumption">Independent Events Assumption<a class="headerlink" href="#epss-lev-independent-events-assumption" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
@@ -4824,15 +4830,19 @@ newly released vulnerabilities).</p>
 </ul>
 <p>The <strong>Independent Events Assumption</strong> is not valid because:</p>
 <ul>
-<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data shows that signature detections do have patterns and are not entirely independent events. See <a href="https://www.cyentia.com/epss-study/">detailed analysis of exploitation patterns over time</a></li>
+<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data shows that signature detections do have patterns and are not entirely independent events. See <a href="https://www.cyentia.com/epss-study/">detailed analysis of exploitation patterns over time</a>.</li>
 <li>Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets</li>
 </ul>
 <h3 id="epss-lev-epss-scores-as-lower-bounds-rationale"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds Rationale<a class="headerlink" href="#epss-lev-epss-scores-as-lower-bounds-rationale" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title"><strong>Rationale is lacking for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
 <p>"While <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores assume that a vulnerability has not been observed to be exploited in the past".</p>
-<p>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model or score is not making this assumption.</p>
-<p>This is not the same as the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model not using past exploitation data directly to feed the model.</p>
+<ul>
+<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model or score is not making this assumption.</li>
+<li>This is not the same as the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model not using past exploitation data directly to feed the model.</li>
+</ul>
+<p>The "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds" rationale from the NIST CSWP 41 paper basically says:
+"If the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> IDS data sees an actual attack attempt (so true positive in the validation data), the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is not set to 1 for that day. So the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on that day is an under-estimate."</p>
 </div>
 <h2 id="epss-lev-takeaways">Takeaways<a class="headerlink" href="#epss-lev-takeaways" title="Permanent link">&para;</a></h2>
 <div class="admonition success">

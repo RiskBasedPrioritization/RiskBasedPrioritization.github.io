@@ -21,6 +21,7 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
 ## Why LEV Matters
 
+
 !!! tip "**KEY INSIGHT: LEV gives an additional View of Vulnerability Risk**"
 
     LEV fills a gap by looking backward in time, complementing forward-looking and current exploitation data:
@@ -29,6 +30,13 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
     |-----------------------------|---------------------------------------------|------------------------------------------------|
     | **Exploited**               | [CISA KEV](../cisa_kev/cisa_kev.md)         |                                        |
     | **Probability of Exploitation** | **LEV (past probability)**                    | [EPSS](./Introduction_to_EPSS.md) (next 30 days) |
+
+<figure markdown>
+  ![](../assets/images/lev_risk.png){ width="800px" }
+  <figcaption></figcaption>
+</figure>
+
+*The diagram above is an extract from [Risk Remediation Taxonomy Detailed](../risk/Understanding_Risk.md#risk-remediation-taxonomy-detailed).*
 
 [CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been **exploited** in the wild (**past**).
 

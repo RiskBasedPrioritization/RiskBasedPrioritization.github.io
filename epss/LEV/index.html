@@ -1995,7 +1995,19 @@
 <li>why it matters for day-to-day prioritization  </li>
 <li>how to apply it alongside <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and <abbr title="Known Exploited Vulnerability">KEV</abbr>  </li>
 </ul>
-<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/RiskBasedPrioritization/LEV/">Source Code</a> is a clean-room implementation of the LEV source code i.e. from the whitepaper only. It is not associated with the LEV paper authors.</p>
+<p><img alt="🧑‍💻" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f9d1-200d-1f4bb.svg" title=":technologist:" /> <a href="https://github.com/RiskBasedPrioritization/LEV/">LEV source code</a> is a cleanroom implementation based on the whitepaper (not associated with the paper authors)</p>
+<ul>
+<li>Uses compute optimizations (multi core, vector multiplication) to avoid the mathematical P30 probability optimization in the paper (which does not hold for high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores) to achieve a runtime of ~30 minutes for the first run<ul>
+<li>Subsequent runs on new day data can be optimized as a delta of the first run and would complete in ~~1 minute.</li>
+</ul>
+</li>
+<li>Generated LEV data: <a href="https://github.com/RiskBasedPrioritization/LEV/tree/main/data_out">https://github.com/RiskBasedPrioritization/LEV/tree/main/data_out</a></li>
+<li>Analysis of resulting LEV data: <a href="https://github.com/RiskBasedPrioritization/LEV/blob/main/lev_analyzer_README.md">LEVAnalyzer</a><ul>
+<li><a href="https://github.com/RiskBasedPrioritization/LEV/blob/main/analysis/lev_analysis_plots/analysis_report.md">Core Analysis Report</a></li>
+<li><a href="https://github.com/RiskBasedPrioritization/LEV/blob/main/analysis/advanced_lev_analysis_plots/advanced_analysis_report.md">Advanced Analysis Report</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <h2 id="what-is-lev">What is LEV?<a class="headerlink" href="#what-is-lev" title="Permanent link">&para;</a></h2>
 <p><strong>Likely Exploited Vulnerabilities (LEV) is a probabilistic score proposed by NIST to estimate the chance that a published vulnerability (<abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>) has already been exploited in the wild</strong>. </p>

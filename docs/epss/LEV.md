@@ -138,6 +138,13 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
 
     - does not know or care **directly** about previous exploitation activity i.e. it does not have an explicit variable for this.
     - does know and care **indirectly** about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.
+        - An example of this from [Fortinet 2H 2023 Global Threat Landscape Report](https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf) where some of the features that EPSS includes (Exploit code published in GitHub, Nuclei template added, reference added to CVE and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the EPSS score to rise, in advance of the exploitation activity detected by the sensor.
+        - This example is given to clarify the above point - not to imply that this is how it always plays out.
+- 
+    <figure markdown>
+    ![](../assets/images/epss_fortinet.png){ width="800px" }
+    <figcaption></figcaption>
+    </figure>
 
 
 

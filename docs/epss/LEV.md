@@ -128,6 +128,19 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
 
 ### Misunderstanding of EPSS?
 
+!!! tip
+
+    See [State of EPSS and What to Expect from Version 4](https://youtu.be/o1XKTgX1JeE?feature=shared&t=1827), Jay Jacobs, April 2025 for how the model is **created** with  historic exploitation activity data.
+
+    - where a new version of the model is created ~~ every year so far e.g. EPSS v1 to today's EPSS v4.
+
+    Once created, the EPSS model when **running**
+
+    - does not know or care **directly** about previous exploitation activity i.e. it does not have an explicit variable for this.
+    - does know and care **indirectly** about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.
+
+
+
 !!! warning "**CRITICAL INSIGHT: Past vs. Future Exploitation**"
 
     [NIST CSWP 41](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf) suggests that EPSS provides inaccurate scores for previously exploited vulnerabilities, and recommends changing the EPSS scores to be 1.0 for all vulnerabilities on a KEV list.

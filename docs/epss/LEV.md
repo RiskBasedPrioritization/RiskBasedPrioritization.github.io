@@ -231,6 +231,7 @@ However, the Independent Events Assumption is problematic because:
 * Human-driven attacks often follow discernible patterns, such as persistent threats or periodic target probing, further invalidating independence.
 
 
+
 !!! quote
 
     Probability error – the LEV equation (10) makes some mistake or invalid assumption. For example, since (10) takes in multiple scores per probability calculation, it could amplify small dependent errors if the equation incorrectly assumes independence. 
@@ -246,6 +247,7 @@ However, the Independent Events Assumption is problematic because:
 
     *"If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."*
 
+See [Misunderstanding of EPSS? 👆](#misunderstanding-of-epss).
 ## Takeaways
 
 !!! success "**KEY TAKEAWAYS**"

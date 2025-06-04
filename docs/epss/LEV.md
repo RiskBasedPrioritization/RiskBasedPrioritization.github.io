@@ -8,8 +8,14 @@
     -   why it matters for day-to-day prioritization  
     -   how to apply it alongside EPSS and KEV  
 
-    :technologist: [Source Code](https://github.com/RiskBasedPrioritization/LEV/) is a clean-room implementation of the LEV source code i.e. from the whitepaper only. It is not associated with the LEV paper authors.
+    :technologist: [LEV source code](https://github.com/RiskBasedPrioritization/LEV/) is a cleanroom implementation based on the whitepaper (not associated with the paper authors)
 
+    - Uses compute optimizations (multi core, vector multiplication) to avoid the mathematical P30 probability optimization in the paper (which does not hold for high EPSS scores) to achieve a runtime of ~30 minutes for the first run
+        - Subsequent runs on new day data can be optimized as a delta of the first run and would complete in ~~1 minute.
+    - Generated LEV data: https://github.com/RiskBasedPrioritization/LEV/tree/main/data_out
+    - Analysis of resulting LEV data: [LEVAnalyzer](https://github.com/RiskBasedPrioritization/LEV/blob/main/lev_analyzer_README.md)
+        - [Core Analysis Report](https://github.com/RiskBasedPrioritization/LEV/blob/main/analysis/lev_analysis_plots/analysis_report.md)
+        - [Advanced Analysis Report](https://github.com/RiskBasedPrioritization/LEV/blob/main/analysis/advanced_lev_analysis_plots/advanced_analysis_report.md)
 ## What is LEV?
 
 **Likely Exploited Vulnerabilities (LEV) is a probabilistic score proposed by NIST to estimate the chance that a published vulnerability (CVE) has already been exploited in the wild**. 

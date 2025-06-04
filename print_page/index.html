@@ -4770,20 +4770,15 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <ul>
 <li>does not know or care <strong>directly</strong> about previous exploitation activity i.e. it does not have an explicit variable for this.</li>
 <li>does know and care <strong>indirectly</strong> about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.<ul>
-<li>An example of this from <a href="https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf">Fortinet 2H 2023 Global Threat Landscape Report</a> where some of the features that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> includes (Exploit code published in GitHub, Nuclei template added, reference added to <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to rise, in advance of the exploitation activity detected by the sensor.</li>
-<li>This example is given to clarify the above point - not to imply that this is how it always plays out.</li>
+<li>An example of this from <a href="https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf">Fortinet 2H 2023 Global Threat Landscape Report</a> where some of the features that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> includes (Exploit code published in GitHub, Nuclei template added, reference added to <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to rise, in advance of the exploitation activity detected by the sensor. (This example is given to clarify the above point - not to imply that this is how it always plays out.)
+<figure markdown>
+<img alt="" src="../assets/images/epss_fortinet.png" width="800px" />
+<figcaption></figcaption>
+</figure></li>
 </ul>
 </li>
 </ul>
 </div>
-<ul>
-<li>
-<p><figure markdown>
-<img alt="" src="../assets/images/epss_fortinet.png" width="800px" />
-<figcaption></figcaption>
-</figure></p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title"><strong>CRITICAL INSIGHT: Past vs. Future Exploitation</strong></p>
 <p><a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41</a> suggests that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> provides inaccurate scores for previously exploited vulnerabilities, and recommends changing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores to be 1.0 for all vulnerabilities on a <abbr title="Known Exploited Vulnerability">KEV</abbr> list.</p>

@@ -4835,32 +4835,32 @@ newly released vulnerabilities).</p>
 </div>
 <h3 id="epss-lev-independent-events-assumption">Independent Events Assumption<a class="headerlink" href="#epss-lev-independent-events-assumption" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
-<p class="admonition-title"><strong>Attacks Aren't Random</strong></p>
-<p>The Independent Events Assumption is not valid.</p>
+<p class="admonition-title"><strong>Caution: Independent Events Assumption introduces potential inaccuracies</strong></p>
+<p>Assuming vulnerability exploitation events occur independently each day simplifies calculations but likely introduces inaccuracies, as real-world exploitation patterns are not random.</p>
 </div>
-<p><strong>Independent Events Assumption:</strong> If we assume the events (vulnerabilities being exploited) are independent day-to-day, then the probability of <em>not</em> being exploited over 30 days would be the product of the probabilities of <em>not</em> being exploited on each individual day.</p>
+<p>Under this assumption:</p>
 <ul>
-<li>Let <span class="arithmatex">\(P_1\)</span> be the daily probability of exploitation</li>
-<li>The probability of <em>not</em> being exploited on a given day is <span class="arithmatex">\((1 - P_1)\)</span></li>
-<li>The probability of <em>not</em> being exploited over 30 days is <span class="arithmatex">\((1 - P_1)^{30}\)</span></li>
-<li>Therefore, the probability of <em>being</em> exploited over 30 days is <span class="arithmatex">\(1 - (1 - P_1)^{30}\)</span></li>
-<li>If you're given <span class="arithmatex">\(P_{30}\)</span> (the 30-day likelihood), you'd solve <span class="arithmatex">\(P_{30} = 1 - (1 - P_1)^{30}\)</span> for <span class="arithmatex">\(P_1\)</span>. This is a much more complex calculation than simple division</li>
+<li>Daily probability of exploitation is denoted by <span class="arithmatex">\(P_1\)</span>.</li>
+<li>Probability of not being exploited on any given day is <span class="arithmatex">\((1 - P_1)\)</span>.</li>
+<li>Probability of not being exploited over 30 days is <span class="arithmatex">\((1 - P_1)^{30}\)</span>.</li>
+<li>Thus, probability of being exploited within 30 days is <span class="arithmatex">\(1 - (1 - P_1)^{30}\)</span>.</li>
+<li>Given the 30-day exploitation likelihood <span class="arithmatex">\(P_{30}\)</span>, the daily probability <span class="arithmatex">\(P_1\)</span> is calculated by solving: <span class="arithmatex">\(P_{30} = 1 - (1 - P_1)^{30}\)</span>.</li>
 </ul>
-<p>The <strong>Independent Events Assumption</strong> is not valid because:</p>
+<p>However, the Independent Events Assumption is problematic because:</p>
 <ul>
-<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data shows that signature detections do have patterns and are not entirely independent events. See <a href="https://www.cyentia.com/epss-study/">detailed analysis of exploitation patterns over time</a>.</li>
-<li>Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets</li>
+<li>Actual exploitation events display patterns and dependencies, not random occurrences, as shown in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> exploitation analyses.</li>
+<li>Human-driven attacks often follow discernible patterns, such as persistent threats or periodic target probing, further invalidating independence.</li>
 </ul>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Probability error – the LEV equation (10) makes some mistake or invalid assumption. For example, since (10) takes in multiple scores per probability calculation, it could amplify small dependent errors if the equation incorrectly assumes independence. </p>
+<p>Page 20 <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"</a></p>
+</div>
 <h3 id="epss-lev-epss-scores-as-lower-bounds-rationale"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds Rationale<a class="headerlink" href="#epss-lev-epss-scores-as-lower-bounds-rationale" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
-<p class="admonition-title"><strong>Rationale is lacking for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
-<p>"While <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores assume that a vulnerability has not been observed to be exploited in the past".</p>
-<ul>
-<li>The <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model or score is not making this assumption.</li>
-<li>This is not the same as the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model not using past exploitation data directly to feed the model.</li>
-</ul>
-<p>The "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds" rationale from the NIST CSWP 41 paper basically says:
-"If the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> IDS data sees an actual attack attempt (so true positive in the validation data), the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is not set to 1 for that day. So the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on that day is an under-estimate."</p>
+<p class="admonition-title"><strong>Rationale for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
+<p>The "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:</p>
+<p><em>"If the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> IDS data sees an actual attack attempt (so true positive in the validation data), the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is not set to 1 for that day. So the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on that day is an under-estimate."</em></p>
 </div>
 <h2 id="epss-lev-takeaways">Takeaways<a class="headerlink" href="#epss-lev-takeaways" title="Permanent link">&para;</a></h2>
 <div class="admonition success">

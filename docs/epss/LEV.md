@@ -213,34 +213,38 @@ This appears to be the underlying assumption for the deliberate simplification m
 
 ### Independent Events Assumption
 
-!!! warning "**Attacks Aren't Random**"
-    
-    The Independent Events Assumption is not valid.
+!!! warning "**Caution: Independent Events Assumption introduces potential inaccuracies**"
 
-**Independent Events Assumption:** If we assume the events (vulnerabilities being exploited) are independent day-to-day, then the probability of *not* being exploited over 30 days would be the product of the probabilities of *not* being exploited on each individual day.
+    Assuming vulnerability exploitation events occur independently each day simplifies calculations but likely introduces inaccuracies, as real-world exploitation patterns are not random.
 
-* Let $P_1$ be the daily probability of exploitation
-* The probability of *not* being exploited on a given day is $(1 - P_1)$
-* The probability of *not* being exploited over 30 days is $(1 - P_1)^{30}$
-* Therefore, the probability of *being* exploited over 30 days is $1 - (1 - P_1)^{30}$
-* If you're given $P_{30}$ (the 30-day likelihood), you'd solve $P_{30} = 1 - (1 - P_1)^{30}$ for $P_1$. This is a much more complex calculation than simple division
-  
-The **Independent Events Assumption** is not valid because:
+Under this assumption:
 
-- The EPSS data shows that signature detections do have patterns and are not entirely independent events. See [detailed analysis of exploitation patterns over time](https://www.cyentia.com/epss-study/).
-- Attacks driven by people have patterns e.g., a persistent threat, periodic probing of targets
+* Daily probability of exploitation is denoted by $P_1$.
+* Probability of not being exploited on any given day is $(1 - P_1)$.
+* Probability of not being exploited over 30 days is $(1 - P_1)^{30}$.
+* Thus, probability of being exploited within 30 days is $1 - (1 - P_1)^{30}$.
+* Given the 30-day exploitation likelihood $P_{30}$, the daily probability $P_1$ is calculated by solving: $P_{30} = 1 - (1 - P_1)^{30}$.
+
+However, the Independent Events Assumption is problematic because:
+
+* Actual exploitation events display patterns and dependencies, not random occurrences, as shown in EPSS exploitation analyses.
+* Human-driven attacks often follow discernible patterns, such as persistent threats or periodic target probing, further invalidating independence.
+
+
+!!! quote
+
+    Probability error – the LEV equation (10) makes some mistake or invalid assumption. For example, since (10) takes in multiple scores per probability calculation, it could amplify small dependent errors if the equation incorrectly assumes independence. 
+
+    Page 20 [NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf)
+
 
 ###  EPSS Scores as Lower Bounds Rationale 
 
-!!! warning "**Rationale is lacking for EPSS Scores as Lower Bounds**"
+!!! warning "**Rationale for EPSS Scores as Lower Bounds**"
 
-    "While EPSS scores assume that a vulnerability has not been observed to be exploited in the past".
+    The "EPSS Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:
 
-    - The EPSS model or score is not making this assumption.
-    - This is not the same as the EPSS model not using past exploitation data directly to feed the model.
-
-    The "EPSS Scores as Lower Bounds" rationale from the NIST CSWP 41 paper basically says:
-    "If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."
+    *"If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."*
 
 ## Takeaways
 

@@ -4760,6 +4760,18 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <hr />
 <h2 id="epss-lev-concerns">Concerns<a class="headerlink" href="#epss-lev-concerns" title="Permanent link">&para;</a></h2>
 <h3 id="epss-lev-misunderstanding-of-epss">Misunderstanding of <abbr title="Exploit Prediction Scoring System">EPSS</abbr>?<a class="headerlink" href="#epss-lev-misunderstanding-of-epss" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See <a href="https://youtu.be/o1XKTgX1JeE?feature=shared&amp;t=1827">State of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and What to Expect from Version 4</a>, Jay Jacobs, April 2025 for how the model is <strong>created</strong> with  historic exploitation activity data.</p>
+<ul>
+<li>where a new version of the model is created ~~ every year so far e.g. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v1 to today's <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v4.</li>
+</ul>
+<p>Once created, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model when <strong>running</strong></p>
+<ul>
+<li>does not know or care <strong>directly</strong> about previous exploitation activity i.e. it does not have an explicit variable for this.</li>
+<li>does know and care <strong>indirectly</strong> about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.</li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title"><strong>CRITICAL INSIGHT: Past vs. Future Exploitation</strong></p>
 <p><a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41</a> suggests that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> provides inaccurate scores for previously exploited vulnerabilities, and recommends changing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores to be 1.0 for all vulnerabilities on a <abbr title="Known Exploited Vulnerability">KEV</abbr> list.</p>

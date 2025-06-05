@@ -4878,7 +4878,7 @@ newly released vulnerabilities).</p>
 <li>Thus, probability of being exploited within 30 days is <span class="arithmatex">\(1 - (1 - P_1)^{30}\)</span>.</li>
 <li>Given the 30-day exploitation likelihood <span class="arithmatex">\(P_{30}\)</span>, the daily probability <span class="arithmatex">\(P_1\)</span> is calculated by solving: <span class="arithmatex">\(P_{30} = 1 - (1 - P_1)^{30}\)</span>.</li>
 </ul>
-<p>However, the Independent Events Assumption is problematic because:</p>
+<p>However, the Independent Events Assumption is false (and this may impact the LEV results) because:</p>
 <ul>
 <li>Actual exploitation events, and the events that precede them that are features in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> (e.g. exploit being weaponized in Nuclei, Metasploit etc.., increase in related social media activity) display patterns and dependencies, not random occurrences, as shown in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> exploitation analyses.</li>
 </ul>

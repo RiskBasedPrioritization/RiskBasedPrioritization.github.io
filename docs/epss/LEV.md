@@ -34,8 +34,11 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
     |                             | **Past**                                    | **Future**                                     |
     |-----------------------------|---------------------------------------------|------------------------------------------------|
-    | **Exploited**               | [CISA KEV](../cisa_kev/cisa_kev.md)         |                                        |
+    | **Exploited**               | [CISA KEV](../cisa_kev/cisa_kev.md) (Known Exploited)         |               -                         |
     | **Probability of Exploitation** | **LEV (past probability)**                    | [EPSS](./Introduction_to_EPSS.md) (next 30 days) |
+
+
+### Where LEV fits
 
 <figure markdown>
   ![](../assets/images/lev_risk.png){ width="800px" }
@@ -46,7 +49,7 @@ CSWP 41. https://doi.org/10.6028/NIST.CSWP.41
 
 [CISA KEV](../cisa_kev/cisa_kev.md) is a list of vulnerabilities that have been **exploited** in the wild (**past**).
 
-- It contains a subset of known exploited CVEs
+- It contains a subset of known exploited CVEs (i.e has False Negatives)
 - Typically, once a vulnerability is added to a KEV list, it stays on the list permanently
  
 [EPSS](./Introduction_to_EPSS.md) is the **probability of exploitation** in the next 30 days (**future**). 
@@ -64,7 +67,7 @@ LEV gives a **probability of exploitation** in the **past**
 
 !!! tip "As a general user, how do I use LEV?"
 
-    You don't:
+    You don't, for now...
     
     - The LEV list is not officially published as of June 1, 2025. And even if it were, the LEV list by itself is not that useful for a general user i.e., there isn't a user guide, there isn't validation of the data
     - General users who use CISA KEV may benefit from LEV by additional validated entries being added to KEV per use case "augment KEV based vulnerability remediation prioritization by identifying higher-probability vulnerabilities that may be missing" 
@@ -89,6 +92,10 @@ LEV gives a **probability of exploitation** in the **past**
 !!! success "**KEY TAKEAWAY: LEV's Backward-Looking Algorithm**"
 
     LEV essentially asks: "Given all the historical EPSS scores, what's the probability this vulnerability was exploited at some point in the past?"
+
+    Because an EPSS score is a probability (of exploitation in the next 30 days), and there is daily historical EPSS scores available, standard probability theory can be used to determine other probabilities e.g. 
+
+    - the probability for a different number of days - in the future or past
 
 1. **Windowing EPSS**
       * EPSS(v, dᵢ) gives the probability of exploitation in the 30-day window starting at date dᵢ
@@ -128,17 +135,19 @@ LEV outputs a daily, per-CVE probability of past exploitation along with support
 
 ### Misunderstanding of EPSS?
 
-!!! tip
+!!! tip "How EPSS works"
 
+    This information on how EPSS works is provided for context for the concerns below.
+    
     See [State of EPSS and What to Expect from Version 4](https://youtu.be/o1XKTgX1JeE?feature=shared&t=1827), Jay Jacobs, April 2025 for how the model is **created** with  historic exploitation activity data.
 
-    - where a new version of the model is created ~~ every year so far e.g. EPSS v1 to today's EPSS v4.
+    - where a new version of the model is created ~~ [every year so far](https://www.first.org/epss/) e.g. EPSS v1 to today's EPSS v4.
 
     Once created, the EPSS model when **running**
 
     - does not know or care **directly** about previous exploitation activity i.e. it does not have an explicit variable for this.
-    - does know and care **indirectly** about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.
-        - An example of this from [Fortinet 2H 2023 Global Threat Landscape Report](https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf) where some of the features that EPSS includes (Exploit code published in GitHub, Nuclei template added, reference added to CVE and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the EPSS score to rise, in advance of the exploitation activity detected by the sensor. (This example is given to clarify the above point - not to imply that this is how it always plays out.)
+    - does know and care **indirectly** about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity. 
+        - An example of this from [Fortinet 2H 2023 Global Threat Landscape Report](https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf) where some of the features that EPSS includes (Exploit code published in GitHub, Nuclei template added, reference added to CVE and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the EPSS score to rise, in advance of the exploitation activity detected by the sensor. (This example that illustrates the predictive (probability in next 30 days) nature of EPSS is given to clarify the above point - not to imply that this is how it always plays out.)
         <figure markdown>
         ![](../assets/images/epss_fortinet.png){ width="800px" }
         <figcaption></figcaption>
@@ -179,6 +188,16 @@ This Risk Based Prioritization guide has already covered the misunderstanding wh
 
     **The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate EPSS scores.** It DOES NOT guarantee to remove all EPSS errors (only a comprehensive KEV list does that, which is a property that can be measured using LEV). 
 
+###  EPSS Scores as Lower Bounds Rationale 
+
+!!! warning "**Rationale for EPSS Scores as Lower Bounds**"
+
+    The "EPSS Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:
+
+    *"If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."*
+
+See [Misunderstanding of EPSS? 👆](#misunderstanding-of-epss).
+
 ### LEV2 Approximation
 
 !!! warning "**Invalid Probability Division**"
@@ -191,7 +210,7 @@ LEV handles EPSS scores as covering only a single day by dividing them by 30: $P
 
 Dividing a 30-day probability by 30 to get a 1-day probability generally **does not make sense** in a rigorous probabilistic context.
 
-An example run of the code from EPSS to 2023-3-7 to 2025-5-31 showed that this approximation resulted in +674 vulnerabilities (+1.57%) less than the rigorous approach.
+An example run of the code from EPSS to 2023-3-7 ([EPSS v3 release](https://www.first.org/epss/)) to 2025-5-31 showed that this approximation resulted in +674 vulnerabilities (+1.57%) less than the rigorous approach.
 
 
 <figure markdown>
@@ -247,8 +266,8 @@ Under this assumption:
 
 However, the Independent Events Assumption is problematic because:
 
-* Actual exploitation events display patterns and dependencies, not random occurrences, as shown in EPSS exploitation analyses.
-* Human-driven attacks often follow discernible patterns, such as persistent threats or periodic target probing, further invalidating independence.
+* Actual exploitation events, and the events that precede them that are features in EPSS (e.g. exploit being weaponized in Nuclei, Metasploit etc.., increase in related social media activity) display patterns and dependencies, not random occurrences, as shown in EPSS exploitation analyses.
+
 
 
 
@@ -259,15 +278,7 @@ However, the Independent Events Assumption is problematic because:
     Page 20 [NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf)
 
 
-###  EPSS Scores as Lower Bounds Rationale 
 
-!!! warning "**Rationale for EPSS Scores as Lower Bounds**"
-
-    The "EPSS Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:
-
-    *"If the EPSS IDS data sees an actual attack attempt (so true positive in the validation data), the EPSS score is not set to 1 for that day. So the EPSS score on that day is an under-estimate."*
-
-See [Misunderstanding of EPSS? 👆](#misunderstanding-of-epss).
 ## Takeaways
 
 !!! success "**KEY TAKEAWAYS**"
@@ -275,13 +286,14 @@ See [Misunderstanding of EPSS? 👆](#misunderstanding-of-epss).
     **What LEV Gets Right:**
 
     1. LEV estimates the likelihood a CVE has already been exploited in the wild
-    2. It leverages and compounds historical EPSS data for evidence-based prioritization
+    2. It leverages and compounds historical EPSS data for evidence-based prioritization using probability theory
     3. Use LEV to measure exploited CVE proportions, evaluate KEV comprehensiveness, and enhance both KEV- and EPSS-driven workflows
     4. Combined with continuous validation (e.g., breach-and-attack simulations), LEV helps close the gap between theoretical risk and real-world exploitation
 
     **What to Watch Out For:**
 
-    1. **Mathematical approximations** may not hold for high EPSS scores (the ones you care about most)
-    2. **Independent events assumption** doesn't reflect real attack patterns
+    1. **Mathematical approximations** may not hold for high EPSS scores (the ones you care about most) - but these are not necessary if compute optimizations are used instead. 
+          1. The source code provides both the mathematical and compute optimization versions.
+    2. **Independent events assumption** doesn't reflect real attack patterns, so this will introduce some error.
     3. **Past vs. future confusion** - don't assume past exploitation guarantees future exploitation
     4. **Limited validation** - LEV needs real-world calibration before widespread adoption

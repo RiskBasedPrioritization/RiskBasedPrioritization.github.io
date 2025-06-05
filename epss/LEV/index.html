@@ -925,6 +925,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Why LEV Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-lev-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where LEV fits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -965,6 +980,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#epss-scores-as-lower-bounds-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      EPSS Scores as Lower Bounds Rationale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lev2-approximation" class="md-nav__link">
     <span class="md-ellipsis">
       LEV2 Approximation
@@ -977,15 +1001,6 @@
   <a href="#independent-events-assumption" class="md-nav__link">
     <span class="md-ellipsis">
       Independent Events Assumption
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#epss-scores-as-lower-bounds-rationale" class="md-nav__link">
-    <span class="md-ellipsis">
-      EPSS Scores as Lower Bounds Rationale
     </span>
   </a>
   
@@ -1891,6 +1906,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Why LEV Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-lev-fits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where LEV fits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1931,6 +1961,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#epss-scores-as-lower-bounds-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      EPSS Scores as Lower Bounds Rationale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#lev2-approximation" class="md-nav__link">
     <span class="md-ellipsis">
       LEV2 Approximation
@@ -1943,15 +1982,6 @@
   <a href="#independent-events-assumption" class="md-nav__link">
     <span class="md-ellipsis">
       Independent Events Assumption
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#epss-scores-as-lower-bounds-rationale" class="md-nav__link">
-    <span class="md-ellipsis">
-      EPSS Scores as Lower Bounds Rationale
     </span>
   </a>
   
@@ -2030,8 +2060,8 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <tbody>
 <tr>
 <td><strong>Exploited</strong></td>
-<td><a href="../../cisa_kev/cisa_kev/"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a></td>
-<td></td>
+<td><a href="../../cisa_kev/cisa_kev/"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> (Known Exploited)</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Probability of Exploitation</strong></td>
@@ -2041,6 +2071,7 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 </tbody>
 </table>
 </div>
+<h3 id="where-lev-fits">Where LEV fits<a class="headerlink" href="#where-lev-fits" title="Permanent link">&para;</a></h3>
 <figure>
 <p><img alt="" src="../../assets/images/lev_risk.png" width="800px" />
   </p>
@@ -2049,7 +2080,7 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <p><em>The diagram above is an extract from <a href="../../risk/Understanding_Risk/#risk-remediation-taxonomy-detailed"><abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Remediation Taxonomy Detailed</a>.</em></p>
 <p><a href="../../cisa_kev/cisa_kev/"><abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr></a> is a list of vulnerabilities that have been <strong>exploited</strong> in the wild (<strong>past</strong>).</p>
 <ul>
-<li>It contains a subset of known exploited CVEs</li>
+<li>It contains a subset of known exploited CVEs (i.e has False Negatives)</li>
 <li>Typically, once a vulnerability is added to a <abbr title="Known Exploited Vulnerability">KEV</abbr> list, it stays on the list permanently</li>
 </ul>
 <p><a href="../Introduction_to_EPSS/"><abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> is the <strong>probability of exploitation</strong> in the next 30 days (<strong>future</strong>). </p>
@@ -2071,7 +2102,7 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">As a general user, how do I use LEV?</p>
-<p>You don't:</p>
+<p>You don't, for now...</p>
 <ul>
 <li>The LEV list is not officially published as of June 1, 2025. And even if it were, the LEV list by itself is not that useful for a general user i.e., there isn't a user guide, there isn't validation of the data</li>
 <li>General users who use <abbr title="Cybersecurity &amp; Infrastructure Security Agency">CISA</abbr> <abbr title="Known Exploited Vulnerability">KEV</abbr> may benefit from LEV by additional validated entries being added to <abbr title="Known Exploited Vulnerability">KEV</abbr> per use case "augment <abbr title="Known Exploited Vulnerability">KEV</abbr> based vulnerability remediation prioritization by identifying higher-probability vulnerabilities that may be missing" </li>
@@ -2096,6 +2127,10 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <div class="admonition success">
 <p class="admonition-title"><strong>KEY TAKEAWAY: LEV's Backward-Looking Algorithm</strong></p>
 <p>LEV essentially asks: "Given all the historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores, what's the probability this vulnerability was exploited at some point in the past?"</p>
+<p>Because an <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is a probability (of exploitation in the next 30 days), and there is daily historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores available, standard probability theory can be used to determine other probabilities e.g. </p>
+<ul>
+<li>the probability for a different number of days - in the future or past</li>
+</ul>
 </div>
 <ol>
 <li>
@@ -2158,16 +2193,17 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <h2 id="concerns">Concerns<a class="headerlink" href="#concerns" title="Permanent link">&para;</a></h2>
 <h3 id="misunderstanding-of-epss">Misunderstanding of <abbr title="Exploit Prediction Scoring System">EPSS</abbr>?<a class="headerlink" href="#misunderstanding-of-epss" title="Permanent link">&para;</a></h3>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">How <abbr title="Exploit Prediction Scoring System">EPSS</abbr> works</p>
+<p>This information on how <abbr title="Exploit Prediction Scoring System">EPSS</abbr> works is provided for context for the concerns below.</p>
 <p>See <a href="https://youtu.be/o1XKTgX1JeE?feature=shared&amp;t=1827">State of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> and What to Expect from Version 4</a>, Jay Jacobs, April 2025 for how the model is <strong>created</strong> with  historic exploitation activity data.</p>
 <ul>
-<li>where a new version of the model is created ~~ every year so far e.g. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v1 to today's <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v4.</li>
+<li>where a new version of the model is created ~~ <a href="https://www.first.org/epss/">every year so far</a> e.g. <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v1 to today's <abbr title="Exploit Prediction Scoring System">EPSS</abbr> v4.</li>
 </ul>
 <p>Once created, the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> model when <strong>running</strong></p>
 <ul>
 <li>does not know or care <strong>directly</strong> about previous exploitation activity i.e. it does not have an explicit variable for this.</li>
-<li>does know and care <strong>indirectly</strong> about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity.<ul>
-<li>An example of this from <a href="https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf">Fortinet 2H 2023 Global Threat Landscape Report</a> where some of the features that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> includes (Exploit code published in GitHub, Nuclei template added, reference added to <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to rise, in advance of the exploitation activity detected by the sensor. (This example is given to clarify the above point - not to imply that this is how it always plays out.)
+<li>does know and care <strong>indirectly</strong> about previous exploitation activity because the approach will boost and weight the variables/features it does have based on their relationship to historic exploitation activity. <ul>
+<li>An example of this from <a href="https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/threat-landscape-report-2h-2023.pdf">Fortinet 2H 2023 Global Threat Landscape Report</a> where some of the features that <abbr title="Exploit Prediction Scoring System">EPSS</abbr> includes (Exploit code published in GitHub, Nuclei template added, reference added to <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> and twitter discussions, Metasploit module added, Intrigue adds scanner) went active, causing the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score to rise, in advance of the exploitation activity detected by the sensor. (This example that illustrates the predictive (probability in next 30 days) nature of <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is given to clarify the above point - not to imply that this is how it always plays out.)
 <figure markdown>
 <img alt="" src="../../assets/images/epss_fortinet.png" width="800px" />
 <figcaption></figcaption>
@@ -2206,6 +2242,13 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 <p>A mathematically defensible solution is obtainable if the goal is changed to include remediation of previously exploited vulnerabilities and a comprehensive <abbr title="Known Exploited Vulnerability">KEV</abbr> list is available. To do this, <strong>change the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores to be 1.0 for all vulnerabilities on a <abbr title="Known Exploited Vulnerability">KEV</abbr> list.</strong></p>
 <p><strong>The addition of LEV probabilities is a practical solution that can overwrite remaining inaccurate <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores.</strong> It DOES NOT guarantee to remove all <abbr title="Exploit Prediction Scoring System">EPSS</abbr> errors (only a comprehensive <abbr title="Known Exploited Vulnerability">KEV</abbr> list does that, which is a property that can be measured using LEV). </p>
 </div>
+<h3 id="epss-scores-as-lower-bounds-rationale"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds Rationale<a class="headerlink" href="#epss-scores-as-lower-bounds-rationale" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Rationale for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
+<p>The "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:</p>
+<p><em>"If the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> IDS data sees an actual attack attempt (so true positive in the validation data), the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is not set to 1 for that day. So the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on that day is an under-estimate."</em></p>
+</div>
+<p>See <a href="#misunderstanding-of-epss">Misunderstanding of <abbr title="Exploit Prediction Scoring System">EPSS</abbr>? 👆</a>.</p>
 <h3 id="lev2-approximation">LEV2 Approximation<a class="headerlink" href="#lev2-approximation" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title"><strong>Invalid Probability Division</strong></p>
@@ -2216,7 +2259,7 @@ CSWP 41. <a href="https://doi.org/10.6028/NIST.CSWP.41">https://doi.org/10.6028/
 </div>
 <p>LEV handles <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores as covering only a single day by dividing them by 30: <span class="arithmatex">\(P_1 \approx P_{30}/30\)</span></p>
 <p>Dividing a 30-day probability by 30 to get a 1-day probability generally <strong>does not make sense</strong> in a rigorous probabilistic context.</p>
-<p>An example run of the code from <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to 2023-3-7 to 2025-5-31 showed that this approximation resulted in +674 vulnerabilities (+1.57%) less than the rigorous approach.</p>
+<p>An example run of the code from <abbr title="Exploit Prediction Scoring System">EPSS</abbr> to 2023-3-7 (<a href="https://www.first.org/epss/"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> v3 release</a>) to 2025-5-31 showed that this approximation resulted in +674 vulnerabilities (+1.57%) less than the rigorous approach.</p>
 <figure>
 <p><img alt="" src="../../assets/images/p30_error.png" width="800px" />
   </p>
@@ -2264,35 +2307,30 @@ newly released vulnerabilities).</p>
 </ul>
 <p>However, the Independent Events Assumption is problematic because:</p>
 <ul>
-<li>Actual exploitation events display patterns and dependencies, not random occurrences, as shown in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> exploitation analyses.</li>
-<li>Human-driven attacks often follow discernible patterns, such as persistent threats or periodic target probing, further invalidating independence.</li>
+<li>Actual exploitation events, and the events that precede them that are features in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> (e.g. exploit being weaponized in Nuclei, Metasploit etc.., increase in related social media activity) display patterns and dependencies, not random occurrences, as shown in <abbr title="Exploit Prediction Scoring System">EPSS</abbr> exploitation analyses.</li>
 </ul>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>Probability error – the LEV equation (10) makes some mistake or invalid assumption. For example, since (10) takes in multiple scores per probability calculation, it could amplify small dependent errors if the equation incorrectly assumes independence. </p>
 <p>Page 20 <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.41.pdf">NIST CSWP 41: "Likely Exploited Vulnerabilities: A Proposed Metric for Vulnerability Exploitation Probability"</a></p>
 </div>
-<h3 id="epss-scores-as-lower-bounds-rationale"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds Rationale<a class="headerlink" href="#epss-scores-as-lower-bounds-rationale" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title"><strong>Rationale for <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds</strong></p>
-<p>The "<abbr title="Exploit Prediction Scoring System">EPSS</abbr> Scores as Lower Bounds" rationale from the NIST CSWP 41 paper is basically saying:</p>
-<p><em>"If the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> IDS data sees an actual attack attempt (so true positive in the validation data), the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score is not set to 1 for that day. So the <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score on that day is an under-estimate."</em></p>
-</div>
-<p>See <a href="#misunderstanding-of-epss">Misunderstanding of <abbr title="Exploit Prediction Scoring System">EPSS</abbr>? 👆</a>.</p>
 <h2 id="takeaways">Takeaways<a class="headerlink" href="#takeaways" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title"><strong>KEY TAKEAWAYS</strong></p>
 <p><strong>What LEV Gets Right:</strong></p>
 <ol>
 <li>LEV estimates the likelihood a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> has already been exploited in the wild</li>
-<li>It leverages and compounds historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data for evidence-based prioritization</li>
+<li>It leverages and compounds historical <abbr title="Exploit Prediction Scoring System">EPSS</abbr> data for evidence-based prioritization using probability theory</li>
 <li>Use LEV to measure exploited <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> proportions, evaluate <abbr title="Known Exploited Vulnerability">KEV</abbr> comprehensiveness, and enhance both <abbr title="Known Exploited Vulnerability">KEV</abbr>- and <abbr title="Exploit Prediction Scoring System">EPSS</abbr>-driven workflows</li>
 <li>Combined with continuous validation (e.g., breach-and-attack simulations), LEV helps close the gap between theoretical risk and real-world exploitation</li>
 </ol>
 <p><strong>What to Watch Out For:</strong></p>
 <ol>
-<li><strong>Mathematical approximations</strong> may not hold for high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the ones you care about most)</li>
-<li><strong>Independent events assumption</strong> doesn't reflect real attack patterns</li>
+<li><strong>Mathematical approximations</strong> may not hold for high <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores (the ones you care about most) - but these are not necessary if compute optimizations are used instead. <ol>
+<li>The source code provides both the mathematical and compute optimization versions.</li>
+</ol>
+</li>
+<li><strong>Independent events assumption</strong> doesn't reflect real attack patterns, so this will introduce some error.</li>
 <li><strong>Past vs. future confusion</strong> - don't assume past exploitation guarantees future exploitation</li>
 <li><strong>Limited validation</strong> - LEV needs real-world calibration before widespread adoption</li>
 </ol>

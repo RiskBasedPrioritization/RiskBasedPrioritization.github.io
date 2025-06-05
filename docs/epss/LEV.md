@@ -264,7 +264,7 @@ Under this assumption:
 * Thus, probability of being exploited within 30 days is $1 - (1 - P_1)^{30}$.
 * Given the 30-day exploitation likelihood $P_{30}$, the daily probability $P_1$ is calculated by solving: $P_{30} = 1 - (1 - P_1)^{30}$.
 
-However, the Independent Events Assumption is problematic because:
+However, the Independent Events Assumption is false (and this may impact the LEV results) because:
 
 * Actual exploitation events, and the events that precede them that are features in EPSS (e.g. exploit being weaponized in Nuclei, Metasploit etc.., increase in related social media activity) display patterns and dependencies, not random occurrences, as shown in EPSS exploitation analyses.
 

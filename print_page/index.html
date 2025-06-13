@@ -1283,6 +1283,74 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_6" id="__nav_5_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Impact
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Impact
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../impact/impact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Impact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -6073,7 +6141,109 @@ primary path from that <abbr title="CWE Common Weakness Enumeration">CWE</abbr> 
     </div>
   </div>
 
-</div></section><h1 class='nav-section-title-end'>Ended: CWE 1000</h1><h1 class='nav-section-title-end'>Ended: Common Weakness and Enumeration (CWE)</h1><h1 class='nav-section-title-end'>Ended: Related Standards</h1>
+</div></section><h1 class='nav-section-title-end'>Ended: CWE 1000</h1>
+                        <h3 class='nav-section-title' id='section-impact'>
+                            Impact <a class='headerlink' href='#section-impact' title='Permanent link'>↵</a>
+                        </h3>
+                        <section class="print-page" id="impact-impact"><h1 id="impact-impact-impact">Impact<a class="headerlink" href="#impact-impact-impact" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Overview</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Is there any machine readable version of the "technical" impact of a vulnerability that is standardized and grouped?</p>
+<p>For example:</p>
+<ul>
+<li>Allows for privilege escalation</li>
+<li>Allows for application data manipulation</li>
+<li>Allows to run shell code at the user level</li>
+</ul>
+<p><a href="https://www.linkedin.com/feed/update/urn:li:activity:7115732049100976128?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7115732049100976128%2C7115790097953775616%29&amp;dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287115790097953775616%2Curn%3Ali%3Aactivity%3A7115732049100976128%29">LinkedIn Thread, Oct 2023</a></p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>No is the short answer AFAIK...</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>See BSidesDub talk <a href="https://www.youtube.com/watch?v=AtN_tav_5Mc">Understanding and Using Impact so you know what Vulnerabilities to fix first</a> and associated <a href="https://riskbasedprioritization.github.io/talks/docs/BSides2024_CVEClassifier_v100.pdf">Slides</a></p>
+</div>
+</div>
+<h2 id="impact-impact-technical-impact">Technical Impact<a class="headerlink" href="#impact-impact-technical-impact" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Technical Impact is different than Attack Pattern!</p>
+<p><a href="https://cwe.mitre.org/">“<abbr title="CWE Common Weakness Enumeration">CWE</abbr></a> is the root mistake, which can lead to a vulnerability (tracked by <a href="https://cve.mitre.org/"><abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr></a> in some cases when known), which can be exploited by an attacker <strong>(using techniques covered by <a href="https://capec.mitre.org/">CAPEC</a>)</strong>”, which can lead to a <strong>Technical Impact</strong> (or consequence), which can result in a Business Impact</p>
+<p><a href="https://riskbasedprioritization.github.io/risk/Vulnerability_Landscape/#key-risk-factor-standards">https://riskbasedprioritization.github.io/risk/Vulnerability_Landscape/#key-risk-factor-standards</a></p>
+</div>
+<h2 id="impact-impact-impact-in-cve-schema">Impact in <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> Schema<a class="headerlink" href="#impact-impact-impact-in-cve-schema" title="Permanent link">&para;</a></h2>
+<p>The <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> Schema contains a <a href="https://github.com/CVELab/cve-schema/blob/3fc0cf8d284da1494a0db0ca0615bec6dfbad7b6/schema/v5.0/CVE_JSON_5.0_schema.json#L812">field for <strong>impacts</strong></a> and it uses the "<strong>CAPEC ID that best relates to this impact.</strong>" and a "description" for <strong>"impact type information"</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#impact-impact-__codelineno-0-1"></a><span class="w">        </span><span class="nt">&quot;impacts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#impact-impact-__codelineno-0-2"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#impact-impact-__codelineno-0-3"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Collection of impacts of this vulnerability.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#impact-impact-__codelineno-0-4"></a><span class="w">            </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#impact-impact-__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;uniqueItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#impact-impact-__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#impact-impact-__codelineno-0-7"></a><span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#impact-impact-__codelineno-0-8"></a><span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is impact type information (e.g. a text description.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#impact-impact-__codelineno-0-9"></a><span class="w">                </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;descriptions&quot;</span><span class="p">],</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#impact-impact-__codelineno-0-10"></a><span class="w">                </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#impact-impact-__codelineno-0-11"></a><span class="w">                    </span><span class="nt">&quot;capecId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#impact-impact-__codelineno-0-12"></a><span class="w">                        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#impact-impact-__codelineno-0-13"></a><span class="w">                        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CAPEC ID that best relates to this impact.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#impact-impact-__codelineno-0-14"></a><span class="w">                        </span><span class="nt">&quot;minLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#impact-impact-__codelineno-0-15"></a><span class="w">                        </span><span class="nt">&quot;maxLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#impact-impact-__codelineno-0-16"></a><span class="w">                        </span><span class="nt">&quot;pattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^CAPEC-[1-9][0-9]{0,4}$&quot;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#impact-impact-__codelineno-0-17"></a><span class="w">                    </span><span class="p">},</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#impact-impact-__codelineno-0-18"></a><span class="w">                    </span><span class="nt">&quot;descriptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#impact-impact-__codelineno-0-19"></a><span class="w">                        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prose description of the impact scenario. At a minimum provide the description given by CAPEC.&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#impact-impact-__codelineno-0-20"></a><span class="w">                        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/definitions/descriptions&quot;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#impact-impact-__codelineno-0-21"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#impact-impact-__codelineno-0-22"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#impact-impact-__codelineno-0-23"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#impact-impact-__codelineno-0-24"></a><span class="w">        </span><span class="p">},</span>
+</code></pre></div>
+<h2 id="impact-impact-mitre-cwe-common-consequences">MITRE <abbr title="CWE Common Weakness Enumeration">CWE</abbr> Common Consequences<a class="headerlink" href="#impact-impact-mitre-cwe-common-consequences" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="MITRE CWE Common Consequences" src="../assets/images/mitre_common_consequences.png" /></p>
+</figure>
+<h2 id="impact-impact-nist-vulntology">NIST Vulntology<a class="headerlink" href="#impact-impact-nist-vulntology" title="Permanent link">&para;</a></h2>
+<p><a href="https://pages.nist.gov/vulntology/">NIST Vulntology</a> defines:</p>
+<ul>
+<li><a href="https://pages.nist.gov/vulntology/specification/values/logical-impact/">Impact</a></li>
+<li><a href="https://pages.nist.gov/vulntology/specification/values/impact-method-type/">Impact Methods</a></li>
+</ul>
+<figure>
+<p><img alt="MITRE CWE Common Consequences" src="../assets/images/NIST_vulntology.png" /></p>
+</figure>
+<h2 id="impact-impact-mitre-technical-impacts">MITRE Technical Impacts<a class="headerlink" href="#impact-impact-mitre-technical-impacts" title="Permanent link">&para;</a></h2>
+<p>MITRE CAPEC (Common Attack Pattern Enumerations and Classifications) lists 8 <a href="https://capec.mitre.org/custom/view.html?id=1000">Technical Impacts</a>, in addition to the many CAPEC attack patterns.</p>
+<ul>
+<li>These can be mapped to NIST Vulntology Impact and Impact Method.</li>
+</ul>
+<figure>
+<p><img alt="MITRE Technical Impact" src="../assets/images/mitre_technical_impact.png" /></p>
+</figure>
+<h2 id="impact-impact-impact-text-and-mitre-technical-impact-extraction-from-a-cve">Impact Text and MITRE Technical Impact Extraction from a <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr><a class="headerlink" href="#impact-impact-impact-text-and-mitre-technical-impact-extraction-from-a-cve" title="Permanent link">&para;</a></h2>
+<p>Per <a href="https://www.first.org/conference/vulncon2025/program#pVulnerability-Root-Cause-Mapping-with-CWE-Challenges-Solutions-and-Insights-from-Grounded-LLM-based-Analysis">Vulnerability Root Cause Mapping with <abbr title="CWE Common Weakness Enumeration">CWE</abbr>: Challenges, Solutions, and Insights from Grounded LLM-based Analysis</a>, FIRST Vulncon 2025, it is possible to</p>
+<ul>
+<li>extract the impact keyphrases from the <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> Info (Description and reference content)</li>
+<li>map the impacts to the MITRE Technical Impacts</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Put the impact in the impact field 💡</p>
+<p>💡 The impact keyphrases, and the MITRE Technical Impacts that they map to, could be placed in the <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> schema impacts field.</p>
+</div>
+<figure>
+<p><img alt="MITRE Technical Impact" src="../assets/images/impact_keyphrases.png" /></p>
+</figure>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Takeaways</p>
+<ul>
+<li>The Technical impact is useful for end users (beyond the <abbr title="Common Vulnerability Scoring System Standard. A framework for scoring the severity of vulnerabilities based on factors such as exploitability and impact.">CVSS</abbr> Confidentiality, Integrity, Availability impact) which is not so useful as it is not granular.</li>
+<li>Technical impact is not represented in CVEs today, even though there is an "impacts" field in the <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> schema.</li>
+<li>The <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> Description (and reference content) impact keyphrases, and the MITRE Technical Impacts that they map to, could be placed in the <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> schema impacts field.</li>
+</ul>
+</div></section><h1 class='nav-section-title-end'>Ended: Impact</h1><h1 class='nav-section-title-end'>Ended: Common Weakness and Enumeration (CWE)</h1><h1 class='nav-section-title-end'>Ended: Related Standards</h1>
                         <h1 class='nav-section-title' id='section-vendors'>
                             Vendors <a class='headerlink' href='#section-vendors' title='Permanent link'>↵</a>
                         </h1>

@@ -127,5 +127,6 @@ Per [Vulnerability Root Cause Mapping with CWE: Challenges, Solutions, and Insig
 !!! success "Takeaways"
 
     * The Technical impact is useful for end users (beyond the CVSS Confidentiality, Integrity, Availability impact) which is not so useful as it is not granular.
-    * Technical impact is not represented in CVEs today, even though there is an "impacts" field in the CVE schema.
+    * Technical impact is not well represented in published CVEs today, even though there is an "impacts" field in the CVE schema.
+    * People may want to know the Impact more than the CAPEC (where CAPEC lives under Impact in the schema - and is often used as the only representation of Impact in a CVE, if at all)
     * The CVE Description (and reference content) impact keyphrases, and the MITRE Technical Impacts that they map to, could be placed in the CVE schema impacts field.

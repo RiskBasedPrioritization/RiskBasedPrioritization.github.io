@@ -42,6 +42,8 @@ nav:
       - CWE 1000:
         - CWE 1000: cwe/cwe_1000.md
         - CWE 1000 Sunburst: cwe/sunburst.md
+      - Impact:
+        - Impact: impact/impact.md
   - Vendors: 
     - Vendors: vendors/vendors.md
     - Qualys: vendors/Qualys.md

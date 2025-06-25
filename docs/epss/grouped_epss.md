@@ -1,4 +1,4 @@
-# EPSS Thresholds
+# Grouped EPSS
 !!! abstract "Overview"
 
     Because EPSS is a probability (of exploitation in the next 30 days), other probabilities can be determined based on standard probability theory e.g.

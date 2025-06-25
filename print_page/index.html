@@ -812,6 +812,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../epss/grouped_epss/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grouped EPSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4652,6 +4673,77 @@ in the organization i.e. how many occurrences of each <abbr title="CVE Common Vu
 <li>You can further adjust this <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Threshold as CVEs are remediated, and as you gain more experience with <abbr title="Exploit Prediction Scoring System">EPSS</abbr>. </li>
 </ol>
 </li>
+</ol>
+</div></section><section class="print-page" id="epss-grouped_epss"><h1 id="epss-grouped_epss-epss-thresholds"><abbr title="Exploit Prediction Scoring System">EPSS</abbr> Thresholds<a class="headerlink" href="#epss-grouped_epss-epss-thresholds" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Overview</p>
+<p>Because <abbr title="Exploit Prediction Scoring System">EPSS</abbr> is a probability (of exploitation in the next 30 days), other probabilities can be determined based on standard probability theory e.g.</p>
+<ul>
+<li>probability of exploitation in the next N days for 1 <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr><ul>
+<li>e.g. this is used in <a href="#epss-lev">NIST LEV</a> calculations</li>
+</ul>
+</li>
+<li>probability of exploitation in the next 30 days for several CVEs i.e. <strong>grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr></strong> (from 1 to many and typical usage is the CVEs on a given container/asset or other logical grouping). This is described in <ul>
+<li>"3: <abbr title="Exploit Prediction Scoring System">EPSS</abbr> Can Scale, to Produce System, Network, and Enterprise-level Exploit Predictions" in <a href="https://www.first.org/epss/user-guide">https://www.first.org/epss/user-guide</a></li>
+<li><a href="https://youtu.be/W2UMqkRyBOY?t=367">Modeling Asset <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Using Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr></a> at <a href="https://www.first.org/conference/vulncon2025/program#pModeling-Asset-Risk-Using-Grouped-EPSS">VulnCon 2025</a> by Stephen Shaffer.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="epss-grouped_epss-core-concept">Core Concept<a class="headerlink" href="#epss-grouped_epss-core-concept" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When you're looking at the probability of <strong>at least one vulnerability being exploited</strong>, it's easier to calculate the opposite:</p>
+<blockquote>
+<p><strong>What is the probability that <em>none</em> of the vulnerabilities are exploited?</strong></p>
+</blockquote>
+<p>Once you have that, you subtract it from 1 to get the probability that <strong>at least one</strong> is exploited.</p>
+<p>This is based on the assumption that vulnerabilities are <strong>independent</strong> — the exploitation of one doesn't affect the others.</p>
+<hr />
+<h3 id="epss-grouped_epss-formula">Formula<a class="headerlink" href="#epss-grouped_epss-formula" title="Permanent link">&para;</a></h3>
+<p>If you have <em>N</em> vulnerabilities with individual exploit probabilities <span class="arithmatex">\(P_1, P_2, ..., P_N\)</span>, then:</p>
+<h4 id="epss-grouped_epss-probability-that-none-are-exploited">🟢 Probability that <strong>none</strong> are exploited:<a class="headerlink" href="#epss-grouped_epss-probability-that-none-are-exploited" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+P(\text{no exploits}) = (1 - P_1) \times (1 - P_2) \times \dots \times (1 - P_N)
+\]</div>
+<h4 id="epss-grouped_epss-probability-that-at-least-one-is-exploited">🔴 Probability that <strong>at least one</strong> is exploited:<a class="headerlink" href="#epss-grouped_epss-probability-that-at-least-one-is-exploited" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+P(\text{at least one exploit}) = 1 - P(\text{no exploits})
+\]</div>
+<hr />
+<h3 id="epss-grouped_epss-simple-worked-example">Simple Worked Example<a class="headerlink" href="#epss-grouped_epss-simple-worked-example" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Simple Worked Example</p>
+<p>Let’s say a system has <strong>3 vulnerabilities</strong>:</p>
+<ol>
+<li>Vulnerability A: 10% chance of being exploited → <span class="arithmatex">\(P_1 = 0.10\)</span></li>
+<li>Vulnerability B: 20% chance → <span class="arithmatex">\(P_2 = 0.20\)</span></li>
+<li>Vulnerability C: 15% chance → <span class="arithmatex">\(P_3 = 0.15\)</span></li>
+</ol>
+<hr />
+<h4 id="epss-grouped_epss-step-1-calculate-the-chance-of-no-vulnerabilities-being-exploited">Step 1: Calculate the chance of <strong>no vulnerabilities being exploited</strong>:<a class="headerlink" href="#epss-grouped_epss-step-1-calculate-the-chance-of-no-vulnerabilities-being-exploited" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+P(\text{no exploits}) = (1 - 0.10) \times (1 - 0.20) \times (1 - 0.15) = 0.90 \times 0.80 \times 0.85 = 0.612
+\]</div>
+<hr />
+<h4 id="epss-grouped_epss-step-2-calculate-the-chance-of-at-least-one-being-exploited">Step 2: Calculate the chance of <strong>at least one being exploited</strong>:<a class="headerlink" href="#epss-grouped_epss-step-2-calculate-the-chance-of-at-least-one-being-exploited" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+P(\text{at least one exploit}) = 1 - 0.612 = 0.388
+\]</div>
+<p><strong>So, there is a 38.8% chance that at least one vulnerability will be exploited.</strong></p>
+</div>
+</div>
+<h2 id="epss-grouped_epss-using-grouped-epss">Using Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#epss-grouped_epss-using-grouped-epss" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Using Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr></p>
+<p>Per <a href="https://youtu.be/W2UMqkRyBOY?t=367">Modeling Asset <abbr title="The likelihood of a vulnerability being exploited and the potential impact of such an exploit on an organization.">Risk</abbr> Using Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr></a>, Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> can be applied to </p>
+<ol>
+<li>Identify high risk assets based on the grouped probability of exploitation for that asset.</li>
+<li>Prioritize remediation efforts by identifying which CVEs, if addressed, would most significantly reduce the grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score across assets.</li>
+<li>Utilize grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> as a decision support mechanism to allocate security efforts to the riskiest assets or groups, aligning with organizational priorities.</li>
+<li>Track the distribution of grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> scores over time to understand shifts in the organization's asset risk posture and the effectiveness of security interventions.</li>
+<li>Analyze your internal data to identify tipping points for specific assets, determining how many vulnerabilities need to be fixed to bring their grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> score below a desired threshold.</li>
+<li>Enrich asset data with internal data classification standards to <a href="https://youtu.be/W2UMqkRyBOY?t=884">combine likelihood (grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr>) with potential impact</a> for a comprehensive risk assessment.</li>
 </ol>
 </div></section><h1 class='nav-section-title-end'>Ended: Exploit Prediction Scoring System (EPSS)</h1>
                         <h2 class='nav-section-title' id='section-nist-lev'>

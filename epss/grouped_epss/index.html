@@ -944,6 +944,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#independence-assumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independence Assumption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Independence Assumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-same-cve-truly-independent-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Same CVE, Truly Independent Deployments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-same-cve-shared-system-or-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Same CVE, Shared System or Pathway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-conditional-probabilities-with-a-small-number-of-dependent-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating Conditional Probabilities With A Small Number Of Dependent Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-grouped-epss" class="md-nav__link">
     <span class="md-ellipsis">
       Using Grouped EPSS
@@ -2040,6 +2082,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#independence-assumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independence Assumption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Independence Assumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-same-cve-truly-independent-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 1: Same CVE, Truly Independent Deployments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-same-cve-shared-system-or-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario 2: Same CVE, Shared System or Pathway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculating-conditional-probabilities-with-a-small-number-of-dependent-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculating Conditional Probabilities With A Small Number Of Dependent Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-grouped-epss" class="md-nav__link">
     <span class="md-ellipsis">
       Using Grouped EPSS
@@ -2121,6 +2205,75 @@ P(\text{at least one exploit}) = 1 - 0.612 = 0.388
 \]</div>
 <p><strong>So, there is a 38.8% chance that at least one vulnerability will be exploited.</strong></p>
 </div>
+</div>
+<h2 id="independence-assumption">Independence Assumption<a class="headerlink" href="#independence-assumption" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">What if Vulnerabilities are not independent?</p>
+<p>If multiple systems in the group (that you're calculating Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr> for) share the same <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>, the assumption of independence is likely not valid — or at least weakened — because:</p>
+<ul>
+<li>
+<p>An attacker exploiting that <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> successfully on one system might increase their ability (or knowledge) to exploit it elsewhere.</p>
+</li>
+<li>
+<p>Shared configurations, network access, or authentication could create a correlation between the vulnerabilities being exploited.</p>
+</li>
+</ul>
+<h4 id="scenario-1-same-cve-truly-independent-deployments"><strong>Scenario 1: Same <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>, Truly Independent Deployments</strong><a class="headerlink" href="#scenario-1-same-cve-truly-independent-deployments" title="Permanent link">&para;</a></h4>
+<p>Imagine you have:</p>
+<ul>
+<li>3 different machines or services,</li>
+<li>All vulnerable to <strong><abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-XXXX-YYYY</strong>,</li>
+<li>Each independently patched, segmented, or exposed.</li>
+</ul>
+<p><strong>In this case</strong>, you can reasonably <strong>treat them independently</strong>. So the math above still applies:</p>
+<div class="arithmatex">\[
+P(\text{no exploits}) = \prod_{i=1}^{N} (1 - P_i)
+\]</div>
+<p>Example: Three instances of <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>-2022-12345 with 10% chance each</p>
+<div class="arithmatex">\[
+P(\text{at least one exploit}) = 1 - (0.9)^3 = 0.271
+\]</div>
+<hr />
+<h4 id="scenario-2-same-cve-shared-system-or-pathway"><strong>Scenario 2: Same <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr>, Shared System or Pathway</strong><a class="headerlink" href="#scenario-2-same-cve-shared-system-or-pathway" title="Permanent link">&para;</a></h4>
+<p>Now suppose:</p>
+<ul>
+<li>All three instances run on the <strong>same host</strong> or share an <strong>authentication mechanism</strong>.</li>
+<li>Once an attacker exploits it in <strong>one place</strong>, they can <strong>reuse access or credentials</strong> elsewhere.</li>
+</ul>
+<p>Then the exploit events are <strong>dependent</strong>, and the original formula <strong>no longer holds</strong>.</p>
+<p>You might see something like:</p>
+<ul>
+<li>One successful exploit causes <strong>all instances</strong> to be compromised (100% dependence).</li>
+<li>Or a <strong>partial dependence</strong> — e.g., exploiting one boosts others from 10% to 50%.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When vulnerabilities are <strong>not</strong> independent and there is a</p>
+<ul>
+<li>small number, e.g. 3, of the same vulnerability, then conditional probabilities can be used </li>
+<li>
+<p>large number of the same vulnerability, then calculating probabilities becomes complex! </p>
+<ul>
+<li>It would involve e.g. conditional probabilities, Bayesian networks, or Markov chains.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="calculating-conditional-probabilities-with-a-small-number-of-dependent-vulnerabilities"><strong>Calculating Conditional Probabilities With A Small Number Of Dependent Vulnerabilities</strong><a class="headerlink" href="#calculating-conditional-probabilities-with-a-small-number-of-dependent-vulnerabilities" title="Permanent link">&para;</a></h4>
+<p>Let’s say you define:</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>: event that system 1 is exploited</li>
+<li><span class="arithmatex">\(B\)</span>: event that system 2 is exploited</li>
+</ul>
+<p>Instead of computing <span class="arithmatex">\(P(A \cup B) = 1 - (1 - P(A))(1 - P(B))\)</span>, you’d now use:</p>
+<div class="arithmatex">\[
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+\]</div>
+<p>Where:</p>
+<div class="arithmatex">\[
+P(A \cap B) = P(A) \cdot P(B | A)
+\]</div>
+<p>And <strong><span class="arithmatex">\(P(B | A) &gt; P(B)\)</span></strong> if they’re positively correlated (as with the same <abbr title="CVE Common Vulnerability and Exposures. A standardized list of publicly known vulnerabilities and exposures maintained by the MITRE Corporation.">CVE</abbr> in a shared system).</p>
 </div>
 <h2 id="using-grouped-epss">Using Grouped <abbr title="Exploit Prediction Scoring System">EPSS</abbr><a class="headerlink" href="#using-grouped-epss" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">

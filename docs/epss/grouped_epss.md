@@ -70,6 +70,81 @@
         **So, there is a 38.8% chance that at least one vulnerability will be exploited.**
 
 
+## Independence Assumption
+
+!!! info "What if Vulnerabilities are not independent?"
+
+    If multiple systems in the group (that you're calculating Grouped EPSS for) share the same CVE, the assumption of independence is likely not valid — or at least weakened — because:
+
+    - An attacker exploiting that CVE successfully on one system might increase their ability (or knowledge) to exploit it elsewhere.
+
+    - Shared configurations, network access, or authentication could create a correlation between the vulnerabilities being exploited.
+    #### **Scenario 1: Same CVE, Truly Independent Deployments**
+
+    Imagine you have:
+
+    * 3 different machines or services,
+    * All vulnerable to **CVE-XXXX-YYYY**,
+    * Each independently patched, segmented, or exposed.
+
+    **In this case**, you can reasonably **treat them independently**. So the math above still applies:
+
+    $$
+    P(\text{no exploits}) = \prod_{i=1}^{N} (1 - P_i)
+    $$
+
+    Example: Three instances of CVE-2022-12345 with 10% chance each
+
+    $$
+    P(\text{at least one exploit}) = 1 - (0.9)^3 = 0.271
+    $$
+
+    ---
+
+    #### **Scenario 2: Same CVE, Shared System or Pathway**
+
+    Now suppose:
+
+    * All three instances run on the **same host** or share an **authentication mechanism**.
+    * Once an attacker exploits it in **one place**, they can **reuse access or credentials** elsewhere.
+
+    Then the exploit events are **dependent**, and the original formula **no longer holds**.
+
+    You might see something like:
+
+    * One successful exploit causes **all instances** to be compromised (100% dependence).
+    * Or a **partial dependence** — e.g., exploiting one boosts others from 10% to 50%.
+
+
+    !!! warning
+
+        When vulnerabilities are **not** independent and there is a
+
+        - small number, e.g. 3, of the same vulnerability, then conditional probabilities can be used 
+        - large number of the same vulnerability, then calculating probabilities becomes complex! 
+        
+            - It would involve e.g. conditional probabilities, Bayesian networks, or Markov chains.
+
+    #### **Calculating Conditional Probabilities With A Small Number Of Dependent Vulnerabilities**
+
+    Let’s say you define:
+
+    * $A$: event that system 1 is exploited
+    * $B$: event that system 2 is exploited
+
+    Instead of computing $P(A \cup B) = 1 - (1 - P(A))(1 - P(B))$, you’d now use:
+
+    $$
+    P(A \cup B) = P(A) + P(B) - P(A \cap B)
+    $$
+
+    Where:
+
+    $$
+    P(A \cap B) = P(A) \cdot P(B | A)
+    $$
+
+    And **$P(B | A) > P(B)$** if they’re positively correlated (as with the same CVE in a shared system).
 
 ## Using Grouped EPSS
 
